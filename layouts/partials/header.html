@@ -1,0 +1,23 @@
+<div class="penn-bar" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <a href="/" class="brand-link" aria-label="{{ site.Params.brandShortForm }} home">
+        <img src="/heading-color.svg" alt="{{ site.Params.brandShortForm }}" class="brand-logo">
+      </a>
+    </div>
+    <nav class="main-nav" aria-label="Main">
+      <ul>
+        {{ range site.Menus.main }}
+        <li>
+          {{- if .Params.placeholder -}}
+            <a class="nav-link nav-disabled" title="Newsletter coming soon">{{ .Name }}{{ if .Params.external }}<span aria-hidden="true"> ↗</span>{{ end }}</a>
+          {{- else -}}
+            <a class="nav-link" href="{{ .URL }}"{{ if .Params.external }} target="_blank" rel="noopener"{{ end }}>{{ .Name }}{{ if .Params.external }}<span aria-hidden="true"> ↗</span>{{ end }}</a>
+          {{- end -}}
+        </li>
+        {{ end }}
+      </ul>
+    </nav>
+  </div>
+</header>

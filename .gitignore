@@ -2,19 +2,12 @@
 .DS_Store
 ._*
 
-# Python
-__pycache__/
-*.py[cod]
-*.egg-info/
-.venv/
-venv/
-.env
-.env.*
+# Hugo build output
+public/
+resources/
+.hugo_build.lock
 
 # Editors
 .vscode/
 .idea/
 *.swp
-
-# Logs
-*.log

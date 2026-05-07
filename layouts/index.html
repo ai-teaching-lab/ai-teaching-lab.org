@@ -1,0 +1,51 @@
+{{ define "main" }}
+<section class="hero">
+  <p class="pillars-tagline">
+    <span class="pillar-word pillar-word-research">Research</span><span class="pillar-dot" aria-hidden="true">·</span><span class="pillar-word pillar-word-build">Build</span><span class="pillar-dot" aria-hidden="true">·</span><span class="pillar-word pillar-word-teach">Teach</span>
+  </p>
+  <h1 class="hero-headline">AI for the legal profession.</h1>
+  <p class="lead">{{ site.Params.description }}</p>
+</section>
+
+<section class="pillar-grid">
+  {{ range site.Params.pillars }}
+    {{ partial "pillar-card.html" (dict "pillar" .) }}
+  {{ end }}
+</section>
+
+<section class="loop-statement">
+  <p>
+    <span class="loop-mark">¶</span>
+    Research findings inform what gets built. Tools enable more research — at scale and with feedback. Teaching disseminates what we learn back to the field, and produces the questions that fuel the next research cycle. <em>The loop is the methodology.</em>
+  </p>
+</section>
+
+{{ $projects := where site.RegularPages "Section" "projects" }}
+{{ if $projects }}
+<section class="featured">
+  <h2 class="section-heading">Projects</h2>
+  <ul class="featured-list">
+    {{ range first 6 $projects }}
+    <li>
+      <a href="{{ .RelPermalink }}">
+        <h3>{{ .Title }}</h3>
+        {{ with .Description }}<p>{{ . }}</p>{{ end }}
+        {{ with .Params.pillar }}
+        <div class="pillar-tags featured-tags">
+          {{ range . }}<span class="pillar-tag pillar-{{ . }}">{{ . }}</span>{{ end }}
+        </div>
+        {{ end }}
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+  <p class="see-all"><a href="/projects/">See all projects →</a></p>
+</section>
+{{ end }}
+
+{{ with .Content }}
+<section class="prose">
+  {{ . }}
+</section>
+{{ end }}
+{{ end }}

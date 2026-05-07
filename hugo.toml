@@ -1,0 +1,83 @@
+baseURL = 'https://ai-teaching-lab.org/'
+locale = 'en-us'
+title = 'Penn Carey Law AI Teaching Lab'
+enableRobotsTXT = true
+enableEmoji = false
+pluralizeListTitles = false
+summaryLength = 30
+timeZone = 'America/New_York'
+
+[params]
+  description = "The Penn Carey Law AI Teaching Lab researches how AI is changing legal education and practice, builds the tools that put those findings to work, and teaches lawyers, law students, judges, and the profession how to use AI well."
+  brandShortForm = "AI Teaching Lab"
+  brandFormalName = "Penn Carey Law AI Teaching Lab"
+  institutionName = "University of Pennsylvania Carey Law School"
+  institutionShort = "Penn Carey Law"
+  contactEmail = "pwagner@law.upenn.edu"
+  director = "Polk Wagner"
+  pillarsTagline = "Research. Build. Teach."
+  pillars = ["research", "build", "teach"]
+  newsletterURL = "#"  # placeholder until Substack URL exists
+  githubOrgURL = "https://github.com/ai-teaching-lab"
+
+[taxonomies]
+  pillar = "pillars"
+  audience = "audiences"
+  workstream = "workstreams"
+  status = "statuses"
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+  page = ["HTML"]
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup.tableOfContents]
+  endLevel = 3
+  ordered = false
+  startLevel = 2
+
+[menus]
+  [[menus.main]]
+    name = "Projects"
+    url = "/projects/"
+    weight = 10
+  [[menus.main]]
+    name = "Toolkit"
+    url = "/toolkit/"
+    weight = 20
+  [[menus.main]]
+    name = "Newsletter"
+    url = "#"
+    weight = 30
+    [menus.main.params]
+      external = true
+      placeholder = true
+  [[menus.main]]
+    name = "Events"
+    url = "/events/"
+    weight = 40
+  [[menus.main]]
+    name = "About"
+    url = "/about/"
+    weight = 50
+  [[menus.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 60
+
+# Pillar landing pages (linked from home + breadcrumbs, not main nav)
+[[menus.pillars]]
+  name = "Research"
+  url = "/research/"
+  identifier = "research"
+[[menus.pillars]]
+  name = "Build"
+  url = "/build/"
+  identifier = "build"
+[[menus.pillars]]
+  name = "Teach"
+  url = "/teach/"
+  identifier = "teach"

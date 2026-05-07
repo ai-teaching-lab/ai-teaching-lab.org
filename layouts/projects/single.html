@@ -1,0 +1,24 @@
+{{ define "main" }}
+<article class="project-single">
+  <header class="page-header">
+    {{ with .Params.workstream }}<p class="workstream-badge">Workstream {{ . }}</p>{{ end }}
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
+    <dl class="project-meta">
+      {{ with .Params.owner }}<dt>Owner</dt><dd>{{ if reflect.IsSlice . }}{{ delimit . ", " }}{{ else }}{{ . }}{{ end }}</dd>{{ end }}
+      {{ with .Params.status }}<dt>Status</dt><dd><span class="status status-{{ . }}">{{ . }}</span></dd>{{ end }}
+      {{ with .Params.pillar }}
+      <dt>Pillar</dt>
+      <dd>
+        {{ range . }}<a href="/{{ . }}/" class="pillar-tag pillar-{{ . }}">{{ . }}</a>{{ end }}
+      </dd>
+      {{ end }}
+      {{ with .Params.github }}<dt>Code</dt><dd><a href="https://github.com/{{ . }}" target="_blank" rel="noopener">github.com/{{ . }} <span aria-hidden="true">↗</span></a></dd>{{ end }}
+      {{ with .Params.partners }}<dt>Partners</dt><dd>{{ if reflect.IsSlice . }}{{ delimit . ", " }}{{ else }}{{ . }}{{ end }}</dd>{{ end }}
+    </dl>
+  </header>
+  <div class="prose">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}
