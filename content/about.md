@@ -30,7 +30,7 @@ The AI Teaching Lab is the **build/apply arm** of the broader Penn Carey Law AI 
 
 ## Director
 
-The Lab is directed by **R. Polk Wagner**, Robert G. Fuller Professor of Law and Deputy Dean for Academic Affairs and Innovation at Penn Carey Law.
+The Lab is directed by **Polk Wagner**, Deputy Dean for Academic Affairs and Innovation at Penn Carey Law.
 
 ## Contact
 
