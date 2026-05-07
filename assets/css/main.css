@@ -1,0 +1,446 @@
+/* Penn Carey Law AI Teaching Lab — Hugo theme stylesheet
+ * Modeled on the original splash visual language. */
+
+:root {
+  --penn-red: #990000;
+  --penn-red-dark: #6e0000;
+  --penn-red-soft: rgba(153, 0, 0, 0.08);
+  --ink: #1a1a1a;
+  --muted: #555;
+  --muted-light: #888;
+  --rule: #e5e5e5;
+  --rule-soft: #f0f0ee;
+  --bg: #fdfdfb;
+  --bg-warm: #f9f7f3;
+  --pillar-research: #4a5568;
+  --pillar-build: #1f6feb;
+  --pillar-teach: var(--penn-red);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  font-size: 17px;
+}
+
+a {
+  color: var(--penn-red);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(153, 0, 0, 0.3);
+  transition: border-color 120ms ease, color 120ms ease;
+}
+a:hover { border-bottom-color: var(--penn-red); }
+a.brand-link, a.pillar-card, a.nav-link, .featured-list a, .content-list a, .project-card a, .see-all a {
+  border-bottom: none;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  font-weight: 600;
+  color: var(--penn-red-dark);
+  line-height: 1.2;
+  letter-spacing: -0.005em;
+}
+h1 { font-size: 2.4rem; margin: 0 0 1rem; }
+h2 { font-size: 1.65rem; margin: 0 0 0.75rem; }
+h3 { font-size: 1.25rem; margin: 0 0 0.5rem; color: var(--ink); }
+p  { margin: 0 0 1rem; }
+
+img { max-width: 100%; height: auto; }
+
+/* ===== Site header ===== */
+.site-header {
+  border-bottom: 1px solid var(--rule);
+  background: var(--bg);
+  padding: 1.25rem 1.5rem 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  align-items: center;
+}
+.institutional {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+.institutional-shield { width: 28px; height: auto; }
+.brand-link { display: inline-block; }
+.brand-logo {
+  width: 100%;
+  max-width: 480px;
+  display: block;
+}
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.4rem;
+}
+.main-nav .nav-link {
+  font-size: 0.95rem;
+  color: var(--ink);
+  border-bottom: 2px solid transparent;
+  padding: 0.25rem 0;
+  font-weight: 500;
+  transition: color 120ms ease, border-color 120ms ease;
+}
+.main-nav .nav-link:hover {
+  color: var(--penn-red);
+  border-bottom-color: var(--penn-red);
+}
+.main-nav .nav-disabled {
+  color: var(--muted-light);
+  cursor: not-allowed;
+}
+.main-nav .nav-disabled:hover { color: var(--muted-light); border-bottom-color: transparent; }
+
+@media (min-width: 720px) {
+  .site-header {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "institutional nav"
+      "brand brand";
+    column-gap: 2rem;
+    padding: 1.5rem 2rem 1.25rem;
+  }
+  .institutional { grid-area: institutional; }
+  .main-nav { grid-area: nav; justify-self: end; }
+  .brand { grid-area: brand; padding-top: 0.75rem; }
+}
+
+/* ===== Page wrapper ===== */
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+}
+
+/* ===== Hero (homepage) ===== */
+.hero {
+  max-width: 760px;
+  margin: 1rem 0 3.5rem;
+}
+.pillars-tagline {
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--penn-red);
+  margin: 0 0 1rem;
+  letter-spacing: -0.005em;
+}
+.hero-headline {
+  font-size: 2.75rem;
+  margin: 0 0 1.5rem;
+}
+.lead {
+  font-size: 1.2rem;
+  color: var(--ink);
+  max-width: 620px;
+  line-height: 1.5;
+}
+
+/* ===== Pillar grid ===== */
+.pillar-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin: 0 0 4rem;
+}
+@media (min-width: 720px) {
+  .pillar-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+}
+.pillar-card {
+  display: block;
+  background: var(--bg-warm);
+  padding: 1.75rem 1.5rem;
+  border-radius: 4px;
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--rule);
+  transition: border-color 150ms ease, transform 150ms ease;
+  color: var(--ink);
+}
+.pillar-card:hover {
+  transform: translateY(-2px);
+}
+.pillar-card.pillar-research { border-top-color: var(--pillar-research); }
+.pillar-card.pillar-build { border-top-color: var(--pillar-build); }
+.pillar-card.pillar-teach { border-top-color: var(--pillar-teach); }
+.pillar-card:hover.pillar-research { border-color: var(--pillar-research); }
+.pillar-card:hover.pillar-build { border-color: var(--pillar-build); }
+.pillar-card:hover.pillar-teach { border-color: var(--pillar-teach); }
+
+.pillar-name {
+  font-size: 1.4rem;
+  margin: 0 0 0.5rem;
+  color: var(--ink);
+}
+.pillar-blurb {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 0 0 1rem;
+}
+.pillar-cta {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--penn-red);
+}
+
+/* ===== Featured projects on home ===== */
+.featured h2 {
+  border-top: 1px solid var(--rule);
+  padding-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+.featured-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (min-width: 720px) {
+  .featured-list { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+}
+.featured-list li a {
+  display: block;
+  padding: 1.25rem;
+  border-left: 3px solid var(--rule);
+  background: var(--bg);
+  transition: border-color 150ms ease, background 150ms ease;
+}
+.featured-list li a:hover {
+  border-left-color: var(--penn-red);
+  background: var(--bg-warm);
+}
+.featured-list h3 { color: var(--ink); margin: 0 0 0.4rem; }
+.featured-list p { color: var(--muted); font-size: 0.95rem; margin: 0; }
+.featured-list .tags { font-size: 0.8rem; margin-top: 0.5rem; color: var(--muted-light); letter-spacing: 0.02em; text-transform: uppercase; }
+.see-all { font-size: 0.95rem; }
+
+/* ===== Page header (subpages) ===== */
+.page-header {
+  margin: 0 0 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+.page-header .lead {
+  font-size: 1.15rem;
+  margin-top: 0.75rem;
+}
+.taxonomy-kind, .workstream-badge {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin: 0 0 0.5rem;
+}
+.workstream-badge { color: var(--penn-red); }
+
+/* ===== Content list (generic) ===== */
+.content-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.content-list li {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--rule-soft);
+}
+.content-list li:last-child { border-bottom: none; }
+.content-list h2 {
+  font-size: 1.4rem;
+  margin: 0 0 0.4rem;
+  color: var(--ink);
+}
+.content-list a:hover h2 { color: var(--penn-red); }
+.content-list p { color: var(--muted); margin: 0 0 0.5rem; }
+.content-list .meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: 0.82rem;
+  color: var(--muted-light);
+}
+
+/* ===== Projects grid ===== */
+.project-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+@media (min-width: 720px) {
+  .project-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+}
+.project-card a {
+  display: block;
+  padding: 1.5rem;
+  background: var(--bg-warm);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  height: 100%;
+  transition: border-color 150ms ease, transform 150ms ease;
+}
+.project-card a:hover {
+  border-color: var(--penn-red);
+  transform: translateY(-2px);
+}
+.project-card h2 {
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem;
+  color: var(--ink);
+}
+.project-card p { color: var(--muted); font-size: 0.95rem; margin: 0 0 0.75rem; }
+.card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+}
+
+/* ===== Pillar tags ===== */
+.pillar-tag {
+  display: inline-block;
+  padding: 0.18rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  border: 1px solid currentColor;
+  margin-right: 0.4rem;
+}
+.pillar-tag.pillar-research { color: var(--pillar-research); }
+.pillar-tag.pillar-build    { color: var(--pillar-build); }
+.pillar-tag.pillar-teach    { color: var(--pillar-teach); }
+a.pillar-tag {
+  border-bottom: 1px solid currentColor;
+  text-decoration: none;
+}
+
+/* ===== Status badges ===== */
+.status {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.status-active { background: rgba(34, 139, 34, 0.1); color: #1a6b1a; }
+.status-paused { background: rgba(214, 158, 46, 0.1); color: #8a5a08; }
+.status-archived { background: rgba(85, 85, 85, 0.1); color: var(--muted); }
+.status-upcoming { background: var(--penn-red-soft); color: var(--penn-red); }
+.status-past { background: rgba(85, 85, 85, 0.08); color: var(--muted); }
+
+/* ===== Project meta dl ===== */
+.project-meta {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.5rem 1.25rem;
+  margin: 1.5rem 0 0;
+  font-size: 0.95rem;
+}
+.project-meta dt {
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  align-self: center;
+}
+.project-meta dd { margin: 0; color: var(--ink); }
+
+/* ===== Article prose ===== */
+.prose {
+  max-width: 720px;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+.prose h2 { margin-top: 2rem; }
+.prose h3 { margin-top: 1.5rem; }
+.prose ul, .prose ol { padding-left: 1.5rem; }
+.prose blockquote {
+  border-left: 3px solid var(--penn-red);
+  padding: 0.5rem 0 0.5rem 1.25rem;
+  margin: 1.5rem 0;
+  color: var(--muted);
+  font-style: italic;
+}
+.prose code {
+  background: var(--bg-warm);
+  padding: 0.1rem 0.35rem;
+  border-radius: 3px;
+  font-size: 0.92em;
+  border: 1px solid var(--rule);
+}
+.prose pre {
+  background: var(--bg-warm);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 1rem;
+  overflow-x: auto;
+  font-size: 0.9rem;
+}
+.prose pre code { background: none; border: none; padding: 0; }
+.prose hr {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 2.5rem 0;
+}
+.prose a { border-bottom: 1px solid rgba(153, 0, 0, 0.3); }
+.prose a:hover { border-bottom-color: var(--penn-red); }
+
+/* ===== Site footer ===== */
+.site-footer {
+  border-top: 1px solid var(--rule);
+  margin-top: 4rem;
+  padding: 2rem 1.5rem 3rem;
+  background: var(--bg-warm);
+}
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.footer-brand strong { color: var(--ink); font-weight: 600; font-size: 1rem; }
+.footer-meta { margin: 0.5rem 0 1rem; }
+.footer-links { margin: 0 0 1rem; font-size: 0.92rem; }
+.footer-links .sep { color: var(--rule); margin: 0 0.4rem; }
+.footer-copyright { font-size: 0.82rem; color: var(--muted-light); margin: 0; }
+
+/* ===== Mobile tweaks ===== */
+@media (max-width: 540px) {
+  body { font-size: 16px; }
+  h1 { font-size: 1.85rem; }
+  h2 { font-size: 1.35rem; }
+  .hero-headline { font-size: 2rem; }
+  .pillars-tagline { font-size: 1.2rem; }
+  .lead { font-size: 1.05rem; }
+  .page { padding: 2rem 1.25rem 3rem; }
+  .site-header { padding: 1rem 1.25rem 0.75rem; }
+  .brand-logo { max-width: 100%; }
+}

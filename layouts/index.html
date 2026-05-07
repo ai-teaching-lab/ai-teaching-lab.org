@@ -1,0 +1,38 @@
+{{ define "main" }}
+<section class="hero">
+  <p class="pillars-tagline">{{ site.Params.pillarsTagline }}</p>
+  <h1 class="hero-headline">AI for the legal profession.</h1>
+  <p class="lead">{{ site.Params.description }}</p>
+</section>
+
+<section class="pillar-grid">
+  {{ range site.Params.pillars }}
+    {{ partial "pillar-card.html" (dict "pillar" .) }}
+  {{ end }}
+</section>
+
+{{ $projects := where site.RegularPages "Section" "projects" }}
+{{ if $projects }}
+<section class="featured">
+  <h2>Projects</h2>
+  <ul class="featured-list">
+    {{ range first 6 $projects }}
+    <li>
+      <a href="{{ .RelPermalink }}">
+        <h3>{{ .Title }}</h3>
+        {{ with .Description }}<p>{{ . }}</p>{{ end }}
+        {{ with .Params.pillar }}<p class="tags">{{ delimit . " · " }}</p>{{ end }}
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+  <p class="see-all"><a href="/projects/">See all projects →</a></p>
+</section>
+{{ end }}
+
+{{ with .Content }}
+<section class="prose">
+  {{ . }}
+</section>
+{{ end }}
+{{ end }}
