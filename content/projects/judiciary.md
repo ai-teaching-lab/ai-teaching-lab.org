@@ -8,7 +8,7 @@ type: project
 workstream: "04-judiciary"
 status: active
 pillar: ["teach"]
-owner: ["Jackie", "Hailey"]
+owner: ["Jackie Wang", "Hailey Parikh"]
 github: "ai-teaching-lab/judiciary"
 ---
 

@@ -7,7 +7,7 @@ type: project
 workstream: "02-essay-grader"
 status: active
 pillar: ["research", "build"]
-owner: ["Tulio"]
+owner: ["Tulio Tagliaferri"]
 github: "ai-teaching-lab/essay-grader"
 ---
 
