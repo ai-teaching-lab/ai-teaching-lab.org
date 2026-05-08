@@ -1,0 +1,49 @@
+{{ define "main" }}
+<article class="toolkit-list">
+  <header class="page-header">
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
+    {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+  </header>
+
+  {{ $core := where .Pages "Params.toolkit_category" "core" }}
+  {{ $audience := where .Pages "Params.toolkit_category" "audience" }}
+  {{ $teaching := where .Pages "Params.toolkit_category" "teaching" }}
+
+  {{ if $core }}
+  <section class="toolkit-section">
+    <h2 class="section-heading">Core publications</h2>
+    <p class="section-lead">The Toolkit's flagship documents — the foundation of the Lab's faculty-facing work.</p>
+    <ul class="toolkit-grid">
+      {{ range $core.ByWeight }}
+        {{ partial "toolkit-card.html" . }}
+      {{ end }}
+    </ul>
+  </section>
+  {{ end }}
+
+  {{ if $audience }}
+  <section class="toolkit-section">
+    <h2 class="section-heading">Audience-specific guidance</h2>
+    <p class="section-lead">Tailored resources for students, 1Ls, and the broader Penn community.</p>
+    <ul class="toolkit-grid">
+      {{ range $audience.ByWeight }}
+        {{ partial "toolkit-card.html" . }}
+      {{ end }}
+    </ul>
+  </section>
+  {{ end }}
+
+  {{ if $teaching }}
+  <section class="toolkit-section">
+    <h2 class="section-heading">Faculty teaching resources</h2>
+    <p class="section-lead">Practical materials for faculty experimenting with AI in the classroom.</p>
+    <ul class="toolkit-grid">
+      {{ range $teaching.ByWeight }}
+        {{ partial "toolkit-card.html" . }}
+      {{ end }}
+    </ul>
+  </section>
+  {{ end }}
+</article>
+{{ end }}

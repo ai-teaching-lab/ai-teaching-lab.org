@@ -688,3 +688,368 @@ a.pillar-tag {
   .loop-statement { padding: 1.25rem 1.25rem; }
   .site-footer { padding: 2.5rem 1.25rem 2rem; }
 }
+
+/* ===== Section headings (toolkit + events landing) ===== */
+.toolkit-section,
+.events-section {
+  margin-top: 3rem;
+}
+.toolkit-section:first-of-type,
+.events-section:first-of-type {
+  margin-top: 2.5rem;
+}
+.section-heading {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.55rem;
+  margin: 0 0 0.4rem;
+  padding-left: 1rem;
+  position: relative;
+  color: var(--ink);
+}
+.section-heading::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+  width: 3px;
+  height: 1em;
+  background: var(--penn-red);
+}
+.section-lead {
+  color: var(--muted);
+  font-size: 1rem;
+  margin: 0 0 1.5rem;
+  max-width: 720px;
+}
+
+/* ===== Toolkit grid + cards ===== */
+.toolkit-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (min-width: 760px) {
+  .toolkit-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+.toolkit-card {
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  border-top: 4px solid var(--rule);
+  transition: transform 150ms ease, box-shadow 150ms ease, border-color 150ms ease;
+}
+.toolkit-card-core     { border-top-color: var(--penn-red); }
+.toolkit-card-audience { border-top-color: var(--penn-blue); }
+.toolkit-card-teaching { border-top-color: var(--pillar-build); }
+.toolkit-card a {
+  display: block;
+  padding: 1.5rem 1.5rem 1.25rem;
+  height: 100%;
+  text-decoration: none;
+  border-bottom: none;
+}
+.toolkit-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+.toolkit-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+.toolkit-card h3 {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 0.4rem 0 0.55rem;
+  color: var(--ink);
+  line-height: 1.25;
+}
+.toolkit-card p {
+  color: var(--muted);
+  font-size: 0.96rem;
+  line-height: 1.55;
+  margin: 0 0 1rem;
+}
+.toolkit-card-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  border-top: 1px solid var(--rule);
+  padding-top: 0.85rem;
+  margin-top: 1rem;
+}
+
+/* ===== Toolkit category badge ===== */
+.toolkit-category {
+  font-family: var(--sans);
+  display: inline-block;
+  padding: 0.18rem 0.55rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  color: white;
+}
+.toolkit-category-core     { background: var(--penn-red); }
+.toolkit-category-audience { background: var(--penn-blue); }
+.toolkit-category-teaching { background: var(--pillar-build); }
+
+/* ===== Toolkit version label ===== */
+.toolkit-version {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  color: var(--muted-light);
+  font-style: italic;
+}
+
+/* ===== Audience tags (shared toolkit + events) ===== */
+.audience-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+.audience-tag {
+  font-family: var(--sans);
+  display: inline-block;
+  padding: 0.14rem 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+  border-radius: 2px;
+  background: var(--rule-soft);
+  color: var(--ink-soft);
+}
+
+/* ===== Availability indicator ===== */
+.availability {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.availability-internal { color: var(--muted); }
+.availability-internal::before {
+  content: "●";
+  color: var(--warm-gold);
+  margin-right: 0.35rem;
+  font-size: 0.85em;
+}
+.availability-public { color: #1a6b1a; }
+.availability-public::before {
+  content: "●";
+  color: #1a6b1a;
+  margin-right: 0.35rem;
+  font-size: 0.85em;
+}
+.availability-upcoming { color: var(--muted-light); }
+
+/* ===== Toolkit single page meta ===== */
+.toolkit-meta,
+.event-meta {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.6rem 1.5rem;
+  margin: 1.75rem 0 0;
+  font-size: 1rem;
+  border-top: 1px solid var(--rule);
+  padding-top: 1.25rem;
+}
+.toolkit-meta dt,
+.event-meta dt {
+  font-family: var(--sans);
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  align-self: center;
+}
+.toolkit-meta dd,
+.event-meta dd { margin: 0; color: var(--ink-soft); }
+
+/* ===== Back link ===== */
+.back-link {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+  font-family: var(--sans);
+  font-size: 0.92rem;
+}
+.back-link a { color: var(--muted); border-bottom: none; }
+.back-link a:hover { color: var(--penn-red); }
+
+/* ===== Events grid + cards ===== */
+.event-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+.event-card {
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  border-left: 4px solid var(--rule);
+  transition: transform 150ms ease, box-shadow 150ms ease;
+  overflow: hidden;
+}
+.event-card-course       { border-left-color: var(--penn-red); }
+.event-card-workshop     { border-left-color: var(--pillar-build); }
+.event-card-talk         { border-left-color: var(--penn-blue); }
+.event-card-orientation  { border-left-color: var(--penn-blue); }
+.event-card-discussion   { border-left-color: var(--warm-gold); }
+.event-card a {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  padding: 0;
+  height: 100%;
+  text-decoration: none;
+  border-bottom: none;
+}
+.event-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* ===== Event date block (the calendar tear-off look) ===== */
+.event-date-block {
+  flex: 0 0 auto;
+  width: 100px;
+  padding: 1.1rem 0.6rem;
+  background: var(--bg-warm);
+  border-right: 1px solid var(--rule);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: var(--sans);
+  color: var(--ink);
+}
+.event-card-course       .event-date-block { background: var(--penn-red-tint); }
+.event-card-workshop     .event-date-block { background: var(--pillar-build-tint); }
+.event-card-talk         .event-date-block,
+.event-card-orientation  .event-date-block { background: var(--penn-blue-tint); }
+.event-card-discussion   .event-date-block { background: var(--warm-cream); }
+.event-date-month {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--penn-red);
+  margin-bottom: 0.1rem;
+}
+.event-card-workshop     .event-date-month { color: var(--pillar-build); }
+.event-card-talk         .event-date-month,
+.event-card-orientation  .event-date-month { color: var(--penn-blue); }
+.event-card-discussion   .event-date-month { color: #8a6a08; }
+.event-date-day {
+  font-family: var(--serif);
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--ink);
+}
+.event-date-recurring {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+}
+.event-date-year {
+  font-size: 0.72rem;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  margin-top: 0.25rem;
+}
+
+/* ===== Event card body ===== */
+.event-body {
+  flex: 1 1 auto;
+  padding: 1.25rem 1.5rem 1.25rem;
+  min-width: 0;
+}
+.event-card-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.4rem;
+}
+.event-card h3 {
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  font-weight: 500;
+  margin: 0.3rem 0 0.55rem;
+  color: var(--ink);
+  line-height: 1.25;
+}
+.event-card p {
+  color: var(--muted);
+  font-size: 0.96rem;
+  line-height: 1.55;
+  margin: 0 0 0.85rem;
+}
+
+/* ===== Event type badge ===== */
+.event-type {
+  font-family: var(--sans);
+  display: inline-block;
+  padding: 0.14rem 0.55rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  color: white;
+}
+.event-type-course       { background: var(--penn-red); }
+.event-type-workshop     { background: var(--pillar-build); }
+.event-type-talk         { background: var(--penn-blue); }
+.event-type-orientation  { background: var(--penn-blue); }
+.event-type-discussion   { background: var(--warm-gold); }
+.event-dates {
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* Mobile: stack date block above body */
+@media (max-width: 600px) {
+  .event-card a {
+    flex-direction: column;
+  }
+  .event-date-block {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--rule);
+    flex-direction: row;
+    gap: 0.7rem;
+    padding: 0.8rem 1rem;
+    justify-content: flex-start;
+  }
+  .event-date-day { font-size: 1.55rem; }
+  .event-date-recurring { font-size: 1rem; }
+  .event-date-year { margin-top: 0; }
+}

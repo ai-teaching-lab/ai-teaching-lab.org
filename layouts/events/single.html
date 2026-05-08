@@ -1,0 +1,23 @@
+{{ define "main" }}
+{{ $type := .Params.event_type | default "event" }}
+{{ $recurring := eq .Params.event_status "recurring" }}
+<article class="event-single">
+  <header class="page-header">
+    <span class="event-type event-type-{{ $type }}">{{ $type }}</span>
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
+    <dl class="event-meta">
+      {{ with .Params.event_dates }}<dt>When</dt><dd>{{ . }}</dd>{{ end }}
+      {{ if $recurring }}<dt>Status</dt><dd>Recurring</dd>{{ end }}
+      {{ with .Params.audience }}
+      <dt>Audience</dt>
+      <dd>{{ if reflect.IsSlice . }}{{ delimit . ", " }}{{ else }}{{ . }}{{ end }}</dd>
+      {{ end }}
+    </dl>
+  </header>
+  <div class="prose">
+    {{ .Content }}
+  </div>
+  <p class="back-link"><a href="/events/">← All events</a></p>
+</article>
+{{ end }}

@@ -1,0 +1,27 @@
+{{ define "main" }}
+{{ $cat := .Params.toolkit_category | default "core" }}
+<article class="toolkit-single">
+  <header class="page-header">
+    <span class="toolkit-category toolkit-category-{{ $cat }}">
+      {{ if eq $cat "core" }}Core publication{{ else if eq $cat "audience" }}Audience-specific{{ else if eq $cat "teaching" }}Faculty teaching{{ else }}{{ $cat }}{{ end }}
+    </span>
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
+    <dl class="toolkit-meta">
+      {{ with .Params.version }}<dt>Version</dt><dd>{{ . }}</dd>{{ end }}
+      {{ with .Params.audience }}
+      <dt>Audience</dt>
+      <dd>{{ if reflect.IsSlice . }}{{ delimit . ", " }}{{ else }}{{ . }}{{ end }}</dd>
+      {{ end }}
+      {{ with .Params.availability }}
+      <dt>Availability</dt>
+      <dd><span class="availability availability-{{ . }}">{{ if eq . "internal" }}Penn-internal{{ else if eq . "public" }}Public{{ else }}{{ . }}{{ end }}</span></dd>
+      {{ end }}
+    </dl>
+  </header>
+  <div class="prose">
+    {{ .Content }}
+  </div>
+  <p class="back-link"><a href="/toolkit/">← All Toolkit resources</a></p>
+</article>
+{{ end }}

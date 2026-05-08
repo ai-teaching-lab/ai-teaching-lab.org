@@ -1,0 +1,33 @@
+{{ define "main" }}
+<article class="events-list">
+  <header class="page-header">
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
+    {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+  </header>
+
+  {{ $upcoming := where .Pages "Params.event_status" "upcoming" }}
+  {{ $rest := where .Pages "Params.event_status" "!=" "upcoming" }}
+
+  {{ if $upcoming }}
+  <section class="events-section">
+    <h2 class="section-heading">Upcoming</h2>
+    <ul class="event-grid">
+      {{ range $upcoming.ByDate }}
+        {{ partial "event-card.html" . }}
+      {{ end }}
+    </ul>
+  </section>
+  {{ end }}
+
+  <section class="events-section">
+    <h2 class="section-heading">{{ if $upcoming }}Recent and past{{ else }}Recent and past events{{ end }}</h2>
+    <p class="section-lead">A summer 2026 events calendar will be posted as it firms up.</p>
+    <ul class="event-grid">
+      {{ range $rest.ByDate.Reverse }}
+        {{ partial "event-card.html" . }}
+      {{ end }}
+    </ul>
+  </section>
+</article>
+{{ end }}

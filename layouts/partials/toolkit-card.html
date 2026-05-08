@@ -1,0 +1,25 @@
+{{ $cat := .Params.toolkit_category | default "core" }}
+<li class="toolkit-card toolkit-card-{{ $cat }}">
+  <a href="{{ .RelPermalink }}">
+    <div class="toolkit-card-head">
+      <span class="toolkit-category toolkit-category-{{ $cat }}">
+        {{ if eq $cat "core" }}Core{{ else if eq $cat "audience" }}Audience{{ else if eq $cat "teaching" }}Teaching{{ else }}{{ $cat }}{{ end }}
+      </span>
+      {{ with .Params.version }}<span class="toolkit-version">{{ . }}</span>{{ end }}
+    </div>
+    <h3>{{ .Title }}</h3>
+    {{ with .Description }}<p>{{ . }}</p>{{ end }}
+    <div class="toolkit-card-foot">
+      {{ with .Params.audience }}
+      <div class="audience-tags">
+        {{ range . }}<span class="audience-tag">{{ . }}</span>{{ end }}
+      </div>
+      {{ end }}
+      {{ with .Params.availability }}
+      <span class="availability availability-{{ . }}">
+        {{ if eq . "internal" }}Penn-internal{{ else if eq . "public" }}Public{{ else if eq . "upcoming" }}Coming soon{{ else }}{{ . }}{{ end }}
+      </span>
+      {{ end }}
+    </div>
+  </a>
+</li>
