@@ -7,21 +7,7 @@
   </header>
   <ul class="project-grid">
     {{ range .Pages }}
-    <li class="project-card">
-      <a href="{{ .RelPermalink }}">
-        {{ with .Params.workstream }}<p class="workstream-badge">{{ . }}</p>{{ end }}
-        <h2>{{ .Title }}</h2>
-        {{ with .Description }}<p>{{ . }}</p>{{ end }}
-        <div class="card-meta">
-          {{ with .Params.pillar }}
-          <div class="pillar-tags">
-            {{ range . }}<span class="pillar-tag pillar-{{ . }}">{{ . }}</span>{{ end }}
-          </div>
-          {{ end }}
-          {{ with .Params.status }}<span class="status status-{{ . }}">{{ . }}</span>{{ end }}
-        </div>
-      </a>
-    </li>
+      {{ partial "project-card.html" . }}
     {{ end }}
   </ul>
 </article>

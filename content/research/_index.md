@@ -1,12 +1,9 @@
 ---
 title: "Research"
 description: "Empirical and applied research on how AI affects legal education and practice."
+layout: "pillar"
 ---
 
 The Lab's *research* pillar studies what AI can and cannot do in law school, in practice, and on the bench. We run controlled experiments, analyze data from real teaching environments, and produce empirical findings that inform what gets built next.
 
-Examples of work in this pillar: AI exam-taking and grading studies; judicial AI use-case research; course-material best-practices research; faculty-experience surveys.
-
-## Active research
-
-Project pages tagged `research` will appear below.
+The research feeds the rest of the Lab: findings shape what the Build pillar makes, and what the Teach pillar takes out into the field. The loop closes when teaching and tool use surface the next questions worth studying.

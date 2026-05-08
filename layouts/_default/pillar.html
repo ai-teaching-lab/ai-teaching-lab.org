@@ -1,0 +1,36 @@
+{{ define "main" }}
+{{ $pillar := .Section }}
+<article class="pillar-landing pillar-landing-{{ $pillar }}">
+  <header class="page-header">
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
+    {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+  </header>
+
+  {{ $projects := where (where site.RegularPages "Section" "projects") "Params.pillar" "intersect" (slice $pillar) }}
+
+  {{ if $projects }}
+  <section class="pillar-projects">
+    <h2 class="section-heading">Projects in {{ .Title }}</h2>
+    <p class="section-lead">Workstreams the Lab is running under the {{ lower .Title }} pillar — including projects that span multiple pillars.</p>
+    <ul class="project-grid">
+      {{ range $projects }}
+        {{ partial "project-card.html" . }}
+      {{ end }}
+    </ul>
+  </section>
+  {{ end }}
+
+  {{ $otherPillars := where site.Params.pillars "ne" $pillar }}
+  {{ if $otherPillars }}
+  <section class="pillar-cross-link">
+    <p class="cross-link-text">
+      Explore the other pillars:
+      {{ range $i, $other := $otherPillars }}
+        {{ if $i }} · {{ end }}<a href="/{{ $other }}/" class="pillar-tag pillar-{{ $other }}">{{ $other }}</a>
+      {{ end }}
+    </p>
+  </section>
+  {{ end }}
+</article>
+{{ end }}
