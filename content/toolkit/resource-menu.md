@@ -14,8 +14,6 @@ The Toolkit's landing page for Penn Carey Law faculty — a single document that
 
 Most of these documents are revised continuously. Check back for new versions.
 
-**Persistent shortlink to the internal Resource Menu:** [bit.ly/PennLaw_AI_Resources](https://bit.ly/PennLaw_AI_Resources)
-
 ## The four core publications
 
 ### Best Practices for AI in Legal Education

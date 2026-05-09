@@ -12,7 +12,7 @@ version: "September 2024; revised May 2026 (Eddie-reviewed 2026-05-09)"
 
 A practical onboarding guide for faculty getting started with general-purpose AI tools — how to set up ChatGPT and Claude accounts, which data-privacy settings to check before uploading anything sensitive, and a starter set of research use cases.
 
-The most current version is maintained at the persistent shortlink <https://bit.ly/Faculty_AI_Guide>; this page is the migrated copy.
+This page is the canonical version, maintained on the Lab's public site.
 
 ## Faculty Retreat presentation
 
