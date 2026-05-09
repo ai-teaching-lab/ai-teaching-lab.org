@@ -11,9 +11,9 @@
         {{ range site.Menus.main }}
         <li>
           {{- if .Params.placeholder -}}
-            <a class="nav-link nav-disabled" title="Newsletter coming soon">{{ .Name }}{{ if .Params.external }}<span aria-hidden="true"> ↗</span>{{ end }}</a>
+            <span class="nav-link nav-disabled" aria-disabled="true" title="Newsletter coming soon">{{ .Name }}{{ if .Params.external }}<span aria-hidden="true"> ↗</span>{{ end }}</span>
           {{- else -}}
-            <a class="nav-link" href="{{ .URL }}"{{ if .Params.external }} target="_blank" rel="noopener"{{ end }}>{{ .Name }}{{ if .Params.external }}<span aria-hidden="true"> ↗</span>{{ end }}</a>
+            <a class="nav-link" href="{{ .URL }}"{{ if .Params.external }} target="_blank" rel="noopener"{{ end }}>{{ .Name }}{{ if .Params.external }}<span aria-hidden="true"> ↗</span><span class="sr-only"> (opens in new tab)</span>{{ end }}</a>
           {{- end -}}
         </li>
         {{ end }}
