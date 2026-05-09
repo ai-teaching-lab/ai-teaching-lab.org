@@ -5,6 +5,7 @@ date: 2026-05-09
 draft: false
 type: project
 cluster: "assessment-tools"
+weight: 10
 workstream: "02-assessment-tools/exam-grader"
 status: active
 pillar: ["build", "research"]

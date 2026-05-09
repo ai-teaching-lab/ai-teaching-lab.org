@@ -1,7 +1,6 @@
 {{ define "main" }}
 <article class="project-single">
   <header class="page-header">
-    {{ with .Params.workstream }}<p class="workstream-badge">Workstream {{ . }}</p>{{ end }}
     <h1>{{ .Title }}</h1>
     {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
     <dl class="project-meta">

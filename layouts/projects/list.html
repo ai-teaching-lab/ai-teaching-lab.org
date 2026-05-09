@@ -18,7 +18,7 @@
     <h2 class="section-heading">Assessment Tools</h2>
     <p class="section-lead">AI on both sides of the law-school exam — taking, grading, and helping faculty write better questions.</p>
     <ul class="project-grid">
-      {{ range $assessment }}
+      {{ range $assessment.ByWeight }}
         {{ partial "project-card.html" . }}
       {{ end }}
     </ul>
@@ -30,7 +30,7 @@
     <h2 class="section-heading">Teaching Tools</h2>
     <p class="section-lead">The connective tissue of a course — extraction, casebooks, virtual TAs, simulations, and the templates that hold them together.</p>
     <ul class="project-grid">
-      {{ range $teaching }}
+      {{ range $teaching.ByWeight }}
         {{ partial "project-card.html" . }}
       {{ end }}
     </ul>

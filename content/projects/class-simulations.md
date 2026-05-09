@@ -6,6 +6,7 @@ lastmod: 2026-05-09
 draft: false
 type: project
 cluster: "teaching-tools"
+weight: 50
 workstream: "03-teaching-tools/class-simulations"
 status: planning
 pillar: ["build", "research"]

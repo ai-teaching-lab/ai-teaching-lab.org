@@ -6,6 +6,7 @@ lastmod: 2026-05-09
 draft: false
 type: project
 cluster: "teaching-tools"
+weight: 10
 workstream: "03-teaching-tools/course-materials"
 status: active
 pillar: ["build", "teach"]

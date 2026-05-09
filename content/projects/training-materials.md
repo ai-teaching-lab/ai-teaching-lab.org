@@ -13,14 +13,14 @@ owner: ["TBD"]
 github: "ai-teaching-lab/training-materials"
 ---
 
-Training Materials produces a complete AI training package for legal-education audiences — modules, exercises, microsites, and the accompanying media — and pitches a cross-Penn version of the same package in collaboration with Bhuv Jain.
+Training Materials produces a complete AI training package for legal-education audiences — modules, exercises, microsites, and the accompanying media — and pitches a cross-Penn version of the same package in collaboration with Bhuvnesh Jain.
 
 The reference output is the Legal Education at Model Velocity microsite: four modules, a cloned-voice podcast, a NotebookLM audio overview, and a stack of PDF summaries. This project's job is to keep producing work in that mold and to widen its audience.
 
 ## What we're doing
 
 - Ship new training packages on a regular cadence — each one a self-contained module set with companion audio, PDFs, and a public microsite.
-- Develop the cross-Penn proposal with Bhuv Jain: a training program that serves Penn audiences beyond the law school, building on the same content engine.
+- Develop the cross-Penn proposal with Bhuvnesh Jain: a training program that serves Penn audiences beyond the law school, building on the same content engine.
 - Use the Course-Website Tooling layer to keep production cost low — each new package should reuse the templating, not rebuild from scratch.
 
 ## Why this matters
@@ -29,4 +29,4 @@ Faculty, students, staff, and judges all need training that engages with how AI 
 
 ## Status
 
-Active. The Legal Education microsite is shipped; next packages are in scoping. Cross-Penn proposal with Bhuv Jain is in early conversation.
+Active. The Legal Education microsite is shipped; next packages are in scoping. Cross-Penn proposal with Bhuvnesh Jain is in early conversation.

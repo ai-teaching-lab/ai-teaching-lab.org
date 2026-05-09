@@ -5,6 +5,7 @@ date: 2026-05-09
 draft: false
 type: project
 cluster: "assessment-tools"
+weight: 30
 workstream: "02-assessment-tools/essay-creator"
 status: active
 pillar: ["build", "teach"]

@@ -5,6 +5,7 @@ date: 2026-05-09
 draft: false
 type: project
 cluster: "teaching-tools"
+weight: 30
 workstream: "03-teaching-tools/course-website-tooling"
 status: planning
 pillar: ["build", "teach"]
