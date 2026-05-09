@@ -6,8 +6,8 @@ lastmod: 2026-05-09
 weight: 10
 toolkit_category: "core"
 audience: ["faculty", "student"]
-availability: "internal"
-version: "August 2025; revised for migration May 2026"
+availability: "public"
+version: "August 2025; revised for migration May 2026 (Eddie-reviewed 2026-05-09)"
 ---
 
 The Lab's flagship faculty-facing document. Organizes student and faculty AI use cases by activity type and academic setting; covers AI training pipelines, efficacy assessment, academic standards, ethical considerations, access and equity, and a glossary of terms.
@@ -18,7 +18,7 @@ Revised regularly as the field moves.
 
 In summer 2023, the AI Law Lab at the University of Pennsylvania Carey Law School began a sustained research effort to understand how generative AI tools could be integrated into legal education.
 
-"Generative AI tools" covers many platforms capable of generating content — textual, visual, auditory, or interactive. Our focus has been on tools that use natural language processing (NLP) to generate and classify text or answer questions conversationally. Some are general-purpose; others are built specifically for the legal domain. General-purpose tools include ChatGPT, Claude, Gemini, DALL-E, and Elicit. Legal-specific tools include Westlaw CoCounsel, Lexis Protégé, Bloomberg Law AI, Harvey, and Spellbook. Throughout these materials, "AI tool" refers to both general and legal-specific text-based generative AI tools.
+"Generative AI tools" covers many platforms capable of generating content — textual, visual, auditory, or interactive. Our focus is on tools that use natural language processing (NLP) to generate and classify text or answer questions conversationally. Some are general-purpose; others are built specifically for the legal domain. General-purpose tools include ChatGPT, Claude, Gemini, and Elicit. Legal-specific tools include Westlaw CoCounsel, Lexis+ with Protégé, Bloomberg Law's AI Assistant, Harvey, and Spellbook. Throughout these materials, "AI tool" refers to both general and legal-specific text-based generative AI tools.
 
 This document makes recommendations across four domains:
 
@@ -57,11 +57,11 @@ Students may want to use AI tools in different law school settings — during in
 
 | Setting | Student usage |
 |---|---|
-| **Doctrinal coursework** (most 1L classes, often Socratic) | Proceed with extreme caution when using AI in traditional doctrinal coursework, especially as a 1L. A core part of being a successful law student is learning to navigate case readings and in-class dialogue (including the Socratic method) in a traditional doctrinal setting. AI in this context can be both detrimental to learning and distracting. <br><br>AI is well-suited to supplement doctrinal learning *outside* class. It can help work through concepts, ask questions, or clarify your understanding of class material. It's also useful for exam prep — generate multiple choice questions or fact patterns to test yourself; ask it to decode or analyze practice exams; ask for study tips for a specific subject. Effective use depends on knowing how to [prompt]({{< ref "/toolkit/prompt-guide" >}}) the tool. You can also create a custom GPT or Claude Project with specific instructions and your class materials uploaded — generating review materials from a more or less "closed universe" reduces the chance of hallucination. |
-| **Research & writing courses** | The Penn Carey Law Legal Practice Skills faculty are well-versed in the capabilities and pitfalls of AI tools for legal writing. Some LPS faculty use AI in class — for demonstrations, or as one of several research tools. Possible uses include researching the elements of a cause of action, tightening writing, and generating rough first drafts of legal analysis. <br><br>In other courses, faculty may discuss the acceptable ways students may use AI — brainstorming paper topics, working on sentence structure, editing, generating first drafts. If your professor doesn't address AI use upfront, ask. |
+| **Doctrinal coursework** (most 1L classes, often Socratic) | Proceed with extreme caution when using AI in traditional doctrinal coursework, especially as a 1L. A core part of being a successful law student is learning to navigate case readings and in-class dialogue (including the Socratic method) in a traditional doctrinal setting. Heavy reliance on AI in this context risks displacing the core skills 1L doctrinal courses are designed to build, and can be a source of in-class distraction. <br><br>AI is well-suited to supplement doctrinal learning *outside* class. It can help work through concepts, ask questions, or clarify your understanding of class material. It's also useful for exam prep — generate multiple choice questions or fact patterns to test yourself; ask it to decode or analyze practice exams; ask for study tips for a specific subject. Effective use depends on knowing how to [prompt]({{< ref "/toolkit/prompt-guide" >}}) the tool. You can also create a custom GPT or Claude Project with specific instructions and your class materials uploaded — generating review materials from a more or less "closed universe" reduces the chance of hallucination. |
+| **Research & writing courses** | Research and writing courses vary in their AI policies. Some Legal Practice Skills faculty have integrated AI into instruction — for demonstrations, or as one of several research tools — while others have not. Possible classroom uses include researching elements of a cause of action, tightening writing, and generating rough first drafts of legal analysis. <br><br>In other courses, faculty may discuss the acceptable ways students may use AI — brainstorming paper topics, working on sentence structure, editing, generating first drafts. Always follow your individual instructor's policy. If your professor doesn't address AI use upfront, ask. |
 | **Clinics, seminars, journals, other coursework** | Non-doctrinal courses, including research and experiential coursework, may allow more AI use depending on the professor's policy and the nature of the course. If the professor doesn't address AI use upfront, ask. <br><br>See the [Prompt Guide]({{< ref "/toolkit/prompt-guide" >}}) for more on getting good results. |
 | **Upper-division coursework** | Compared with 1L doctrinal courses, upper-division courses generally have more room for AI use, particularly to learn content. By the time students reach upper-level coursework, they should be able to identify where AI tools perform well (summarizing, editing, quickly learning content at a high level) and where they don't (learning professor-specific takeaways, navigating complex doctrine). |
-| **Use outside class** | AI tools help work through concepts, ask questions, or clarify understanding. Effective use depends on prompting — see the [Prompt Guide]({{< ref "/toolkit/prompt-guide" >}}). <br><br>Specific ways to use AI tools when studying for class: <br>1. Summarizing cases — as a substitute for Quimbee or Lexis briefs <br>2. Generating multiple choice questions or fact patterns to test your knowledge <br>3. Decoding or analyzing practice exams ("why is xyz concept true") <br>4. Getting real-life examples <br>5. Generating study tips for a specific subject <br>6. Speeding up outline creation |
+| **Use outside class** | AI tools help work through concepts, ask questions, or clarify understanding. Effective use depends on prompting — see the [Prompt Guide]({{< ref "/toolkit/prompt-guide" >}}). <br><br>These uses can supplement, but should not replace, the core synthesis work of summarizing and outlining yourself — the synthesis is much of the learning. With that caveat, specific ways to use AI tools when studying for class: <br>1. Summarizing cases — as a check on your own reading, not a substitute for it <br>2. Generating multiple choice questions or fact patterns to test your knowledge <br>3. Decoding or analyzing practice exams ("why is xyz concept true") <br>4. Getting real-life examples <br>5. Generating study tips for a specific subject <br>6. Stress-testing an outline you've already drafted |
 
 ## Use Cases for Faculty
 
@@ -77,15 +77,15 @@ Many of the student use cases above have faculty counterparts.
 
 ## How AI Tools Are Trained
 
-AI tools are trained in a three-step process — training, validating, and testing:
+AI tools are built in three stages — training, validation, and testing:
 
-1. **Training.** Feed curated data into an algorithm to produce predictions.
-2. **Validating.** Evaluate how well the trained model performs on the training data (training error) and on new curated data (testing error).
-3. **Testing.** Assess prediction accuracy on real-world data.
+1. **Training.** Fit model parameters to a labeled training dataset.
+2. **Validation.** Evaluate the model on a held-out validation set to tune hyperparameters and choose between candidate models.
+3. **Testing.** Assess final performance on a separate test set the model has never seen.
 
-For example, ChatGPT is built on the GPT family of models — **Generative Pre-trained Transformer**. The name is revealing: these systems (1) generate results, (2) are pre-trained on large corpora, and (3) use the transformer architecture to self-weight text inputs to "understand" text and infer meaning and context. ChatGPT later introduced Reinforcement Learning from Human Feedback (RLHF), which incorporates human feedback into the training process to fine-tune the system for conversational use. Claude (Anthropic) uses related techniques, including Constitutional AI methods that build on RLHF.
+For example, ChatGPT is built on the GPT family of models — **Generative Pre-trained Transformer**. The name is revealing: these systems (1) generate results, (2) are pre-trained on large corpora, and (3) use the transformer architecture to self-weight text inputs to "understand" text and infer meaning and context. OpenAI's InstructGPT and ChatGPT used Reinforcement Learning from Human Feedback (RLHF), a technique that incorporates human ratings into the training loop to fine-tune the system for helpful, conversational responses. Claude (Anthropic) uses related alignment techniques, including Constitutional AI, which trains models against a written set of principles using AI-generated feedback in addition to (or in place of) human ratings.
 
-Training is critical. Done poorly, it produces classic failure modes — overfitting (the model performs well on training data but poorly on new data) and underfitting (poor performance on both). Because AI algorithms imitate the world they were trained on, performance depends heavily on the quality and accuracy of the training data. Good training requires high-quality, accurate data that reflects current society.
+Training is critical. Done poorly, it produces classic failure modes — overfitting (the model performs well on training data but poorly on new data) and underfitting (poor performance on both). Because AI algorithms imitate the world they were trained on, performance is determined by the quality and accuracy of the training data. Good training requires data that is high-quality, accurate, and broadly representative of the domains the model is expected to handle.
 
 General-purpose AI tools like ChatGPT and Claude are trained on enormous text collections — books, articles, Wikipedia, and large web datasets like Common Crawl. As companies acquire access to better training data, the tools improve. AI platforms can also be trained or supplemented with domain-specific materials — most relevantly here, legal materials. These law-specific tools work better in legal contexts because they're trained on focused legal corpora and may be limited to particular legal tasks. The validation process is more refined because the model is trained and validated on text within a narrow legal corpus. (These tools remain early in development and require careful use.) General-purpose tools are typically less effective on specific legal questions because their training data is so broad — better for general questions and brainstorming, less reliable on complex legal nuance.
 
@@ -99,7 +99,7 @@ AI tools work best when paired with human expertise, critical thinking, and lega
 
 AI is a tool, like textbooks, lecture slides, reference works, or websites. Like any other tool, it's best practice to be clear about what is and isn't allowed.
 
-**We strongly recommend that faculty include an AI usage policy in class syllabi.** See the Lab's [Syllabus Guide]({{< ref "/toolkit/syllabus-guide" >}}) for templates and examples.
+Including an AI usage policy in the syllabus is an effective way to set expectations clearly. See the Lab's [Syllabus Guide]({{< ref "/toolkit/syllabus-guide" >}}) for templates and examples.
 
 **For students, the most important consideration is the faculty member's policy:**
 
@@ -113,21 +113,21 @@ AI is a tool, like textbooks, lecture slides, reference works, or websites. Like
 
 AI tools raise important ethical issues. Responsible use requires awareness of bias embedded in algorithms — if a model is trained on data containing bias against a group, the model's decisions and outputs will reflect that bias. Lack of transparency and accountability are related challenges. Many AI tools are technically opaque — "black box" models — meaning the internal algorithmic process isn't visible to the user, which makes it hard to examine why a particular output appeared. That opacity makes it harder to detect and address bias and discrimination, which is why human discretion remains essential when using AI-generated content.
 
-AI tools also raise specific challenges for lawyers, who operate under a professional code that requires high standards of accuracy, accountability, and reliability. Anything a lawyer says or writes in a professional context — especially in court — must be accurate, complete, justifiable, and truthful. Lawyers are particularly exposed to AI weaknesses because models hallucinate — they generate factually incorrect, fabricated, or sometimes nonsensical information that looks plausible. Many attorneys have been sanctioned since 2023 for using AI to draft court filings and not verifying the citations or representations of law before filing.
+AI tools also raise specific challenges for lawyers, who operate under a professional code that requires high standards of accuracy, accountability, and reliability. Anything a lawyer says or writes in a professional context — especially in court — must be accurate, complete, justifiable, and truthful. Lawyers are particularly exposed to AI weaknesses because models hallucinate — they generate factually incorrect, fabricated, or sometimes nonsensical information that looks plausible. Many attorneys have been sanctioned since 2023 — beginning with the high-profile *Mata v. Avianca* matter — for filing briefs containing AI-generated fabricated citations they did not verify. Damien Charlotin's [AI Hallucination Cases Database](https://www.damiencharlotin.com/hallucinations/) maintains an ongoing tally.
 
-Practicing lawyers also need to comply with confidentiality and client-data privacy rules. Inputting client information into a public AI tool may break attorney-client privilege, depending on the tool and on who can see prompts on the company's end. Many law firms have prohibited attorneys from using publicly-available AI tools for these reasons. Firms are increasingly developing internal AI tools by partnering with technology companies (e.g., [Dentons' partnership with Legora](https://legora.com/blog/dentons-partnership)).
+Practicing lawyers also need to comply with confidentiality and client-data privacy rules. Inputting client information into a public AI tool may break attorney-client privilege, depending on the tool and on who can see prompts on the company's end. Many law firms initially prohibited attorneys from using publicly-available AI tools for these reasons, and many continue to restrict such use even as they roll out internal, enterprise-grade alternatives.
 
 ## Access and Resources
 
 ### How to get access
 
-Most legal AI tools are subscription-based and require credentials, but law students have several free options: ChatGPT, Claude, Gemini, and Microsoft Copilot. Starting in Fall 2025, 1L students and some others (TAs, Littleton Fellows, etc.) get access to ChatGPT Edu accounts through the Law School. Westlaw CoCounsel and Lexis Protégé are also available as part of the Law School's subscriptions.
+Most legal AI tools are subscription-based and require credentials, but law students have several free options: ChatGPT, Claude, Gemini, and Microsoft Copilot. Starting in Fall 2025, 1L students, teaching assistants for 1L courses, and Littleton Fellows receive ChatGPT Edu accounts through the Law School. Westlaw CoCounsel and Lexis+ with Protégé are also available as part of the Law School's subscriptions.
 
 ### Training resources
 
 The Lab maintains an evolving set of training materials and workshops for Penn Carey Law students and faculty. See the [Toolkit landing page]({{< ref "/toolkit" >}}) for current offerings.
 
-Useful external resources include Penn professor Ethan Mollick's YouTube series ["Practical AI for Students and Instructors"](https://www.youtube.com/watch?v=t9gmyvf7JYo) and his AI blog [One Useful Thing](https://www.oneusefulthing.org/).
+Useful external resources include Wharton professor Ethan Mollick's YouTube series ["Practical AI for Instructors and Students"](https://www.youtube.com/playlist?list=PL0EdWFC9ZZrUAirFa2amE4Hg05KqCWhoq) and his AI blog [One Useful Thing](https://www.oneusefulthing.org/).
 
 ### Equity considerations
 
@@ -141,7 +141,7 @@ Beyond access and knowledge, AI tools themselves contain biases and knowledge ga
 
 **Generative AI** — a broad term for any AI system that *generates* content.
 
-**Foundation models** — large artificial neural networks pre-trained on large datasets *without a particular end-use in mind*. The term was popularized by the Stanford Center for Research on Foundation Models to describe the shift toward fundamental underlying models that drive many specific applications. Earlier AI models were trained on task-specific data for narrow uses.
+**Foundation models** — large artificial neural networks pre-trained on large datasets *without a particular end-use in mind*. The term was coined by researchers at Stanford's [Center for Research on Foundation Models](https://crfm.stanford.edu/) in 2021 to describe the shift toward fundamental underlying models that drive many specific applications. Earlier AI models were trained on task-specific data for narrow uses.
 
 **Large language models (LLMs)** — a subset of foundation models focused on text data and natural language tasks. Typically classified by parameter count and by the amount and type of training data. The GPT family (OpenAI) and Claude (Anthropic) are examples; ChatGPT and Claude.ai are direct interfaces to those underlying LLMs.
 
@@ -166,4 +166,4 @@ This document is maintained by:
 
 ## Status
 
-Maintained internally for the Penn Carey Law community. Public release pending review. As the Lab's flagship faculty resource, this document is updated regularly to reflect the current state of AI in legal education.
+The Lab's flagship faculty resource, updated regularly to reflect the current state of AI in legal education. Comments and suggestions: <pwagner@law.upenn.edu>.

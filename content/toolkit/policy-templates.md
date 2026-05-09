@@ -5,13 +5,15 @@ date: 2024-08-01
 weight: 240
 toolkit_category: "teaching"
 audience: ["faculty"]
-availability: "internal"
-version: "Fall 2024; revised for migration May 2026"
+availability: "public"
+version: "Fall 2024; revised May 2026 (Eddie-reviewed 2026-05-09)"
 ---
 
-Professor Struve's attribution-and-disclosure model for generative AI in a writing-intensive seminar, with sample AI-use disclosures students can adapt to specific use cases. The framework treats AI as a tool that requires attribution and process transparency rather than as a capability to be banned outright.
+Professor Struve's attribution-and-disclosure model for generative AI in a writing-intensive seminar, with sample AI-use disclosures students can adapt to specific use cases. The framework treats AI as a tool that requires attribution and process transparency.
 
-The sample syllabus language and AI-use disclosures below are reproduced verbatim from Professor Struve's draft seminar syllabus. The value of this document is in the exact wording — faculty are expected to copy the blocks, adapt them to their courses, and adjust the citations and Canvas references as needed. Editorial commentary frames each block; the blocks themselves are not edited.
+**Scope.** These templates reflect individual-faculty syllabus language drafted by Professor Struve and reproduced here as a reference. They are *not* Penn Carey Law's institutional AI policy and have not been adopted by the Office of Academic Affairs, the Curriculum Committee, or the Office of Student Conduct. Each faculty member is responsible for the AI policy in their own course; students should rely on the syllabus they receive, not on this page.
+
+The syllabus language is reproduced from Professor Struve's draft seminar syllabus. The sample AI-use disclosures were originally generated in a dialogue with ChatGPT and have been edited for accuracy and pedagogical clarity. Faculty using these templates should copy the blocks where the wording is doing work, then adapt citations, Canvas references, and use cases to their own courses. **Note on illustrative citations:** the sample disclosures below contain bracketed placeholders for case names, articles, and authors (e.g., `[Author, Title, Vol. Journal Page (Year)]`). Replace each placeholder with a real source you have read and verified before submitting work.
 
 ## The framework
 
@@ -25,11 +27,11 @@ Three ideas drive the policy:
 
 ### Attribution and AI use (drop-in syllabus block)
 
-> **Attribution.** You must make sure to provide proper attribution of all sources that you use in your paper. You must read and comply with Section 1(b)(3) of the Law School's Code of Student Conduct and Responsibility[^1] and the Law School Policy on Plagiarism.[^2] As the Policy explains, plagiarism is the use of "another's words or ideas without attribution." It is important to have a good understanding of how this translates into actual practice. For this purpose, we ask that you read the University of Wisconsin–Madison Writing Center's handout titled "Acknowledging, Paraphrasing, and Quoting Sources," available at <https://writing.wisc.edu/wp-content/uploads/sites/535/2018/07/Acknowledging_Sources.pdf>.
+> **Attribution.** You must make sure to provide proper attribution of all sources that you use in your paper. You must read and comply with Section I.B.3 of the Law School's Code of Student Conduct and Responsibility[^1] and the Law School Policy on Plagiarism.[^2] As the Policy explains, plagiarism is the use of "another's words or ideas without attribution." It is important to have a good understanding of how this translates into actual practice. For this purpose, we ask that you read the University of Wisconsin–Madison Writing Center's handout titled "Acknowledging, Paraphrasing, and Quoting Sources," available at <https://dept.writing.wisc.edu/wac/acknowledging-paraphrasing-and-quoting-sources/>.
 >
 > **Generative AI.** This paragraph contains our policy on your use of generative AI in connection with this seminar. You need not use generative AI in connection with your work for this seminar. If you do use generative AI, you must provide proper attribution (under the standards discussed in the preceding paragraph) for any language that generative AI supplies to you (whether your use of that language consists of a quote or merely a close paraphrase). And, of course, you are responsible for scrutinizing (and ensuring the accuracy of) any ideas or information that generative AI provides to you. Also, if you use generative AI in connection with your assigned work in this seminar (whether that is the two-page paper, your class presentation, the outline of your final research paper, or your final research paper itself), when you hand in (or present) the work in connection with which you used generative AI you must include an "AI use statement" that explains how and when you used the generative AI.[^3]
 
-[^1]: This provision bars "purposeful[], knowing[], or reckless[]" plagiarism "in an academic pursuit[,] including any use of another's work without attribution, whether such use be verbatim or merely conceptual or structural." See <https://www.law.upenn.edu/students/policies/conduct-and-responsibility.php>.
+[^1]: This provision bars "intentional[], knowing[], or reckless[]" plagiarism "in an academic pursuit[,] including any use of another's work without attribution, whether such use be verbatim or merely conceptual or structural." See <https://www.law.upenn.edu/students/policies/conduct-and-responsibility.php>.
 
 [^2]: The Policy is available at <https://www.law.upenn.edu/students/policies/conduct-and-responsibility.php>.
 
@@ -89,7 +91,7 @@ These were originally generated through a dialogue with ChatGPT (model o3) about
 
 > **AI use statement for presentation slides submitted 3 Nov 2025**
 >
-> - **Tool & access date:** Microsoft Copilot in PowerPoint (GPT-4o backend), 1 Nov 2025.
+> - **Tool & access date:** Microsoft Copilot in PowerPoint, 1 Nov 2025.
 > - **Purpose:** To identify basic design and accessibility issues (over-full slides, small fonts, low-contrast text/background combinations).
 > - **Prompt (excerpt):** "Review the 12-slide deck I've uploaded. For each slide list any problems with information density, font size (<18 pt), or colour contrast below WCAG AA. Do not rewrite content; give only diagnostic comments."
 > - **Output received:** Copilot produced a slide-by-slide checklist (e.g., "Slide 4: 9 bullet points — consider splitting slide; Slide 7: contrast ratio 3.8:1 between text and background").
@@ -155,8 +157,8 @@ The following addition to the syllabus operationalizes that obligation.
 >
 > 1. **Treat the AI output as a lead, not a citation.** Prompt the model for clues: "Where in the academic or judicial literature has this argument appeared? Please list specific cases, articles, or books."
 > 2. **Independently confirm any sources named.** Look up the case, article, or book yourself. Read enough of the source to be sure it actually contains the idea.
-> 3. **Cite the human source in the ordinary way.** Example: *See* Smith, *The Post-Lexecon Landscape*, 54 U. Chi. L. Rev. 321, 334–35 (2024).
-> 4. **If, after reasonable search, no prior human source emerges, state in your AI use statement that:** "The model suggested Argument X; I searched the legal literature (databases A, B) and was unable to locate a prior publication. The argument therefore appears to be original to me, though inspired by the AI prompt."
+> 3. **Cite the human source in the ordinary way.** Example: *See* [Author], *[Article Title]*, [Vol.] [Journal] [Page] ([Year]).
+> 4. **If, after reasonable search, no prior human source emerges,** state in your AI use statement: "The model surfaced this argument during my brainstorming. I searched the legal literature (databases A, B; search terms: ...) and did not locate a prior published articulation. I have refined the argument and developed the supporting analysis independently."
 > 5. **Never cite the AI model itself as the intellectual originator of a legal or scholarly claim.** Models provide computations over text; citation credit belongs to the human author(s) on whose text the model drew — or to you if no prior source exists.
 
 ### Rationale to share with students
@@ -186,12 +188,12 @@ When the student successfully traces an AI-suggested idea to a human author, the
 >   2. Follow-up: "For Counter-Argument #2 you suggested — that *Lexecon* waivers could violate defendants' Seventh Amendment rights — where (if anywhere) has this claim appeared in published scholarship or case law? Please name specific sources."
 > - **Output received:**
 >   - Five counter-arguments identified.
->   - Cited Professor Dana M. Yale, *Seventh Amendment Constraints on Lexecon Waivers*, 72 Fordham L. Rev. 945 (2004) as prior articulation of Counter-Argument #2.
+>   - Cited [Author, *Article Title*, Vol. Journal Page (Year)] as a prior articulation of Counter-Argument #2.
 > - **How I used the output:**
->   1. Read Yale's article in full to verify the argument's scope.
->   2. Added a new subsection, § III B 2, responding to Yale's Seventh Amendment critique.
+>   1. Read the cited article in full to verify the argument's scope.
+>   2. Added a new subsection, § III.B.2, responding to that author's Seventh Amendment critique.
 >   3. All language in the paper is my own; no AI-generated wording appears verbatim or in paraphrase.
-> - **Verification:** Confirmed Yale's page numbers and doctrinal analysis; double-checked Bluebook citation format.
+> - **Verification:** Confirmed page numbers and doctrinal analysis; double-checked Bluebook citation format.
 > - **Responsibility:** AI served solely as a diagnostic aid to locate existing scholarship. The counter-argument's substantive discussion and all responses are my original work.
 
 **Example in-text treatment of the human source.**
@@ -200,7 +202,7 @@ When the student successfully traces an AI-suggested idea to a human author, the
 
 **Corresponding footnote.**
 
-> ¹ Dana M. Yale, *Seventh Amendment Constraints on Lexecon Waivers*, 72 Fordham L. Rev. 945, 960–62 (2004).
+> ¹ [Author], *[Article Title]*, [Vol.] [Journal] [Page], [Pin Cite] ([Year]).
 
 The disclosure separates the AI's role (idea lead) from the human author's role (intellectual originator), shows the trace-and-verify step, and credits the source in standard scholarly form while the AI-use statement documents process transparency.
 
@@ -219,4 +221,4 @@ These templates and the underlying framework are reproduced from a draft seminar
 
 ## Status
 
-Maintained internally for the Penn Carey Law community. Public release pending review.
+Maintained for the Penn Carey Law community. Comments and suggestions: <pwagner@law.upenn.edu>.
