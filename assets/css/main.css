@@ -333,7 +333,10 @@ hr {
 }
 .loop-mark {
   font-family: var(--serif);
-  color: var(--warm-gold);
+  /* Darker than --warm-gold #C49A4F to meet WCAG AA contrast (~5:1
+   * vs #fdfdfb). Also aria-hidden in the template, so this is a
+   * belt-and-suspenders fix for low-vision sighted users. */
+  color: #8a6418;
   font-size: 1.4rem;
   margin-right: 0.5rem;
   font-weight: 600;
