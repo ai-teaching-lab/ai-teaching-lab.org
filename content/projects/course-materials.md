@@ -1,29 +1,32 @@
 ---
-title: "Course Materials & Casebooks"
-description: "Tools and structured collections that make law-school course materials more usable for AI-assisted teaching."
+title: "Course Materials"
+description: "An extraction primitive: turn the messy artifacts of a real course — PDFs, slide decks, casebook excerpts, syllabi — into clean structured text that downstream tools can use."
 date: 2026-05-08
+lastmod: 2026-05-09
 draft: false
 type: project
-workstream: "05-course-materials"
+cluster: "teaching-tools"
+workstream: "03-teaching-tools/course-materials"
 status: active
 pillar: ["build", "teach"]
 owner: ["TBD"]
 github: "ai-teaching-lab/course-materials"
 ---
 
-A workstream centered on the connective tissue of legal education: case lists, syllabi, course readers, and the workflow tools that hold them together. AI is most useful when it can ground its answers in the actual texts a course is teaching — which means we need clean, structured collections of those texts in the first place.
+Course Materials is the extraction primitive that sits underneath the rest of the Teaching Tools cluster. The job is narrow and load-bearing: take the messy artifacts of a real course — PDFs, slide decks, casebook excerpts, syllabi, lecture transcripts — and turn them into clean, structured text that other tools can consume reliably.
+
+It's not a casebook-creation project. It's the layer that makes casebook creation, virtual-TA retrieval, exam generation, and class-simulation tooling possible in the first place.
 
 ## What we're doing
 
-- **Course collection repos.** Extracting case lists from major casebooks via tables of cases — a structured starting point for AI-assisted course tools.
-- **Casebook / course creation tools.** Drafting aids for faculty assembling their own readings, problem sets, and supplements.
-- **Best-practices research.** What makes a course material collection useful to both human readers and AI systems? Where do existing collections fall short?
-- **Pedagogy tools.** New ways to put course materials in front of students — searchable, queryable, navigable.
+- Maintain the `materials-md` extraction toolchain — a deterministic CLI that converts PDFs, DOCX, PPTX, and HTML to clean markdown.
+- Handle the cases that matter for legal materials: scanned casebook pages, court opinions in messy formats, slide decks with speaker notes, structured tables of cases.
+- Ship the output in a shape downstream Lab tools can use directly — Heron's retrieval, exam-grader's reference texts, class-simulations' problem stems, casebook-builder's source corpus.
 
-## Open questions
+## Why this matters
 
-- Best path for linking to downloadable course materials given copyright constraints on casebook excerpts.
+Every other Teaching Tool either works or fails on the quality of its input. Hallucinations in a virtual TA, miscalibrated exam grading, drift in a class simulation — most of these trace back to dirty source text. Getting the primitive right once means the rest of the cluster gets cleaner inputs by default.
 
 ## Status
 
-Open workstream — owner being recruited from the summer 2026 applicant pool. Profile: IP/casebook fluency, structured-data work with light scraping, copyright awareness.
+Active. The CLI is in production use across Polk's own teaching workflow and across other Lab skills. Next work: harden the casebook-extraction path against scanned-page edge cases and document the output schema so other Lab projects can integrate against a stable contract.

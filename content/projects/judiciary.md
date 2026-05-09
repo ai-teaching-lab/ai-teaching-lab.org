@@ -2,9 +2,10 @@
 title: "Judiciary — Teaching the Bench"
 description: "Working with the federal judiciary on the practical use of AI tools — through training, research, chambers-facing tools, and structured feedback."
 date: 2026-05-07
-lastmod: 2026-05-08
+lastmod: 2026-05-09
 draft: false
 type: project
+cluster: "judiciary"
 workstream: "04-judiciary"
 status: active
 pillar: ["teach"]

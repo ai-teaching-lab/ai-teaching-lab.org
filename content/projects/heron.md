@@ -2,9 +2,11 @@
 title: "Heron — Virtual TA Slackbot"
 description: "Pedagogy infrastructure: a Slackbot that serves as a 24/7 virtual teaching assistant for course use."
 date: 2026-05-07
+lastmod: 2026-05-09
 draft: false
 type: project
-workstream: "07-heron"
+cluster: "teaching-tools"
+workstream: "03-teaching-tools/heron"
 status: active
 pillar: ["build", "teach"]
 owner: ["TBD"]
@@ -19,4 +21,4 @@ A first-line TA available at 3am the night before an exam, in office-hours queue
 
 ## Status
 
-v1 prototype exists in personal workspace. Lab-owned v2 is the next major build.
+v1 prototype lives at `~/code/ip_slackbot` — built around an IP-class corpus and used to validate the retrieval pattern. Lab-owned v2 is the next major build, scoped to generalize the architecture across courses.
