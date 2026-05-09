@@ -1,6 +1,6 @@
 baseURL = 'https://ai-teaching-lab.org/'
 locale = 'en-us'
-title = 'Penn Carey Law AI Teaching Lab'
+title = 'AI Teaching Lab at Penn Carey Law'
 enableRobotsTXT = true
 enableEmoji = false
 pluralizeListTitles = false
@@ -8,9 +8,9 @@ summaryLength = 30
 timeZone = 'America/New_York'
 
 [params]
-  description = "The Penn Carey Law AI Teaching Lab researches how AI is changing legal education and practice, builds the tools that put those findings to work, and teaches lawyers, law students, judges, and the profession how to use AI well."
+  description = "The AI Teaching Lab at Penn Carey Law researches how AI is changing legal education and practice, builds the tools that put those findings to work, and teaches lawyers, law students, judges, and the profession how to use AI well."
   brandShortForm = "AI Teaching Lab"
-  brandFormalName = "Penn Carey Law AI Teaching Lab"
+  brandFormalName = "AI Teaching Lab at Penn Carey Law"
   institutionName = "University of Pennsylvania Carey Law School"
   institutionShort = "Penn Carey Law"
   contactEmail = "pwagner@law.upenn.edu"
