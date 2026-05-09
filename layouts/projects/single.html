@@ -5,7 +5,6 @@
     <h1>{{ .Title }}</h1>
     {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
     <dl class="project-meta">
-      {{ with .Params.owner }}<dt>Owner</dt><dd>{{ if reflect.IsSlice . }}{{ delimit . ", " }}{{ else }}{{ . }}{{ end }}</dd>{{ end }}
       {{ with .Params.status }}<dt>Status</dt><dd><span class="status status-{{ . }}">{{ . }}</span></dd>{{ end }}
       {{ with .Params.pillar }}
       <dt>Pillar</dt>
