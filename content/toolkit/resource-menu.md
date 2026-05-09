@@ -46,8 +46,8 @@ The Lab's oldest publication. Introduces the CRAFTED prompting framework with th
 
 The Resource Menu is a Lab document maintained by:
 
-- Ambar Larancuent '26 — `ajlaran@penncareylaw.upenn.edu`
-- Hailey Parikh '27 — `hkparikh@penncareylaw.upenn.edu`
+- Ambar Larancuent '26
+- Hailey Parikh '27
 - Polk Wagner — `pwagner@law.upenn.edu`
 
 *With thanks to AI Law Lab alumni who contributed to the original menu:*

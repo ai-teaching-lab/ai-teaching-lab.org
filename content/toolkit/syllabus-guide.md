@@ -128,8 +128,8 @@ For a course where AI tools are off-limits, this block states the prohibition an
 
 This guide is maintained by:
 
-- Ambar Larancuent '26 — `ajlaran@penncareylaw.upenn.edu`
-- Hailey Parikh '27 — `hkparikh@penncareylaw.upenn.edu`
+- Ambar Larancuent '26
+- Hailey Parikh '27
 - Polk Wagner — `pwagner@law.upenn.edu`
 
 *With thanks to AI Law Lab alumni who contributed to the original guide:*
