@@ -1,16 +1,16 @@
 ---
 title: "Creating a Virtual TA with Custom GPTs"
-description: "A step-by-step guide to building a course-specific virtual teaching assistant, using the Lab's IP TA as a template."
+description: "A step-by-step guide to building a course-specific virtual teaching assistant on OpenAI's Custom GPTs platform, using the Lab's IP TA as a template."
 date: 2024-09-01
 lastmod: 2026-05-09
 weight: 230
 toolkit_category: "teaching"
 audience: ["faculty"]
-availability: "internal"
-version: "2024; revised for migration May 2026"
+availability: "public"
+version: "2024; revised May 2026 (Eddie-reviewed 2026-05-09)"
 ---
 
-A walkthrough for faculty who want to build a course-specific virtual teaching assistant using OpenAI's Custom GPTs (or the equivalent in Claude Projects, Gemini Gems, or whatever your platform of the moment offers). The example throughout is the Lab's IP TA — a study-and-review assistant for Intro to Intellectual Property at Penn Carey Law.
+A walkthrough for faculty who want to build a course-specific virtual teaching assistant using OpenAI's Custom GPTs. The same conceptual moves apply to Claude Projects (Anthropic) or Gemini Gems (Google), but the specific UI flows differ — adapt the steps below to your platform. The example throughout is the Lab's IP TA — a study-and-review assistant for Intro to Intellectual Property at Penn Carey Law.
 
 This is the conceptual precursor to the Lab's **Heron** virtual-TA Slackbot project. The Custom GPT path is a low-effort starting point: no code, no hosting, no integration work. You drop in syllabus materials, write a few paragraphs of instructions, and the platform handles the rest.
 
@@ -28,7 +28,7 @@ If you need any of those things, a Custom GPT is the wrong tool — look at Hero
 
 ### 1. Navigate to the GPT editor
 
-Go to [chatgpt.com/gpts/editor](https://chatgpt.com/gpts/editor). You need a paid ChatGPT account (Plus, Team, or Enterprise) to publish a Custom GPT. From the editor, open MyGPTs from the top-right menu.
+Go to [chatgpt.com/create](https://chatgpt.com/create) (or open Explore GPTs from the ChatGPT sidebar and click "Create"). You need a paid ChatGPT account (Plus, Pro, Business, Enterprise, or Edu) to publish a Custom GPT. To find GPTs you've already built, open Explore GPTs in the ChatGPT sidebar and select My GPTs.
 
 ### 2. Create a new GPT
 
@@ -74,17 +74,24 @@ Three or four starters is plenty. More clutters the interface.
 
 #### Knowledge
 
-Upload course materials — syllabus, key textbook chapters, lecture slides, practice questions, hypotheticals, and (if available) cleaned-up transcripts of class recordings. The GPT uses retrieval over these documents to ground answers in your course rather than the model's general training.
+Upload course materials — syllabus, key textbook chapters, lecture slides, practice questions, and your own hypotheticals. The GPT uses retrieval over these documents to ground answers in your course rather than the model's general training.
+
+**Do not upload:**
+
+- Class recordings or transcripts of class recordings (FERPA: identifiable student speech is a protected education record; recording-consent terms also apply).
+- Student work, exam answers, or grading materials with student names attached.
+- Copyrighted casebook chapters or commercial materials beyond fair-use limits.
+- Anything covered by NDA, embargo, or partner-confidentiality.
 
 A few practical notes:
 
 - PDFs and Word docs work well. Slides export to PDF cleanly.
-- The retrieval is imperfect — if a student asks about a doctrine you covered in class but not in any uploaded document, the GPT will fall back on the model's general knowledge of IP law, which may or may not match your framing. Upload broadly.
+- The retrieval is imperfect — if a student asks about a doctrine you covered in class but not in any uploaded document, the GPT will fall back on the model's general knowledge, which may or may not match your framing. Upload broadly within the limits above.
 - Keep an eye on file count and size. Performance degrades with very large knowledge bases.
 
 #### Capabilities
 
-Check Web Search, DALL-E Image Generation, and Code Interpreter & Data Analysis. Web Search is the most useful — it lets the TA pull recent cases and developments. The other two are rarely used in a doctrinal-law TA but don't hurt to enable.
+Check Web Browsing, Image Generation (DALL·E), and Code Interpreter & Data Analysis. Web Browsing is the most useful — it lets the TA pull recent cases and developments. The other two are rarely used in a doctrinal-law TA but don't hurt to enable.
 
 #### Actions
 
@@ -92,7 +99,7 @@ Skip this. Actions are for connecting the GPT to external APIs (authentication l
 
 ### 5. Publish
 
-Click Create at the top right. Choose visibility — "Only me," "Anyone with a link," or (for Team/Enterprise accounts) "My workspace." Link-based sharing is the practical default for a course TA.
+Click Create at the top right. Choose visibility — "Only me," "Anyone with a link," "Everyone" (GPT Store) for personal accounts, or "Anyone at [Workspace]" for Business/Enterprise/Edu accounts. Link-based sharing is the practical default for a course TA.
 
 ### 6. Tune the response style
 
@@ -110,10 +117,14 @@ Simulate the questions students are likely to ask. Stress-test the boundaries �
 
 Update knowledge as the course evolves. New cases, new hypotheticals, revised slides — re-upload and the TA stays current.
 
+**Boundaries are guidance, not enforcement.** Custom GPT instruction-following on adversarial student prompts is unreliable. A determined student can often coax the TA into answering exam questions or writing a draft paper despite explicit instructions to the contrary. Treat the boundaries as design intent and student-facing norms, not enforcement; pair the TA with course-policy guidance (the [AI Syllabus Guide]({{< ref "/toolkit/syllabus-guide" >}}) covers academic-integrity expectations) and reserve graded assessment for tasks the TA cannot easily do.
+
 ## Privacy note
 
-When you upload documents to a Custom GPT, OpenAI does not use those documents for model training. They remain within the context of your GPT. This is a meaningful distinction from pasting content directly into a regular ChatGPT conversation, where data handling depends on your account settings. Confirm OpenAI's current data-handling terms before uploading anything sensitive — the policy is stable but the wording shifts periodically.
+OpenAI's data-handling rules depend on plan tier. On Business, Enterprise, and Edu accounts, uploaded documents are not used for model training by default. On Plus and Pro consumer accounts, training-data use depends on your account-level Data Controls setting; opt out before uploading anything. Confirm OpenAI's current data-handling terms for your plan tier before uploading anything sensitive — vendor policies change.
+
+The same constraints apply to Claude Projects (Anthropic) and Gemini Gems (Google), but the defaults differ. Check the platform's current privacy terms before uploading. Review the do-not-upload list in the Knowledge section above before adding any course material.
 
 ## Status
 
-Maintained internally for the Penn Carey Law community. Public release pending review.
+Maintained for the Penn Carey Law community. Vendor UI flows and privacy defaults change frequently — verify against current vendor documentation before relying on the specifics here.

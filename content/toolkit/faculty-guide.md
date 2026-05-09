@@ -6,8 +6,8 @@ lastmod: 2026-05-09
 weight: 210
 toolkit_category: "teaching"
 audience: ["faculty"]
-availability: "internal"
-version: "September 2024; revised for migration May 2026"
+availability: "public"
+version: "September 2024; revised May 2026 (Eddie-reviewed 2026-05-09)"
 ---
 
 A practical onboarding guide for faculty getting started with general-purpose AI tools — how to set up ChatGPT and Claude accounts, which data-privacy settings to check before uploading anything sensitive, and a starter set of research use cases.
@@ -26,41 +26,53 @@ The example prompts used in the retreat live on the [Teaching with Generative AI
 
 Free tiers of ChatGPT and Claude work for basic experimentation. Paid tiers unlock larger context windows, better models, and the file-upload features most teaching tasks rely on.
 
+**Check institutionally-provided access first.** Penn Carey Law faculty have institutional access to ChatGPT, Claude, and other AI tools through Penn-administered platforms. See the [AI Resources at Penn]({{< ref "/toolkit/ai-resources-at-penn" >}}) page before paying out of pocket — depending on your role, you may already have access at the school's expense.
+
 ### ChatGPT
 
 1. Go to <https://chatgpt.com/>.
 2. Create an account or log in.
-3. In Settings (click the circle in the upper-right), upgrade to Plus or Team.
+3. Open account settings (from the profile/account menu) and choose a paid plan. Personal plans include Plus and Pro; Business and Enterprise are workspace plans.
 
-The Plus account is for individuals. The Team account adds others to the workspace — useful for RAs or TAs. Team requires a minimum of two active accounts; you can add and subtract members, but you'll be billed for at least two seats per month.
+Plus and Pro are for individuals (Pro adds higher usage limits). The Business plan (formerly "Team," renamed by OpenAI in August 2025) adds others to a shared workspace — useful for RAs or TAs. Business requires a minimum of two active accounts.
 
 ### Claude
 
 1. Go to <https://claude.ai>.
 2. Create an account or log in.
-3. In Settings, upgrade to Pro or Team.
+3. Open account settings and choose a paid plan.
 
-The Pro account is for individuals. The Team plan adds others to a shared workspace; minimum is five active accounts.
-
-Penn Carey Law faculty also have institutional access to Claude and ChatGPT through Penn-administered platforms — check the [AI Resources at Penn]({{< ref "/toolkit/ai-resources-at-penn" >}}) page for details on Penn-supported access.
+Pro is the standard individual plan. Max (5x and 20x tiers) provides higher usage limits for heavy users who hit Pro caps. The Team plan adds others to a shared workspace; minimum is five active accounts.
 
 ## Keeping your data out of training
 
-Privacy settings differ by platform. Confirm the current configuration before uploading anything sensitive — student work, internal documents, partner-confidential material.
+Privacy settings differ by platform — and they have changed multiple times since 2023. Always confirm current vendor policy and your account settings before uploading anything sensitive.
+
+**Do not upload to consumer AI tools** (regardless of opt-out settings):
+
+- Student educational records or graded work (FERPA)
+- Unpublished co-authored work without all co-authors' consent
+- IRB-regulated data or protected interview transcripts
+- Material under NDA, embargo, or partner-confidentiality obligations
+- Confidential committee or personnel information
+
+For sensitive material that needs AI assistance, use the Penn-administered enterprise tools described on the [AI Resources at Penn]({{< ref "/toolkit/ai-resources-at-penn" >}}) page, or consult the Office of Audit, Compliance and Privacy and PCL ITS first.
 
 ### ChatGPT
 
-In account Settings → Data controls, turn **off** the "Improve the model for everyone" option. With this off, your conversations and uploads do not feed model training.
+On Plus and Pro plans: open account Settings → Data Controls and turn **off** the "Improve the model for everyone" toggle. With it off, your conversations and uploads should not feed model training. On Business, Enterprise, and Edu plans, OpenAI's default is not to train on workspace data; admins control settings rather than individual users. See OpenAI's [privacy policy](https://openai.com/policies/row-privacy-policy/) for current terms.
 
 ### Claude
 
-Per Anthropic's [consumer terms](https://www.anthropic.com/legal/consumer-terms), Claude does not use chats or uploaded documents for training, except in narrow cases (such as flagged Trust & Safety review). There is no setting to toggle.
+As of late 2025, Anthropic's [consumer terms](https://www.anthropic.com/legal/consumer-terms) made training on conversations the **default for Free, Pro, and Max plans**, with an opt-out toggle. To opt out: Settings → Privacy → turn off "Help improve Claude." Even with the toggle off, Anthropic may use chats flagged for Trust & Safety review and any feedback you submit. The Team and Enterprise plans are governed by separate Commercial Terms and do not train on customer data by default.
 
-In both cases: re-check the current terms before uploading anything you would not want surfaced. Vendor data policies have changed multiple times over the past two years, and the wording sometimes shifts even when the substance does not.
+This area changes frequently. Re-check the current vendor terms and your account settings before uploading anything you would not want surfaced.
 
 ## Six research use cases
 
-A starter set of ways AI tools can help with research and academic writing. These work in ChatGPT or Claude — and most have direct analogues in legal-specific tools like Westlaw CoCounsel and Lexis Protégé when the task is legal research rather than general scholarship.
+A starter set of ways AI tools can help with research and academic writing. These work in ChatGPT or Claude — and most have direct analogues in legal-specific tools when the task is legal research rather than general scholarship (see the [Legal AI Tool Guide]({{< ref "/toolkit/legal-ai-tool-guide" >}})).
+
+Verification, attribution, and any compliance obligations (FERPA, IRB, NDA, journal policy, co-author consent) remain with you. The tool is a draft assistant, not a publisher of record. Do not paste material covered by the do-not-upload list above into consumer AI tools.
 
 1. **Literature summarization.** Feed articles or sources to the model and ask for a structured summary. Useful for sifting large volumes; verify quotes and citations against the source.
 2. **Developing research questions.** Brainstorm angles, gaps in the literature, and counterarguments based on a topic you describe. The model is good at producing more directions than you'll use; the editorial judgment is yours.
@@ -73,4 +85,4 @@ For more on getting good results from prompts, see the [Prompt Guide]({{< ref "/
 
 ## Status
 
-Maintained internally for Penn Carey Law faculty. Public release pending review. Suggestions, corrections, and additions are welcome — email Polk Wagner at <pwagner@law.upenn.edu>.
+Maintained for Penn Carey Law faculty. Vendor account flows, plan tiers, and data-handling defaults change frequently — confirm against current vendor pages before relying on the specifics here. Suggestions, corrections, and additions are welcome — email Polk Wagner at <pwagner@law.upenn.edu>.

@@ -6,15 +6,17 @@ lastmod: 2026-05-09
 weight: 220
 toolkit_category: "teaching"
 audience: ["faculty"]
-availability: "internal"
-version: "Fall 2024; revised for migration May 2026"
+availability: "public"
+version: "Fall 2024; revised May 2026 (Eddie-reviewed 2026-05-09)"
 ---
 
 The example prompts used in Polk's Fall 2024 Faculty Retreat session on teaching with generative AI. Each prompt is reproduced as it was given to the model so you can adapt the wording to your own course.
 
 The prompts work in ChatGPT and Claude, and most carry over with minor tweaks to whatever general-purpose model you prefer. Pair this page with the [Faculty Guide to AI Tools]({{< ref "/toolkit/faculty-guide" >}}) for setup and account guidance.
 
-The materials below assume you've uploaded the relevant readings into the model session — ChatGPT and Claude both accept PDF and DOCX uploads on paid tiers. The demos use the IP class fair-use cases as the running example; substitute your own materials for your course.
+The materials below assume you've uploaded the relevant readings into the model session. ChatGPT and Claude both accept PDF and DOCX uploads — free tiers have stricter daily limits than paid tiers, so a class session's worth of materials usually requires a paid plan. The demos use the IP class fair-use cases as the running example; substitute your own materials for your course.
+
+**Before uploading:** confirm you have the right to share the materials with the AI tool, and don't upload student work or anything covered by FERPA, NDA, or partner-confidentiality. See the [Faculty Guide to AI Tools]({{< ref "/toolkit/faculty-guide" >}}) for the full do-not-upload list.
 
 ## Level 1 — Common teaching tasks
 
@@ -22,7 +24,7 @@ The materials below assume you've uploaded the relevant readings into the model 
 
 After uploading the readings, ask the model to generate a domain-relevant image:
 
-> These readings are for a class session in Intellectual Property at Penn Law. Please create a photo-realistic image of a science laboratory as suggested by the *Texaco* case, with binders of American Chemical Society scientific articles on shelves and lab tables throughout. Show a scientist operating a photocopier in the corner, making copies of an article from the ACS publication for her colleagues.
+> These readings are for a class session in Intellectual Property at Penn Law. Please create a photo-realistic image of a science laboratory as suggested by the *Texaco* case, with binders of *Journal of Catalysis* and other scientific journal articles on shelves and lab tables throughout. Show a scientist operating a photocopier in the corner, making copies of an article from one of those journals for her colleagues.
 
 Useful when you want a slide visual that ties directly to the doctrine. Image generation is a strength of these tools; the output quality is improving steadily.
 
@@ -58,7 +60,7 @@ The pair — problem plus reasoned model answer — gives faculty a starting poi
 
 ### Use AI as a Virtual TA
 
-Create a Custom GPT (or Claude Project) seeded with your slides and readings. The system prompt below works as a starting point:
+Create a Custom GPT (ChatGPT Plus or higher) or a Claude Project (available on Claude's free plan) seeded with your slides and readings. The system prompt below works as a starting point:
 
 > You are a helpful and friendly teaching assistant for Introduction to Intellectual Property. Your task is to provide answers to student inquiries based on the materials given only. Be sure to only use these materials as sources for your answers to the student inquiries, and tell the student if a question cannot be answered using these materials (and you can then use your best efforts to answer it anyway). When answering, provide a reference to the reading materials and/or slides whenever possible.
 
@@ -79,4 +81,4 @@ This work later became the basis for the Lab's [Exam Grader]({{< ref "/projects/
 
 ## Status
 
-Maintained internally for Penn Carey Law faculty. Public release pending review. Demos may be updated as new model capabilities open new pedagogical patterns. Email Polk Wagner at <pwagner@law.upenn.edu> with suggestions.
+Maintained for Penn Carey Law faculty. Demos may be updated as new model capabilities open new pedagogical patterns. Email Polk Wagner at <pwagner@law.upenn.edu> with suggestions.

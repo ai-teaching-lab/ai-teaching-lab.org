@@ -6,11 +6,11 @@ lastmod: 2026-05-09
 weight: 130
 toolkit_category: "audience"
 audience: ["faculty", "student", "staff"]
-availability: "internal"
-version: "February 2026; revised for migration May 2026"
+availability: "public"
+version: "February 2026; revised May 2026 (Eddie-reviewed 2026-05-09)"
 ---
 
-A directory of AI resources across Penn Carey Law and the broader University of Pennsylvania — tool access points, training programs, academic policies, and the support contacts who handle each. Updated as Penn's AI offerings expand.
+A directory of AI resources across Penn Carey Law and the broader University of Pennsylvania — tool access points, training programs, academic policies, and the support contacts who handle each. Updated as Penn's AI offerings expand. The owning units (PCL ITS, Biddle Law Library, Penn ISC, the centers and initiatives below) are authoritative for current eligibility and terms; links go to those pages.
 
 ## Law school resources
 
@@ -18,34 +18,36 @@ A directory of AI resources across Penn Carey Law and the broader University of 
 
 These tools use generative AI for legal research, drafting, summarization, and analysis. Each draws on the platform's own authoritative legal and regulatory content.
 
-- [Westlaw CoCounsel](https://www.thomsonreuters.com/en/cocounsel)
-- [LexisNexis Protégé](https://www.lexisnexis.com/en-us/products/protege.page)
-- [Bloomberg Law AI Assistant](https://pro.bloomberglaw.com/products/ai-and-bloomberg-law/#overview)
+- [CoCounsel Legal](https://www.thomsonreuters.com/en/cocounsel) (Thomson Reuters; integrated with Westlaw Advantage)
+- [Lexis+ with Protégé](https://www.lexisnexis.com/en-us/products/protege.page)
+- [Bloomberg Law AI tools](https://pro.bloomberglaw.com/products/ai-and-bloomberg-law/) (AI Assistant and Answers)
 
 ### ChatGPT Edu
 
-[ChatGPT Edu accounts](https://www.law.upenn.edu/its/docs/ai/chatgpt-for-students/) are available to all PCL 1Ls, Littletons, and TAs. ChatGPT Edu runs OpenAI's current models in a secure, private, Penn-administered environment.
+[ChatGPT Edu accounts](https://www.law.upenn.edu/its/docs/ai/chatgpt-for-students/) are provided to PCL 1Ls, Littleton Fellows, and 1L teaching assistants. ChatGPT Edu is the Penn-licensed, enterprise-tier version of ChatGPT. See the linked PCL ITS page for current eligibility and data-handling terms.
 
 ### Microsoft Copilot
 
-[Microsoft Copilot Chat](https://www.law.upenn.edu/its/docs/ai/copilot/) is Microsoft's AI chat client integrated with Office 365. It generates text summaries, helps with Outlook/Word/Teams tasks, and includes web search enhanced with generative AI. All Penn faculty, staff, and students with Penn Microsoft accounts can use Copilot Chat at no extra cost.
+[Microsoft Copilot Chat](https://www.law.upenn.edu/its/docs/ai/copilot/) is Microsoft's AI chat client integrated with Office 365. It generates text summaries, helps with Outlook/Word/Teams tasks, and includes web search enhanced with generative AI. PCL community members access Copilot Chat through PCL ITS using their school login; see the linked PCL ITS page for current scope and data-handling guidance.
 
 ### Harvey
 
-[Harvey](https://www.harvey.ai/about/law-schools) is a professional-grade AI platform used by many major law firms and legal organizations. Harvey now has a collaboration with PCL and is available to faculty, staff, 2Ls, 3Ls, and LLM students through a secure, closed platform. It supports:
+[Harvey](https://www.harvey.ai/about/law-schools) is a professional-grade AI platform used by major law firms and legal organizations. Beginning in Spring 2026, Harvey is available to PCL 2Ls, 3Ls, and LLM students through a Penn-administered enrollment process. Typical use cases:
 
-- **Legal research and analysis** — review and summarize contracts, case law, and regulatory filings, with access to over 200 legal knowledge sources (including LexisNexis and EDGAR integrations).
+- **Legal research and analysis** — review and summarize contracts, case law, and regulatory filings, with access to Harvey's integrated legal data sources (including LexisNexis and EDGAR).
 - **Document drafting** — briefs, contracts, memoranda, and other legal documents.
-- **Study support** — synthesizing key information for exam prep, embedded citations in research papers, refined class notes.
+- **Study support** — drafting summaries, organizing source notes, and exam preparation.
 - **Collaboration tools** — shared threads and workflows for class projects, journal work, and clinic assignments.
+
+See the [PCL ITS Harvey page] for current eligibility and onboarding.
 
 ### Center for Technology, Innovation & Competition (CTIC)
 
-[CTIC](https://www.law.upenn.edu/institutes/ctic/) is the premier technology and law center at PCL, focused on research, policy, and practice at the intersection of technology and legal institutions. It's currently running a [cross-institutional project](https://www.law.upenn.edu/live/files/13132-ctai-ctic-collaborate-on-ai-standards-design) with the Center for Trustworthy AI (CTAI) at Seoul National University to develop AI standards.
+[CTIC](https://www.law.upenn.edu/institutes/ctic/) is PCL's center for technology, innovation, and competition law — research, policy, and practice at the intersection of technology and legal institutions. CTIC is currently running a [cross-institutional project](https://www.law.upenn.edu/live/files/13132-ctai-ctic-collaborate-on-ai-standards-design) with the Center for Trustworthy AI (CTAI) at Seoul National University to develop AI standards.
 
-### AI Law Lab
+### AI Teaching Lab
 
-The Lab — led by Polk Wagner and a team of student research assistants — produces best practices for AI use, a prompting guide, a curated list of legal AI tools, and a syllabus guide. It also operates a judiciary AI testbed and publishes a monthly faculty newsletter with AI news for the PCL community and a practical tip of the month.
+The Lab — led by faculty director Polk Wagner with student research assistants — produces best practices for AI use, a prompting guide, a guide to legal AI tools, and a syllabus guide. It also operates an AI testbed for evaluating judicial-decision tools and publishes a monthly faculty newsletter with AI news for the PCL community.
 
 ### Biddle Law Library
 
@@ -59,7 +61,7 @@ Check with [Biddle librarians](https://www.law.upenn.edu/library/) for help usin
 
 ### PennAI
 
-[PennAI](https://ai.upenn.edu/) is the cross-campus front door for AI at Penn. Best for finding events, speakers, and interdisciplinary opportunities across all 12 schools. Launched as a university-wide initiative framed around responsible AI and real-world impact. Tracks research talks, seminars, programs, and fellowships across the university.
+[PennAI](https://ai.upenn.edu/) is the cross-campus front door for AI at Penn. Best for finding events, speakers, and interdisciplinary opportunities across Penn's 12 schools. Launched as a university-wide initiative framed around responsible AI and real-world impact. Tracks research talks, seminars, programs, and fellowships across the university.
 
 ### Amy Gutmann Hall
 
@@ -87,11 +89,11 @@ A [broad interdisciplinary initiative](https://ai-analytics.wharton.upenn.edu/) 
 
 - **[PRiML](https://priml.upenn.edu/)** (Penn Research in Machine Learning) — joint Penn Engineering + Wharton forum running seminars and convening Penn's ML community.
 - **[IDEAS](https://ideas.seas.upenn.edu/)** (Innovation in Data Engineering and Science) — Penn Engineering center focused on AI/ML and data science for scientific discovery and trustworthy systems.
-- **[ASSET Center](https://asset.seas.upenn.edu/)** (AI-enabled Systems: Safety, Explainability, Trustworthiness) — Engineering center focused on safety, explainability, and trustworthiness.
+- **[ASSET Center](https://asset.seas.upenn.edu/)** (AI-Enabled Systems: Safe, Explainable, and Trustworthy) — Engineering center focused on safety, explainability, and trustworthiness.
 - **[Warren Center for Network and Data Sciences](https://warrencenter.upenn.edu/)** — cross-disciplinary center on networked and data-driven systems; hosts events that bring together multiple AI groups at Penn.
 - **[GRASP Lab](https://www.grasp.upenn.edu/research-area/machine-learning-ai-and-autonomous-systems/)** (General Robotics, Automation, Sensing & Perception) — major Penn Engineering robotics and AI research center.
 - **[AI@SAS](https://ai.sas.upenn.edu/)** (Penn Arts & Sciences) — cross-disciplinary Arts & Sciences hub for AI-related research and initiatives.
 
 ## Status
 
-Maintained internally for the Penn Carey Law community. Public release pending review.
+Maintained for the Penn Carey Law community. The owning unit is authoritative for current eligibility, terms, and scope on each tool — links go to those pages. Comments and corrections: <pwagner@law.upenn.edu>.

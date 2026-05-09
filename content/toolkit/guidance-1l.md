@@ -6,19 +6,21 @@ lastmod: 2026-05-09
 weight: 110
 toolkit_category: "audience"
 audience: ["student"]
-availability: "internal"
-version: "September 2025; revised for migration May 2026"
+availability: "public"
+version: "September 2025; revised May 2026 (Eddie-reviewed 2026-05-09)"
 ---
 
-Written for incoming 1Ls. Covers how LLMs work, what they do well, what they fail at, the "human-AI-human sandwich" workflow that keeps the student in the loop, and concrete prompting tips. Used in 1L orientation programming.
+Written for incoming 1Ls. Covers how LLMs work, what they do well, what they fail at, the "human-AI-human sandwich" workflow that keeps the student in the loop, and concrete prompting tips.
+
+**First and most important:** every course has its own rules about AI. Always check your syllabus and follow your professor's guidance — that governs. This document is general orientation for cases not covered by a specific course rule.
 
 ## The frame
 
-Your main task as a 1L is to develop legal reasoning. Generative AI can support that learning, but it cannot replace the work of thinking, analyzing, and writing as a lawyer. Approach AI with attention, mindfulness, and skepticism. Use it thoughtfully, not as a shortcut.
+Your main task as a 1L is to develop legal reasoning. Generative AI can support that learning, but it cannot replace the work of thinking, analyzing, and writing as a lawyer. Approach AI with attention and skepticism. Use it thoughtfully, not as a shortcut.
 
 ## How generative AI works
 
-ChatGPT, Claude, and other Large Language Models are predictive tools. They generate the most likely next word based on patterns in the data they were trained on and the prompts you provide. They do not "know" facts or truly reason. Their outputs may look fluent and persuasive, but they simulate reasoning rather than perform it. This is why they sometimes produce confident mistakes — "hallucinations."
+ChatGPT, Claude, and other Large Language Models are predictive tools. They generate likely next text based on patterns in their training data and the prompts you provide — a process that often produces fluent, useful output but is fundamentally different from how a lawyer reasons through a problem. They can produce confident mistakes, called "hallucinations," because nothing in the underlying mechanism checks output against truth.
 
 ## Where AI excels
 
@@ -33,14 +35,15 @@ AI is most useful as a study assistant. It can:
 
 AI should not be trusted for precise fact retrieval — case names, holdings, statutory language. It is unreliable for citation accuracy and Bluebook formatting. Most importantly, it cannot provide genuine legal reasoning or analysis. Those are the core skills you are here to master.
 
-Long chats may also cause AI to forget instructions or drift from the task. If responses get worse, start a fresh session.
+If responses start drifting or losing track of earlier instructions, start a fresh session — it's cheap and often fixes the problem.
 
 ## Critical risks
 
 - **Hallucination.** AI may invent authority or distort holdings. The output sounds confident either way.
-- **Overreliance.** Using AI too early — before doing your own work — weakens the reasoning skills you're trying to build.
-- **Bias.** AI reflects biases from its training data and can reinforce inaccurate or harmful assumptions.
-- **Integrity.** Misrepresenting AI output as your own, or failing to verify it, can violate academic integrity rules.
+- **Overreliance.** Relying on AI before you've done your own reasoning short-circuits the practice you came to law school to get. The skills you're building — issue-spotting, analogical reasoning, working through ambiguity — develop through struggle, not through reading a polished answer.
+- **Bias.** AI reflects biases in its training data, including stereotyped framings on race, gender, immigration status, and class. That matters when you're working in doctrinal areas where bias affects outcomes (criminal procedure, employment, family law, immigration). Check outputs for stereotyped framings before relying on them.
+- **Integrity.** Misrepresenting AI output as your own work violates academic integrity rules. Failing to verify AI output is your own quality problem — and depending on the assignment, it can become an integrity issue if the work is presented as your independent analysis.
+- **Confidentiality.** Don't paste another person's work, anything from a confidential source, or anything you wouldn't want on a public web page. ChatGPT Edu has institutional protections; consumer AI tools may not. If you're not sure where a tool stores or trains on your inputs, assume it does.
 
 ## Best practices: the human-AI-human sandwich
 
@@ -75,10 +78,8 @@ Good results depend on how you ask:
 
 ## The big takeaway
 
-Generative AI can be a valuable tool, but it is not a substitute for legal reasoning. Its value depends on your ability to supervise it critically. Use it to enhance, not avoid, your own work.
-
-Always check individual syllabi and follow professor-specific guidance on AI use.
+Generative AI can be a valuable tool, but it is not a substitute for legal reasoning. Its value depends on your ability to supervise it critically. Use it to enhance, not avoid, your own work — and remember that course-specific syllabus rules govern.
 
 ## Status
 
-Maintained internally for the Penn Carey Law community. Public release pending review.
+Maintained for the Penn Carey Law community.
