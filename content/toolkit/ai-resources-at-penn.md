@@ -7,7 +7,7 @@ weight: 130
 toolkit_category: "audience"
 audience: ["faculty", "student", "staff"]
 availability: "public"
-version: "February 2026; revised May 2026 (Eddie-reviewed 2026-05-09)"
+version: "February 2026; revised May 2026"
 ---
 
 A directory of AI resources across Penn Carey Law and the broader University of Pennsylvania — tool access points, training programs, academic policies, and the support contacts who handle each. Updated as Penn's AI offerings expand. The owning units (PCL ITS, Biddle Law Library, Penn ISC, the centers and initiatives below) are authoritative for current eligibility and terms; links go to those pages.

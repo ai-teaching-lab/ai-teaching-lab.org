@@ -7,7 +7,7 @@ weight: 230
 toolkit_category: "teaching"
 audience: ["faculty"]
 availability: "public"
-version: "2024; revised May 2026 (Eddie-reviewed 2026-05-09)"
+version: "2024; revised May 2026"
 ---
 
 A walkthrough for faculty who want to build a course-specific virtual teaching assistant using OpenAI's Custom GPTs. The same conceptual moves apply to Claude Projects (Anthropic) or Gemini Gems (Google), but the specific UI flows differ — adapt the steps below to your platform. The example throughout is the Lab's IP TA — a study-and-review assistant for Intro to Intellectual Property at Penn Carey Law.

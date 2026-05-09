@@ -7,7 +7,7 @@ weight: 10
 toolkit_category: "core"
 audience: ["faculty", "student"]
 availability: "public"
-version: "August 2025; revised for migration May 2026 (Eddie-reviewed 2026-05-09)"
+version: "August 2025; revised for migration May 2026"
 ---
 
 The Lab's flagship faculty-facing document. Organizes student and faculty AI use cases by activity type and academic setting; covers AI training pipelines, efficacy assessment, academic standards, ethical considerations, access and equity, and a glossary of terms.

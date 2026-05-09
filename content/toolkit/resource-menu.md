@@ -7,7 +7,7 @@ weight: 50
 toolkit_category: "core"
 audience: ["faculty"]
 availability: "public"
-version: "August 2025; revised May 2026 (Eddie-reviewed 2026-05-09)"
+version: "August 2025; revised May 2026"
 ---
 
 The Toolkit's landing page for Penn Carey Law faculty — a single document that links to the four core publications and serves as the Lab's faculty-facing entry point.

@@ -6,7 +6,7 @@ weight: 240
 toolkit_category: "teaching"
 audience: ["faculty"]
 availability: "public"
-version: "Fall 2024; revised May 2026 (Eddie-reviewed 2026-05-09)"
+version: "Fall 2024; revised May 2026"
 ---
 
 Professor Struve's attribution-and-disclosure model for generative AI in a writing-intensive seminar, with sample AI-use disclosures students can adapt to specific use cases. The framework treats AI as a tool that requires attribution and process transparency.

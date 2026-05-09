@@ -7,7 +7,7 @@ weight: 120
 toolkit_category: "audience"
 audience: ["student"]
 availability: "public"
-version: "August 2025; revised May 2026 (Eddie-reviewed 2026-05-09)"
+version: "August 2025; revised May 2026"
 ---
 
 Talking points for orientation sessions and 1L AI-introduction events. Designed as a presenter's guide for in-person delivery rather than independent reading. Pairs with the longer [1L Guidance on ChatGPT Edu Use](../guidance-1l/).

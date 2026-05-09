@@ -7,7 +7,7 @@ weight: 30
 toolkit_category: "core"
 audience: ["faculty"]
 availability: "public"
-version: "July 2025; revised May 2026 (Eddie-reviewed 2026-05-09)"
+version: "July 2025; revised May 2026"
 ---
 
 A categorized overview of the legal AI landscape — seven domain-specific tool families plus the major general-purpose models (ChatGPT, Claude, Gemini). Built for faculty who want to understand what's out there without having to track every product launch.

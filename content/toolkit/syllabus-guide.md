@@ -7,7 +7,7 @@ weight: 20
 toolkit_category: "core"
 audience: ["faculty"]
 availability: "public"
-version: "August 2025; revised May 2026 (Eddie-reviewed 2026-05-09)"
+version: "August 2025; revised May 2026"
 ---
 
 Drop-in syllabus language for faculty across four policy stances — (1) no written assignments, (2) limited AI use, (3) limited AI use with attribution and a written AI-use statement (Professor Cathie Struve's Fall 2025 seminar version), and (4) complete prohibition. Faculty are expected to copy these blocks, adapt where noted, and adjust to course specifics.

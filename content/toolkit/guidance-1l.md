@@ -7,7 +7,7 @@ weight: 110
 toolkit_category: "audience"
 audience: ["student"]
 availability: "public"
-version: "September 2025; revised May 2026 (Eddie-reviewed 2026-05-09)"
+version: "September 2025; revised May 2026"
 ---
 
 Written for incoming 1Ls. Covers how LLMs work, what they do well, what they fail at, the "human-AI-human sandwich" workflow that keeps the student in the loop, and concrete prompting tips.

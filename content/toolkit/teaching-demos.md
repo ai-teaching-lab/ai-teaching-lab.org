@@ -7,7 +7,7 @@ weight: 220
 toolkit_category: "teaching"
 audience: ["faculty"]
 availability: "public"
-version: "Fall 2024; revised May 2026 (Eddie-reviewed 2026-05-09)"
+version: "Fall 2024; revised May 2026"
 ---
 
 The example prompts used in Polk's Fall 2024 Faculty Retreat session on teaching with generative AI. Each prompt is reproduced as it was given to the model so you can adapt the wording to your own course.
