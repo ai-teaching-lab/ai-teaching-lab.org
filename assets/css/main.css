@@ -1083,7 +1083,7 @@ a.pillar-tag {
 .event-type-workshop     { background: var(--pillar-build); }
 .event-type-talk         { background: var(--penn-blue); }
 .event-type-orientation  { background: var(--penn-blue); }
-.event-type-discussion   { background: var(--warm-gold); }
+.event-type-discussion   { background: #8a6418; } /* darker than --warm-gold so white text meets WCAG AA (5:1) */
 .event-dates {
   font-family: var(--sans);
   font-size: 0.82rem;
