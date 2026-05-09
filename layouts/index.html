@@ -1,9 +1,11 @@
 {{ define "main" }}
 <section class="hero">
+  <div class="hero-bleed-bg" aria-hidden="true"></div>
+  <p class="hero-eyebrow">Penn Carey Law</p>
   <p class="pillars-tagline">
     <span class="pillar-word pillar-word-research">Research</span><span class="pillar-dot" aria-hidden="true">·</span><span class="pillar-word pillar-word-build">Build</span><span class="pillar-dot" aria-hidden="true">·</span><span class="pillar-word pillar-word-teach">Teach</span>
   </p>
-  <h1 class="hero-headline">AI for the legal profession.</h1>
+  <h1 class="hero-headline">AI for the <em>legal profession</em>.</h1>
   <p class="lead">{{ site.Params.description }}</p>
 </section>
 
@@ -24,7 +26,7 @@
 {{ $active := where $allProjects "Params.status" "active" }}
 {{ if $active }}
 <section class="featured">
-  <h2 class="section-heading">Active projects</h2>
+  <p class="issue-marker issue-marker-rule">Active projects</p>
   <ul class="featured-list">
     {{ range first 4 $active }}
     <li>
@@ -43,6 +45,11 @@
   <p class="see-all"><a href="/projects/">All {{ len $allProjects }} projects →</a></p>
 </section>
 {{ end }}
+
+<aside class="editorial-pull editorial-pull-drop">
+  <p>Every other Teaching Tool either works or fails on the quality of its input.</p>
+  <cite>From Course Materials, Teaching Tools cluster</cite>
+</aside>
 
 {{ $events := where site.RegularPages "Section" "events" }}
 {{ $signature := where $events "Params.event_status" "ne" "recurring" }}

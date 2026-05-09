@@ -1,0 +1,6 @@
+{{- $cite := .Get "cite" -}}
+{{- $drop := default true (.Get "drop") -}}
+<aside class="editorial-pull{{ if $drop }} editorial-pull-drop{{ end }}">
+  <p>{{ .Inner | markdownify }}</p>
+  {{ with $cite }}<cite>{{ . }}</cite>{{ end }}
+</aside>
