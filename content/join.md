@@ -41,7 +41,7 @@ Some roles welcome non-law backgrounds where the technical or pedagogical fit is
 
 - **Paid or for credit** — $25/hr, or up to two ungraded credits per semester in place of pay. Summer work is credited in the fall.
 - **Time** — roughly 10–15 hours/week over the summer; flexible during the academic year.
-- **Location** — very remote-friendly, with occasional in-person check-ins in Philadelphia.
+- **Location and cadence** — fully remote for the summer. Almost all our work happens on Slack, with weekly Zoom check-ins and project updates.
 - **Term** — Summer 2026, with the possibility of extension into the academic year for most roles.
 - **Eligibility** — JD students, recent JD grads, and graduate students with relevant skills.
 
