@@ -64,6 +64,10 @@ timeZone = 'America/New_York'
     url = "/about/"
     weight = 50
   [[menus.main]]
+    name = "Join"
+    url = "/join/"
+    weight = 55
+  [[menus.main]]
     name = "Contact"
     url = "/contact/"
     weight = 60
