@@ -1,5 +1,14 @@
 # Faculty AI Resources Portal → Lab Subdomain — Implementation Plan
 
+> ## ✅ STATUS: COMPLETED 2026-05-30
+>
+> Portal live at **https://ai-resources.ai-teaching-lab.org/** (public repo `ai-teaching-lab/penn-law-ai-resources`, own Pages, Enforce HTTPS on); Toolkit card live; `pennlaw.link/ai-resources` repointed (Rebrandly). All checkboxes below are done. **Deviations from plan, for the record:**
+> - **Transfer took the portal offline.** The `ai-teaching-lab` org is on the **Free** plan, which can't serve Pages from a *private* repo — so making the repo **public** was mandatory, not optional, to restore the site.
+> - **History purge added.** Before going public, `CLAUDE.md` + `docs/` were removed from the working tree *and purged from all git history* (`git-filter-repo`), preserved to Box at `Lab/website/penn-law-ai-resources-dev-docs/`. A fresh public-safe `CLAUDE.md` + `_config.yml` (Jekyll exclude) were added to the repo.
+> - **Cert needed a nudge.** GitHub's TLS cert stalled at `null` for ~17 min despite correct DNS; toggling the custom domain off/on forced issuance (`authorization_pending` → `approved`).
+> - **Team access deferred.** Only Polk is in the org, so no team was created; Grace was invited as a collaborator directly. Set up a team with Write when more members join.
+> - **DNS** is at GoDaddy (`ns21/22.domaincontrol.com`); record added as `CNAME ai-resources → ai-teaching-lab.github.io`.
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Make the Penn Carey Law AI Resources portal a Lab project — owned by the `ai-teaching-lab` GitHub org, served at `https://ai-resources.ai-teaching-lab.org/` on its own GitHub Pages, and featured as a card in the Lab site's Toolkit — with no build coupling between the two sites.
