@@ -1,13 +1,14 @@
 {{ $cat := .Params.toolkit_category | default "core" }}
+{{ $url := .Params.external_url | default .RelPermalink }}
 <li class="toolkit-card toolkit-card-{{ $cat }}">
-  <a href="{{ .RelPermalink }}">
+  <a href="{{ $url }}"{{ if .Params.external_url }} target="_blank" rel="noopener"{{ end }}>
     <div class="toolkit-card-head">
       <span class="toolkit-category toolkit-category-{{ $cat }}">
         {{ if eq $cat "core" }}Core{{ else if eq $cat "audience" }}Audience{{ else if eq $cat "teaching" }}Teaching{{ else }}{{ $cat }}{{ end }}
       </span>
       {{ with .Params.version }}<span class="toolkit-version">{{ . }}</span>{{ end }}
     </div>
-    <h3>{{ .Title }}</h3>
+    <h3>{{ .Title }}{{ if .Params.external_url }} <span class="toolkit-card-ext" aria-hidden="true">↗</span>{{ end }}</h3>
     {{ with .Description }}<p>{{ . }}</p>{{ end }}
     <div class="toolkit-card-foot">
       {{ with .Params.audience }}
