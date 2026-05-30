@@ -68,9 +68,9 @@ availability: "public"
 version: "<current portal version/date string>"
 weight: <fits the audience-group ordering>
 external_url: "https://ai-resources.ai-teaching-lab.org/"
-_build:
-  render: never      # no empty orphan page at /toolkit/ai-resources/
-  list: always       # but keep the card in the toolkit grid
+build:                 # NOTE: key is `build`, not `_build` (renamed in Hugo 0.145)
+  render: never        # no empty orphan page at /toolkit/ai-resources/
+  list: always         # but keep the card in the toolkit grid
 ---
 ```
 

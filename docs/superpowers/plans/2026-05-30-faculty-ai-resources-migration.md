@@ -71,10 +71,10 @@ with:
 - [ ] **Step 4: Build and confirm existing cards are unchanged.** From `~/code/ai-teaching-lab/ai-teaching-lab.org`:
 
 ```bash
-hugo --gc --minify --quiet && grep -c '<li class="toolkit-card' public/toolkit/index.html && grep -c '↗' public/toolkit/index.html
+hugo --gc --minify --quiet && grep -c '<li class="toolkit-card' public/toolkit/index.html
 ```
 
-Expected: build succeeds with no errors; the `<li class="toolkit-card` count is `12` (the existing cards still render); the `↗` count is `0` (no card has `external_url` until Task 2).
+Expected: build succeeds with no errors; the `<li class="toolkit-card` count is `12` (the existing cards still render). Note: a site-wide `grep -c '↗'` returns `5` from pre-existing nav/footer chrome — to confirm no card carries the affordance, verify the arrows fall outside the `<li class="toolkit-card …">…</li>` blocks (none do until Task 2).
 
 - [ ] **Step 5: Commit.**
 
@@ -104,11 +104,13 @@ availability: "public"
 version: "May 2026"
 weight: 100
 external_url: "https://ai-resources.ai-teaching-lab.org/"
-_build:
+build:
   render: never
   list: always
 ---
 ```
+
+> The key is `build:` (not `_build:` — renamed in Hugo 0.145; both CI 0.161.1 and local 0.162.1 require the new key, or `render: never` is silently ignored and an orphan page is generated).
 
 - [ ] **Step 2: Build the site.**
 
@@ -121,15 +123,15 @@ Expected: succeeds, no errors, no duplicate-target warnings.
 - [ ] **Step 3: Confirm the card renders and links to the subdomain.**
 
 ```bash
-grep -A4 'Faculty AI Resources' public/toolkit/index.html | grep -o 'https://ai-resources.ai-teaching-lab.org/'
+grep -o 'href=[^ "]*ai-resources.ai-teaching-lab.org/' public/toolkit/index.html
 ```
 
-Expected: prints `https://ai-resources.ai-teaching-lab.org/` (the card exists and links out).
+Expected: prints `href=https://ai-resources.ai-teaching-lab.org/` (the card exists and links out). Note: don't use `grep -A4` here — `--minify` collapses the page to one line, so line-context flags return nothing.
 
 - [ ] **Step 4: Confirm NO orphan page was emitted at the portal's future path.**
 
 ```bash
-test ! -e public/toolkit/ai-resources/index.html && echo "OK: no orphan page"
+test ! -e public/toolkit/ai-resources && echo "OK: no orphan page"
 ```
 
 Expected: `OK: no orphan page` (proves `render: never` worked — the subdomain owns that URL space, the Lab site doesn't shadow it).
