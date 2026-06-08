@@ -15,11 +15,11 @@ owner: ["Tulio Tagliaferri '27"]
 
 Exam Taker is the test-subject side of the Lab's exam work. The pipeline puts a current AI model in the seat of a law student: it answers real Penn Carey Law finals — the same exams enrolled students sit for — and the answers go into the live grading stack to be scored blind, on the curve, by the faculty who wrote them.
 
-Wave 1 ran during the Spring 2026 exam period and is now written up. A frontier model sat for eleven real PCL finals from across the curriculum — tax, remedies, constitutional law, criminal law, intellectual property, legislation, national security, international law, and a seminar. Each exam was answered twice under otherwise identical conditions: once on the model's training alone, and once with the course syllabus and an outline supplied. The answers were packaged to look like ordinary student submissions, given reserved examination numbers that could not collide with any real student, and graded blind by the faculty on their own rubrics. The class curve — recomputed with the AI answers removed — is the comparator.
+Wave 1 ran during the Spring 2026 exam period and is now written up as a draft paper. A frontier model sat for eleven real PCL finals from across the curriculum — tax, remedies, constitutional law, criminal law, intellectual property, legislation, national security, international law, and a seminar. Each exam was answered twice under otherwise identical conditions: once on the model's training alone, and once with the course syllabus and an outline supplied. The answers were packaged to look like ordinary student submissions, given reserved examination numbers that could not collide with any real student, and graded blind by the faculty on their own rubrics. The class curve — recomputed with the AI answers removed — is the comparator.
 
 ## Read the work
 
-- **[Paper — *Can AI Ace Your Exam? A Penn Law Experiment*](/papers/can-ai-ace-your-exam-2026-06.pdf)** (PDF) — the full Wave 1 write-up.
+- **[Draft paper — *Can AI Ace Your Exam? A Penn Law Experiment*](/papers/can-ai-ace-your-exam-2026-06.pdf)** (PDF) — the full Wave 1 write-up, a working draft not yet circulated.
 - **[Extended abstract](/papers/can-ai-ace-your-exam-extended-abstract.pdf)** (PDF) — the three-page summary.
 - **[Slides](/slides/can-ai-ace-your-exam/)** — the self-contained presentation deck.
 
@@ -34,6 +34,10 @@ Three findings organize the Wave 1 results.
 ## Why it matters
 
 The empirical answer is yes — a machine that never took the course can write a top-of-the-class answer to the final. The harder question is the one this work puts to colleagues: if that's true, what is the final measuring? On this evidence, not mastery of the course so much as fluency in a genre — the time-limited issue-spotter and the doctrinal multiple-choice block — that current models have already mastered. The durable response is not to chase this year's model's weaknesses but to rethink the instrument: assess what we intrinsically value, assess the human-plus-AI system rather than the unaided human, and favor process over one-shot product.
+
+## Behind the paper
+
+A short companion essay, *Behind the Paper: AI-Assisted Research* (draft), reflects on how the project itself was run — a study of AI exam-taking conducted with AI as the apparatus, and what running it that way taught about trust, control, and keeping a reliable research record. **[Read it here](/papers/behind-the-paper-2026-06.pdf)** (PDF).
 
 ## What's next
 
