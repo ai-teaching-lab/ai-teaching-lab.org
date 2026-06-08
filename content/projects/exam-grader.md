@@ -2,6 +2,7 @@
 title: "Exam Grader"
 description: "Calibration-based AI grading for law-school essay exams — deployed against Polk's Spring 2026 IP class."
 date: 2026-05-09
+lastmod: 2026-06-08
 draft: false
 type: project
 cluster: "assessment-tools"
@@ -10,7 +11,6 @@ workstream: "02-assessment-tools/exam-grader"
 status: active
 pillar: ["build", "research"]
 owner: ["Tulio Tagliaferri '27"]
-github: "ai-teaching-lab/exam-grader"
 ---
 
 Exam Grader is the Lab's calibration-based grading tool for law-school essay exams. The model doesn't grade in a vacuum — it grades against a calibration set the faculty member has already scored, learning the rubric from worked examples before scoring the rest of the stack.
@@ -30,4 +30,4 @@ Law-school exam grading is the highest-friction step in the teaching cycle and t
 
 ## Status
 
-Active build. Code lives at `~/code/exam-grader/`. First deployment is the Spring 2026 IP final at Penn Carey Law; results feed Wave 2 of the AI Final Exam Project.
+Active build. Shares the underlying pipeline with the Exam Taker project. The first deployment is the Spring 2026 IP final at Penn Carey Law; results feed Wave 2 of the AI Final Exam Project.
