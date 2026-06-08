@@ -21,7 +21,7 @@ Wave 1 ran during the Spring 2026 exam period and is now written up as a draft p
 
 - **[Draft paper — *Can AI Ace Your Exam? A Penn Law Experiment*](/papers/can-ai-ace-your-exam-2026-06.pdf)** (PDF) — the full Wave 1 write-up, a working draft not yet circulated.
 - **[Extended abstract](/papers/can-ai-ace-your-exam-extended-abstract.pdf)** (PDF) — the three-page summary.
-- **[Slides](/slides/can-ai-ace-your-exam/)** — the self-contained presentation deck.
+- **[Slides](/slides/can-ai-ace-your-exam/)** — the self-contained presentation deck ([PDF](/slides/can-ai-ace-your-exam/can-ai-ace-your-exam-slides.pdf)).
 
 ## What we found
 
