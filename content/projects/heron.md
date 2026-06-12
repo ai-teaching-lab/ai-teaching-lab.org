@@ -1,8 +1,8 @@
 ---
-title: "Heron — Virtual TA Slackbot"
-description: "Pedagogy infrastructure: a Slackbot that serves as a 24/7 virtual teaching assistant for course use."
+title: "Heron — A Course-Bounded Virtual TA"
+description: "A citation-first teaching assistant that answers students only from a single course's materials — and the argument that faculty should build these to govern the AI students already use. Spring 2026 results and a draft paper."
 date: 2026-05-07
-lastmod: 2026-05-09
+lastmod: 2026-06-12
 draft: false
 type: project
 cluster: "teaching-tools"
@@ -10,16 +10,44 @@ weight: 40
 workstream: "03-teaching-tools/heron"
 status: active
 pillar: ["build", "teach"]
-owner: ["TBD"]
-github: "ai-teaching-lab/heron"
+owner: ["R. Polk Wagner"]
 ---
 
-Heron is a virtual TA Slackbot for law school courses. Backed by retrieval over course materials — syllabus, readings, lecture transcripts — Heron answers student questions, points to relevant materials, and escalates to faculty when something needs human judgment.
+Heron is a course-bounded, citation-first teaching assistant — a Slack bot that answers students only from a single course's assigned readings, slides, and class transcripts, cites a page or a timestamp for every doctrinal claim, refuses when the materials don't support an answer, and goes dark before the exam. R. Polk Wagner built it and ran it in his Intellectual Property course at Penn Carey Law in the spring of 2026.
 
-## Why this matters
+The argument behind it is the point: faculty should build course-bounded, cite-or-refuse teaching assistants — not to beat the general chatbots on answer quality, which the evidence says they will not, but to *govern* a tool students are already using, pointing it at the course, the source, and the exam.
 
-A first-line TA available at 3am the night before an exam, in office-hours queue when the human TAs are saturated, in study-group conversations when no one's quite sure of the answer. Pedagogy infrastructure: students learn from interacting with Heron; faculty save synchronous-TA bandwidth for higher-leverage work.
+## Read the work
+
+- **[Draft paper — *Heron in the Classroom: A Faculty-Built AI Teaching Assistant for Legal Education*](/papers/heron-in-the-classroom-2026-06.pdf)** (PDF) — the full write-up: the design, the one-semester case study, the cost and skill it actually takes, and a replication path. An early working draft, not yet circulated.
+
+## The design: six principles
+
+Heron runs on six choices, each answering to a pedagogical commitment rather than to accuracy.
+
+- **The corpus is the course, and nothing else.** Retrieval is limited to the assigned materials — no open web — so the tool becomes a way *into* the readings rather than a way around them.
+- **Cite, or say you can't.** Every retrieval is scored against a similarity threshold; clear it and Heron answers from the passages and cites them, fall below it and it discloses, plainly, that the question is out of scope.
+- **A citation you can open.** Pinpoint references — a page, a slide number, a transcript timestamp — so the student can verify against the source, not a summary of it.
+- **The bot sounds like the course.** Aligned to the course's voice and to its standard for a complete answer, the rule applied rather than the black-letter rule recited.
+- **It goes dark for the exam.** A configured cutoff takes the tool offline during the examination period — for everyone, the instructor included.
+- **When it doesn't know, it says so — plainly.** No upbeat hedge, no confident bluff, never a citation invented to fill a gap.
+
+## What one semester showed
+
+One course, one instructor, one semester — a case study, not a test. Heron was live all term but sat nearly untouched until the last week before the exam, when students arrived all at once: in the six days before the final, **33 students (43% of the class) put close to a thousand questions to Heron**. The course's own materials answered **96.6%** of them; the rest fell through to a labeled general-knowledge disclaimer. Use was conversational, not transactional — **86% of questions came inside back-and-forth threads** — and the exam-period cutoff engaged on schedule, taking the tool offline when the course needed it gone. The cite-or-refuse design held; what it could not do was make students reach for the tool across the term rather than only in the week it could help them most.
+
+## Why it matters: governance, not accuracy
+
+The capability question is settled. A frontier model already passes real Penn Carey Law finals when graded blind (see the Lab's [Exam Taker](/projects/exam-taker/) project), and in a blinded study this spring, law professors more often preferred an AI tutor's short answers to a fellow professor's. And yet grounding a capable model in a fixed course corpus does not reliably make its answers *better* — in both that tutoring study and the exam work, the grounded system did not outperform the stock one.
+
+So the case for a course-bounded teaching assistant cannot rest on better answers. It rests on governance: answering from *this* course in *this* course's frame, citing a page a student can actually open and check, sending students back to the source, and going silent for the exam. None of that is about being right more often. It is the pedagogical work a polished, ungrounded chatbot quietly skips — and it is exactly what a general chatbot, by design, leaves ungoverned.
+
+## Build it yourself
+
+The second claim is the one most colleagues doubt until they see it done: a single faculty member, without an engineering team, can now build and run such a thing. Heron is five commodity pieces wired together — Slack, a managed vector database, an embedding model, a multi-provider LLM layer, and a one-process host — with most of the implementation code written by an AI coding assistant under the author's direction and review. The cost was about **ten hours** for the first working version, **under an hour a week** to run, and **under a dollar per enrolled student** for the semester. The skill required is real but bounded: comfort at the command line, environment variables, a little Git, and the patience to read an error message without flinching.
+
+The code is open source and built to be forked: **[github.com/ai-teaching-lab/heron](https://github.com/ai-teaching-lab/heron)**. Point it at your own course's materials, set a handful of configuration choices, and deploy.
 
 ## Status
 
-v1 prototype lives at `~/code/ip_slackbot` — built around an IP-class corpus and used to validate the retrieval pattern. Lab-owned v2 is the next major build, scoped to generalize the architecture across courses.
+Active. Deployed in a Spring 2026 Intellectual Property course and written up as an early draft paper. The implementation is one example, built one way; a lab-owned, course-general v2 — generalizing the architecture across courses — is the next major build.
