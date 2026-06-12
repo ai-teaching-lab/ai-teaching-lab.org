@@ -1,6 +1,6 @@
 ---
 title: "Heron — A Course-Bounded Virtual TA"
-description: "A citation-first teaching assistant that answers students only from a single course's materials — and the argument that faculty should build these to govern the AI students already use. Spring 2026 results and a draft paper."
+description: "A virtual teaching-assistant chatbot bound to one course's materials: it answers students in Slack from the assigned readings, with citations. Plus the argument that faculty should build these to govern the AI students already use. Spring 2026 results and a draft paper."
 date: 2026-05-07
 lastmod: 2026-06-12
 draft: false
@@ -13,9 +13,11 @@ pillar: ["build", "teach"]
 owner: ["R. Polk Wagner"]
 ---
 
-Heron is a course-bounded, citation-first teaching assistant — a Slack bot that answers students only from a single course's assigned readings, slides, and class transcripts, cites a page or a timestamp for every doctrinal claim, refuses when the materials don't support an answer, and goes dark before the exam. R. Polk Wagner built it and ran it in his Intellectual Property course at Penn Carey Law in the spring of 2026.
+**Heron is a virtual teaching assistant for a single course — a chatbot students talk to in Slack.** Ask it about a case, a doctrine, or the week's reading, and it answers from *that course's own materials* — the assigned readings, slides, and class transcripts — citing the exact page or timestamp so a student can check the source, and saying so plainly when the materials don't cover the question. It is named for Heron of Alexandria, the first-century engineer of steam toys and automatic doors: a fitting namesake for a course about invention.
 
-The argument behind it is the point: faculty should build course-bounded, cite-or-refuse teaching assistants — not to beat the general chatbots on answer quality, which the evidence says they will not, but to *govern* a tool students are already using, pointing it at the course, the source, and the exam.
+R. Polk Wagner built Heron and ran it in his Intellectual Property course at Penn Carey Law in the spring of 2026. Heron itself is one working example; the general idea it argues for is the point. Faculty should build *course-bounded, cite-or-refuse* teaching assistants — bound to one course's materials, citing what they can and declining what they can't — not to beat general chatbots like ChatGPT on answer quality (the evidence says they won't), but to *govern* a tool students already use, pointing it at the course, the source, and the exam.
+
+> **Where Heron fits in the Lab.** Heron is the *teaching* side of the Lab's work — the always-on assistant that helps students learn *during* the course. Its siblings work the *assessment* side: [Exam Taker](/projects/exam-taker/) puts an AI in the student's seat to test what finals actually measure, and [Exam Grader](/projects/exam-grader/) helps faculty grade.
 
 ## Read the work
 
