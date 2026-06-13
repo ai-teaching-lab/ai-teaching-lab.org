@@ -1,8 +1,8 @@
 ---
 title: "Heron — A Course-Bounded Virtual TA"
-description: "A virtual teaching-assistant chatbot bound to one course's materials: it answers students in Slack from the assigned readings, with citations. Plus the argument that faculty should build these to govern the AI students already use. Spring 2026 results and a draft paper."
+description: "A virtual teaching-assistant chatbot bound to one course's materials: it answers students in Slack from the assigned readings, with citations. Plus the argument that faculty should consider building these to govern the AI students already use. Spring 2026 results and a draft paper."
 date: 2026-05-07
-lastmod: 2026-06-12
+lastmod: 2026-06-13
 draft: false
 type: project
 cluster: "teaching-tools"
@@ -15,13 +15,17 @@ owner: ["R. Polk Wagner"]
 
 **Heron is a virtual teaching assistant for a single course — a chatbot students talk to in Slack.** Ask it about a case, a doctrine, or the week's reading, and it answers from *that course's own materials* — the assigned readings, slides, and class transcripts — citing the exact page or timestamp so a student can check the source, and saying so plainly when the materials don't cover the question. It is named for Heron of Alexandria, the first-century engineer of steam toys and automatic doors: a fitting namesake for a course about invention.
 
-R. Polk Wagner built Heron and ran it in his Intellectual Property course at Penn Carey Law in the spring of 2026. Heron itself is one working example; the general idea it argues for is the point. Faculty should build *course-bounded, cite-or-refuse* teaching assistants — bound to one course's materials, citing what they can and declining what they can't — not to beat general chatbots like ChatGPT on answer quality (the evidence says they won't), but to *govern* a tool students already use, pointing it at the course, the source, and the exam.
+R. Polk Wagner built Heron and ran it in his Intellectual Property course at Penn Carey Law in the spring of 2026. Heron itself is one working example; the general idea it argues for is the point. Faculty should consider building *course-bounded, cite-or-refuse* teaching assistants — bound to one course's materials, citing what they can and declining what they can't — not to beat general chatbots like ChatGPT on answer quality (the evidence says they won't), but to *govern* a tool students already use, pointing it at the course, the source, and the exam.
 
 > **Where Heron fits in the Lab.** Heron is the *teaching* side of the Lab's work — the always-on assistant that helps students learn *during* the course. Its siblings work the *assessment* side: [Exam Taker](/projects/exam-taker/) puts an AI in the student's seat to test what finals actually measure, and [Exam Grader](/projects/exam-grader/) helps faculty grade.
 
 ## Read the work
 
 - **[Draft paper — *Heron in the Classroom: A Faculty-Built AI Teaching Assistant for Legal Education*](/papers/heron-in-the-classroom-2026-06.pdf)** (PDF) — the full write-up: the design, the one-semester case study, the cost and skill it actually takes, and a replication path. An early working draft, not yet circulated.
+
+The paper's abstract:
+
+> The faculty debate over whether to permit AI in our courses is, I think, largely over, settled less by argument than by two facts: a frontier model now passes real law-school finals, and in a blinded study law professors preferred an AI tutor's answers to a colleague's three times in four. The obvious response — ground the model in the course's own materials — does not, the evidence suggests, make its answers any better. The case for a course-bounded teaching assistant therefore rests not on accuracy but on governance: answering from this course's materials, citing a page a student can open, refusing when the readings cannot support an answer, and going dark for the exam. I make two claims. The first is that faculty should consider building such tools; the second, more often doubted, is that one faculty member can. I built and ran Heron in my Intellectual Property course in the spring of 2026 — alone, in about ten hours of setup, at under a dollar per enrolled student. The tool sat nearly unused until the week before the exam, when thirty-three students put close to a thousand questions to it and the course's own materials answered 96.6% of them. One semester cannot prove a design philosophy; it can show what one looks like, and that building it is now within reach.
 
 ## The design: six principles
 
