@@ -1,18 +1,20 @@
 ---
-title: "1L Guidance on ChatGPT Edu Use"
+title: "1L Guidance on Claude Use"
 description: "Written for incoming 1Ls. How LLMs work, their strengths and weaknesses, the human-AI-human sandwich workflow, and prompting tips."
 date: 2025-09-01
-lastmod: 2026-05-09
+lastmod: 2026-07-13
 weight: 110
 toolkit_category: "audience"
 audience: ["student"]
 availability: "public"
-version: "September 2025; revised May 2026"
+version: "September 2025; revised July 2026"
 ---
 
 Written for incoming 1Ls. Covers how LLMs work, what they do well, what they fail at, the "human-AI-human sandwich" workflow that keeps the student in the loop, and concrete prompting tips.
 
 **First and most important:** every course has its own rules about AI. Always check your syllabus and follow your professor's guidance — that governs. This document is general orientation for cases not covered by a specific course rule.
+
+Starting with the 2026–27 academic year, 1Ls receive institutional access to **Claude.ai**, integrated into the 1L Legal Practice Skills curriculum. That's the tool this document assumes. ChatGPT EDU remains available at Penn Carey Law for faculty and staff, but it's no longer the student-facing tool — the guidance below is written for Claude.
 
 ## The frame
 
@@ -20,7 +22,7 @@ Your main task as a 1L is to develop legal reasoning. Generative AI can support 
 
 ## How generative AI works
 
-ChatGPT, Claude, and other Large Language Models are predictive tools. They generate likely next text based on patterns in their training data and the prompts you provide — a process that often produces fluent, useful output but is fundamentally different from how a lawyer reasons through a problem. They can produce confident mistakes, called "hallucinations," because nothing in the underlying mechanism checks output against truth.
+Claude, ChatGPT, and other Large Language Models are predictive tools. They generate likely next text based on patterns in their training data and the prompts you provide — a process that often produces fluent, useful output but is fundamentally different from how a lawyer reasons through a problem. They can produce confident mistakes, called "hallucinations," because nothing in the underlying mechanism checks output against truth.
 
 ## Where AI excels
 
@@ -43,7 +45,7 @@ If responses start drifting or losing track of earlier instructions, start a fre
 - **Overreliance.** Relying on AI before you've done your own reasoning short-circuits the practice you came to law school to get. The skills you're building — issue-spotting, analogical reasoning, working through ambiguity — develop through struggle, not through reading a polished answer.
 - **Bias.** AI reflects biases in its training data, including stereotyped framings on race, gender, immigration status, and class. That matters when you're working in doctrinal areas where bias affects outcomes (criminal procedure, employment, family law, immigration). Check outputs for stereotyped framings before relying on them.
 - **Integrity.** Misrepresenting AI output as your own work violates academic integrity rules. Failing to verify AI output is your own quality problem — and depending on the assignment, it can become an integrity issue if the work is presented as your independent analysis.
-- **Confidentiality.** Don't paste another person's work, anything from a confidential source, or anything you wouldn't want on a public web page. ChatGPT Edu has institutional protections; consumer AI tools may not. If you're not sure where a tool stores or trains on your inputs, assume it does.
+- **Confidentiality.** Don't paste another person's work, anything from a confidential source, or anything you wouldn't want on a public web page. The Claude access provided through the 1L curriculum is expected to carry institutional data protections, but Penn's data-approval terms for it are still being finalized as the university-wide agreement rolls out — check current guidance before assuming coverage. Personal or consumer AI accounts don't have this protection. If you're not sure where a tool stores or trains on your inputs, assume it does.
 
 ## Best practices: the human-AI-human sandwich
 

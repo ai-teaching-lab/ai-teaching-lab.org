@@ -1,130 +1,94 @@
 ---
-title: "Creating a Virtual TA with Custom GPTs"
-description: "A step-by-step guide to building a course-specific virtual teaching assistant on OpenAI's Custom GPTs platform, using the Lab's IP TA as a template."
+title: "Building a Virtual TA for Your Course"
+description: "Four ways to give your course a virtual teaching assistant — Claude Projects, PennChat Agents, the Lab's Heron Slackbot, or an externally-hosted tool — with access, cost, setup, and data tradeoffs for each."
 date: 2024-09-01
-lastmod: 2026-05-09
+lastmod: 2026-07-13
 weight: 230
 toolkit_category: "teaching"
 audience: ["faculty"]
 availability: "public"
-version: "2024; revised May 2026"
+version: "2024; revised July 2026"
 ---
 
-A walkthrough for faculty who want to build a course-specific virtual teaching assistant using OpenAI's Custom GPTs. The same conceptual moves apply to Claude Projects (Anthropic) or Gemini Gems (Google), but the specific UI flows differ — adapt the steps below to your platform. The example throughout is the Lab's IP TA — a study-and-review assistant for Intro to Intellectual Property at Penn Carey Law.
+A virtual TA is a course-specific AI assistant, grounded in your syllabus, readings, and framing, that students can ask questions of directly. As of mid-2026 there are four real ways to build one at Penn Carey Law, and they differ enough in access, cost, and setup that the right choice depends heavily on your course. This guide walks through all four.
 
-This is the conceptual precursor to the Lab's **Heron** virtual-TA Slackbot project. The Custom GPT path is a low-effort starting point: no code, no hosting, no integration work. You drop in syllabus materials, write a few paragraphs of instructions, and the platform handles the rest.
+This replaces the older version of this guide, which walked through building a ChatGPT Custom GPT. That path is no longer workable for reaching students: ChatGPT EDU remains available at Penn Carey Law, but only for faculty and staff — students are moving to Claude for 2026–27, so a Custom GPT has no student audience to reach on the institutional side. The four paths below are the current landscape.
 
-## Before you start
+## The four paths, at a glance
 
-Custom GPTs are useful when:
+| Path | Who can reach it | Cost | Setup effort | Where materials go | Best for |
+|---|---|---|---|---|---|
+| **1. Claude.ai / Claude Projects** | Faculty (research account); 1Ls (2026–27 curriculum); other students only if they have their own Claude account | Free tier is limited; full Project functionality needs a paid plan (Pro/Max/Team/Enterprise) | Low — build a Project, write instructions, upload files. No code. | Anthropic's servers, under your (or each student's) individual account | A 1L course, or any course where you can assume students already have Claude |
+| **2. PennChat Agents** | Everyone — faculty, staff, all student levels (pilot now, full launch expected after mid-August 2026) | Free during the pilot; credit-based system at full launch (pricing TBD) | Low-to-medium — rebuild your instructions/knowledge/tools as a PennChat Agent; no import from a Custom GPT | Penn's secure hosted environment (LibreChat), approved for most data up to High Risk | Broad reach across a whole class regardless of year, especially with sensitive course material |
+| **3. Heron (Slack)** | Anyone in your course's Slack workspace — no Claude/ChatGPT/PennChat account needed | Real, ongoing: Pinecone, OpenAI embeddings, an LLM provider, and Railway hosting all bill separately; not free | Medium-to-high — fork a repo, configure a YAML file, stand up a Slack app, deploy, sync materials | Third-party infrastructure (Pinecone, OpenAI, your chosen LLM provider, Railway) — not a Penn-reviewed tool | Courses already living in Slack, or where you want page/slide/timestamp-level citations and are comfortable with (or have help for) the technical setup |
+| **4. Externally-hosted** | Whoever you grant access to, on whatever platform you choose | Variable, and entirely on you | High — you're building and running a service | Wherever you host it — outside Penn's reviewed tools entirely | Narrow, low-risk use cases where you need something Penn's tools don't offer, and you have the technical support to run it |
 
-- You want students to be able to ask questions about course-specific material — your syllabus, your slides, your hypotheticals — and get answers grounded in *your* framing of the doctrine.
-- You don't need analytics, persistent memory across students, or integration with another platform.
-- You're comfortable with students using the AI tool's web interface rather than having the TA embedded somewhere (Canvas, Slack, your course site).
+Read the sections below before picking — the table compresses a lot of nuance, especially on path 1's sharing story and path 3's data posture.
 
-If you need any of those things, a Custom GPT is the wrong tool — look at Heron-style implementations or build something custom.
+## Path 1: Claude.ai and Claude Projects
 
-## Seven steps
+**Who can access it.** Faculty have Claude access through research accounts today; a University-wide Claude agreement is expected around August 2026. For 2026–27, 1Ls receive Claude.ai (and likely Claude Code) as part of the 1L Legal Practice Skills curriculum. Outside that curriculum, Penn hasn't confirmed institutional Claude access for 2Ls, 3Ls, or LLMs — if you teach one of those courses, this path depends on students bringing their own Claude accounts.
 
-### 1. Navigate to the GPT editor
+**What it costs.** Claude's free tier is limited; full Project functionality requires a paid plan (Pro, Max, Team, or Enterprise). Whether the 1L curriculum's Claude access includes a paid tier for students, or what the university-wide agreement will look like, isn't confirmed in Penn's current tool documentation — **check with me before telling students what tier they'll have.**
 
-Go to [chatgpt.com/create](https://chatgpt.com/create) (or open Explore GPTs from the ChatGPT sidebar and click "Create"). You need a paid ChatGPT account (Plus, Pro, Business, Enterprise, or Edu) to publish a Custom GPT. To find GPTs you've already built, open Explore GPTs in the ChatGPT sidebar and select My GPTs.
+**What setup involves.** Build a Claude Project: give it custom instructions (the same kind of briefing you'd write for a Custom GPT — audience, purpose, voice, scope, boundaries) and upload knowledge files (syllabus, readings, your own hypotheticals). No code, no hosting.
 
-### 2. Create a new GPT
+**The sharing story — read this before you promise anything.** Claude Projects live on an individual account. There is no button that publishes a Project to "everyone in my course" the way a GPT Store listing works. What's confirmed: a Project's files, instructions, and chat history follow your account across devices once you're logged in, and full functionality needs a paid plan; if your account is managed by an organization, that org's settings can affect access independently of Claude itself. What's *not* confirmed is whether Penn's forthcoming Claude deployment will provision projects as a shared, multi-user workspace — that would likely require a Team- or Enterprise-style account structure, and nothing in Penn's current tool documentation says whether that's how the rollout will work. **Treat any claim of a "shared class Project" as unverified until I've confirmed it.**
 
-Click the plus sign to start a new GPT.
+The workaround that works today regardless of how that resolves: build the Project as your own reference tool, then hand students the underlying pieces — your instructions and your (rights-cleared) materials — as something they paste into a Project on their *own* individual account. It's more setup per student than a single shared link, but it doesn't depend on a capability nobody has confirmed yet. **This is the most genuinely open question in this guide — I don't have a clean answer for class-wide Project sharing, and I'd rather say that plainly than invent a procedure.**
 
-### 3. Open the Configure tab
+**What data can go in.** Follow the same do-not-upload list that applies to any AI knowledge base: no class recordings or transcripts of them (FERPA protects identifiable student speech), no student work or grading materials with names attached, no copyrighted casebook material beyond fair use, nothing under NDA or embargo. Penn's data-risk review anticipates Claude will be approved for Low and Moderate Risk data, but that approval is explicitly "to be confirmed at rollout" — don't put anything you'd classify as High Risk into a Project yet.
 
-Two tabs appear at the top left — Create and Configure. Skip the Create tab (it's a guided builder that walks you through the same fields conversationally) and go directly to Configure. You'll have more control and a cleaner result.
+**When to pick this path.** Your course is a 1L course (where Claude access is a given via the curriculum), or you're comfortable requiring or assuming students already have paid Claude accounts. It's the lowest-effort path with the best model quality, but the honest access gap for non-1L courses is real — don't build this for a 2L seminar and assume every student can reach it.
 
-### 4. Fill in the configuration
+## Path 2: PennChat Agents
 
-This is where the real work happens. The fields are:
+**What PennChat is.** Penn's AI portal, hosted inside Penn's secure network, fronting both Anthropic's Claude and OpenAI's models in one interface. It runs on **LibreChat**, an open platform, and its **Agents** feature is the direct successor to ChatGPT's Custom GPTs: you give an agent standing instructions, attach knowledge files it searches across, and add tools (web search, a code interpreter, and OpenAPI-based actions — which tools are switched on can vary during the pilot).
 
-#### Name
+**Who can access it.** Broader than any other path: faculty, staff, and students at every level, currently in a pilot running through roughly mid-August 2026, then moving to a full enterprise launch. This is the only path that reliably reaches 2Ls, 3Ls, and LLMs alongside 1Ls without depending on personal accounts.
 
-Pick something descriptive. The Lab's IP TA is called "Intro to IP TA" — students see the name in the chat header, so make it obvious what course it serves.
+**What it costs.** Free during the pilot. At full launch, PennChat moves to a credit-based usage system — the specific pricing isn't set yet, so don't commit to numbers with students until that's published.
 
-#### Description
+**One access catch:** PennChat requires a connection to PennNet, AirPennNet, or the GlobalProtect VPN. A student working from off-campus without the VPN can't reach it — worth flagging if your course has remote components.
 
-One sentence on what the GPT is for. The IP TA's description: *"Study and Grading assistant for IP Law at Penn Carey Law."*
+**What setup involves.** There's no one-click import from a ChatGPT Custom GPT — a Custom GPT is rebuilt, not migrated. Paste your instructions into a new PennChat agent, re-upload your knowledge files, and recreate any actions as PennChat tools. Every Custom GPT capability has a direct equivalent; it's manual, not automatic. Start from the Agent Builder in PennChat's side panel. (LibreChat's own agent documentation covers the mechanics in more depth than Penn-specific guidance does.)
 
-#### Instructions
+**What data can go in.** This is PennChat's strongest point: it's approved for Low, Moderate, and most High Risk data (excluding SSNs and credit-card numbers, and avoiding identifiable PHI) — the broadest data approval of any general-purpose AI tool reviewed at Penn Carey Law, alongside Microsoft Copilot Chat. If your course materials include anything sensitive, this is the safest of the four paths.
 
-This is the most important field. Treat it as a full briefing for a smart but inexperienced TA who has never seen your course before. Cover:
+**When to pick this path.** You want to reach your whole class regardless of year, your course touches data more sensitive than "public syllabus and readings," or you'd rather wait a few weeks for the full launch than build something today on infrastructure Penn hasn't reviewed. The tradeoff is the VPN requirement and a pilot timeline that isn't finished yet — this is a path for the fall semester, not necessarily for something you need live this month.
 
-- **Audience.** Who is this for? "Students in the Intro to Intellectual Property class at the University of Pennsylvania Carey Law School."
-- **Purpose.** What does the TA do? Study help? Practice questions? Grading rubric explanations? Be specific. Multiple purposes are fine — just enumerate them.
-- **Voice and depth.** How should the TA respond? "Detailed but concise explanations, enriched with real-life case examples. Encourages understanding through Q&A; helps students grasp key takeaways without overwhelming them."
-- **Subject scope.** What content domain? For the IP TA, the syllabus modules: patents, trademarks, copyrights, trade secrets, and basic IP-law principles.
-- **Boundaries.** What should the TA *not* do? Common ones: don't write papers, don't answer take-home exam questions, don't substitute for the assigned reading.
+## Path 3: Heron (Slack)
 
-The IP TA's full instructions live in the Lab's internal materials — ask if you'd like to see them as a starting template.
+**What it is.** Heron is the Lab's own open-source project: a RAG-powered Slack bot that answers student questions using your course materials. Students `@mention` the bot inside a Slack channel; it retrieves relevant passages from your materials (stored in a Pinecone vector database), and generates an answer with page citations via an LLM, called through LiteLLM so it can run on Anthropic, OpenAI, or Google models. It supports PDF, Word, Markdown, CSV, Google Docs, and Google Sheets, syncing automatically from a Google Drive folder. Markdown transcripts with `[HH:MM:SS]` timestamps get citations like "Class 5 Transcript, around the 7:00 mark" instead of page numbers, and slide decks cite by slide number.
 
-#### Conversation starters
+The code is course-agnostic — one repository, and everything course-specific (bot name and personality, system prompts, topic categories) lives in a single `course_config.yaml` file you edit or generate with an interactive setup wizard.
 
-Pre-written prompts that appear as buttons when a student opens the GPT. They serve two purposes — orienting the student to what the TA can do, and seeding the conversation in productive directions. A few examples from the IP TA:
+**Who can access it.** Anyone who's a member of the Slack workspace and channel the bot is installed in — no Claude, ChatGPT, or PennChat account required at all. This is the lowest access barrier of the four paths if your course (or your students generally) already lives in Slack. DMs to the bot are admin-only; students interact by mentioning it in an allowed channel.
 
-- *Welcome:* "Hello! I'm [Name], your virtual TA for Intro to Intellectual Property. I'm here to help you understand topics like patents, copyrights, and trademarks. Ask me about key concepts, definitions, and examples."
-- *Guidance:* "When asking about a specific concept, use keywords and I'll do my best to clarify. For example: 'What is fair use?'"
-- *Learning objectives:* "This course covers intellectual property types, the purpose of IP rights, and the basics of protecting creations and inventions under IP law."
+**What it costs — and this is the one path with real ongoing dollar cost.** Unlike the other three, Heron isn't a flat-rate or free institutional tool. You (or whoever administers it) need, and pay for, separately: a Pinecone account (vector database), an OpenAI API key (used for embeddings regardless of which model answers questions), an API key for at least one LLM provider (Anthropic, OpenAI, or Google), and hosting — the reference deployment runs on Railway. None of these costs are fixed numbers in the codebase; they scale with usage and current vendor pricing. **Get current quotes before committing to this path for a course of any size.**
 
-Three or four starters is plenty. More clutters the interface.
+**What setup involves.** Fork the repository, run the setup wizard (`python scripts/setup.py`) to generate your course config, create a Slack app with the required OAuth scopes and Socket Mode enabled, set the environment variables (Slack tokens, Pinecone key, OpenAI key, your chosen LLM provider key, a Google service-account credential for Drive sync), and deploy — the reference setup targets Railway. Then point it at a Google Drive folder of course materials and sync. Admin control happens through Slack slash commands (`status`, `health`, `sync`, `resync`, `model`, `export`, and more) restricted to a configured list of admin Slack user IDs; which channels the bot will respond in is also configured explicitly. This is a real technical setup — plan on doing it yourself if you're comfortable with Python and API credentials, or getting help from an RA or the Lab.
 
-#### Knowledge
+**What data can go in — and this needs a clear-eyed answer.** Whatever you put in the synced Google Drive folder gets sent to OpenAI (for embeddings) and stored in Pinecone (a third-party vector database), plus whichever LLM provider answers questions. This is **not** one of the tools Penn Law ITS or Penn ISC has reviewed and approved for a specific data-risk tier — it doesn't appear on Penn's list of endorsed AI tools at all. That means there's no institutional data classification covering it; you're relying on Pinecone's, OpenAI's, and your LLM provider's own commercial data-handling terms, which you should read before uploading anything. Treat this the same as any personal-account AI tool: fine for ordinary public course materials (syllabus, published readings, your own slides), and a bad fit for anything FERPA-protected, confidential, or above Low/Moderate risk. One more thing worth knowing: the bot logs student queries — a rolling window of the last 1,000 in an active file, with everything older archived indefinitely (deletable only via an explicit admin command) — so there's a standing record of which students asked what, unless you actively purge it.
 
-Upload course materials — syllabus, key textbook chapters, lecture slides, practice questions, and your own hypotheticals. The GPT uses retrieval over these documents to ground answers in your course rather than the model's general training.
+**When to pick this path.** Your course already runs on Slack, you want citation precision (specific pages, slide numbers, or transcript timestamps) that a general chat tool won't give you out of the box, and you're willing to either do the setup yourself or line up help — and to budget for the ongoing API and hosting costs. It's the most capable and most customizable of the four, and also the most work.
 
-**Do not upload:**
+## Path 4: Externally-hosted
 
-- Class recordings or transcripts of class recordings (FERPA: identifiable student speech is a protected education record; recording-consent terms also apply).
-- Student work, exam answers, or grading materials with student names attached.
-- Copyrighted casebook chapters or commercial materials beyond fair-use limits.
-- Anything covered by NDA, embargo, or partner-confidentiality.
+**What this means practically.** Anything you build or run outside Penn's institutional systems and Penn-reviewed tool list — that includes a self-hosted Heron instance sitting on infrastructure Penn hasn't reviewed (see Path 3), but also covers other options: a custom web app calling an LLM API directly, a third-party AI-chatbot-builder SaaS product, or any other outside service you point students to.
 
-A few practical notes:
+**The tradeoff, honestly.** You get control and flexibility Penn's reviewed tools don't offer — pick any model or provider, customize without waiting on a pilot to finish, reach people without Penn credentials if that matters for your use case. You give up institutional review and support in exchange: nobody at Penn Law ITS has vetted the vendor's data-handling terms, there's no help desk if it breaks during the semester, and you (or whoever built it) are the ongoing maintainer for as long as it's live. A bot that goes dark mid-exam-prep because nobody was watching it is worse than no bot.
 
-- PDFs and Word docs work well. Slides export to PDF cleanly.
-- The retrieval is imperfect — if a student asks about a doctrine you covered in class but not in any uploaded document, the GPT will fall back on the model's general knowledge, which may or may not match your framing. Upload broadly within the limits above.
-- Keep an eye on file count and size. Performance degrades with very large knowledge bases.
+**When it's appropriate.** Low-risk, non-sensitive material, where you specifically need a capability none of the first three paths offer, and you or a collaborator can actually maintain a running service through the semester. Check the material you're putting in against Penn's data risk classification framework before you start — the same three tiers (Low, Moderate, High Risk) that govern every other tool on this page apply here too, except there's no vendor review to lean on. You're doing that assessment yourself.
 
-#### Capabilities
+**When it isn't.** Any FERPA-protected material, anything above Low/Moderate risk, or any course where you can't guarantee someone is maintaining the service for the term. If you're not sure which bucket you're in, that's the sign to use one of the first three paths instead.
 
-Check Web Browsing, Image Generation (DALL·E), and Code Interpreter & Data Analysis. Web Browsing is the most useful — it lets the TA pull recent cases and developments. The other two are rarely used in a doctrinal-law TA but don't hurt to enable.
+## Which path should you pick?
 
-#### Actions
+Start with who needs to reach it. If it's just your own 1L section, Claude Projects is the least work and the best model quality — but confirm with me what tier of Claude access students actually have before you build around an assumption. If you need to reach 2Ls, 3Ls, or LLMs, or your materials are more sensitive than an ordinary reading list, wait for PennChat's full launch or use it now during the pilot. If you want Slack-native delivery and citation precision and are willing to pay for and maintain the infrastructure, Heron is the Lab's own answer to that. Reach for an externally-hosted option only when the first three genuinely don't cover what you need, and only for material that doesn't carry real data risk.
 
-Skip this. Actions are for connecting the GPT to external APIs (authentication layers, custom databases). For a study TA, you don't need it.
-
-### 5. Publish
-
-Click Create at the top right. Choose visibility — "Only me," "Anyone with a link," "Everyone" (GPT Store) for personal accounts, or "Anyone at [Workspace]" for Business/Enterprise/Edu accounts. Link-based sharing is the practical default for a course TA.
-
-### 6. Tune the response style
-
-Once the GPT is live, open it and have a few real conversations. Adjust the tone in the prompting interface — *"Be more concise."* *"Use fewer bullet points."* *"Always cite the case name when discussing doctrine."* These adjustments fold back into the GPT's instructions automatically.
-
-A few tone defaults that work well for a law-school TA:
-
-- Approachable, clear, professional.
-- Match the complexity students are expected to handle. Don't dumb it down; don't pile on jargon.
-- End answers with an invitation to follow up: *"If this wasn't clear or you'd like a deeper explanation, ask me to elaborate."*
-
-### 7. Test and iterate
-
-Simulate the questions students are likely to ask. Stress-test the boundaries — try to get the TA to write a paper, or answer an exam question, or hallucinate a case. Where it fails, tighten the instructions. Where it succeeds, note what's working.
-
-Update knowledge as the course evolves. New cases, new hypotheticals, revised slides — re-upload and the TA stays current.
-
-**Boundaries are guidance, not enforcement.** Custom GPT instruction-following on adversarial student prompts is unreliable. A determined student can often coax the TA into answering exam questions or writing a draft paper despite explicit instructions to the contrary. Treat the boundaries as design intent and student-facing norms, not enforcement; pair the TA with course-policy guidance (the [AI Syllabus Guide]({{< ref "/toolkit/syllabus-guide" >}}) covers academic-integrity expectations) and reserve graded assessment for tasks the TA cannot easily do.
-
-## Privacy note
-
-OpenAI's data-handling rules depend on plan tier. On Business, Enterprise, and Edu accounts, uploaded documents are not used for model training by default. On Plus and Pro consumer accounts, training-data use depends on your account-level Data Controls setting; opt out before uploading anything. Confirm OpenAI's current data-handling terms for your plan tier before uploading anything sensitive — vendor policies change.
-
-The same constraints apply to Claude Projects (Anthropic) and Gemini Gems (Google), but the defaults differ. Check the platform's current privacy terms before uploading. Review the do-not-upload list in the Knowledge section above before adding any course material.
+None of these are mutually exclusive with good pedagogy design — the [AI Syllabus Guide]({{< ref "/toolkit/syllabus-guide" >}}) covers setting expectations around a virtual TA the same way it covers AI use generally, and the do-not-upload guidance in this doc applies no matter which path you pick.
 
 ## Status
 
-Maintained for the Penn Carey Law community. Vendor UI flows and privacy defaults change frequently — verify against current vendor documentation before relying on the specifics here.
+Maintained for the Penn Carey Law community. Vendor UI flows, pilot timelines, and data-approval terms change — verify against current Penn Law ITS and Penn ISC guidance before relying on the specifics here. Comments and corrections: <pwagner@law.upenn.edu>.
