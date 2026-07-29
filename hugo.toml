@@ -1,4 +1,4 @@
-baseURL = 'https://ai-teaching-lab.org/'
+baseURL = 'https://pennai.law/'
 locale = 'en-us'
 title = 'AI Teaching Lab at Penn Carey Law'
 enableRobotsTXT = true
