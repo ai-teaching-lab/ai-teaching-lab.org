@@ -10,7 +10,7 @@ workstream: "02-assessment-tools/essay-creator"
 status: active
 pillar: ["build", "teach"]
 owner: ["TBD"]
-github: "ai-teaching-lab/essay-creator"
+github: "pennai-law/essay-creator"
 ---
 
 Essay Creator is the Lab's productized version of the `law-essay-generator` skill: a faculty-facing tool for drafting law-school essay exam questions — issue spotters and fact-pattern questions — that meet assessment-science quality standards out of the box.

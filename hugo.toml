@@ -18,7 +18,7 @@ timeZone = 'America/New_York'
   pillarsTagline = "Research. Build. Teach."
   pillars = ["research", "build", "teach"]
   newsletterURL = "#"  # placeholder until Substack URL exists
-  githubOrgURL = "https://github.com/ai-teaching-lab"
+  githubOrgURL = "https://github.com/pennai-law"
 
 [taxonomies]
   pillar = "pillars"

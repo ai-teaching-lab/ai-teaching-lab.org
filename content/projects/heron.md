@@ -52,7 +52,7 @@ So the case for a course-bounded teaching assistant cannot rest on better answer
 
 The second claim is the one most colleagues doubt until they see it done: a single faculty member, without an engineering team, can now build and run such a thing. Heron is five commodity pieces wired together — Slack, a managed vector database, an embedding model, a multi-provider LLM layer, and a one-process host — with most of the implementation code written by an AI coding assistant under the author's direction and review. The cost was about **ten hours** for the first working version, **under an hour a week** to run, and **under a dollar per enrolled student** for the semester. The skill required is real but bounded: comfort at the command line, environment variables, a little Git, and the patience to read an error message without flinching.
 
-The code is open source and built to be forked: **[github.com/ai-teaching-lab/heron](https://github.com/ai-teaching-lab/heron)**. Point it at your own course's materials, set a handful of configuration choices, and deploy.
+The code is open source and built to be forked: **[github.com/pennai-law/heron](https://github.com/pennai-law/heron)**. Point it at your own course's materials, set a handful of configuration choices, and deploy.
 
 ## Status
 

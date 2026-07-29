@@ -14,4 +14,4 @@ Philadelphia, PA 19104
 
 ## Code
 
-All public code: [github.com/ai-teaching-lab](https://github.com/ai-teaching-lab)
+All public code: [github.com/pennai-law](https://github.com/pennai-law)

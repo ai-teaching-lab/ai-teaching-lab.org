@@ -10,7 +10,7 @@ workstream: "04-judiciary"
 status: active
 pillar: ["teach"]
 owner: ["Jackie Wang '27", "Hailey Parikh '27"]
-github: "ai-teaching-lab/judiciary"
+github: "pennai-law/judiciary"
 ---
 
 The Lab's judiciary workstream — the **PennLaw-Judiciary AI Testbed** — provides federal judges and their chambers with structured AI access, training, and ongoing support, governed by a formal Memorandum of Understanding. The work spans use-case research, chambers-facing tools, and a continuous feedback loop with participating chambers.
