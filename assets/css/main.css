@@ -125,7 +125,8 @@ hr {
 .brand-link { display: inline-block; }
 .brand-logo {
   width: 100%;
-  max-width: 251px;
+  /* Tracks the lockup's aspect ratio (1191x310) so the header height stays put. */
+  max-width: 288px;
   display: block;
 }
 .main-nav ul {
