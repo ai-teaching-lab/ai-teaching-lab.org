@@ -9,7 +9,7 @@ timeZone = 'America/New_York'
 
 [params]
   description = "The Penn Carey Law AI Project researches how AI is changing legal education and practice, builds the tools that put those findings to work, and teaches lawyers, law students, judges, and the profession how to use AI well."
-  brandShortForm = "PCL AI Project"
+  brandShortForm = "AI Project"
   brandFormalName = "Penn Carey Law AI Project"
   institutionName = "University of Pennsylvania Carey Law School"
   institutionShort = "Penn Carey Law"
