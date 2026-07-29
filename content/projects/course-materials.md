@@ -11,7 +11,7 @@ workstream: "03-teaching-tools/course-materials"
 status: active
 pillar: ["build", "teach"]
 owner: ["TBD"]
-github: "ai-teaching-lab/course-materials"
+github: "pennai-law/course-materials"
 ---
 
 Course Materials is the extraction primitive that sits underneath the rest of the Teaching Tools cluster. The job is narrow and load-bearing: take the messy artifacts of a real course — PDFs, slide decks, casebook excerpts, syllabi, lecture transcripts — and turn them into clean, structured text that other tools can consume reliably.

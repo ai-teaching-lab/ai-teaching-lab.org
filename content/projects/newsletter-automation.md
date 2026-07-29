@@ -10,7 +10,7 @@ workstream: "05-newsletter"
 status: active
 pillar: ["build", "teach"]
 owner: ["TBD"]
-github: "ai-teaching-lab/newsletter-automation"
+github: "pennai-law/newsletter-automation"
 ---
 
 Newsletter Automation is the build side of the Lab's monthly AI Updates newsletter. The newsletter has been publishing since February 2025; the project here is the pipeline that produces it — automated collection of candidate items through the month, an editorial workflow that surfaces what's worth including, and Substack as the distribution layer.

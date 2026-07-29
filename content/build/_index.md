@@ -10,4 +10,4 @@ The Lab's *build* pillar produces working software: virtual TAs, exam-creation t
 Tools that real people use — built for actual workflows, not for demos.
 {{< /pullquote >}}
 
-Code lives at [github.com/ai-teaching-lab](https://github.com/ai-teaching-lab).
+Code lives at [github.com/pennai-law](https://github.com/pennai-law).
