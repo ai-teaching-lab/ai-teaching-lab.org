@@ -1,6 +1,6 @@
 ---
 title: "Prompt Guide & Scenarios"
-description: "The Lab's oldest publication. Introduces the CRAFTED prompting framework with three worked-through scenarios — Contracts class prep, Constitutional Law practice questions, CoCounsel research."
+description: "The Project's oldest publication. Introduces the CRAFTED prompting framework with three worked-through scenarios — Contracts class prep, Constitutional Law practice questions, CoCounsel research."
 date: 2023-08-17
 lastmod: 2026-05-08
 weight: 40
@@ -10,7 +10,7 @@ availability: "public"
 version: "August 2023, revised for public release May 2026"
 ---
 
-The Lab's oldest publication and still in active use. The CRAFTED framework was first written in August 2023 for ChatGPT 3.5 / GPT-4 and CoCounsel; the principles apply across modern general-purpose AI assistants (ChatGPT, Claude) and legal-specific tools.
+The Project's oldest publication and still in active use. The CRAFTED framework was first written in August 2023 for ChatGPT 3.5 / GPT-4 and CoCounsel; the principles apply across modern general-purpose AI assistants (ChatGPT, Claude) and legal-specific tools.
 
 This is the first Toolkit document released publicly. The framework has held up across model generations because it focuses on what's durable about prompting — context, role, specificity, iteration — rather than what's transient about any particular model.
 
@@ -138,7 +138,7 @@ CoCounsel's strength is breadth across legal materials; iterative refinement nar
 
 ## Contact
 
-The Prompt Guide is a Lab document maintained by:
+The Prompt Guide is a Project document maintained by:
 
 - Ambar Larancuent '26
 - Hailey Parikh '27

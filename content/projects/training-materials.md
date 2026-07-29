@@ -25,7 +25,7 @@ The reference output is the Legal Education at Model Velocity microsite: four mo
 
 ## Why this matters
 
-Faculty, students, staff, and judges all need training that engages with how AI actually works in legal contexts — not generic AI literacy. The Lab is one of the few places set up to produce that material at the level of detail it needs, and shipping it as polished, public-facing work is what lets it reach people who aren't in the room when we run a session.
+Faculty, students, staff, and judges all need training that engages with how AI actually works in legal contexts — not generic AI literacy. The Project is one of the few places set up to produce that material at the level of detail it needs, and shipping it as polished, public-facing work is what lets it reach people who aren't in the room when we run a session.
 
 ## Status
 

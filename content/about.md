@@ -1,11 +1,11 @@
 ---
-title: "About the Lab"
+title: "About the Project"
 description: "Who we are, what we do, who we serve."
 ---
 
-The **Penn Carey Law AI Teaching Lab** researches how AI is changing legal education and practice, builds the tools that put those findings to work, and teaches lawyers, law students, judges, and the profession how to use AI well.
+The **Penn Carey Law AI Project** researches how AI is changing legal education and practice, builds the tools that put those findings to work, and teaches lawyers, law students, judges, and the profession how to use AI well.
 
-{{< pullquote cite="The Lab's working principle" >}}
+{{< pullquote cite="The Project's working principle" >}}
 Don't ship without learning. Don't learn without applying.
 {{< /pullquote >}}
 
@@ -22,7 +22,7 @@ We organize around three pillars: **Research**, **Build**, and **Teach**. Resear
 
 ## Where we sit
 
-The AI Teaching Lab is the **build/apply arm** of the broader Penn Carey Law AI Initiative. The Initiative is the strategy/curriculum/credentialing umbrella; the Lab is where tools, code, training systems, and applied research projects get made.
+The AI Project is the **build/apply arm** of the broader Penn Carey Law AI Initiative. The Initiative is the strategy/curriculum/credentialing umbrella; we are where tools, code, training systems, and applied research get made.
 
 ## How we work
 
@@ -30,11 +30,11 @@ The AI Teaching Lab is the **build/apply arm** of the broader Penn Carey Law AI 
 - **Open source by default.** Public GitHub, public website, no-login access where possible.
 - **Markdown-first documentation.** Code-adjacent, version-controlled, portable.
 - **Tools that real people use.** Built for actual workflows — students, faculty, chambers, firms — not for demos.
-- **Penn Carey Law as the home, not the boundary.** The Lab serves the profession, with PCL as its base.
+- **Penn Carey Law as the home, not the boundary.** The Project serves the profession, with PCL as its base.
 
 ## Director
 
-The Lab is directed by **Polk Wagner**, Deputy Dean for Academic Affairs and Innovation at Penn Carey Law.
+The Project is directed by **Polk Wagner**, Deputy Dean for Academic Affairs and Innovation at Penn Carey Law.
 
 ## Contact
 

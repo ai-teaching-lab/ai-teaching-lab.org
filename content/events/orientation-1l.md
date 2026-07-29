@@ -15,4 +15,4 @@ Run as part of Penn Carey Law's 1L orientation in September 2025 and (in earlier
 
 ## Format
 
-Live programming during the orientation week, designed to set baseline expectations before students enter their first year of coursework. Students leave the session with concrete guidance and access to the Lab's 1L-facing resources.
+Live programming during the orientation week, designed to set baseline expectations before students enter their first year of coursework. Students leave the session with concrete guidance and access to the Project's 1L-facing resources.
