@@ -1,6 +1,6 @@
 # ai-teaching-lab.org
 
-Source for the Penn Carey Law AI Teaching Lab website at https://ai-teaching-lab.org.
+Source for the Penn Carey Law AI Project website at https://ai-teaching-lab.org.
 
 ## Current state — splash page
 
