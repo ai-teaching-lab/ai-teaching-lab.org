@@ -6,7 +6,7 @@ audience: ["faculty"]
 availability: "public"
 version: "May 2026"
 weight: 100
-external_url: "https://ai-resources.ai-teaching-lab.org/"
+external_url: "https://ai-resources.pennai.law/"
 build:
   render: never
   list: always

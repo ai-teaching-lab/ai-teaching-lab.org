@@ -10,7 +10,7 @@ availability: "public"
 version: "August 2025; revised for migration May 2026"
 ---
 
-The Lab's flagship faculty-facing document. Organizes student and faculty AI use cases by activity type and academic setting; covers AI training pipelines, efficacy assessment, academic standards, ethical considerations, access and equity, and a glossary of terms.
+The Project's flagship faculty-facing document. Organizes student and faculty AI use cases by activity type and academic setting; covers AI training pipelines, efficacy assessment, academic standards, ethical considerations, access and equity, and a glossary of terms.
 
 Revised regularly as the field moves.
 
@@ -99,7 +99,7 @@ AI tools work best when paired with human expertise, critical thinking, and lega
 
 AI is a tool, like textbooks, lecture slides, reference works, or websites. Like any other tool, it's best practice to be clear about what is and isn't allowed.
 
-Including an AI usage policy in the syllabus is an effective way to set expectations clearly. See the Lab's [Syllabus Guide]({{< ref "/toolkit/syllabus-guide" >}}) for templates and examples.
+Including an AI usage policy in the syllabus is an effective way to set expectations clearly. See the Project's [Syllabus Guide]({{< ref "/toolkit/syllabus-guide" >}}) for templates and examples.
 
 **For students, the most important consideration is the faculty member's policy:**
 
@@ -125,7 +125,7 @@ Most legal AI tools are subscription-based and require credentials, but law stud
 
 ### Training resources
 
-The Lab maintains an evolving set of training materials and workshops for Penn Carey Law students and faculty. See the [Toolkit landing page]({{< ref "/toolkit" >}}) for current offerings.
+The Project maintains an evolving set of training materials and workshops for Penn Carey Law students and faculty. See the [Toolkit landing page]({{< ref "/toolkit" >}}) for current offerings.
 
 Useful external resources include Wharton professor Ethan Mollick's YouTube series ["Practical AI for Instructors and Students"](https://www.youtube.com/playlist?list=PL0EdWFC9ZZrUAirFa2amE4Hg05KqCWhoq) and his AI blog [One Useful Thing](https://www.oneusefulthing.org/).
 
@@ -147,7 +147,7 @@ Beyond access and knowledge, AI tools themselves contain biases and knowledge ga
 
 **Hallucinations** — when AI models, particularly LLMs, generate incorrect or misleading information presented as fact. Hallucinations range from minor inconsistencies to fully fabricated content, and they often appear plausible because the language is fluent.
 
-**Prompting** — the process of crafting instructions or inputs (prompts) that guide a generative AI model to produce desired outputs — text, images, code. Detailed prompts (specifying tone, audience, goals) produce better output. See the Lab's [Prompt Guide]({{< ref "/toolkit/prompt-guide" >}}).
+**Prompting** — the process of crafting instructions or inputs (prompts) that guide a generative AI model to produce desired outputs — text, images, code. Detailed prompts (specifying tone, audience, goals) produce better output. See the Project's [Prompt Guide]({{< ref "/toolkit/prompt-guide" >}}).
 
 **Training** — the process of teaching a machine learning algorithm from data. The model is fed a dataset and its parameters are iteratively adjusted based on the results, with the goal of improving performance on a specific task — making predictions, classifying information. Training does not enable a model to independently reason; it makes the model better at predicting results based on the data it has seen.
 
@@ -166,4 +166,4 @@ This document is maintained by:
 
 ## Status
 
-The Lab's flagship faculty resource, updated regularly to reflect the current state of AI in legal education. Comments and suggestions: <pwagner@law.upenn.edu>.
+The Project's flagship faculty resource, updated regularly to reflect the current state of AI in legal education. Comments and suggestions: <pwagner@law.upenn.edu>.

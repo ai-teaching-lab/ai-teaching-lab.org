@@ -13,7 +13,7 @@ pillar: ["research", "build"]
 owner: ["Tulio Tagliaferri '27"]
 ---
 
-Exam Taker is the test-subject side of the Lab's exam work. The pipeline puts a current AI model in the seat of a law student: it answers real Penn Carey Law finals — the same exams enrolled students sit for — and the answers go into the live grading stack to be scored blind, on the curve, by the faculty who wrote them.
+Exam Taker is the test-subject side of the Project's exam work. The pipeline puts a current AI model in the seat of a law student: it answers real Penn Carey Law finals — the same exams enrolled students sit for — and the answers go into the live grading stack to be scored blind, on the curve, by the faculty who wrote them.
 
 Wave 1 ran during the Spring 2026 exam period and is now written up as a draft paper. A frontier model sat for eleven real PCL finals from across the curriculum — tax, remedies, constitutional law, criminal law, intellectual property, legislation, national security, international law, and a seminar. Each exam was answered twice under otherwise identical conditions: once on the model's training alone, and once with the course syllabus and an outline supplied. The answers were packaged to look like ordinary student submissions, given reserved examination numbers that could not collide with any real student, and graded blind by the faculty on their own rubrics. The class curve — recomputed with the AI answers removed — is the comparator.
 

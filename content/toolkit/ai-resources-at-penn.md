@@ -45,9 +45,9 @@ See the [PCL ITS Harvey page] for current eligibility and onboarding.
 
 [CTIC](https://www.law.upenn.edu/institutes/ctic/) is PCL's center for technology, innovation, and competition law — research, policy, and practice at the intersection of technology and legal institutions. CTIC is currently running a [cross-institutional project](https://www.law.upenn.edu/live/files/13132-ctai-ctic-collaborate-on-ai-standards-design) with the Center for Trustworthy AI (CTAI) at Seoul National University to develop AI standards.
 
-### AI Teaching Lab
+### Penn Carey Law AI Project
 
-The Lab — led by faculty director Polk Wagner with student research assistants — produces best practices for AI use, a prompting guide, a guide to legal AI tools, and a syllabus guide. It also operates an AI testbed for evaluating judicial-decision tools and publishes a monthly faculty newsletter with AI news for the PCL community.
+The Project — led by faculty director Polk Wagner with student research assistants — produces best practices for AI use, a prompting guide, a guide to legal AI tools, and a syllabus guide. It also operates an AI testbed for evaluating judicial-decision tools and publishes a monthly faculty newsletter with AI news for the PCL community.
 
 ### Biddle Law Library
 

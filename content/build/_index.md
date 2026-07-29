@@ -4,10 +4,10 @@ description: "Tools that put research into practice — software, platforms, and
 layout: "pillar"
 ---
 
-The Lab's *build* pillar produces working software: virtual TAs, exam-creation tools, AI-grading pipelines, judicial chambers tools, course-material repositories, simulation environments. Default is open source.
+The Project's *build* pillar produces working software: virtual TAs, exam-creation tools, AI-grading pipelines, judicial chambers tools, course-material repositories, simulation environments. Default is open source.
 
-{{< pullquote cite="From the Lab's identity" >}}
+{{< pullquote cite="From the Project's identity" >}}
 Tools that real people use — built for actual workflows, not for demos.
 {{< /pullquote >}}
 
-Code lives at [github.com/ai-teaching-lab](https://github.com/ai-teaching-lab).
+Code lives at [github.com/pennai-law](https://github.com/pennai-law).

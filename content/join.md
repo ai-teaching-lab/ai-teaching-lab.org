@@ -1,9 +1,9 @@
 ---
-title: "Join the Lab"
-description: "Work with the AI Teaching Lab — open roles, how we work, and how to apply."
+title: "Join the Project"
+description: "Work with the Penn Carey Law AI Project — open roles, how we work, and how to apply."
 ---
 
-The **Penn Carey Law AI Teaching Lab** hires research assistants and project leads who want to work at the front edge of AI and the law. We research how AI is changing legal education and practice, build the tools that put those findings to work, and teach law students, faculty, judges, and the profession how to use AI well.
+The **Penn Carey Law AI Project** hires research assistants and project leads who want to work at the front edge of AI and the law. We research how AI is changing legal education and practice, build the tools that put those findings to work, and teach law students, faculty, judges, and the profession how to use AI well.
 
 {{< pullquote cite="What you can expect" >}}
 We give you an outcome and a partner, not a checklist.
@@ -11,7 +11,7 @@ We give you an outcome and a partner, not a checklist.
 
 ## What you'd work on
 
-The Lab runs eight workstreams across the three pillars — Research, Build, and Teach. Recent and current work includes:
+The Project runs eight workstreams across the three pillars — Research, Build, and Teach. Recent and current work includes:
 
 - **Assessment tools** — AI exam-taking and grading studies, and tools that help faculty build essay and multiple-choice exams.
 - **Teaching tools** — a virtual-TA Slackbot, course-material pipelines, a casebook builder, and AI-driven classroom simulations.
@@ -49,7 +49,7 @@ See the [full role list and current openings](/projects/).
 
 ## How to apply
 
-Email **[pwagner@law.upenn.edu](mailto:pwagner@law.upenn.edu)** with the subject line **AI Teaching Lab Application — <Role>**, and include:
+Email **[pwagner@law.upenn.edu](mailto:pwagner@law.upenn.edu)** with the subject line **Penn Carey Law AI Project Application — <Role>**, and include:
 
 1. A short statement of interest — which role or roles you want, and what you'd want to build first.
 2. Your CV or résumé.

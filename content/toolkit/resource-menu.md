@@ -1,6 +1,6 @@
 ---
 title: "Resource Menu"
-description: "The Lab's faculty-facing entry point — a single landing page that links to the four core publications."
+description: "The Project's faculty-facing entry point — a single landing page that links to the four core publications."
 date: 2025-08-01
 lastmod: 2026-05-09
 weight: 50
@@ -10,7 +10,7 @@ availability: "public"
 version: "August 2025; revised May 2026"
 ---
 
-The Toolkit's landing page for Penn Carey Law faculty — a single document that links to the four core publications and serves as the Lab's faculty-facing entry point.
+The Toolkit's landing page for Penn Carey Law faculty — a single document that links to the four core publications and serves as the Project's faculty-facing entry point.
 
 Most of these documents are revised continuously. Check back for new versions.
 
@@ -36,13 +36,13 @@ Categorized overview of seven legal AI tool families plus the major general-purp
 
 ### Prompt Guide & Scenarios
 
-The Lab's oldest publication. Introduces the CRAFTED prompting framework with three worked-through scenarios — Contracts class prep, Constitutional Law practice questions, and research for a writing assignment (using CoCounsel).
+The Project's oldest publication. Introduces the CRAFTED prompting framework with three worked-through scenarios — Contracts class prep, Constitutional Law practice questions, and research for a writing assignment (using CoCounsel).
 
 - [/toolkit/prompt-guide/](/toolkit/prompt-guide/)
 
 ## Contact
 
-The Resource Menu is a Lab document maintained by:
+The Resource Menu is a Project document maintained by:
 
 - Ambar Larancuent '26
 - Hailey Parikh '27

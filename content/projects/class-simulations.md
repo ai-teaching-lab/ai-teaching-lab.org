@@ -11,7 +11,7 @@ workstream: "03-teaching-tools/class-simulations"
 status: planning
 pillar: ["build", "research"]
 owner: ["TBD"]
-github: "ai-teaching-lab/class-simulations"
+github: "pennai-law/class-simulations"
 ---
 
 Class Simulations builds AI-driven exercises around the class problems students already work through each week. Instead of generic role-plays, the simulations attach to the specific hypotheticals a course assigns — so the AI counterparty pushes back the way the doctrine actually pushes back, and students get to see their reasoning tested against something that has to follow the same rules they do.

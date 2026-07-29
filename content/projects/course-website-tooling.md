@@ -1,6 +1,6 @@
 ---
 title: "Course-Website Tooling"
-description: "Generalize the Legal Education at Model Velocity microsite into reusable templates the Lab and others can deploy quickly."
+description: "Generalize the Legal Education at Model Velocity microsite into reusable templates the Project and others can deploy quickly."
 date: 2026-05-09
 draft: false
 type: project
@@ -10,12 +10,12 @@ workstream: "03-teaching-tools/course-website-tooling"
 status: planning
 pillar: ["build", "teach"]
 owner: ["TBD"]
-github: "ai-teaching-lab/course-website-tooling"
+github: "pennai-law/course-website-tooling"
 ---
 
-Course-Website Tooling is the build layer underneath the Lab's Training Materials work. It generalizes the Legal Education at Model Velocity microsite — the four-module microsite, the cloned-voice podcast pipeline, the NotebookLM audio overview, the auto-generated PDF summaries — into reusable templates that future training packages and course microsites can deploy without rebuilding from scratch.
+Course-Website Tooling is the build layer underneath the Project's Training Materials work. It generalizes the Legal Education at Model Velocity microsite — the four-module microsite, the cloned-voice podcast pipeline, the NotebookLM audio overview, the auto-generated PDF summaries — into reusable templates that future training packages and course microsites can deploy without rebuilding from scratch.
 
-Each new training package the Lab ships should be a thin instantiation of this layer, not a one-off project.
+Each new training package the Project ships should be a thin instantiation of this layer, not a one-off project.
 
 ## What we're doing
 

@@ -10,10 +10,10 @@ weight: 20
 workstream: "03-teaching-tools/casebook-builder"
 status: active
 pillar: ["build", "teach"]
-owner: ["AI Teaching Lab"]
+owner: ["Penn Carey Law AI Project"]
 ---
 
-Casebook Builder is the Lab's tool for turning a faculty member's case list into a custom course casebook. Give it the cases you want; it fetches the full opinions, edits them down to casebook form — main cases, squibs, contrast cases, comprehension and discussion questions, and explanatory notes — and assembles them into units and a finished book ready for student distribution. It came out of a faculty conversation about the $300–500 commercial casebook problem: AI plus the right tooling should let faculty assemble exactly the casebook their course needs at a fraction of the cost.
+Casebook Builder is the Project's tool for turning a faculty member's case list into a custom course casebook. Give it the cases you want; it fetches the full opinions, edits them down to casebook form — main cases, squibs, contrast cases, comprehension and discussion questions, and explanatory notes — and assembles them into units and a finished book ready for student distribution. It came out of a faculty conversation about the $300–500 commercial casebook problem: AI plus the right tooling should let faculty assemble exactly the casebook their course needs at a fraction of the cost.
 
 Three faculty pilots are lined up: Torts (Fall 2026), Patents (Fall 2026), and Legislation (Spring 2027).
 

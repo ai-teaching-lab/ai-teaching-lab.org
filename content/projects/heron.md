@@ -17,7 +17,7 @@ owner: ["R. Polk Wagner"]
 
 R. Polk Wagner built Heron and ran it in his Intellectual Property course at Penn Carey Law in the spring of 2026. Heron itself is one working example; the general idea it argues for is the point. Faculty should consider building *course-bounded, cite-or-refuse* teaching assistants — bound to one course's materials, citing what they can and declining what they can't — not to beat general chatbots like ChatGPT on answer quality (the evidence says they won't), but to *govern* a tool students already use, pointing it at the course, the source, and the exam.
 
-> **Where Heron fits in the Lab.** Heron is the *teaching* side of the Lab's work — the always-on assistant that helps students learn *during* the course. Its siblings work the *assessment* side: [Exam Taker](/projects/exam-taker/) puts an AI in the student's seat to test what finals actually measure, and [Exam Grader](/projects/exam-grader/) helps faculty grade.
+> **Where Heron fits in the Project.** Heron is the *teaching* side of the Project's work — the always-on assistant that helps students learn *during* the course. Its siblings work the *assessment* side: [Exam Taker](/projects/exam-taker/) puts an AI in the student's seat to test what finals actually measure, and [Exam Grader](/projects/exam-grader/) helps faculty grade.
 
 ## Read the work
 
@@ -44,7 +44,7 @@ One course, one instructor, one semester — a case study, not a test. Heron was
 
 ## Why it matters: governance, not accuracy
 
-The capability question is settled. A frontier model already passes real Penn Carey Law finals when graded blind (see the Lab's [Exam Taker](/projects/exam-taker/) project), and in a blinded study this spring, law professors more often preferred an AI tutor's short answers to a fellow professor's. And yet grounding a capable model in a fixed course corpus does not reliably make its answers *better* — in both that tutoring study and the exam work, the grounded system did not outperform the stock one.
+The capability question is settled. A frontier model already passes real Penn Carey Law finals when graded blind (see the Project's [Exam Taker](/projects/exam-taker/) project), and in a blinded study this spring, law professors more often preferred an AI tutor's short answers to a fellow professor's. And yet grounding a capable model in a fixed course corpus does not reliably make its answers *better* — in both that tutoring study and the exam work, the grounded system did not outperform the stock one.
 
 So the case for a course-bounded teaching assistant cannot rest on better answers. It rests on governance: answering from *this* course in *this* course's frame, citing a page a student can actually open and check, sending students back to the source, and going silent for the exam. None of that is about being right more often. It is the pedagogical work a polished, ungrounded chatbot quietly skips — and it is exactly what a general chatbot, by design, leaves ungoverned.
 
@@ -52,7 +52,7 @@ So the case for a course-bounded teaching assistant cannot rest on better answer
 
 The second claim is the one most colleagues doubt until they see it done: a single faculty member, without an engineering team, can now build and run such a thing. Heron is five commodity pieces wired together — Slack, a managed vector database, an embedding model, a multi-provider LLM layer, and a one-process host — with most of the implementation code written by an AI coding assistant under the author's direction and review. The cost was about **ten hours** for the first working version, **under an hour a week** to run, and **under a dollar per enrolled student** for the semester. The skill required is real but bounded: comfort at the command line, environment variables, a little Git, and the patience to read an error message without flinching.
 
-The code is open source and built to be forked: **[github.com/ai-teaching-lab/heron](https://github.com/ai-teaching-lab/heron)**. Point it at your own course's materials, set a handful of configuration choices, and deploy.
+The code is open source and built to be forked: **[github.com/pennai-law/heron](https://github.com/pennai-law/heron)**. Point it at your own course's materials, set a handful of configuration choices, and deploy.
 
 ## Status
 

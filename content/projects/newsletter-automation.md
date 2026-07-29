@@ -1,6 +1,6 @@
 ---
 title: "Newsletter Automation"
-description: "Build the pipeline that produces the Lab's monthly AI newsletter — automated collection, editorial workflow, Substack distribution."
+description: "Build the pipeline that produces the Project's monthly AI newsletter — automated collection, editorial workflow, Substack distribution."
 date: 2026-05-08
 lastmod: 2026-05-09
 draft: false
@@ -10,10 +10,10 @@ workstream: "05-newsletter"
 status: active
 pillar: ["build", "teach"]
 owner: ["TBD"]
-github: "ai-teaching-lab/newsletter-automation"
+github: "pennai-law/newsletter-automation"
 ---
 
-Newsletter Automation is the build side of the Lab's monthly AI Updates newsletter. The newsletter has been publishing since February 2025; the project here is the pipeline that produces it — automated collection of candidate items through the month, an editorial workflow that surfaces what's worth including, and Substack as the distribution layer.
+Newsletter Automation is the build side of the Project's monthly AI Updates newsletter. The newsletter has been publishing since February 2025; the project here is the pipeline that produces it — automated collection of candidate items through the month, an editorial workflow that surfaces what's worth including, and Substack as the distribution layer.
 
 The point is to get the editorial pass focused on *selecting* and *writing*, not hunting for material.
 
@@ -25,7 +25,7 @@ The point is to get the editorial pass focused on *selecting* and *writing*, not
 
 ## Why this matters
 
-The newsletter is the Lab's most public, regular touch point with the legal-education community. Automating the collection and editorial scaffolding means the writing gets the attention it deserves and the cadence stays reliable — both of which matter more than any individual issue.
+The newsletter is the Project's most public, regular touch point with the legal-education community. Automating the collection and editorial scaffolding means the writing gets the attention it deserves and the cadence stays reliable — both of which matter more than any individual issue.
 
 ## Status
 

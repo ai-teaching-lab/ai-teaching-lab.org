@@ -68,7 +68,7 @@ For a deeper walkthrough of the Custom GPT setup process, see [Creating a Virtua
 
 ### Use AI to evaluate ("grade") essays
 
-The Lab's Spring 2024 IP exam was the testbed for the Lab's first AI-grading work. The exercise paired:
+The Project's Spring 2024 IP exam was the testbed for the Project's first AI-grading work. The exercise paired:
 
 - An essay question (the IP exam fact pattern)
 - A scoring rubric and answer key
@@ -77,7 +77,7 @@ The Lab's Spring 2024 IP exam was the testbed for the Lab's first AI-grading wor
 
 Ask the model to score each answer against the rubric, returning structured output that maps to the template.
 
-This work later became the basis for the Lab's [Exam Grader]({{< ref "/projects/exam-grader" >}}) project — a calibration-based grading pipeline currently in production use.
+This work later became the basis for the Project's [Exam Grader]({{< ref "/projects/exam-grader" >}}) project — a calibration-based grading pipeline currently in production use.
 
 ## Status
 

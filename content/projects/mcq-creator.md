@@ -10,10 +10,10 @@ workstream: "02-assessment-tools/mcq-creator"
 status: active
 pillar: ["build", "teach"]
 owner: ["TBD"]
-github: "ai-teaching-lab/mcq-creator"
+github: "pennai-law/mcq-creator"
 ---
 
-MCQ Creator is the Lab's productized version of the `law-mcq-generator` skill: a faculty-facing tool for drafting multiple-choice exam questions that pass the structural and psychometric quality checks the assessment literature actually expects.
+MCQ Creator is the Project's productized version of the `law-mcq-generator` skill: a faculty-facing tool for drafting multiple-choice exam questions that pass the structural and psychometric quality checks the assessment literature actually expects.
 
 The point is to make it cheap to produce *good* MCQs — narrative- or fact-pattern-based, with plausible distractors, single best answers, and no clueing — instead of the cookie-cutter items most generators produce.
 
@@ -30,4 +30,4 @@ MCQs are a powerful teaching and assessment tool when they're built well and a w
 
 ## Status
 
-Active. The underlying `law-mcq-generator` skill is in production use; productization as a Lab project is the next step.
+Active. The underlying `law-mcq-generator` skill is in production use; productization as a standalone tool is the next step.
