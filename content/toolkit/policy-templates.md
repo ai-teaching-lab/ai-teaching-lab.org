@@ -217,7 +217,7 @@ A few notes for faculty importing this language into their own syllabi:
 
 ## Acknowledgment
 
-These templates and the underlying framework are reproduced from a draft seminar syllabus by Professor Struve. The Lab thanks her for permitting their inclusion in the Toolkit.
+These templates and the underlying framework are reproduced from a draft seminar syllabus by Professor Struve. The Project thanks her for permitting their inclusion in the Toolkit.
 
 ## Status
 

@@ -22,7 +22,7 @@ It's not a casebook-creation project. It's the layer that makes casebook creatio
 
 - Maintain the `materials-md` extraction toolchain — a deterministic CLI that converts PDFs, DOCX, PPTX, and HTML to clean markdown.
 - Handle the cases that matter for legal materials: scanned casebook pages, court opinions in messy formats, slide decks with speaker notes, structured tables of cases.
-- Ship the output in a shape downstream Lab tools can use directly — Heron's retrieval, exam-grader's reference texts, class-simulations' problem stems, casebook-builder's source corpus.
+- Ship the output in a shape downstream Project tools can use directly — Heron's retrieval, exam-grader's reference texts, class-simulations' problem stems, casebook-builder's source corpus.
 
 ## Why this matters
 
@@ -30,4 +30,4 @@ Every other Teaching Tool either works or fails on the quality of its input. Hal
 
 ## Status
 
-Active. The CLI is in production use across Polk's own teaching workflow and across other Lab skills. Next work: harden the casebook-extraction path against scanned-page edge cases and document the output schema so other Lab projects can integrate against a stable contract.
+Active. The CLI is in production use across Polk's own teaching workflow and across other Project skills. Next work: harden the casebook-extraction path against scanned-page edge cases and document the output schema so our other projects can integrate against a stable contract.

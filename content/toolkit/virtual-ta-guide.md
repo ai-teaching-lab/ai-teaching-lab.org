@@ -1,6 +1,6 @@
 ---
 title: "Creating a Virtual TA with Custom GPTs"
-description: "A step-by-step guide to building a course-specific virtual teaching assistant on OpenAI's Custom GPTs platform, using the Lab's IP TA as a template."
+description: "A step-by-step guide to building a course-specific virtual teaching assistant on OpenAI's Custom GPTs platform, using the Project's IP TA as a template."
 date: 2024-09-01
 lastmod: 2026-05-09
 weight: 230
@@ -10,9 +10,9 @@ availability: "public"
 version: "2024; revised May 2026"
 ---
 
-A walkthrough for faculty who want to build a course-specific virtual teaching assistant using OpenAI's Custom GPTs. The same conceptual moves apply to Claude Projects (Anthropic) or Gemini Gems (Google), but the specific UI flows differ — adapt the steps below to your platform. The example throughout is the Lab's IP TA — a study-and-review assistant for Intro to Intellectual Property at Penn Carey Law.
+A walkthrough for faculty who want to build a course-specific virtual teaching assistant using OpenAI's Custom GPTs. The same conceptual moves apply to Claude Projects (Anthropic) or Gemini Gems (Google), but the specific UI flows differ — adapt the steps below to your platform. The example throughout is the Project's IP TA — a study-and-review assistant for Intro to Intellectual Property at Penn Carey Law.
 
-This is the conceptual precursor to the Lab's **Heron** virtual-TA Slackbot project. The Custom GPT path is a low-effort starting point: no code, no hosting, no integration work. You drop in syllabus materials, write a few paragraphs of instructions, and the platform handles the rest.
+This is the conceptual precursor to the Project's **Heron** virtual-TA Slackbot project. The Custom GPT path is a low-effort starting point: no code, no hosting, no integration work. You drop in syllabus materials, write a few paragraphs of instructions, and the platform handles the rest.
 
 ## Before you start
 
@@ -44,7 +44,7 @@ This is where the real work happens. The fields are:
 
 #### Name
 
-Pick something descriptive. The Lab's IP TA is called "Intro to IP TA" — students see the name in the chat header, so make it obvious what course it serves.
+Pick something descriptive. The Project's IP TA is called "Intro to IP TA" — students see the name in the chat header, so make it obvious what course it serves.
 
 #### Description
 
@@ -60,7 +60,7 @@ This is the most important field. Treat it as a full briefing for a smart but in
 - **Subject scope.** What content domain? For the IP TA, the syllabus modules: patents, trademarks, copyrights, trade secrets, and basic IP-law principles.
 - **Boundaries.** What should the TA *not* do? Common ones: don't write papers, don't answer take-home exam questions, don't substitute for the assigned reading.
 
-The IP TA's full instructions live in the Lab's internal materials — ask if you'd like to see them as a starting template.
+The IP TA's full instructions live in the Project's internal materials — ask if you'd like to see them as a starting template.
 
 #### Conversation starters
 

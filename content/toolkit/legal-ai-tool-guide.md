@@ -81,7 +81,7 @@ A few points worth keeping in mind as you talk with students or colleagues about
 
 ## Contact
 
-The Legal AI Tool Guide is a Lab document maintained by:
+The Legal AI Tool Guide is a Project document maintained by:
 
 - Ambar Larancuent '26
 - Hailey Parikh '27

@@ -26,7 +26,7 @@ It went live April 19, 2026.
 
 ## Why it matters
 
-The artifact is the proof that a single faculty member, with the right tooling, can ship a polished, multi-format teaching resource in weeks rather than years. It's also the reference output that the Course-Website Tooling project is generalizing — the next training package the Lab ships should look like this one, but cost a fraction as much to produce.
+The artifact is the proof that a single faculty member, with the right tooling, can ship a polished, multi-format teaching resource in weeks rather than years. It's also the reference output that the Course-Website Tooling project is generalizing — the next training package the Project ships should look like this one, but cost a fraction as much to produce.
 
 ## Where to find it
 

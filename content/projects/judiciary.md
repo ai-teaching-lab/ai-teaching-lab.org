@@ -13,9 +13,9 @@ owner: ["Jackie Wang '27", "Hailey Parikh '27"]
 github: "pennai-law/judiciary"
 ---
 
-The Lab's judiciary workstream — the **PennLaw-Judiciary AI Testbed** — provides federal judges and their chambers with structured AI access, training, and ongoing support, governed by a formal Memorandum of Understanding. The work spans use-case research, chambers-facing tools, and a continuous feedback loop with participating chambers.
+The Project's judiciary workstream — the **PennLaw-Judiciary AI Testbed** — provides federal judges and their chambers with structured AI access, training, and ongoing support, governed by a formal Memorandum of Understanding. The work spans use-case research, chambers-facing tools, and a continuous feedback loop with participating chambers.
 
-Per the Lab's pillar architecture, this work sits in **Teach** — judicial AI training is teaching the bench, not partnership-mediated Building.
+Per the Project's pillar architecture, this work sits in **Teach** — judicial AI training is teaching the bench, not partnership-mediated Building.
 
 ## What it is
 
@@ -64,4 +64,4 @@ Active and expanding. Monthly meetings with 15+ chambers continue; the orientati
 
 ## Sensitivity
 
-The most external-facing of the Lab's workstreams. Chambers context is presumptively confidential. Public materials describe the program structure and aggregated findings — not the work of any individual chambers.
+The most external-facing of the Project's workstreams. Chambers context is presumptively confidential. Public materials describe the program structure and aggregated findings — not the work of any individual chambers.

@@ -1,11 +1,11 @@
 ---
 title: "Accessibility"
-description: "The AI Teaching Lab at Penn Carey Law's accessibility commitments and how to report a barrier."
+description: "The Penn Carey Law AI Project's accessibility commitments and how to report a barrier."
 date: 2026-05-09
 lastmod: 2026-05-09
 ---
 
-The AI Teaching Lab at Penn Carey Law is committed to digital accessibility for the entire Penn Carey Law community and the broader public. This site is built to meet the [University of Pennsylvania's digital accessibility policy](https://accessibility.web-resources.upenn.edu/overview-accessibility-penn/standards) and the [Web Content Accessibility Guidelines (WCAG) 2.2 Level AA](https://www.w3.org/TR/WCAG22/).
+The Penn Carey Law AI Project is committed to digital accessibility for the entire Penn Carey Law community and the broader public. This site is built to meet the [University of Pennsylvania's digital accessibility policy](https://accessibility.web-resources.upenn.edu/overview-accessibility-penn/standards) and the [Web Content Accessibility Guidelines (WCAG) 2.2 Level AA](https://www.w3.org/TR/WCAG22/).
 
 ## Conformance target
 
@@ -32,7 +32,7 @@ This site targets **WCAG 2.2, Level AA conformance**, the standard Penn applies 
 
 If you encounter content on this site that is not accessible to you, please contact us. We will work to address the issue and, when possible, provide an accessible alternative within five business days.
 
-- **Lab contact:** Polk Wagner, [pwagner@law.upenn.edu](mailto:pwagner@law.upenn.edu)
+- **Project contact:** Polk Wagner, [pwagner@law.upenn.edu](mailto:pwagner@law.upenn.edu)
 - **Penn-wide reporting:** [Report an accessibility issue](https://accessibility.web-resources.upenn.edu/get-help) through Penn's Office of Information Systems & Computing.
 - **Office of Affirmative Action and Equal Opportunity Programs:** [oae.upenn.edu](https://www.oae.upenn.edu/) — for formal disability-related concerns at Penn.
 
