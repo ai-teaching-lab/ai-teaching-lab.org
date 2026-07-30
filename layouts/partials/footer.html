@@ -18,7 +18,9 @@
       <li><a href="/license/">License</a></li>
     </ul></div>
     <div><p class="foot-h">Penn Carey Law</p><ul>
-      <li><a href="https://www.law.upenn.edu" target="_blank" rel="noopener">Carey Law School <span aria-hidden="true">↗</span><span class="sr-only"> (opens in new tab)</span></a></li>
+      {{- /* Never "Carey Law School" on its own — the name always carries Penn.
+             Drawn from site.Params.institutionName so it cannot drift again. */ -}}
+      <li><a href="https://www.law.upenn.edu" target="_blank" rel="noopener">{{ site.Params.institutionName }} <span aria-hidden="true">↗</span><span class="sr-only"> (opens in new tab)</span></a></li>
       <li><a href="https://www.upenn.edu" target="_blank" rel="noopener">University of Pennsylvania <span aria-hidden="true">↗</span><span class="sr-only"> (opens in new tab)</span></a></li>
       <li><a href="https://accessibility.web-resources.upenn.edu/get-help" target="_blank" rel="noopener">Report accessibility issues <span aria-hidden="true">↗</span><span class="sr-only"> (opens in new tab)</span></a></li>
     </ul></div>
