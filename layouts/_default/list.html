@@ -1,26 +1,23 @@
 {{ define "main" }}
-<article class="list">
+<article class="wrapx">
+  <p class="crumb">{{ site.Params.brandFormalName }} &nbsp;/&nbsp; <b>{{ .Title }}</b></p>
   <header class="page-header">
-    <h1>{{ .Title }}</h1>
-    {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
-    {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+    <h1 class="display-2">{{ .Title }}</h1>
+    {{ with .Description }}<p class="lede">{{ . }}</p>{{ end }}
+    {{ with .Content }}<div class="prose page-header-prose">{{ . }}</div>{{ end }}
   </header>
   {{ if .Pages }}
-  <ul class="content-list">
+  <section class="cluster">
+    {{ $n := 0 }}
     {{ range .Pages }}
-    <li>
-      <a href="{{ .RelPermalink }}">
-        <h2>{{ .Title }}</h2>
-        {{ with .Description }}<p>{{ . }}</p>{{ end }}
-        <div class="meta">
-          {{ with .Params.pillar }}<span class="tags">{{ delimit . " · " }}</span>{{ end }}
-          {{ with .Params.audience }}<span class="audience">{{ delimit . " · " }}</span>{{ end }}
-          {{ with .Params.status }}<span class="status status-{{ . }}">{{ . }}</span>{{ end }}
-        </div>
-      </a>
-    </li>
+      {{ $n = add $n 1 }}
+      <div class="row">
+        <span class="row-num">{{ printf "%03d" $n }}</span>
+        <a class="row-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <span class="row-desc">{{ .Description }}</span>
+      </div>
     {{ end }}
-  </ul>
+  </section>
   {{ end }}
 </article>
 {{ end }}

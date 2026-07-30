@@ -4,7 +4,6 @@ description: "Curate and edit cases into custom course casebooks at a fraction o
 date: 2026-05-09
 lastmod: 2026-06-16
 draft: false
-type: project
 cluster: "teaching-tools"
 weight: 20
 workstream: "03-teaching-tools/casebook-builder"

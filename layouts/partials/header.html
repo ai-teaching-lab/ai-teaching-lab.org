@@ -1,11 +1,9 @@
-<div class="penn-bar" aria-hidden="true"></div>
+<div class="pennbar" aria-hidden="true"></div>
 <header class="site-header">
-  <div class="header-inner">
-    <div class="brand">
-      <a href="/" class="brand-link" aria-label="{{ site.Params.brandShortForm }} home">
-        <img src="/heading-color.svg" alt="{{ site.Params.brandShortForm }}" class="brand-logo">
-      </a>
-    </div>
+  <div class="header-inner wrapx">
+    <a href="/" class="brand-link" aria-label="{{ site.Params.brandShortForm }} home">
+      <img src="/heading-color.svg" alt="{{ site.Params.brandFormalName }} — pennai.law" class="brand-logo" width="1191" height="310">
+    </a>
     <nav class="main-nav" aria-label="Main">
       <ul>
         {{ range site.Menus.main }}
@@ -13,18 +11,15 @@
           {{- if .Params.placeholder -}}
             <span class="nav-link nav-disabled" aria-disabled="true" title="Newsletter coming soon">{{ .Name }}{{ if .Params.external }}<span aria-hidden="true"> ↗</span>{{ end }}</span>
           {{- else -}}
-            <a class="nav-link" href="{{ .URL }}"{{ if .Params.external }} target="_blank" rel="noopener"{{ end }}>{{ .Name }}{{ if .Params.external }}<span aria-hidden="true"> ↗</span><span class="sr-only"> (opens in new tab)</span>{{ end }}</a>
+            <a class="nav-link{{ if hasPrefix $.RelPermalink .URL }} is-active{{ end }}" href="{{ .URL }}"{{ if .Params.external }} target="_blank" rel="noopener"{{ end }}>{{ .Name }}{{ if .Params.external }}<span aria-hidden="true"> ↗</span><span class="sr-only"> (opens in new tab)</span>{{ end }}</a>
           {{- end -}}
         </li>
         {{ end }}
       </ul>
+      <button id="search-trigger" class="search-trigger" type="button" aria-label="Open search" title="Search (⌘K)">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <span class="sr-only">Search</span>
+      </button>
     </nav>
-    <button id="search-trigger" class="search-trigger" type="button" aria-label="Open search" title="Search (⌘K)">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <circle cx="11" cy="11" r="7"></circle>
-        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-      </svg>
-      <span class="sr-only">Search</span>
-    </button>
   </div>
 </header>

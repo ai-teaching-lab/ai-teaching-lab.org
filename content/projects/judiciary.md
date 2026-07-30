@@ -4,7 +4,6 @@ description: "Working with the federal judiciary on the practical use of AI tool
 date: 2026-05-07
 lastmod: 2026-05-09
 draft: false
-type: project
 cluster: "judiciary"
 workstream: "04-judiciary"
 status: active

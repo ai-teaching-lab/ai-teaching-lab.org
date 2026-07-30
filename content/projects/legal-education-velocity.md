@@ -4,7 +4,6 @@ description: "A four-module microsite on legal education in the era of AI, with 
 date: 2026-04-19
 lastmod: 2026-05-09
 draft: false
-type: project
 cluster: "artifact"
 workstream: "07-artifacts/legal-education-velocity"
 status: shipped

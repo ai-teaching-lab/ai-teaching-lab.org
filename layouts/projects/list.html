@@ -1,88 +1,80 @@
 {{ define "main" }}
-<article class="project-list">
+<article class="wrapx">
+  <p class="crumb">{{ site.Params.brandFormalName }} &nbsp;/&nbsp; <b>Projects</b></p>
   <header class="page-header">
-    <h1>{{ .Title }}</h1>
-    {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
-    {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+    <h1 class="display-2">{{ .Title }}</h1>
+    {{ with .Description }}<p class="lede">{{ . }}</p>{{ end }}
+    {{ with .Content }}<div class="prose page-header-prose">{{ . }}</div>{{ end }}
   </header>
 
-  {{ $assessment := where .Pages "Params.cluster" "assessment-tools" }}
-  {{ $teaching := where .Pages "Params.cluster" "teaching-tools" }}
-  {{ $judiciary := where .Pages "Params.cluster" "judiciary" }}
-  {{ $newsletter := where .Pages "Params.cluster" "newsletter" }}
-  {{ $training := where .Pages "Params.cluster" "training" }}
-  {{ $artifact := where .Pages "Params.cluster" "artifact" }}
+  <div class="filters" role="group" aria-label="Filter projects">
+    <div class="fg"><span>Pillar</span>
+      <button class="f on" data-filter-pillar="all" aria-pressed="true">All</button>
+      <button class="f" data-filter-pillar="research" aria-pressed="false">Research</button>
+      <button class="f" data-filter-pillar="build" aria-pressed="false">Build</button>
+      <button class="f" data-filter-pillar="teach" aria-pressed="false">Teach</button>
+    </div>
+    <div class="fg"><span>Status</span>
+      <button class="f on" data-filter-status="all" aria-pressed="true">All</button>
+      <button class="f" data-filter-status="active" aria-pressed="false">Active</button>
+      <button class="f" data-filter-status="planning" aria-pressed="false">Planning</button>
+      <button class="f" data-filter-status="shipped" aria-pressed="false">Shipped</button>
+    </div>
+  </div>
+  <p class="filter-empty" aria-live="polite" hidden>No projects match this filter.</p>
 
-  {{ if $assessment }}
-  <section class="projects-section">
-    <h2 class="section-heading">Assessment Tools</h2>
-    <p class="section-lead">AI on both sides of the law-school exam — taking, grading, and helping faculty write better questions.</p>
-    <ul class="project-grid">
-      {{ range $assessment.ByWeight }}
-        {{ partial "project-card.html" . }}
+  {{ $pages := .Pages }}
+  {{ $n := 0 }}
+  {{ range site.Data.clusters.cluster }}
+    {{ $cluster := . }}
+    {{ $items := (where $pages "Params.cluster" .slug).ByWeight }}
+    {{ if $items }}
+    <section class="cluster" data-cluster="{{ .slug }}">
+      <div class="cluster-h"><h2>{{ .name }}</h2><span>{{ printf "%02d" (len $items) }}</span></div>
+      <p class="cdesc">{{ .lead }}</p>
+      {{ range $items }}
+        {{ $n = add $n 1 }}
+        <div class="row-holder" data-pillars="{{ delimit (.Params.pillar | default slice) " " }}" data-status="{{ .Params.status }}">
+          {{ partial "row.html" (dict
+              "num" (printf "%03d" $n)
+              "title" .Title
+              "url" .RelPermalink
+              "desc" .Description
+              "tags" .Params.pillar
+              "status" .Params.status) }}
+        </div>
       {{ end }}
-    </ul>
-  </section>
-  {{ end }}
-
-  {{ if $teaching }}
-  <section class="projects-section">
-    <h2 class="section-heading">Teaching Tools</h2>
-    <p class="section-lead">The connective tissue of a course — extraction, casebooks, virtual TAs, simulations, and the templates that hold them together.</p>
-    <ul class="project-grid">
-      {{ range $teaching.ByWeight }}
-        {{ partial "project-card.html" . }}
-      {{ end }}
-    </ul>
-  </section>
-  {{ end }}
-
-  {{ if $judiciary }}
-  <section class="projects-section">
-    <h2 class="section-heading">Judiciary</h2>
-    <p class="section-lead">The Lab's research partnership with federal courts and the Delaware Court of Chancery.</p>
-    <ul class="project-grid">
-      {{ range $judiciary }}
-        {{ partial "project-card.html" . }}
-      {{ end }}
-    </ul>
-  </section>
-  {{ end }}
-
-  {{ if $training }}
-  <section class="projects-section">
-    <h2 class="section-heading">Training</h2>
-    <p class="section-lead">Training materials for legal-education audiences — and the cross-Penn version of the same package.</p>
-    <ul class="project-grid">
-      {{ range $training }}
-        {{ partial "project-card.html" . }}
-      {{ end }}
-    </ul>
-  </section>
-  {{ end }}
-
-  {{ if $newsletter }}
-  <section class="projects-section">
-    <h2 class="section-heading">Newsletter</h2>
-    <p class="section-lead">The pipeline behind the Lab's monthly AI Updates newsletter.</p>
-    <ul class="project-grid">
-      {{ range $newsletter }}
-        {{ partial "project-card.html" . }}
-      {{ end }}
-    </ul>
-  </section>
-  {{ end }}
-
-  {{ if $artifact }}
-  <section class="projects-section">
-    <h2 class="section-heading">Shipped Artifacts</h2>
-    <p class="section-lead">Lab work already in the world — public-facing artifacts you can read, listen to, and use.</p>
-    <ul class="project-grid">
-      {{ range $artifact }}
-        {{ partial "project-card.html" . }}
-      {{ end }}
-    </ul>
-  </section>
+    </section>
+    {{ end }}
   {{ end }}
 </article>
+
+<script>
+(function () {
+  var state = { pillar: 'all', status: 'all' };
+  function apply() {
+    document.querySelectorAll('.row-holder').forEach(function (r) {
+      var okP = state.pillar === 'all' || (r.dataset.pillars || '').split(' ').indexOf(state.pillar) !== -1;
+      var okS = state.status === 'all' || r.dataset.status === state.status;
+      r.style.display = (okP && okS) ? '' : 'none';
+    });
+    document.querySelectorAll('.cluster').forEach(function (c) {
+      var visible = c.querySelectorAll('.row-holder:not([style*="none"])').length;
+      c.style.display = visible ? '' : 'none';
+    });
+    document.querySelector('.filter-empty').hidden = [...document.querySelectorAll('.row-holder')].some(function (r) { return r.style.display !== 'none'; });
+  }
+  document.querySelectorAll('.filters .f').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var key = b.dataset.filterPillar !== undefined ? 'pillar' : 'status';
+      state[key] = b.dataset.filterPillar || b.dataset.filterStatus;
+      b.closest('.fg').querySelectorAll('.f').forEach(function (o) {
+        o.classList.toggle('on', o === b);
+        o.setAttribute('aria-pressed', String(o === b));
+      });
+      apply();
+    });
+  });
+})();
+</script>
 {{ end }}

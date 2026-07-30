@@ -3,7 +3,6 @@ title: "MCQ Creator"
 description: "Generate law-school multiple-choice questions with built-in distractor validation and psychometric quality controls."
 date: 2026-05-09
 draft: false
-type: project
 cluster: "assessment-tools"
 weight: 40
 workstream: "02-assessment-tools/mcq-creator"

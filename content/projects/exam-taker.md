@@ -4,7 +4,6 @@ description: "The AI Final Exam Project — can current AI pass real Penn Carey 
 date: 2026-05-09
 lastmod: 2026-06-08
 draft: false
-type: project
 cluster: "assessment-tools"
 weight: 20
 workstream: "02-assessment-tools/exam-taker"

@@ -1,32 +1,30 @@
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-cols">
-      <div class="footer-col footer-brand-col">
-        <p class="footer-brand"><strong>{{ site.Params.brandFormalName }}</strong></p>
-        <p class="footer-meta">
-          The build/apply arm of the<br>
-          Penn Carey Law AI Initiative.
-        </p>
-      </div>
-      <div class="footer-col">
-        <p class="footer-heading">Institution</p>
-        <ul class="footer-links">
-          <li><a href="https://www.law.upenn.edu" target="_blank" rel="noopener">University of Pennsylvania Carey Law School <span aria-hidden="true">↗</span><span class="sr-only"> (opens in new tab)</span></a></li>
-          <li><a href="https://www.upenn.edu" target="_blank" rel="noopener">University of Pennsylvania <span aria-hidden="true">↗</span><span class="sr-only"> (opens in new tab)</span></a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <p class="footer-heading">Lab</p>
-        <ul class="footer-links">
-          <li><a href="{{ site.Params.githubOrgURL }}" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (opens in new tab)</span></a></li>
-          <li><a href="mailto:{{ site.Params.contactEmail }}">Contact</a></li>
-          <li><a href="/accessibility/">Accessibility</a></li>
-          <li><a href="/license/">License</a></li>
-        </ul>
-      </div>
-    </div>
-    <p class="footer-copyright">
-      <small>&copy; 2026 The Trustees of the University of Pennsylvania &middot; Licensed under <a href="/license/">CC BY 4.0</a> &middot; <a href="https://accessibility.web-resources.upenn.edu/get-help" target="_blank" rel="noopener">Report Accessibility Issues and Get Help <span aria-hidden="true">↗</span><span class="sr-only">(opens in new tab)</span></a> &middot; Last updated {{ .Lastmod.Format "January 2, 2006" }}</small>
-    </p>
+<footer class="site-footer wrapx">
+  <div class="foot-cols">
+    <div><p class="foot-h">Project</p><ul>
+      <li><a href="/projects/">Projects</a></li>
+      <li><a href="/toolkit/">Toolkit</a></li>
+      <li><a href="/events/">Events</a></li>
+      <li><a href="/about/">About</a></li>
+    </ul></div>
+    <div><p class="foot-h">Resources</p><ul>
+      <li><a href="https://resources.pennai.law/" target="_blank" rel="noopener">Faculty portal <span aria-hidden="true">↗</span><span class="sr-only"> (opens in new tab)</span></a></li>
+      <li><a href="{{ site.Params.githubOrgURL }}" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (opens in new tab)</span></a></li>
+      <li><a href="mailto:{{ site.Params.contactEmail }}">Contact</a></li>
+      <li><a href="/accessibility/">Accessibility</a></li>
+    </ul></div>
+    <div><p class="foot-h">Get involved</p><ul>
+      <li><a href="/join/">Join</a></li>
+      <li><a href="/contact/">Contact the Project</a></li>
+      <li><a href="/license/">License</a></li>
+    </ul></div>
+    <div><p class="foot-h">Penn Carey Law</p><ul>
+      <li><a href="https://www.law.upenn.edu" target="_blank" rel="noopener">Carey Law School <span aria-hidden="true">↗</span><span class="sr-only"> (opens in new tab)</span></a></li>
+      <li><a href="https://www.upenn.edu" target="_blank" rel="noopener">University of Pennsylvania <span aria-hidden="true">↗</span><span class="sr-only"> (opens in new tab)</span></a></li>
+      <li><a href="https://accessibility.web-resources.upenn.edu/get-help" target="_blank" rel="noopener">Report accessibility issues <span aria-hidden="true">↗</span><span class="sr-only"> (opens in new tab)</span></a></li>
+    </ul></div>
   </div>
+  <p class="colofon">
+    <span>&copy; 2026 The Trustees of the University of Pennsylvania &middot; {{ site.Params.brandFormalName }} &middot; pennai.law</span>
+    <span><a href="/license/">CC BY 4.0 content &middot; Apache 2.0 code</a> &middot; Updated {{ .Lastmod.Format "January 2, 2006" }}</span>
+  </p>
 </footer>

@@ -4,7 +4,6 @@ description: "Produce a complete AI training package for legal-education audienc
 date: 2026-05-08
 lastmod: 2026-05-09
 draft: false
-type: project
 cluster: "training"
 workstream: "06-training"
 status: active

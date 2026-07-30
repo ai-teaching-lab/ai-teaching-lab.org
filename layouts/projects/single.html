@@ -1,22 +1,40 @@
 {{ define "main" }}
-<article class="project-single">
+{{ $clusterName := .Params.cluster }}
+{{ range site.Data.clusters.cluster }}{{ if eq .slug $.Params.cluster }}{{ $clusterName = .name }}{{ end }}{{ end }}
+<article class="wrapx">
+  <p class="crumb"><a href="/projects/">Projects</a> &nbsp;/&nbsp; {{ $clusterName }} &nbsp;/&nbsp; <b>{{ .Title }}</b></p>
   <header class="page-header">
-    <h1>{{ .Title }}</h1>
-    {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
-    <dl class="project-meta">
-      {{ with .Params.status }}<dt>Status</dt><dd><span class="status status-{{ . }}">{{ . }}</span></dd>{{ end }}
-      {{ with .Params.pillar }}
-      <dt>Pillar</dt>
-      <dd>
-        {{ range . }}<a href="/{{ . }}/" class="pillar-tag pillar-{{ . }}">{{ . }}</a>{{ end }}
-      </dd>
-      {{ end }}
-      {{ with .Params.github }}<dt>Code</dt><dd><a href="https://github.com/{{ . }}" target="_blank" rel="noopener">github.com/{{ . }} <span aria-hidden="true">↗</span></a></dd>{{ end }}
-      {{ with .Params.partners }}<dt>Partners</dt><dd>{{ if reflect.IsSlice . }}{{ delimit . ", " }}{{ else }}{{ . }}{{ end }}</dd>{{ end }}
-    </dl>
+    <h1 class="display-2">{{ .Title }}</h1>
+    {{ with .Description }}<p class="lede">{{ . }}</p>{{ end }}
   </header>
-  <div class="prose">
-    {{ .Content }}
+
+  <div class="proj">
+    <div class="prose">{{ .Content }}</div>
+    <aside class="rail" aria-label="Project metadata">
+      <dl>
+        {{ with .Params.status }}<dt>Status</dt><dd><span class="row-status is-{{ . }}">{{ index (dict "active" "Active" "planning" "Planning" "shipped" "Shipped") . | default . }}</span></dd>{{ end }}
+        {{ with .Params.pillar }}<dt>Pillar</dt><dd><span class="row-tags">{{ range . }}<b>{{ . }}</b>{{ end }}</span></dd>{{ end }}
+        {{ with .Params.owner }}<dt>Owner</dt><dd>{{ delimit . ", " }}</dd>{{ end }}
+        <dt>Cluster</dt><dd>{{ $clusterName }}</dd>
+        {{ with .Lastmod }}<dt>Updated</dt><dd>{{ .Format "January 2, 2006" }}</dd>{{ end }}
+      </dl>
+      {{ with .Params.github }}<a class="rail-gh" href="https://github.com/{{ . }}" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (opens in new tab)</span></a>{{ end }}
+    </aside>
   </div>
+
+  {{ $siblings := (where (where site.RegularPages "Section" "projects") "Params.cluster" .Params.cluster).ByWeight }}
+  {{ $prev := "" }}{{ $next := "" }}
+  {{ range $i, $p := $siblings }}
+    {{ if eq $p.RelPermalink $.RelPermalink }}
+      {{ if gt $i 0 }}{{ $prev = index $siblings (sub $i 1) }}{{ end }}
+      {{ if lt (add $i 1) (len $siblings) }}{{ $next = index $siblings (add $i 1) }}{{ end }}
+    {{ end }}
+  {{ end }}
+  {{ if or $prev $next }}
+  <nav class="nextprev" aria-label="More in this cluster">
+    <div>{{ with $prev }}<a href="{{ .RelPermalink }}"><span class="np-lbl">← Previous in cluster</span><span class="np-t">{{ .Title }}</span></a>{{ end }}</div>
+    <div>{{ with $next }}<a href="{{ .RelPermalink }}"><span class="np-lbl">Next in cluster →</span><span class="np-t">{{ .Title }}</span></a>{{ end }}</div>
+  </nav>
+  {{ end }}
 </article>
 {{ end }}

@@ -4,7 +4,6 @@ description: "Calibration-based AI grading for law-school essay exams — deploy
 date: 2026-05-09
 lastmod: 2026-06-08
 draft: false
-type: project
 cluster: "assessment-tools"
 weight: 10
 workstream: "02-assessment-tools/exam-grader"

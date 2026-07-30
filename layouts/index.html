@@ -1,82 +1,55 @@
 {{ define "main" }}
-<section class="hero">
-  <div class="hero-bleed-bg" aria-hidden="true"></div>
-  <p class="hero-eyebrow">Penn Carey Law</p>
-  <p class="pillars-tagline">
-    <span class="pillar-word pillar-word-research">Research</span><span class="pillar-dot" aria-hidden="true">·</span><span class="pillar-word pillar-word-build">Build</span><span class="pillar-dot" aria-hidden="true">·</span><span class="pillar-word pillar-word-teach">Teach</span>
-  </p>
-  <h1 class="hero-headline">AI for the <em>legal profession</em>.</h1>
-  <p class="lead">{{ site.Params.description }}</p>
+<section class="hero wrapx">
+  <p class="metaline"><span>{{ site.Params.institutionName }}</span><span class="sep" aria-hidden="true"></span><span>Philadelphia, Pennsylvania</span></p>
+  <h1 class="display-1">AI for the <em>legal profession</em></h1>
+  <p class="lede">{{ site.Params.description }}</p>
+  <div class="cta">
+    <a class="btn solid" href="/projects/">See the work</a>
+    <a class="btn" href="/research/">Read the research</a>
+  </div>
 </section>
 
-<section class="pillar-grid">
-  {{ range site.Params.pillars }}
-    {{ partial "pillar-card.html" (dict "pillar" .) }}
+{{- /* Pillar copy comes from each pillar page's own title and description, so it
+       is edited in content/{research,build,teach}/_index.md, never here. Order
+       follows site.Params.pillars. */ -}}
+<section class="pillars" aria-label="Research, Build, Teach">
+  {{ range $i, $slug := site.Params.pillars }}
+    {{ with site.GetPage (printf "/%s" $slug) }}
+    <div class="cell">
+      <p class="num">{{ printf "%02d" (add $i 1) }}</p>
+      <h2>{{ .Title }}</h2>
+      <p>{{ .Description }}</p>
+      <a href="{{ .RelPermalink }}">{{ .Title }} →</a>
+    </div>
+    {{ end }}
   {{ end }}
 </section>
 
-<section class="loop-statement">
-  <p>
-    <span class="loop-mark" aria-hidden="true">¶</span>
-    Research findings inform what gets built. Tools enable more research — at scale and with feedback. Teaching disseminates what we learn back to the field, and produces the questions that fuel the next research cycle. <em>The loop is the methodology.</em>
-  </p>
-</section>
+<div class="wrapx">
+  {{ $projects := (where site.RegularPages "Section" "projects").ByWeight }}
+  <div class="section-h"><h2>Selected work</h2><a href="/projects/">All projects →</a></div>
+  {{ range $i, $p := first 5 $projects }}
+    {{ partial "row.html" (dict
+        "num" (printf "%03d" (add $i 1))
+        "title" $p.Title
+        "url" $p.RelPermalink
+        "desc" $p.Description
+        "tags" $p.Params.pillar
+        "status" $p.Params.status) }}
+  {{ end }}
 
-{{ $allProjects := where site.RegularPages "Section" "projects" }}
-{{ $active := where $allProjects "Params.status" "active" }}
-{{ if $active }}
-<section class="featured">
-  <p class="issue-marker issue-marker-rule">Active projects</p>
-  <ul class="featured-list">
-    {{ range first 4 $active }}
-    <li>
-      <a href="{{ .RelPermalink }}">
-        <h3>{{ .Title }}</h3>
-        {{ with .Description }}<p>{{ . }}</p>{{ end }}
-        {{ with .Params.pillar }}
-        <div class="pillar-tags featured-tags">
-          {{ range . }}<span class="pillar-tag pillar-{{ . }}">{{ . }}</span>{{ end }}
-        </div>
-        {{ end }}
-      </a>
-    </li>
+  {{ $events := (where site.RegularPages "Section" "events").ByDate.Reverse }}
+  {{ if $events }}
+  <div class="section-h"><h2>Events</h2><a href="/events/">All events →</a></div>
+  <div class="evs">
+    {{ range first 3 $events }}
+    <a class="ev" href="{{ .RelPermalink }}">
+      <span class="ev-dt">{{ with .Params.event_dates }}{{ . }}{{ else }}{{ .Date.Format "Jan 2006" }}{{ end }}</span>
+      <span class="ev-t">{{ .Title }}</span>
+      {{ with .Description }}<span class="ev-d">{{ . }}</span>{{ end }}
+    </a>
     {{ end }}
-  </ul>
-  <p class="see-all"><a href="/projects/">All {{ len $allProjects }} projects →</a></p>
-</section>
-{{ end }}
-
-<aside class="editorial-pull editorial-pull-drop">
-  <p>Every other Teaching Tool either works or fails on the quality of its input.</p>
-  <cite>From Course Materials, Teaching Tools cluster</cite>
-</aside>
-
-{{ $events := where site.RegularPages "Section" "events" }}
-{{ $signature := where $events "Params.event_status" "ne" "recurring" }}
-{{ with first 1 $signature.ByDate.Reverse }}
-{{ range . }}
-<section class="featured-event">
-  <p class="featured-event-eyebrow">Recently from the Lab</p>
-  <a href="{{ .RelPermalink }}" class="featured-event-card">
-    <div class="featured-event-date">
-      <span class="featured-event-month">{{ .Date.Format "Jan" }}</span>
-      <span class="featured-event-day">{{ .Date.Format "2" }}</span>
-      <span class="featured-event-year">{{ .Date.Format "2006" }}</span>
-    </div>
-    <div class="featured-event-body">
-      <span class="event-type event-type-{{ .Params.event_type }}">{{ .Params.event_type }}</span>
-      <h3>{{ .Title }}</h3>
-      {{ with .Description }}<p>{{ . }}</p>{{ end }}
-      <span class="featured-event-link">Read more →</span>
-    </div>
-  </a>
-</section>
-{{ end }}
-{{ end }}
-
-{{ with .Content }}
-<section class="prose">
-  {{ . }}
-</section>
-{{ end }}
+  </div>
+  {{ end }}
+</div>
 {{ end }}

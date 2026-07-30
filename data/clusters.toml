@@ -1,0 +1,29 @@
+[[cluster]]
+slug = "assessment-tools"
+name = "Assessment Tools"
+lead = "AI on both sides of the law-school exam — taking, grading, and helping faculty write better questions."
+
+[[cluster]]
+slug = "teaching-tools"
+name = "Teaching Tools"
+lead = "The connective tissue of a course — extraction, casebooks, virtual TAs, simulations, and the templates that hold them together."
+
+[[cluster]]
+slug = "judiciary"
+name = "Judiciary"
+lead = "The Lab's research partnership with federal courts and the Delaware Court of Chancery."
+
+[[cluster]]
+slug = "training"
+name = "Training"
+lead = "Training materials for legal-education audiences — and the cross-Penn version of the same package."
+
+[[cluster]]
+slug = "newsletter"
+name = "Newsletter"
+lead = "The pipeline behind the Lab's monthly AI Updates newsletter."
+
+[[cluster]]
+slug = "artifact"
+name = "Shipped Artifacts"
+lead = "Lab work already in the world — public-facing artifacts you can read, listen to, and use."
