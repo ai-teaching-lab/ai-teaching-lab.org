@@ -4,7 +4,6 @@ description: "A virtual teaching-assistant chatbot bound to one course's materia
 date: 2026-05-07
 lastmod: 2026-06-13
 draft: false
-type: project
 cluster: "teaching-tools"
 weight: 40
 workstream: "03-teaching-tools/heron"

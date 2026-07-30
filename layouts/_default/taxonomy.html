@@ -1,19 +1,22 @@
 {{ define "main" }}
-<article class="taxonomy">
+<article class="wrapx">
+  <p class="crumb">{{ site.Params.brandFormalName }} &nbsp;/&nbsp; {{ .Data.Singular | title }} &nbsp;/&nbsp; <b>{{ .Title }}</b></p>
   <header class="page-header">
-    <p class="taxonomy-kind">{{ .Data.Singular | title }}</p>
-    <h1>{{ .Title }}</h1>
-    {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+    <h1 class="display-2">{{ .Title }}</h1>
+    {{ with .Content }}<div class="prose page-header-prose">{{ . }}</div>{{ end }}
   </header>
-  <ul class="content-list">
+  {{ if .Pages }}
+  <section class="cluster">
+    {{ $n := 0 }}
     {{ range .Pages }}
-    <li>
-      <a href="{{ .RelPermalink }}">
-        <h2>{{ .Title }}</h2>
-        {{ with .Description }}<p>{{ . }}</p>{{ end }}
-      </a>
-    </li>
+      {{ $n = add $n 1 }}
+      <div class="row">
+        <span class="row-num">{{ printf "%03d" $n }}</span>
+        <a class="row-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <span class="row-desc">{{ .Description }}</span>
+      </div>
     {{ end }}
-  </ul>
+  </section>
+  {{ end }}
 </article>
 {{ end }}

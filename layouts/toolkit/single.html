@@ -1,27 +1,21 @@
 {{ define "main" }}
-{{ $cat := .Params.toolkit_category | default "core" }}
-<article class="toolkit-single">
+<article class="wrapx">
+  <p class="crumb"><a href="/toolkit/">Toolkit</a> &nbsp;/&nbsp; <b>{{ .Title }}</b></p>
   <header class="page-header">
-    <span class="toolkit-category toolkit-category-{{ $cat }}">
-      {{ if eq $cat "core" }}Core publication{{ else if eq $cat "audience" }}Audience-specific{{ else if eq $cat "teaching" }}Faculty teaching{{ else }}{{ $cat }}{{ end }}
-    </span>
-    <h1>{{ .Title }}</h1>
-    {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
-    <dl class="toolkit-meta">
-      {{ with .Params.version }}<dt>Version</dt><dd>{{ . }}</dd>{{ end }}
-      {{ with .Params.audience }}
-      <dt>Audience</dt>
-      <dd>{{ if reflect.IsSlice . }}{{ delimit . ", " }}{{ else }}{{ . }}{{ end }}</dd>
-      {{ end }}
-      {{ with .Params.availability }}
-      <dt>Availability</dt>
-      <dd><span class="availability availability-{{ . }}">{{ if eq . "internal" }}Penn-internal{{ else if eq . "public" }}Public{{ else }}{{ . }}{{ end }}</span></dd>
-      {{ end }}
-    </dl>
+    <h1 class="display-2">{{ .Title }}</h1>
+    {{ with .Description }}<p class="lede">{{ . }}</p>{{ end }}
   </header>
-  <div class="prose">
-    {{ .Content }}
+  <div class="proj">
+    <div class="prose">{{ .Content }}</div>
+    <aside class="rail" aria-label="Document metadata">
+      <dl>
+        {{ with .Params.toolkit_category }}<dt>Category</dt><dd style="text-transform:capitalize">{{ . }}</dd>{{ end }}
+        {{ with .Params.audience }}<dt>Audience</dt><dd><span class="row-tags">{{ range . }}<b>{{ . }}</b>{{ end }}</span></dd>{{ end }}
+        {{ with .Params.availability }}<dt>Availability</dt><dd style="text-transform:capitalize">{{ . }}</dd>{{ end }}
+        {{ with .Params.version }}<dt>Version</dt><dd>{{ . }}</dd>{{ end }}
+        {{ with .Lastmod }}<dt>Updated</dt><dd>{{ .Format "January 2, 2006" }}</dd>{{ end }}
+      </dl>
+    </aside>
   </div>
-  <p class="back-link"><a href="/toolkit/">← All Toolkit resources</a></p>
 </article>
 {{ end }}

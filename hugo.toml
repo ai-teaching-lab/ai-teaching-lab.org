@@ -8,7 +8,7 @@ summaryLength = 30
 timeZone = 'America/New_York'
 
 [params]
-  description = "The Penn Carey Law AI Project researches how AI is changing legal education and practice, builds the tools that put those findings to work, and teaches lawyers, law students, judges, and the profession how to use AI well."
+  description = "The Penn Carey Law AI Project researches how AI is changing legal practice, legal education, and the law itself; builds the tools that put those findings to work; and teaches lawyers, law students, judges, and the profession how to use AI well."
   brandShortForm = "AI Project"
   brandFormalName = "Penn Carey Law AI Project"
   institutionName = "University of Pennsylvania Carey Law School"

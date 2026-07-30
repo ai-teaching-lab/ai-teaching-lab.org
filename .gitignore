@@ -11,3 +11,5 @@ resources/
 .vscode/
 .idea/
 *.swp
+.superpowers/
+docs/superpowers/

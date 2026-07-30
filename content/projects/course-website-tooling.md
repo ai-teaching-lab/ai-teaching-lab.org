@@ -3,7 +3,6 @@ title: "Course-Website Tooling"
 description: "Generalize the Legal Education at Model Velocity microsite into reusable templates the Project and others can deploy quickly."
 date: 2026-05-09
 draft: false
-type: project
 cluster: "teaching-tools"
 weight: 30
 workstream: "03-teaching-tools/course-website-tooling"

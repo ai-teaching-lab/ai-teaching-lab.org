@@ -1,33 +1,21 @@
 {{ define "main" }}
-<article class="events-list">
+<article class="wrapx">
+  <p class="crumb">{{ site.Params.brandFormalName }} &nbsp;/&nbsp; <b>Events</b></p>
   <header class="page-header">
-    <h1>{{ .Title }}</h1>
-    {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
-    {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+    <h1 class="display-2">{{ .Title }}</h1>
+    {{ with .Description }}<p class="lede">{{ . }}</p>{{ end }}
+    {{ with .Content }}<div class="prose page-header-prose">{{ . }}</div>{{ end }}
   </header>
-
-  {{ $upcoming := where .Pages "Params.event_status" "upcoming" }}
-  {{ $rest := where .Pages "Params.event_status" "!=" "upcoming" }}
-
-  {{ if $upcoming }}
-  <section class="events-section">
-    <h2 class="section-heading">Upcoming</h2>
-    <ul class="event-grid">
-      {{ range $upcoming.ByDate }}
-        {{ partial "event-card.html" . }}
-      {{ end }}
-    </ul>
-  </section>
-  {{ end }}
-
-  <section class="events-section">
-    <h2 class="section-heading">{{ if $upcoming }}Recent and past{{ else }}Recent and past events{{ end }}</h2>
-    <p class="section-lead">A summer 2026 events calendar will be posted as it firms up.</p>
-    <ul class="event-grid">
-      {{ range $rest.ByDate.Reverse }}
-        {{ partial "event-card.html" . }}
-      {{ end }}
-    </ul>
+  <section class="cluster">
+    {{ range .Pages.ByDate.Reverse }}
+    <div class="row row-event">
+      <span class="row-num">{{ with .Params.event_dates }}{{ . }}{{ else }}{{ .Date.Format "Jan 2006" }}{{ end }}</span>
+      <h3 class="row-h"><a class="row-title" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      <span class="row-desc">{{ .Description }}</span>
+      <span class="row-tags">{{ with .Params.event_type }}<b>{{ . }}</b>{{ end }}{{ range .Params.audience }}<b>{{ . }}</b>{{ end }}</span>
+      <span class="row-avail">{{ .Params.event_status }}</span>
+    </div>
+    {{ end }}
   </section>
 </article>
 {{ end }}

@@ -4,7 +4,6 @@ description: "Build the pipeline that produces the Project's monthly AI newslett
 date: 2026-05-08
 lastmod: 2026-05-09
 draft: false
-type: project
 cluster: "newsletter"
 workstream: "05-newsletter"
 status: active

@@ -1,49 +1,32 @@
 {{ define "main" }}
-<article class="toolkit-list">
+<article class="wrapx">
+  <p class="crumb">{{ site.Params.brandFormalName }} &nbsp;/&nbsp; <b>Toolkit</b></p>
   <header class="page-header">
-    <h1>{{ .Title }}</h1>
-    {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
-    {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+    <h1 class="display-2">{{ .Title }}</h1>
+    {{ with .Description }}<p class="lede">{{ . }}</p>{{ end }}
+    {{ with .Content }}<div class="prose page-header-prose">{{ . }}</div>{{ end }}
   </header>
 
+  {{ $n := 0 }}
   {{ $core := where .Pages "Params.toolkit_category" "core" }}
-  {{ $audience := where .Pages "Params.toolkit_category" "audience" }}
-  {{ $teaching := where .Pages "Params.toolkit_category" "teaching" }}
-
-  {{ if $core }}
-  <section class="toolkit-section">
-    <h2 class="section-heading">Core publications</h2>
-    <p class="section-lead">The Toolkit's flagship documents — the foundation of the Lab's faculty-facing work.</p>
-    <ul class="toolkit-grid">
-      {{ range $core.ByWeight }}
-        {{ partial "toolkit-card.html" . }}
+  {{ $rest := where .Pages "Params.toolkit_category" "ne" "core" }}
+  {{ range $group := slice (dict "name" "Core publications" "items" $core.ByWeight) (dict "name" "Guides and references" "items" $rest.ByWeight) }}
+    {{ if $group.items }}
+    <section class="cluster">
+      <div class="cluster-h"><h2>{{ $group.name }}</h2><span>{{ printf "%02d" (len $group.items) }}</span></div>
+      {{ range $group.items }}
+        {{ $n = add $n 1 }}
+        {{ $url := .Params.external_url | default .RelPermalink }}
+        <div class="row">
+          <span class="row-num">{{ printf "%03d" $n }}</span>
+          <h3 class="row-h"><a class="row-title" href="{{ $url }}"{{ if .Params.external_url }} target="_blank" rel="noopener"{{ end }}>{{ .Title }}{{ if .Params.external_url }}<span aria-hidden="true"> ↗</span><span class="sr-only"> (opens in new tab)</span>{{ end }}</a></h3>
+          <span class="row-desc">{{ .Description }}</span>
+          <span class="row-tags">{{ range .Params.audience }}<b>{{ . }}</b>{{ end }}</span>
+          <span class="row-avail">{{ .Params.availability }}</span>
+        </div>
       {{ end }}
-    </ul>
-  </section>
-  {{ end }}
-
-  {{ if $audience }}
-  <section class="toolkit-section">
-    <h2 class="section-heading">Audience-specific guidance</h2>
-    <p class="section-lead">Tailored resources for students, 1Ls, and the broader Penn community.</p>
-    <ul class="toolkit-grid">
-      {{ range $audience.ByWeight }}
-        {{ partial "toolkit-card.html" . }}
-      {{ end }}
-    </ul>
-  </section>
-  {{ end }}
-
-  {{ if $teaching }}
-  <section class="toolkit-section">
-    <h2 class="section-heading">Faculty teaching resources</h2>
-    <p class="section-lead">Practical materials for faculty experimenting with AI in the classroom.</p>
-    <ul class="toolkit-grid">
-      {{ range $teaching.ByWeight }}
-        {{ partial "toolkit-card.html" . }}
-      {{ end }}
-    </ul>
-  </section>
+    </section>
+    {{ end }}
   {{ end }}
 </article>
 {{ end }}

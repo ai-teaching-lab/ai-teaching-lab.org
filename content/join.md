@@ -3,7 +3,7 @@ title: "Join the Project"
 description: "Work with the Penn Carey Law AI Project — open roles, how we work, and how to apply."
 ---
 
-The **Penn Carey Law AI Project** hires research assistants and project leads who want to work at the front edge of AI and the law. We research how AI is changing legal education and practice, build the tools that put those findings to work, and teach law students, faculty, judges, and the profession how to use AI well.
+The **Penn Carey Law AI Project** hires research assistants and project leads who want to work at the front edge of AI and the law. We research how AI is changing legal practice, legal education, and the law itself; build the tools that put those findings to work; and teach law students, faculty, judges, and the profession how to use AI well.
 
 {{< pullquote cite="What you can expect" >}}
 We give you an outcome and a partner, not a checklist.

@@ -1,0 +1,13 @@
+{{- /* Indexed row. Params: num, title, url, desc, tags ([]string), status (active|planning|shipped) */ -}}
+{{- $statusLabel := dict "active" "Active" "planning" "Planning" "shipped" "Shipped" -}}
+<div class="row">
+  <span class="row-num">{{ .num }}</span>
+  <h3 class="row-h"><a class="row-title" href="{{ .url }}">{{ .title }}</a></h3>
+  <span class="row-desc">{{ .desc }}</span>
+  <span class="row-tags">
+    {{- range .tags }}<b>{{ . }}</b>{{ end -}}
+  </span>
+  {{- with .status }}
+  <span class="row-status is-{{ . }}">{{ index $statusLabel . | default . }}</span>
+  {{- end }}
+</div>

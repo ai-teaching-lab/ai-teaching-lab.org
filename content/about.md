@@ -3,7 +3,7 @@ title: "About the Project"
 description: "Who we are, what we do, who we serve."
 ---
 
-The **Penn Carey Law AI Project** researches how AI is changing legal education and practice, builds the tools that put those findings to work, and teaches lawyers, law students, judges, and the profession how to use AI well.
+The **Penn Carey Law AI Project** researches how AI is changing legal practice, legal education, and the law itself; builds the tools that put those findings to work; and teaches lawyers, law students, judges, and the profession how to use AI well.
 
 {{< pullquote cite="The Project's working principle" >}}
 Don't ship without learning. Don't learn without applying.
