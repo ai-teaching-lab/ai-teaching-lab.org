@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>PLAIS Strategy Dashboard — internal prototype (placeholder data)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#011f5b; --blue2:#33528a; --blue3:#7c8aa5;
+    --red:#990000; --red-soft:#f1dede;
+    --ink:#12203f; --canvas:#e9ecf1; --card:#ffffff;
+    --up:#2f7d55; --down:#990000;
+    --line:#d5dbe4; --line2:#c2cad6; --muted:#5c6a82; --chip:#eef1f6;
+    --r:10px; --gap:18px;
+    --serif:"Spectral",Georgia,serif;
+    --sans:"IBM Plex Sans",system-ui,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+  body{margin:0;background:var(--canvas);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.45;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1220px;margin:0 auto;padding:0 22px}
+
+  .masthead{background:var(--blue);color:#eaf0f6;border-bottom:3px solid var(--red)}
+  .mast-inner{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;padding:20px 0 18px}
+  .mark{display:flex;align-items:center;gap:14px}
+  .seal{width:46px;height:46px;border:1.5px solid var(--red);border-radius:3px;display:grid;place-items:center;flex:none;background:#01184a}
+  .seal span{font-family:var(--serif);font-weight:600;font-size:18px;color:#fff;letter-spacing:.5px}
+  .titles h1{font-family:var(--serif);font-weight:600;font-size:25px;margin:0;letter-spacing:.2px}
+  .titles p{margin:2px 0 0;color:#9fb1c8;font-size:12.5px;letter-spacing:.3px}
+  .mast-right{display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+  .proto{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;letter-spacing:.5px;color:#fff;background:var(--red);border-radius:100px;padding:4px 11px;text-transform:uppercase}
+  .proto b{width:7px;height:7px;border-radius:50%;background:#fff;display:inline-block}
+  .controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+  .controls label{font-size:10.5px;color:#8ba0ba;letter-spacing:.5px;text-transform:uppercase;font-family:var(--mono)}
+  .seg{display:inline-flex;border:1px solid #365079;border-radius:7px;overflow:hidden}
+  .seg button{font-family:var(--mono);font-size:11.5px;background:transparent;color:#b9c6d8;border:0;padding:6px 11px;cursor:pointer;letter-spacing:.4px}
+  .seg button+button{border-left:1px solid #365079}
+  .seg button[aria-pressed="true"]{background:var(--red);color:#fff;font-weight:500}
+  .toggle{font-family:var(--mono);font-size:11.5px;color:#b9c6d8;background:transparent;border:1px solid #365079;border-radius:7px;padding:6px 11px;cursor:pointer;letter-spacing:.3px}
+  .toggle[aria-pressed="true"]{background:#123a74;color:#fff;border-color:var(--red)}
+  .banner{background:#01184a;color:#bcd0e6;font-size:12px;text-align:center;padding:7px 12px;font-family:var(--mono);letter-spacing:.2px;border-bottom:1px solid #143061}
+  .banner b{color:#fff;font-weight:500}
+
+  .hero{padding:26px 0 8px}
+  .hero-eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin:0 0 14px}
+  .map{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .trunk{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;display:flex;gap:14px;align-items:stretch}
+  .trunk-label{writing-mode:vertical-rl;transform:rotate(180deg);font-family:var(--serif);font-weight:600;font-size:14px;letter-spacing:2px;text-transform:uppercase;color:var(--blue);border-right:2px solid var(--red);padding-right:10px;display:flex;align-items:center}
+  .branches{display:flex;gap:10px;flex-wrap:wrap;flex:1}
+  .branch{flex:1 1 150px;text-align:left;background:#f7f9fb;border:1px solid var(--line);border-radius:8px;padding:11px 12px;cursor:pointer;font-family:var(--sans);color:var(--ink);transition:border-color .15s,background .15s}
+  .branch:hover{border-color:var(--blue2);background:#eef3f9}
+  .branch:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+  .branch .num{font-family:var(--mono);font-size:11px;color:#fff;background:var(--blue);border-radius:4px;padding:1px 6px;letter-spacing:.5px}
+  .branch .b-title{display:block;margin-top:8px;font-weight:500;font-size:13.5px}
+  .branch .b-sub{display:block;color:var(--muted);font-size:11px;margin-top:2px}
+
+  main{padding:14px 0 40px}
+  section{scroll-margin-top:14px;margin-top:26px}
+  .band{display:flex;align-items:center;gap:14px;border-top:2px solid var(--blue);padding:11px 0 9px;margin-bottom:var(--gap)}
+  .band .idx{font-family:var(--mono);font-size:12px;font-weight:500;color:#fff;background:var(--blue);width:26px;height:26px;border-radius:5px;display:grid;place-items:center;flex:none}
+  .band h2{font-family:var(--serif);font-weight:600;font-size:19px;margin:0;flex:1}
+  .band .band-note{font-family:var(--mono);font-size:11px;color:var(--red);letter-spacing:.4px;white-space:nowrap;display:flex;align-items:center;gap:6px}
+  .band .band-note::before{content:"";width:6px;height:6px;background:var(--red);border-radius:50%}
+
+  .grid{display:grid;gap:var(--gap);grid-template-columns:repeat(auto-fit,minmax(288px,1fr))}
+  .tile{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px 16px 13px;display:flex;flex-direction:column;min-height:178px}
+  .tile.wide{grid-column:span 2}
+  @media(max-width:760px){.tile.wide{grid-column:span 1}}
+  .eyebrow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:9px}
+  .id-chip{font-family:var(--mono);font-size:10.5px;color:var(--blue);background:var(--chip);border:1px solid var(--line2);border-radius:4px;padding:1px 6px;letter-spacing:.3px}
+  .src{font-family:var(--mono);font-size:10.5px;color:var(--muted);letter-spacing:.2px}
+  .eyebrow .spacer{flex:1}
+  .tile h3{font-size:13.5px;font-weight:600;margin:0 0 10px;letter-spacing:.1px}
+  .tile h3 .opt{font-family:var(--mono);font-weight:400;color:var(--muted);font-size:11px}
+  .tile-body{flex:1;display:flex;flex-direction:column;justify-content:center}
+
+  .rng{display:inline-flex;border:1px solid var(--line2);border-radius:6px;overflow:hidden}
+  .rng button{font-family:var(--mono);font-size:10px;background:#fff;color:var(--muted);border:0;padding:3px 7px;cursor:pointer;letter-spacing:.3px}
+  .rng button+button{border-left:1px solid var(--line2)}
+  .rng button[aria-pressed="true"]{background:var(--blue);color:#fff}
+  .metricrow{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px}
+  .metricrow button{font-family:var(--mono);font-size:10px;background:#f4f6f9;color:var(--blue);border:1px solid var(--line2);border-radius:5px;padding:3px 8px;cursor:pointer}
+  .metricrow button[aria-pressed="true"]{background:var(--blue);color:#fff;border-color:var(--blue)}
+
+  .metric{font-family:var(--mono);font-size:31px;font-weight:500;line-height:1;letter-spacing:-.5px}
+  .delta{font-family:var(--mono);font-size:12px;margin-left:2px;display:inline-flex;align-items:center;gap:3px}
+  .delta.up{color:var(--up)} .delta.down{color:var(--down)}
+  .sub-metric{color:var(--muted);font-size:12px;margin-top:6px}
+  .sub-metric b{color:var(--ink);font-family:var(--mono)}
+
+  .statgrid{display:grid;grid-template-columns:1fr 1fr;gap:11px 16px}
+  .stat .v{font-family:var(--mono);font-size:20px;font-weight:500;line-height:1}
+  .stat .k{font-size:11px;color:var(--muted);letter-spacing:.2px;margin-top:3px;text-transform:uppercase;font-family:var(--mono)}
+
+  .chartbox{width:100%}
+  svg{display:block;width:100%;overflow:visible}
+  .axis{font-family:var(--mono);font-size:9.5px;fill:var(--muted)}
+  .glabel{font-family:var(--mono);font-size:10px;fill:var(--muted)}
+  .clegend{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px;font-family:var(--mono);font-size:10.5px;color:var(--muted)}
+  .clegend i{font-style:normal;display:inline-flex;align-items:center;gap:5px}
+  .dotp{width:9px;height:9px;border-radius:2px;display:inline-block}
+
+  .funnel{display:flex;flex-direction:column;gap:7px}
+  .frow{display:flex;align-items:center;gap:10px}
+  .fbar{height:22px;background:linear-gradient(90deg,var(--blue),var(--blue2));border-radius:3px;flex:none}
+  .fmeta{font-family:var(--mono);font-size:12px;white-space:nowrap}
+  .fmeta b{color:var(--ink)} .fmeta span{color:var(--muted)}
+
+  table{width:100%;border-collapse:collapse;font-size:12.5px}
+  th,td{text-align:left;padding:6px 6px;border-bottom:1px solid var(--line)}
+  th{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);font-weight:500}
+  td.num,th.num{text-align:right;font-family:var(--mono)}
+  td.date{font-family:var(--mono);color:var(--muted);white-space:nowrap}
+  td.name b{font-weight:600}
+  .cat{font-family:var(--mono);font-size:10px;color:var(--blue);background:var(--chip);border-radius:4px;padding:1px 6px}
+  .defn{font-family:var(--mono);font-size:10px;color:var(--muted);margin-top:8px;line-height:1.5}
+
+  .gauge-wrap{display:flex;align-items:center;gap:16px}
+  .gauge-num{font-family:var(--mono);font-size:14px}
+  .gauge-num b{font-size:24px;font-weight:500}
+
+  .tile-foot{margin-top:11px;padding-top:9px;border-top:1px dashed var(--line2);font-family:var(--mono);font-size:10.5px;color:var(--muted);display:flex;justify-content:space-between;gap:10px}
+  .spec{display:none;font-family:var(--mono);font-size:10.5px;color:#2b4a7a;background:#eff3f9;border:1px dashed var(--blue2);border-radius:6px;padding:7px 9px;margin-top:10px;line-height:1.55}
+  body.spec-on .spec{display:block}
+  .spec b{color:var(--blue)}
+
+  footer{border-top:2px solid var(--blue);margin-top:34px;padding:18px 0 44px;color:var(--muted);font-size:12px}
+  footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+  footer b{color:var(--ink);font-weight:600}
+  .legend{font-family:var(--mono);font-size:10.5px;display:flex;gap:14px;flex-wrap:wrap}
+  .legend i{font-style:normal}
+  .legend .dotp{border-radius:50%;margin-right:4px;vertical-align:middle}
+
+  @media(max-width:720px){.map{grid-template-columns:1fr}.mast-right{align-items:flex-start}.mast-inner{align-items:flex-start}}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap mast-inner">
+    <div class="mark">
+      <div class="seal"><span>PL</span></div>
+      <div class="titles">
+        <h1>PLAIS Strategy Dashboard</h1>
+        <p>Penn Carey Law · Law &amp; AI strategic monitor</p>
+      </div>
+    </div>
+    <div class="mast-right">
+      <span class="proto"><b></b> Prototype · illustrative placeholder data</span>
+      <div class="controls">
+        <label>Global range</label>
+        <div class="seg" id="globalSeg" role="group" aria-label="Global time range">
+          <button data-range="5" aria-pressed="false">5Y</button>
+          <button data-range="10" aria-pressed="false">10Y</button>
+          <button data-range="max" aria-pressed="true">Max</button>
+        </div>
+        <button class="toggle" id="specBtn" aria-pressed="false">Spec view</button>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="banner">All figures are <b>placeholders for layout only</b> — not real data. <b>Global range</b> sets every time-series tile; each tile also has its own toggle you can adjust independently. Turn on <b>Spec view</b> for build-spec metadata.</div>
+
+<div class="wrap">
+  <div class="hero">
+    <p class="hero-eyebrow">Lever tree — select a branch to jump</p>
+    <div class="map">
+      <div class="trunk">
+        <div class="trunk-label">Education</div>
+        <div class="branches">
+          <button class="branch" data-go="s1"><span class="num">1</span><span class="b-title">Talent in</span><span class="b-sub">Applicants &amp; intake</span></button>
+          <button class="branch" data-go="s2"><span class="num">2</span><span class="b-title">Graduates out</span><span class="b-sub">Outcomes &amp; demand</span></button>
+          <button class="branch" data-go="s3"><span class="num">3</span><span class="b-title">Education supply</span><span class="b-sub">Curriculum &amp; peers</span></button>
+        </div>
+      </div>
+      <div class="trunk">
+        <div class="trunk-label">Practice</div>
+        <div class="branches">
+          <button class="branch" data-go="s4"><span class="num">4</span><span class="b-title">Legal market</span><span class="b-sub">Demand &amp; economics</span></button>
+          <button class="branch" data-go="s5"><span class="num">5</span><span class="b-title">Context</span><span class="b-sub">Regulation &amp; history</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section id="s1">
+      <div class="band"><div class="idx">1</div><h2>Talent in</h2><div class="band-note">Education · Demand · Applicants</div></div>
+      <div class="grid">
+
+        <article class="tile wide">
+          <div class="eyebrow"><span class="id-chip">1.1 / 1.3</span><span class="src">LSAC</span><span class="spacer"></span>
+            <div class="rng" data-for="lsat"><button data-r="5">5Y</button><button data-r="10">10Y</button><button data-r="max" aria-pressed="true">Max</button></div>
+          </div>
+          <h3>Applications &amp; LSAT-band mix</h3>
+          <div class="tile-body">
+            <div class="metric">71,400<span class="delta up">&#9650; 20.6% YoY</span></div>
+            <div class="chartbox" data-chart="lsat" style="margin-top:8px"></div>
+            <div class="clegend" data-legend="lsat"></div>
+          </div>
+          <div class="spec"><b>Analysis:</b> Past application behaviour + applicant quality/composition. <b>Need-to-have:</b> LSAC volumes by LSAT band, T14/T5 share, STEM-major mix. <b>Cadence:</b> monthly in-cycle / annual final. <b>Auto-refresh:</b> partial (manual entry).</div>
+          <div class="tile-foot"><span>As of Jun 2026</span><span>Stacked = band composition</span></div>
+        </article>
+
+        <article class="tile">
+          <div class="eyebrow"><span class="id-chip">1.1</span><span class="src">LSAC · BLS</span><span class="spacer"></span>
+            <div class="rng" data-for="ratio"><button data-r="5">5Y</button><button data-r="10">10Y</button><button data-r="max" aria-pressed="true">Max</button></div>
+          </div>
+          <h3>Applicants : labour force</h3>
+          <div class="tile-body">
+            <div class="metric" style="font-size:27px">40.8<span class="delta up">&#9650; per 100k</span></div>
+            <div class="chartbox" data-chart="ratio" style="margin-top:8px"></div>
+          </div>
+          <div class="spec"><b>Analysis:</b> Applicants-to-labour-force ratio (demand intensity). <b>Need-to-have:</b> annual applicants &divide; civilian labour force. <b>Cadence:</b> annual. <b>Auto-refresh:</b> partial (BLS API for denominator).</div>
+          <div class="tile-foot"><span>As of Jun 2026</span><span>Applicants per 100k workers</span></div>
+        </article>
+
+        <article class="tile">
+          <div class="eyebrow"><span class="id-chip">1.4</span><span class="src">Internal · CRM</span></div>
+          <h3>Admissions funnel &amp; yield</h3>
+          <div class="tile-body">
+            <div class="funnel">
+              <div class="frow"><div class="fbar" style="width:100%"></div><div class="fmeta"><b>8,940</b> <span>apps</span></div></div>
+              <div class="frow"><div class="fbar" style="width:52%"></div><div class="fmeta"><b>1,048</b> <span>admits</span></div></div>
+              <div class="frow"><div class="fbar" style="width:26%"></div><div class="fmeta"><b>259</b> <span>matric.</span></div></div>
+              <div class="frow"><div class="fbar" style="width:20%"></div><div class="fmeta"><b>24.7%</b> <span>yield</span></div></div>
+            </div>
+          </div>
+          <div class="spec"><b>Analysis:</b> Admissions funnel &amp; yield economics. <b>Need-to-have:</b> apps&rarr;admits&rarr;matric&rarr;yield, cross-admit set. <b>Cadence:</b> per cycle. <b>Auto-refresh:</b> yes if CRM connects.</div>
+          <div class="tile-foot"><span>As of Jun 2026</span><span>Internal source</span></div>
+        </article>
+
+        <article class="tile">
+          <div class="eyebrow"><span class="id-chip">1.5</span><span class="src">ABA 509</span></div>
+          <h3>Price, ROI &amp; debt</h3>
+          <div class="tile-body">
+            <div class="statgrid">
+              <div class="stat"><div class="v">$76.4k</div><div class="k">Tuition</div></div>
+              <div class="stat"><div class="v">42%</div><div class="k">Discount rate</div></div>
+              <div class="stat"><div class="v">$118k</div><div class="k">Avg debt</div></div>
+              <div class="stat"><div class="v">0.9&times;</div><div class="k">Debt : income</div></div>
+            </div>
+          </div>
+          <div class="spec"><b>Analysis:</b> ROI &amp; price sensitivity of the JD. <b>Need-to-have:</b> tuition, discount, debt, debt-to-income. <b>Cadence:</b> annual. <b>Auto-refresh:</b> manual.</div>
+          <div class="tile-foot"><span>As of Apr 2026</span><span>Class of 2025</span></div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="s2">
+      <div class="band"><div class="idx">2</div><h2>Graduates out</h2><div class="band-note">Education · Demand · Output</div></div>
+      <div class="grid">
+
+        <article class="tile">
+          <div class="eyebrow"><span class="id-chip">2.3</span><span class="src">ABA 509 · NALP</span></div>
+          <h3>Employment outcomes</h3>
+          <div class="tile-body">
+            <div class="gauge-wrap">
+              <div id="donutEmp"></div>
+              <div style="font-family:var(--mono);font-size:11.5px;line-height:1.9">
+                <div><span class="dotp" style="background:var(--blue);border-radius:50%"></span> JD-required <b>84.2%</b></div>
+                <div><span class="dotp" style="background:var(--blue2);border-radius:50%"></span> JD-advantaged <b>7.9%</b></div>
+                <div><span class="dotp" style="background:var(--red);border-radius:50%"></span> School-funded <b>2.8%</b></div>
+                <div><span class="dotp" style="background:#c3ccd4;border-radius:50%"></span> Other / seeking <b>5.1%</b></div>
+              </div>
+            </div>
+          </div>
+          <div class="spec"><b>Analysis:</b> Employment-outcomes deep dive. <b>Need-to-have:</b> % FT-LT JD-required / advantaged / school-funded; sector split. <b>Cadence:</b> annual. <b>Auto-refresh:</b> manual.</div>
+          <div class="tile-foot"><span>As of Apr 2026</span><span>10-mo. outcomes</span></div>
+        </article>
+
+        <article class="tile">
+          <div class="eyebrow"><span class="id-chip">2.9</span><span class="src">NALP</span></div>
+          <h3>Starting-salary distribution</h3>
+          <div class="tile-body">
+            <div class="chartbox" id="histSalary"></div>
+            <div class="sub-metric">Median <b>$195k</b> · bimodal peaks &asymp; $75k &amp; $225k</div>
+          </div>
+          <div class="spec"><b>Analysis:</b> Compensation &amp; debt-to-income outlook. <b>Need-to-have:</b> full salary distribution over time (the bimodal split). <b>Cadence:</b> annual. <b>Auto-refresh:</b> manual.</div>
+          <div class="tile-foot"><span>As of 2025 cycle</span><span>All employed grads</span></div>
+        </article>
+
+        <article class="tile">
+          <div class="eyebrow"><span class="id-chip">2.2 / 2.6</span><span class="src">BLS · API (auto)</span><span class="spacer"></span>
+            <div class="rng" data-for="bls"><button data-r="5">5Y</button><button data-r="10">10Y</button><button data-r="max" aria-pressed="true">Max</button></div>
+          </div>
+          <h3>Legal-labour demand</h3>
+          <div class="tile-body">
+            <div class="metric" style="font-size:28px">834k<span class="delta up">&#9650; 5% 10-yr proj.</span></div>
+            <div class="chartbox" data-chart="bls" style="margin-top:8px"></div>
+          </div>
+          <div class="spec"><b>Analysis:</b> Future employer / labour demand. <b>Need-to-have:</b> lawyer employment level + projection. <b>Cadence:</b> annual. <b>Auto-refresh:</b> yes — free BLS public API.</div>
+          <div class="tile-foot"><span>OES series</span><span>US lawyers, all sectors</span></div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="s3">
+      <div class="band"><div class="idx">3</div><h2>Education supply</h2><div class="band-note">Education · Supply · Curriculum &amp; peers</div></div>
+      <div class="grid">
+
+        <article class="tile">
+          <div class="eyebrow"><span class="id-chip">3.7 / X.2</span><span class="src">NCBE</span></div>
+          <h3>NextGen Bar &amp; passage</h3>
+          <div class="tile-body">
+            <div class="gauge-wrap">
+              <div id="gaugeBar"></div>
+              <div class="gauge-num"><b>12</b>/56<br><span style="color:var(--muted);font-size:11px">jurisdictions adopted</span></div>
+            </div>
+            <div class="statgrid" style="margin-top:12px">
+              <div class="stat"><div class="v">3/5</div><div class="k">T5 placement states</div></div>
+              <div class="stat"><div class="v">95.8%</div><div class="k">Bar-pass rate</div></div>
+            </div>
+          </div>
+          <div class="spec"><b>Analysis:</b> Licensure alignment — NextGen Bar. <b>Need-to-have:</b> # jurisdictions adopted, placement-state coverage, bar-pass. <b>Cadence:</b> as states adopt. <b>Auto-refresh:</b> manual.</div>
+          <div class="tile-foot"><span>As of Jul 2026</span><span>Rollout began Jul 2026</span></div>
+        </article>
+
+        <article class="tile wide">
+          <div class="eyebrow"><span class="id-chip">X.3</span><span class="src">Curated scan</span></div>
+          <h3>Peer-school AI moves <span class="opt">· 27 tracked YTD</span></h3>
+          <div class="tile-body">
+            <table>
+              <thead><tr><th>Date</th><th>School</th><th>Move</th><th>Type</th></tr></thead>
+              <tbody>
+                <tr><td class="date">Jun &rsquo;26</td><td>Peer A</td><td>Launched Law &amp; AI research center</td><td><span class="cat">Center</span></td></tr>
+                <tr><td class="date">May &rsquo;26</td><td>Peer B</td><td>New JD/MS-CS joint degree</td><td><span class="cat">Degree</span></td></tr>
+                <tr><td class="date">Apr &rsquo;26</td><td>Peer C</td><td>Two endowed Law-&amp;-AI chairs</td><td><span class="cat">Faculty</span></td></tr>
+                <tr><td class="date">Mar &rsquo;26</td><td>Peer D</td><td>Exec-ed program for GCs on legal AI</td><td><span class="cat">Exec-ed</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="spec"><b>Analysis:</b> Peer-school competitive strategy scan. <b>Need-to-have:</b> peer initiatives (centres, hires, degrees, exec-ed). <b>Cadence:</b> ongoing. <b>Auto-refresh:</b> manual, curated.</div>
+          <div class="tile-foot"><span>As of Jun 2026</span><span>Illustrative entries</span></div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="s4">
+      <div class="band"><div class="idx">4</div><h2>Legal market</h2><div class="band-note">Practice · Demand &amp; economics</div></div>
+      <div class="grid">
+
+        <article class="tile wide">
+          <div class="eyebrow"><span class="id-chip">2.5 / 7.8</span><span class="src">Thomson Reuters · Citi</span><span class="spacer"></span>
+            <div class="rng" data-for="firm"><button data-r="5">5Y</button><button data-r="10">10Y</button><button data-r="max" aria-pressed="true">Max</button></div>
+          </div>
+          <h3>Law-firm economics by firm size</h3>
+          <div class="tile-body">
+            <div class="chartbox" data-chart="firm"></div>
+            <div class="clegend" data-legend="firm"></div>
+            <div class="sub-metric">Demand index (2018 = 100) — large firms pulling ahead as AI leverage concentrates.</div>
+          </div>
+          <div class="spec"><b>Analysis:</b> BigLaw economic-model + firm economics under AI, split by size band. <b>Need-to-have:</b> demand / rate / PPEP by firm-size segment (500+, 100–500, &lt;100). <b>Cadence:</b> quarterly / annual. <b>Auto-refresh:</b> manual.</div>
+          <div class="tile-foot"><span>As of Q1 2026</span><span>Segmented composite</span></div>
+        </article>
+
+        <article class="tile">
+          <div class="eyebrow"><span class="id-chip">7.1 / 7.3</span><span class="src">CodeX · PitchBook</span><span class="spacer"></span>
+            <div class="rng" data-for="funding"><button data-r="5">5Y</button><button data-r="10">10Y</button><button data-r="max" aria-pressed="true">Max</button></div>
+          </div>
+          <h3>Legal-AI market funding</h3>
+          <div class="tile-body">
+            <div class="metric" style="font-size:26px">$6.1B<span class="delta up">&#9650; funding YTD</span></div>
+            <div class="chartbox" data-chart="funding" style="margin-top:8px"></div>
+          </div>
+          <div class="spec"><b>Analysis:</b> Legal-AI vendor landscape &amp; maturity. <b>Need-to-have:</b> funding $, # notable tools, rounds / M&amp;A. <b>Cadence:</b> ongoing. <b>Auto-refresh:</b> partial.</div>
+          <div class="tile-foot"><span>As of Jun 2026</span><span>Annual VC into legal AI</span></div>
+        </article>
+
+        <article class="tile">
+          <div class="eyebrow"><span class="id-chip">X.1</span><span class="src">Public leaderboards</span><span class="spacer"></span>
+            <div class="rng" data-for="cap"><button data-r="5">5Y</button><button data-r="10">10Y</button><button data-r="max" aria-pressed="true">Max</button></div>
+          </div>
+          <h3>AI capability trajectory</h3>
+          <div class="tile-body">
+            <div class="metric" style="font-size:26px">91%<span class="delta up">&#9650; legal eval</span></div>
+            <div class="chartbox" data-chart="cap" style="margin-top:8px"></div>
+          </div>
+          <div class="spec"><b>Analysis:</b> AI capability trajectory in legal tasks (master driver). <b>Need-to-have:</b> model performance on legal benchmarks over time. <b>Cadence:</b> ongoing. <b>Auto-refresh:</b> partial.</div>
+          <div class="tile-foot"><span>As of Jun 2026</span><span>Composite benchmark</span></div>
+        </article>
+
+        <article class="tile wide">
+          <div class="eyebrow"><span class="id-chip">7.3</span><span class="src">Press · PitchBook · company reports</span></div>
+          <h3>Legal-tech monitor <span class="opt">· dominant platforms</span></h3>
+          <div class="tile-body">
+            <table>
+              <thead><tr><th>Player</th><th class="num">Valuation</th><th class="num">Users / seats</th><th class="num">ARR</th><th class="num">~ $/seat/yr</th></tr></thead>
+              <tbody>
+                <tr><td class="name"><b>Harvey</b></td><td class="num">$11.0B</td><td class="num">100,000+</td><td class="num">$190M</td><td class="num">~$1.9k</td></tr>
+                <tr><td class="name"><b>Legora</b></td><td class="num">$5.6B</td><td class="num">~40,000</td><td class="num">$100M</td><td class="num">~$2.5k</td></tr>
+                <tr><td class="name"><b>Clio</b></td><td class="num">$5.0B</td><td class="num">200,000+</td><td class="num">$500M</td><td class="num">~$2.5k</td></tr>
+                <tr><td class="name"><b>CoCounsel</b> (Thomson Reuters)</td><td class="num">public</td><td class="num">n/d</td><td class="num">bundled</td><td class="num">—</td></tr>
+                <tr><td class="name"><b>Ironclad</b></td><td class="num">~$3.2B</td><td class="num">n/d</td><td class="num">$200M+</td><td class="num">—</td></tr>
+                <tr><td class="name"><b>EvenUp</b></td><td class="num">~$2.0B</td><td class="num">n/d</td><td class="num">n/d</td><td class="num">—</td></tr>
+              </tbody>
+            </table>
+            <div class="defn"><b>Set:</b> legal-AI / legal-tech platforms with disclosed valuation &ge; ~$50M (research, drafting, CLM, practice-management). Price/seat derived from ARR &divide; users. All figures illustrative placeholders.</div>
+          </div>
+          <div class="spec"><b>Analysis:</b> Legal-AI vendor landscape &amp; maturity (player-level). <b>Need-to-have:</b> valuation, seats/users, ARR, price/seat for dominant players. <b>Cadence:</b> ongoing (rounds, reports). <b>Auto-refresh:</b> partial (paid data APIs; else manual).</div>
+          <div class="tile-foot"><span>As of Jun 2026</span><span>Illustrative — verify before use</span></div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="s5">
+      <div class="band"><div class="idx">5</div><h2>Context</h2><div class="band-note">Practice · Regulation &amp; structural history</div></div>
+      <div class="grid">
+
+        <article class="tile">
+          <div class="eyebrow"><span class="id-chip">7.9</span><span class="src">AZ Sup. Ct. · UT sandbox</span><span class="spacer"></span>
+            <div class="rng" data-for="abs"><button data-r="5">5Y</button><button data-r="10">10Y</button><button data-r="max" aria-pressed="true">Max</button></div>
+          </div>
+          <h3>ABS / non-lawyer ownership</h3>
+          <div class="tile-body">
+            <div class="statgrid" style="margin-bottom:8px">
+              <div class="stat"><div class="v">112</div><div class="k">Arizona ABS entities</div></div>
+              <div class="stat"><div class="v">40+</div><div class="k">Utah sandbox</div></div>
+            </div>
+            <div class="chartbox" data-chart="abs"></div>
+          </div>
+          <div class="spec"><b>Analysis:</b> Regulatory &amp; licensure of delivery (ABS/UPL). <b>Need-to-have:</b> # ABS entities, sandbox participants, reform pipeline. <b>Cadence:</b> periodic. <b>Auto-refresh:</b> manual.</div>
+          <div class="tile-foot"><span>As of Jun 2026</span><span>Arizona ABS count</span></div>
+        </article>
+
+        <article class="tile wide">
+          <div class="eyebrow"><span class="id-chip">X.1 / X.3</span><span class="src">ABA · NALP · Census · BLS (historical)</span><span class="spacer"></span>
+            <div class="rng" data-for="hist"><button data-r="25">25Y</button><button data-r="50">50Y</button><button data-r="max" aria-pressed="true">Max</button></div>
+          </div>
+          <h3>Historical analogues — prior tech waves</h3>
+          <div class="tile-body">
+            <div class="metricrow" id="histMetrics">
+              <button data-m="lpw" aria-pressed="true">Lawyers / 1,000 workers</button>
+              <button data-m="firm">Avg. AmLaw-100 firm size</button>
+              <button data-m="grad">JD graduates / yr</button>
+            </div>
+            <div class="chartbox" data-chart="hist"></div>
+            <div class="sub-metric" id="histNote"></div>
+          </div>
+          <div class="spec"><b>Analysis:</b> Structural comparison of the legal profession across prior technology waves (digital revolution 1970s–80s; internet / dot-com 1995–2004) vs. the AI era. <b>Metric that moved most:</b> average large-firm size (~10&times; since 1985) &gt; JD graduates (~2.5&times; then decline) &gt; lawyers per 1,000 workers (~1.9&times;). <b>Feasibility:</b> yes — long-run public series exist (ABA lawyer counts, NALP/ABA graduate counts, Am Law from 1985, BLS/Census workforce). <b>Auto-refresh:</b> manual, infrequent. Independent long-run scale (not driven by global range).</div>
+          <div class="tile-foot"><span>Shaded = prior tech waves</span><span>Illustrative long-run values</span></div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div><b>PLAIS Strategy Dashboard — prototype.</b> Penn Carey Law. Layout &amp; visual spec only; every figure is a placeholder. Use <b>Spec view</b> for the developer hand-off.</div>
+    <div class="legend">
+      <i><span class="dotp" style="background:var(--up)"></span>improving</i>
+      <i><span class="dotp" style="background:var(--red)"></span>accent / latest</i>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var C_BLUE="#011f5b", C_BLUE2="#33528a", C_STEEL="#7c8aa5", C_RED="#990000";
+
+  var DATA = {
+    lsat:{ type:"sbars", years:[2017,2018,2019,2020,2021,2022,2023,2024,2025,2026],
+      order:["170+","165-169","160-164","<160"],
+      colors:{"170+":C_BLUE,"165-169":C_BLUE2,"160-164":"#8a9bbf","<160":"#c8d0de"},
+      bands:{ "170+":[4.1,4.4,4.6,4.3,4.8,5.6,5.0,5.1,5.6,7.2],
+              "165-169":[8.8,9.3,9.6,9.0,9.7,10.8,9.9,9.6,10.4,12.6],
+              "160-164":[13.9,14.6,15.0,14.2,15.1,16.5,15.4,15.0,15.8,18.4],
+              "<160":[27.2,28.7,29.8,28.5,29.4,31.1,29.2,29.5,29.2,33.2] } },
+    ratio:{ type:"line", years:[2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026],
+      values:[42,40,37,34,31,29,30,31,30,33,31,30,32,33,34,40.8] },
+    bls:{ type:"line", years:[2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026],
+      values:[792,800,808,815,820,819,823,826,828,831,834] },
+    firm:{ type:"mline", years:[2018,2019,2020,2021,2022,2023,2024,2025,2026],
+      order:["500+ lawyers","100-500","<100"],
+      colors:{"500+ lawyers":C_BLUE,"100-500":C_RED,"<100":C_STEEL},
+      series:{ "500+ lawyers":[100,103,106,101,108,112,114,116,119],
+               "100-500":[100,101,102,98,103,105,105,106,107],
+               "<100":[100,100,99,95,99,100,99,99,100] } },
+    cap:{ type:"line", years:[2020,2021,2022,2023,2024,2025,2026], values:[41,48,57,68,79,86,91] },
+    funding:{ type:"bars", years:[2020,2021,2022,2023,2024,2025,2026], values:[0.3,0.6,0.9,1.8,3.4,4.9,6.1] },
+    abs:{ type:"bars", years:[2021,2022,2023,2024,2025,2026], values:[22,44,68,92,104,112] },
+    hist:{ type:"histline", years:[1970,1975,1980,1985,1990,1995,2000,2005,2010,2015,2020,2025],
+      metrics:{
+        lpw:{label:"Lawyers per 1,000 workers", vals:[4.3,4.7,5.1,5.5,6.0,6.6,7.2,7.6,7.8,8.1,8.3,7.9], fmt:function(v){return v.toFixed(1);}},
+        firm:{label:"Avg. AmLaw-100 firm size (attorneys)", vals:[95,120,160,230,320,410,500,620,740,830,900,980], fmt:function(v){return Math.round(v);}},
+        grad:{label:"JD graduates per year (000s)", vals:[17.5,24,35,36,36,39,38,43,44,40,35,38], fmt:function(v){return v.toFixed(0);}}
+      },
+      eras:[ {name:"Digital revolution",from:1970,to:1985},
+             {name:"Internet / dot-com",from:1995,to:2004},
+             {name:"AI era",from:2023,to:2025} ] }
+  };
+
+  var RANGE = { lsat:"max", ratio:"max", bls:"max", firm:"max", cap:"max", funding:"max", abs:"max" };
+  var HIST_RANGE = "max", HIST_METRIC = "lpw";
+
+  function keepIdx(years, n){
+    if(n==="max") return years.map(function(_,i){return i;});
+    var minY = years[years.length-1]-parseInt(n,10)+1, idx=[];
+    years.forEach(function(y,i){ if(y>=minY) idx.push(i); });
+    if(idx.length<2){ idx=[years.length-2,years.length-1]; }
+    return idx;
+  }
+  function box(key){ return document.querySelector('[data-chart="'+key+'"]'); }
+  function niceMM(vals){
+    var mn=Math.min.apply(null,vals), mx=Math.max.apply(null,vals);
+    if(mn===mx){mn=mn*0.9;mx=mx*1.1;}
+    var pad=(mx-mn)*0.15; return [mn-pad, mx+pad];
+  }
+  function yr2(y){ return "\u2019"+String(y).slice(2); }
+  function pathFor(vals, X, Y){ var d=""; for(var i=0;i<vals.length;i++){ d+=(i?" L":"M")+X(i).toFixed(1)+" "+Y(vals[i]).toFixed(1); } return d; }
+
+  function renderLine(key){
+    var el=box(key); if(!el) return;
+    var D=DATA[key], idx=keepIdx(D.years,RANGE[key]);
+    var years=idx.map(function(i){return D.years[i];}), vals=idx.map(function(i){return D.values[i];});
+    var W=el.clientWidth||300, H=58, L=4, R=4, T=8, B=16, n=vals.length;
+    var mm=niceMM(vals), mn=mm[0], mx=mm[1];
+    var X=function(i){return L+(n<=1?0:i*(W-L-R)/(n-1));};
+    var Y=function(v){return T+(H-T-B)*(1-(v-mn)/(mx-mn));};
+    var d=pathFor(vals,X,Y);
+    var area=d+" L"+X(n-1).toFixed(1)+" "+(H-B)+" L"+X(0).toFixed(1)+" "+(H-B)+" Z";
+    var pts=""; for(var i=0;i<n;i++){ pts+='<circle cx="'+X(i).toFixed(1)+'" cy="'+Y(vals[i]).toFixed(1)+'" r="'+(i===n-1?3.2:2)+'" fill="'+(i===n-1?C_RED:C_BLUE)+'"><title>'+years[i]+': '+vals[i]+'</title></circle>'; }
+    el.innerHTML='<svg viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="none" style="height:'+H+'px">'+
+      '<defs><linearGradient id="g_'+key+'" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="'+C_BLUE2+'" stop-opacity="0.16"/><stop offset="1" stop-color="'+C_BLUE2+'" stop-opacity="0"/></linearGradient></defs>'+
+      '<path d="'+area+'" fill="url(#g_'+key+')"/><path d="'+d+'" fill="none" stroke="'+C_BLUE+'" stroke-width="1.8"/>'+pts+
+      '<text class="axis" x="'+X(0)+'" y="'+(H-3)+'">'+years[0]+'</text>'+
+      '<text class="axis" x="'+X(n-1)+'" y="'+(H-3)+'" text-anchor="end">'+years[n-1]+'</text></svg>';
+  }
+
+  function renderMLine(key){
+    var el=box(key); if(!el) return;
+    var D=DATA[key], idx=keepIdx(D.years,RANGE[key]);
+    var years=idx.map(function(i){return D.years[i];});
+    var all=[]; D.order.forEach(function(s){ idx.forEach(function(i){ all.push(D.series[s][i]); }); });
+    var W=el.clientWidth||300, H=66, L=4, R=4, T=8, B=16, n=years.length;
+    var mm=niceMM(all), mn=mm[0], mx=mm[1];
+    var X=function(i){return L+(n<=1?0:i*(W-L-R)/(n-1));};
+    var Y=function(v){return T+(H-T-B)*(1-(v-mn)/(mx-mn));};
+    var paths="";
+    D.order.forEach(function(s){
+      var vals=idx.map(function(i){return D.series[s][i];});
+      paths+='<path d="'+pathFor(vals,X,Y)+'" fill="none" stroke="'+D.colors[s]+'" stroke-width="1.8"/>';
+      var last=vals[n-1];
+      paths+='<circle cx="'+X(n-1).toFixed(1)+'" cy="'+Y(last).toFixed(1)+'" r="3" fill="'+D.colors[s]+'"><title>'+s+' '+years[n-1]+': '+last+'</title></circle>';
+    });
+    el.innerHTML='<svg viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="none" style="height:'+H+'px">'+paths+
+      '<text class="axis" x="'+X(0)+'" y="'+(H-3)+'">'+years[0]+'</text>'+
+      '<text class="axis" x="'+X(n-1)+'" y="'+(H-3)+'" text-anchor="end">'+years[n-1]+'</text></svg>';
+    var lg=document.querySelector('[data-legend="'+key+'"]');
+    if(lg){ lg.innerHTML=D.order.map(function(s){return '<i><span class="dotp" style="background:'+D.colors[s]+'"></span>'+s+'</i>';}).join(''); }
+  }
+
+  function renderSBars(key){
+    var el=box(key); if(!el) return;
+    var D=DATA[key], idx=keepIdx(D.years,RANGE[key]);
+    var years=idx.map(function(i){return D.years[i];});
+    var totals=idx.map(function(i){ var t=0; D.order.forEach(function(s){t+=D.bands[s][i];}); return t; });
+    var W=el.clientWidth||300, H=70, B=15, T=4, n=years.length, mx=Math.max.apply(null,totals)*1.08;
+    var bw=(W/n)*0.62, gap=W/n, out="";
+    for(var j=0;j<n;j++){
+      var i=idx[j], yAcc=H-B, xx=j*gap+(gap-bw)/2;
+      D.order.forEach(function(s){
+        var h=(H-T-B)*(D.bands[s][i]/mx); yAcc-=h;
+        out+='<rect x="'+xx.toFixed(1)+'" y="'+yAcc.toFixed(1)+'" width="'+bw.toFixed(1)+'" height="'+h.toFixed(1)+'" fill="'+D.colors[s]+'"><title>'+years[j]+' '+s+': '+D.bands[s][i]+'k</title></rect>';
+      });
+      out+='<text class="axis" x="'+(j*gap+gap/2).toFixed(1)+'" y="'+(H-3)+'" text-anchor="middle">'+yr2(years[j])+'</text>';
+    }
+    el.innerHTML='<svg viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="none" style="height:'+H+'px">'+out+'</svg>';
+    var lg=document.querySelector('[data-legend="'+key+'"]');
+    if(lg){ lg.innerHTML=D.order.map(function(s){return '<i><span class="dotp" style="background:'+D.colors[s]+'"></span>'+s+'</i>';}).join(''); }
+  }
+
+  function renderBars(key){
+    var el=box(key); if(!el) return;
+    var D=DATA[key], idx=keepIdx(D.years,RANGE[key]);
+    var years=idx.map(function(i){return D.years[i];}), vals=idx.map(function(i){return D.values[i];});
+    var W=el.clientWidth||300, H=58, B=16, T=6, n=vals.length, mx=Math.max.apply(null,vals)*1.12;
+    var bw=(W/n)*0.56, gap=W/n, out="";
+    for(var i=0;i<n;i++){
+      var h=(H-T-B)*(vals[i]/mx), xx=i*gap+(gap-bw)/2, yy=H-B-h, last=i===n-1;
+      out+='<rect x="'+xx.toFixed(1)+'" y="'+yy.toFixed(1)+'" width="'+bw.toFixed(1)+'" height="'+h.toFixed(1)+'" rx="2" fill="'+(last?C_RED:C_BLUE)+'"><title>'+years[i]+': '+vals[i]+'</title></rect>';
+      out+='<text class="axis" x="'+(i*gap+gap/2).toFixed(1)+'" y="'+(H-3)+'" text-anchor="middle">'+yr2(years[i])+'</text>';
+    }
+    el.innerHTML='<svg viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="none" style="height:'+H+'px">'+out+'</svg>';
+  }
+
+  function renderHist(){
+    var el=box("hist"); if(!el) return;
+    var D=DATA.hist, idx=keepIdx(D.years,HIST_RANGE);
+    var years=idx.map(function(i){return D.years[i];});
+    var M=D.metrics[HIST_METRIC], vals=idx.map(function(i){return M.vals[i];});
+    var W=el.clientWidth||600, H=118, L=6, R=6, T=20, B=30, n=vals.length;
+    var mm=niceMM(vals), mn=mm[0], mx=mm[1];
+    var y0=years[0], y1=years[n-1];
+    var PX=function(yr){ return L+(y1===y0?0:(yr-y0)*(W-L-R)/(y1-y0)); };
+    var X=function(i){return PX(years[i]);};
+    var Y=function(v){return T+(H-T-B)*(1-(v-mn)/(mx-mn));};
+    var eras="";
+    D.eras.forEach(function(e){
+      var a=Math.max(e.from,y0), b=Math.min(e.to,y1); if(b<a) return;
+      var x1=PX(a), x2=PX(b), isAI=e.name.indexOf("AI")===0;
+      eras+='<rect x="'+x1.toFixed(1)+'" y="'+T+'" width="'+Math.max(x2-x1,1.5).toFixed(1)+'" height="'+(H-T-B)+'" fill="'+(isAI?C_BLUE:C_RED)+'" opacity="'+(isAI?0.10:0.07)+'"/>';
+      eras+='<text class="glabel" x="'+((x1+x2)/2).toFixed(1)+'" y="'+(T-7)+'" text-anchor="middle" fill="'+(isAI?C_BLUE:C_RED)+'">'+e.name+'</text>';
+    });
+    var d=pathFor(vals,X,Y), pts="";
+    for(var i=0;i<n;i++){ pts+='<circle cx="'+X(i).toFixed(1)+'" cy="'+Y(vals[i]).toFixed(1)+'" r="2.4" fill="'+C_BLUE+'"><title>'+years[i]+': '+M.fmt(vals[i])+'</title></circle>'; }
+    var xt=""; for(var k=0;k<n;k++){ if(n<=8 || k%2===0 || k===n-1){ xt+='<text class="axis" x="'+X(k).toFixed(1)+'" y="'+(H-14)+'" text-anchor="middle">'+years[k]+'</text>'; } }
+    el.innerHTML='<svg viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="none" style="height:'+H+'px">'+eras+
+      '<path d="'+d+'" fill="none" stroke="'+C_BLUE+'" stroke-width="2"/>'+pts+xt+'</svg>';
+    var note=document.getElementById("histNote");
+    if(note){ note.innerHTML=M.label+' — first <b>'+M.fmt(vals[0])+'</b> ('+years[0]+') &rarr; latest <b>'+M.fmt(vals[n-1])+'</b> ('+years[n-1]+').'; }
+  }
+
+  function drawDonut(){
+    var el=document.getElementById('donutEmp'); if(!el) return;
+    var segs=[[C_BLUE,84.2],[C_BLUE2,7.9],[C_RED,2.8],["#c3ccd4",5.1]];
+    var S=92, r=34, cx=S/2, cy=S/2, Cc=2*Math.PI*r, off=0, out="";
+    segs.forEach(function(s){ var len=Cc*(s[1]/100);
+      out+='<circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="none" stroke="'+s[0]+'" stroke-width="13" stroke-dasharray="'+len.toFixed(2)+' '+(Cc-len).toFixed(2)+'" stroke-dashoffset="'+(-off).toFixed(2)+'" transform="rotate(-90 '+cx+' '+cy+')"/>'; off+=len; });
+    el.innerHTML='<svg viewBox="0 0 '+S+' '+S+'" style="width:92px;height:92px">'+out+
+      '<text x="'+cx+'" y="'+(cy-1)+'" text-anchor="middle" style="font-family:var(--mono);font-size:15px;font-weight:500;fill:'+C_BLUE+'">84%</text>'+
+      '<text x="'+cx+'" y="'+(cy+11)+'" text-anchor="middle" class="glabel">JD-req.</text></svg>';
+  }
+  function drawGauge(){
+    var el=document.getElementById('gaugeBar'); if(!el) return;
+    var pct=12/56, S=90, r=34, cx=S/2, cy=S/2, Cc=2*Math.PI*r, len=Cc*pct;
+    el.innerHTML='<svg viewBox="0 0 '+S+' '+S+'" style="width:88px;height:88px">'+
+      '<circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="none" stroke="#e4e9ef" stroke-width="11"/>'+
+      '<circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="none" stroke="'+C_BLUE+'" stroke-width="11" stroke-linecap="round" stroke-dasharray="'+len.toFixed(2)+' '+(Cc-len).toFixed(2)+'" transform="rotate(-90 '+cx+' '+cy+')"/>'+
+      '<text x="'+cx+'" y="'+(cy+5)+'" text-anchor="middle" style="font-family:var(--mono);font-size:16px;font-weight:500;fill:'+C_BLUE+'">21%</text></svg>';
+  }
+  function drawHistSalary(){
+    var el=document.getElementById('histSalary'); if(!el) return;
+    var vals=[6,10,17,12,7,4,3,4,7,12,16,9,3];
+    var W=el.clientWidth||300, H=60, B=14, n=vals.length, mx=Math.max.apply(null,vals);
+    var bw=(W/n)*0.78, gap=W/n, out="";
+    for(var i=0;i<n;i++){ var h=(H-B)*(vals[i]/mx), xx=i*gap+(gap-bw)/2, yy=H-B-h, peak=(i===2||i===10);
+      out+='<rect x="'+xx.toFixed(1)+'" y="'+yy.toFixed(1)+'" width="'+bw.toFixed(1)+'" height="'+h.toFixed(1)+'" rx="1.5" fill="'+(peak?C_RED:C_BLUE)+'"/>'; }
+    out+='<text class="axis" x="0" y="'+(H-2)+'">$55k</text><text class="axis" x="'+W+'" y="'+(H-2)+'" text-anchor="end">$235k</text>';
+    el.innerHTML='<svg viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="none" style="height:'+H+'px">'+out+'</svg>';
+  }
+
+  var RENDER={line:renderLine,mline:renderMLine,sbars:renderSBars,bars:renderBars};
+  function renderKey(key){ var t=DATA[key].type; if(RENDER[t]) RENDER[t](key); }
+  function renderAllSeries(){ Object.keys(RANGE).forEach(renderKey); }
+  function renderStatic(){ drawDonut(); drawGauge(); drawHistSalary(); }
+  function renderAll(){ renderAllSeries(); renderHist(); renderStatic(); }
+
+  document.querySelectorAll('.rng').forEach(function(g){
+    var key=g.getAttribute('data-for');
+    g.addEventListener('click',function(e){
+      var b=e.target.closest('button'); if(!b) return;
+      var r=b.getAttribute('data-r');
+      Array.prototype.forEach.call(g.querySelectorAll('button'),function(x){ x.setAttribute('aria-pressed', x===b?'true':'false'); });
+      if(key==='hist'){ HIST_RANGE=r; renderHist(); } else { RANGE[key]=r; renderKey(key); }
+    });
+  });
+
+  document.getElementById('globalSeg').addEventListener('click',function(e){
+    var b=e.target.closest('button'); if(!b) return;
+    var r=b.getAttribute('data-range');
+    Array.prototype.forEach.call(this.querySelectorAll('button'),function(x){ x.setAttribute('aria-pressed', x===b?'true':'false'); });
+    Object.keys(RANGE).forEach(function(k){ RANGE[k]=r; });
+    document.querySelectorAll('.rng').forEach(function(g){
+      if(g.getAttribute('data-for')==='hist') return;
+      Array.prototype.forEach.call(g.querySelectorAll('button'),function(x){ x.setAttribute('aria-pressed', x.getAttribute('data-r')===r?'true':'false'); });
+    });
+    renderAllSeries();
+  });
+
+  document.getElementById('histMetrics').addEventListener('click',function(e){
+    var b=e.target.closest('button'); if(!b) return;
+    HIST_METRIC=b.getAttribute('data-m');
+    Array.prototype.forEach.call(this.querySelectorAll('button'),function(x){ x.setAttribute('aria-pressed', x===b?'true':'false'); });
+    renderHist();
+  });
+
+  var specBtn=document.getElementById('specBtn');
+  specBtn.addEventListener('click',function(){ var on=document.body.classList.toggle('spec-on'); specBtn.setAttribute('aria-pressed', on?'true':'false'); });
+
+  document.querySelectorAll('.branch').forEach(function(b){
+    b.addEventListener('click',function(){ var t=document.getElementById(b.getAttribute('data-go')); if(t) t.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'}); });
+  });
+
+  renderAll();
+  var rt; window.addEventListener('resize',function(){ clearTimeout(rt); rt=setTimeout(renderAll,150); });
+})();
+</script>
+</body>
+</html>
