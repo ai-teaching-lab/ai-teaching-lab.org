@@ -1,6 +1,6 @@
 {{ define "main" }}
 {{ $clusterName := .Params.cluster }}
-{{ range site.Data.clusters.cluster }}{{ if eq .slug $.Params.cluster }}{{ $clusterName = .name }}{{ end }}{{ end }}
+{{ range hugo.Data.clusters.cluster }}{{ if eq .slug $.Params.cluster }}{{ $clusterName = .name }}{{ end }}{{ end }}
 <article class="wrapx">
   <p class="crumb"><a href="/projects/">Projects</a> &nbsp;/&nbsp; {{ $clusterName }} &nbsp;/&nbsp; <b>{{ .Title }}</b></p>
   <header class="page-header">

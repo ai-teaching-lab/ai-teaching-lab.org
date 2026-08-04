@@ -25,7 +25,7 @@
 
   {{ $pages := .Pages }}
   {{ $n := 0 }}
-  {{ range site.Data.clusters.cluster }}
+  {{ range hugo.Data.clusters.cluster }}
     {{ $cluster := . }}
     {{ $items := (where $pages "Params.cluster" .slug).ByWeight }}
     {{ if $items }}
