@@ -2,12 +2,12 @@
 title: "Resource Menu"
 description: "The Project's faculty-facing entry point — a single landing page that links to the four core publications."
 date: 2025-08-01
-lastmod: 2026-05-09
+lastmod: 2026-08-04
 weight: 50
 toolkit_category: "core"
 audience: ["faculty"]
 availability: "public"
-version: "August 2025; revised May 2026"
+version: "August 2025; revised August 2026"
 ---
 
 The Toolkit's landing page for Penn Carey Law faculty — a single document that links to the four core publications and serves as the Project's faculty-facing entry point.
@@ -24,7 +24,7 @@ The Toolkit's flagship document. Student and faculty use cases organized by acti
 
 ### AI Syllabus Guide
 
-Four blocks of ready-to-use syllabus language — no written assignments, limited AI use (two variants, including Professor Cathie Struve's Fall 2025 seminar version), complete prohibition — plus answers to the eight questions students most often ask.
+Fall 2026 syllabus language organized by course design: lecture and exam courses, seminars with research papers, writing and skills assignments, mixed assessment courses, disclosure language, and restrictive-policy options.
 
 - [/toolkit/syllabus-guide/](/toolkit/syllabus-guide/)
 

@@ -1,128 +1,324 @@
 ---
 title: "AI Syllabus Guide"
-description: "Ready-to-use syllabus language across four policy stances — no written assignments, limited AI use (two variants), complete prohibition — plus answers to the eight questions students most often ask."
+description: "Fall 2026 syllabus language for teaching in an age of AI, organized by course type, assignment design, disclosure, and assessment choices."
 date: 2025-08-01
-lastmod: 2026-05-09
+lastmod: 2026-08-04
 weight: 20
 toolkit_category: "core"
 audience: ["faculty"]
 availability: "public"
-version: "August 2025; revised May 2026"
+version: "August 2025; revised August 2026"
 ---
 
-Drop-in syllabus language for faculty across four policy stances — (1) no written assignments, (2) limited AI use, (3) limited AI use with attribution and a written AI-use statement (Professor Cathie Struve's Fall 2025 seminar version), and (4) complete prohibition. Faculty are expected to copy these blocks, adapt where noted, and adjust to course specifics.
+Drop-in syllabus and assignment language for faculty teaching in an age of AI. This guide is organized around the decisions faculty actually have to make: what kind of course you are teaching, what work you are assessing, what AI uses you want to permit or prohibit, and what students must disclose.
 
-## About this document
+The guide draws especially on Kirsten K. Davis's *Guide to Syllabus and Assignment Generative AI Policies and Advice*, Korin Munsterman's *GenAI in Legal Education: A Practical Guide for Professors and Students*, and Professor Cathie Struve's attribution-and-disclosure model for writing-intensive seminars.
 
-This guide helps Penn Carey Law faculty think through the pedagogical issues that current generative AI tools present, in advance of the semester.
+This document is not official Law School policy. Each faculty member sets the AI policy for their own course, subject to ordinary academic-integrity rules and any exam procedures administered by the Registrar.
 
-**This document is not official Law School policy.** The point is to make sure every faculty member has at least considered generative AI as part of course planning — and addressed it clearly in the syllabus or other introductory materials.
+## Jump to sample language
 
-## Things to keep in mind
+- [Traditional lecture course with a final exam](#lecture-exam)
+- [Seminar with a research paper](#seminar-paper)
+- [Research, writing, or skills assignments](#writing-skills)
+- [Courses with multiple assessment types](#mixed-assessments)
+- [Permitted-uses table](#permitted-uses-table)
+- [Disclosure language](#disclosure-language)
+- [Design options](#design-options)
 
-**Generative AI is increasingly present in everyday tools.** "AI" is not a single form or application — it is spreading across the digital toolset, and avoiding it is increasingly impractical. A few examples:
+## The short version
 
-- Microsoft 365 Copilot (which uses OpenAI's GPT models among others) is available to students and faculty through the Law School's Office 365 — including Word and Excel.
-- Students using Google Docs or Sheets can access Google Gemini.
-- Westlaw and Lexis offer AI-enabled versions of their legal-research tools (Westlaw's CoCounsel; Lexis+ with Protégé).
+Say what students may do. Say it at the assignment level when rules differ. Design the work so your policy is credible.
 
-**Students will be familiar with AI tools.** Fluency varies, but you should assume most students have used general-purpose tools like ChatGPT or Claude. Many will have used legal-specific AI tools (CoCounsel, Lexis+ with Protégé, Bloomberg Law's AI Assistant, Harvey) during summer or externship work, and some will have continuing access. You will not be able to avoid the topic. We recommend addressing AI explicitly in the syllabus or introductory materials.
+A blanket syllabus sentence is rarely enough. Students need to know whether AI may be used for studying, brainstorming, research, outlining, drafting, revising, cite-checking, grammar, simulations, practice questions, and uploading course materials. They also need to know when disclosure is required.
 
-**Students will want clarity.** What clarity looks like depends on the course. For a traditional lecture course with no written assignments before the exam, there's not much to say — detailed exam-use questions can be deferred, though we suggest a brief note on your tentative exam approach to set expectations. For a course with written assignments — responsive essays, problem sets, research papers, presentations — students need specific policy statements right away. Generative AI can implicate academic integrity in ways that require clear faculty direction.
+A good course AI policy does four things:
 
-**Consider helpful AI use cases.** Even if you broadly limit or prohibit AI for submitted written work, there are use cases worth allowing — and in some cases worth affirmatively suggesting:
+1. Defines permitted, permitted-with-disclosure, and prohibited uses.
+2. Separates study use from submitted work and exams.
+3. Makes students responsible for accuracy, sources, confidentiality, and judgment.
+4. Gives a concrete disclosure form when disclosure is required.
 
-- *Class preparation.* Organizing notes, clarifying concepts, predicting in-class discussion questions.
-- *Brainstorming paper topics.* General-purpose models are effective at generating topic ideas given prompts about areas of law or issues of interest.
-- *Developing practice questions.* AI can produce hypothetical scenarios that help students solidify subject-matter understanding.
-- *Summarizing materials and creating outlines.* Models can distill or outline supplied materials. Remind students that general-purpose AI can hallucinate, and that any AI-generated information should be confirmed.
-- *Editing and refining writing.* Many tools edit well for clarity and organization. This can be especially useful for students whose first language is not English.
+Do not build the policy around AI detection. Detection is unreliable, and it does not teach students how to use AI responsibly. Better design choices include process artifacts, revision history, oral explanation, source checks, critique of AI output, and assignment-specific disclosure.
 
-**Generative AI complicates your guidance.** If a student uses an AI tool to create a first draft of a short response paper, then heavily edits it before submission, has the student violated your policy? If you allow student-to-student collaboration, does collaboration with an AI tool count? What if the student writes a first draft alone and then has AI edit it? "Use" of an AI tool covers a wide range of activity — much of it potentially beneficial to learning and to the quality of submitted work. Your policy needs to anticipate that range.
+## Start with the learning goal
 
-**Consider equity issues.** As of the current academic year, all Penn Carey Law students can access at least the free public versions of ChatGPT and Claude, plus the AI tools built into Lexis and Westlaw through the Law School's subscriptions. Through the University's ChatGPT Edu program, incoming 1L students, teaching assistants for 1L courses, and Littleton Fellows currently receive accounts that provide a secure environment with access to current OpenAI foundational models. Familiarity and comfort still vary. If AI is integrated into your course, consider specifying a particular tool, deciding which advanced legal tools (CoCounsel, Lexis+ with Protégé, etc.) are in or out of scope, and whether to provide an AI guide or background materials. Contact us if you'd like help.
+Before choosing policy language, decide what the assignment is meant to measure.
 
-**Students will need to learn how to use AI.** AI tools will be an integral part of legal practice. Future lawyers need to be fluent — knowing how to use these tools, their strengths and weaknesses, and the privacy, security, and ethical considerations. Think through how AI might affect your course, and whether some uses of AI might improve learning while letting students experiment and build confidence with the tools.
+If the goal is independent recall, first-pass legal analysis, exam performance, or fluency without assistance, prohibit AI for that task. If the goal is research strategy, revision judgment, professional communication, or critique, AI may be useful if the assignment requires students to supervise and verify it. If the goal is AI fluency itself, make AI part of the task and grade the student's judgment, not the polish of the machine output.
 
-## Questions you might get asked
+The key move is to regulate the work, not the technology in the abstract. "No AI" is sometimes right. "Use AI, but show your work" is sometimes right. "Use AI because evaluating it is the assignment" is sometimes right.
 
-Eight questions students are most likely to raise about an AI policy:
+## Policy models
 
-1. What is your official policy on the use of generative AI tools in this course?
-2. Are there any specific assignments or tasks where the use of AI is prohibited or discouraged?
-3. If we use AI to assist in our work, to what extent must we disclose its involvement in our assignments or projects?
-4. How do you differentiate between students using AI as a tool to assist in understanding versus students relying too heavily on AI-generated content?
-5. Can we use generative AI to help draft or refine our papers, arguments, or other assignments? If so, are there any limits or guidelines?
-6. How might the use of AI affect our grading, especially if an assignment reflects a blend of AI-generated content and our own work?
-7. Are there any specific AI platforms or tools that you recommend or discourage us from using in this course?
-8. How should we cite or acknowledge AI-generated content or insights in our work?
+The publications behind this guide use slightly different taxonomies, but they point toward the same practical menu.
 
-A clear AI policy in the syllabus answers most of these on its own. The sample language below is written to do that.
+Davis's guide usefully frames three common choices: allow AI for research but not writing, provide a menu of permitted uses, or permit broad use while requiring students to account for it. Munsterman's guide adds a teaching-design frame: GenAI-prohibited, GenAI-resistant, GenAI-transparent, and GenAI-integrated assignments. For syllabus purposes, those approaches can be translated into the following working categories.
+
+| Policy model | What it means | Best fit |
+| --- | --- | --- |
+| Prohibited | Students may not use AI for the task. | Closed exams, quizzes, first-pass analysis, assignments where independent performance is the point. |
+| Study support only | Students may use AI to practice or review, but not for submitted work or exams. | Traditional lecture courses with a final exam. |
+| Research but not writing | Students may use AI to find leads, brainstorm, or understand background, but not to draft or revise submitted text. | Seminars or writing assignments where research support is acceptable but authorship must stay clean. |
+| Menu of permitted uses | The syllabus or assignment lists specific allowed and prohibited activities. | Courses with multiple assignment types or mixed assessment methods. |
+| Transparent use | Students may use AI, but must disclose how, when, and why. | Research papers, presentations, simulations, and projects with process checkpoints. |
+| Integrated use | AI use is part of the assignment. | Exercises that teach AI critique, verification, prompting, professional judgment, or client-facing review. |
+
+You can use more than one model in the same course. A seminar might prohibit AI for a short in-class diagnostic, allow AI-assisted brainstorming for a paper topic, require disclosure for draft feedback, and require AI critique in one class exercise.
+
+## Course policy or assignment policy?
+
+Use a course-level policy for stable defaults. Use assignment-level language whenever the rule changes.
+
+A course-level policy should cover:
+
+- Whether AI is permitted for studying or class preparation.
+- Whether students may upload course materials, recordings, slides, or notes.
+- The default rule for submitted work.
+- The default rule for exams and quizzes.
+- Whether disclosure is required.
+- What students should do when they are unsure.
+
+Assignment-level instructions should cover:
+
+- Which AI uses are permitted for that task.
+- Whether students may use AI before or after creating their own first draft.
+- Whether students must save prompts, outputs, chat logs, revision history, or a process memo.
+- What form of disclosure is required.
+- How AI-related process work will affect grading.
+
+## Common questions students will ask
+
+A clear policy should answer these questions without requiring a separate conversation:
+
+1. May I use AI to study for class?
+2. May I upload the syllabus, slides, readings, class recordings, or my notes to an AI tool?
+3. May I use AI to brainstorm paper topics or research paths?
+4. May I use AI to find sources, summarize sources, or check citations?
+5. May I use AI to outline, draft, revise, edit, translate, or polish submitted work?
+6. Must I disclose AI use even if no AI-generated wording appears in the final submission?
+7. Which tools are allowed, and are any tools prohibited?
+8. What happens if I am unsure whether a proposed use is permitted?
 
 ## Sample syllabus language
 
-The four blocks below are starting points. Reproduce, adapt, and adjust to your course. The text inside each blockquote is the sample language from the source guide; the surrounding prose is editorial framing.
+The blocks below are starting points. Keep the language that does real work; replace bracketed terms; add assignment-specific rules where needed.
 
-### 1. Traditional lecture course with no written assignments
+<a id="lecture-exam"></a>
+<a id="1-traditional-lecture-course-with-no-written-assignments"></a>
 
-For a doctrinal course where the only graded work is a final exam, the policy can be brief — defer specifics about the exam itself, but flag that AI can still be useful for studying.
+### 1. Traditional lecture course with a final exam
 
-> **Artificial Intelligence Policy.** There are no written assignments in this course aside from your final exam; accordingly there is no need for a formal AI policy, other than the policy which will apply to the exam.
->
-> I will provide the final exam AI policy at least [N weeks] before the exam. To set expectations now, I currently expect to [ prohibit ] [ permit only specifically-designated ] [ permit ] use of AI tools on the exam.
->
-> You may find that the use of AI tools, as with any other supplement or guide, can in some cases improve your learning — for example, using AI to test your understanding of the concepts in the course, or to help prepare for class discussions. I strongly encourage you to carefully and critically evaluate the output of any AI, recognizing that the current generation of these tools is often misleading, incomplete, or wholly inaccurate. Further, like any unofficial supplement or other outside material, AI-generated content may or may not accurately reflect the content covered in this course.
+For a doctrinal lecture course where the final exam is the main assessment, separate study use from exam use. The syllabus can permit AI as a study aid while preserving a strict exam rule.
 
-### 2. Course with written assignments — limited AI use
+> **Artificial Intelligence Policy.** This course has no graded written assignments other than the final exam. You may use generative AI tools as study aids, subject to the limits below. For example, you may ask an AI tool to generate practice hypotheticals, quiz you on rule elements, help you compare outlines, or explain a doctrine after you have read the assigned materials.
+>
+> You may not use AI as a substitute for the assigned reading, rely on AI summaries instead of your own case analysis, or treat AI output as authority. AI tools can be incomplete, misleading, or wrong. You are responsible for checking any AI output against the assigned materials and your own notes.
+>
+> Do not upload nonpublic course materials, recordings, student work, exam questions, model answers, or grading materials to an AI tool unless I have expressly authorized that use and the tool has been approved for that type of data.
+>
+> The final exam AI policy will be stated in the exam instructions. Unless those instructions expressly permit AI use, you may not use generative AI tools, chatbots, AI-assisted search, or AI drafting tools during the exam.
 
-For a course with written work where you want to permit AI for support tasks (brainstorming, research, editing) but not for first-draft generation, this block is the starting point. It includes a citation format students can follow and language requiring a footnote when AI shaped the final product.
+Optional short version:
 
-> **Artificial Intelligence Policy.** You may use AI tools to assist in the creation of your written work in this course subject to the general principle that all work submitted by you must be your work product alone. Specifically:
->
-> - You <u>may</u> use AI tools to help you brainstorm about topics or refine your topic ideas;
-> - You <u>may</u> use AI tools to assist you in your research;
-> - You <u>may</u> use AI tools to help you edit a draft that you have written for clarity or length;
-> - You <u>may</u> <u>not</u> use AI tools to create "first drafts" or other blocks of textual material.
->
-> You must cite any use of a generative AI tool, and include clear and specific details about the tool, its version, the developers or the organization responsible for it, and any pertinent parameters or settings that influenced the generation. Here's a sample format and an example:
->
-> Format:
->
-> *[AI tool name] ([Version, if available]). Developed by [Developers/Organization Name]. Retrieved [Date], from [URL or source if applicable]. [Specific parameters/settings if necessary].*
->
-> Example:
->
-> *ChatGPT (GPT-4o, 2024). Developed by OpenAI. Retrieved [Date], from https://chatgpt.com. Model prompt: "[exact or paraphrased prompt given to the AI]"*.
->
-> In addition to a formal citation, if the AI tool's output has influenced the final product of your paper, it is appropriate to describe its role in a footnote of your paper. For instance: *"I used ChatGPT (GPT-4o) to generate preliminary research questions for this paper. I prompted the model with '[exact or paraphrased prompt],' then reviewed and verified the outputs against the relevant primary sources before incorporating them into my analysis."*
->
-> I strongly encourage you to carefully and critically evaluate the output of any AI, recognizing that the current generation of these tools is often misleading, incomplete, or wholly inaccurate. Further, like any unofficial supplement or other outside material, AI-generated content may or may not accurately reflect the content covered in this course.
->
-> It is the responsibility of each student to be aware of this policy and to seek clarification if they are uncertain about what constitutes a violation. If you are unsure about the permissibility of a particular tool or method, you are strongly encouraged to consult with me prior to its use.
+> You may use AI tools to study for this course, but not during the final exam unless the exam instructions expressly allow it. AI study use must supplement, not replace, your own reading, outlining, and analysis. You remain responsible for the accuracy of anything you learn from an AI tool.
 
-### 3. Limited AI use — Professor Struve's Fall 2025 seminar version
+Optional exam instruction:
 
-A second take on the limited-use stance, focused on attribution and a written AI-use statement rather than on a citation format. Created by Professor Cathie Struve for a Fall 2025 writing-intensive seminar.
+> **Exam AI Rule.** You may not use generative AI, chatbots, AI-assisted search, AI drafting tools, or similar systems during this exam. The exam assesses your own understanding under the stated exam conditions. Use of AI during the exam is prohibited unless these instructions expressly say otherwise.
 
-> **Generative AI.** This paragraph contains our policy on your use of generative AI in connection with this seminar. You need not use generative AI in connection with your work for this seminar. If you do use generative AI, you must provide proper attribution (under the standards discussed in the preceding paragraph) for any language that generative AI supplies to you (whether your use of that language consists of a quote or merely a close paraphrase). And, of course, you are responsible for scrutinizing (and ensuring the accuracy of) any ideas or information that generative AI provides to you. Also, if you use generative AI in connection with your assigned work in this seminar (whether that is the two-page paper, your class presentation, the outline of your final research paper, or your final research paper itself), when you hand in (or present) the work in connection with which you used generative AI you must include an "AI use statement" that explains how and when you used the generative AI.
+If you plan to allow AI on an exam, write that rule separately and with precision. Say which tools are permitted, whether internet access is permitted, whether students may upload the exam question, whether students must disclose AI use in the answer, and whether AI output may be quoted, paraphrased, or used only as a reference.
 
-Professor Struve has also produced a [companion document](https://drive.google.com/file/d/1oY0tuIcwTjuT47KzErnjC6X0vPtxmiz5/view?usp=drive_link) that works through specific examples of AI use in her seminar with sample AI-use statements. **Highly recommended.** The Project's [AI Use Policy Templates]({{< relref "policy-templates" >}}) document reproduces and expands on this framework.
+<a id="seminar-paper"></a>
 
-### 4. Complete prohibition
+### 2. Seminar with a research paper
 
-For a course where AI tools are off-limits, this block states the prohibition and gives concrete examples of what it covers.
+A seminar paper needs a process policy. Students need to know what AI may do at each stage: topic development, source identification, thesis formation, outline, draft, revision, and final submission.
 
-**A note on enforceability:** Faculty adopting this stance should consider whether truly comprehensive prohibition is achievable. Microsoft Word, Westlaw, and Lexis all incorporate AI features that students cannot easily disable. Most faculty adopting a "no AI" stance limit it to drafting and content generation in submitted work, with a separate carve-out for AI-assisted research tools where appropriate. Adapt the block below accordingly, especially the word "preparation."
-
-> **Artificial Intelligence Policy.** Students are strictly prohibited from using generative artificial intelligence (AI) tools, software, platforms, or any related technology in the preparation, drafting, or completion of any assignments, papers, projects, or examinations submitted for this course.
+> **Artificial Intelligence Policy.** You may use generative AI as a limited research and writing-process assistant in this seminar. You remain responsible for the thesis, research judgment, organization, legal analysis, citations, and final text of your work.
 >
-> This prohibition includes but is not limited to:
+> Unless an assignment says otherwise, you may use AI to brainstorm possible topics, identify counterarguments, test whether an outline is clear, ask for feedback on a draft you have already written, or generate questions you should consider as you revise. You may not submit unreviewed AI-generated text, use AI-generated citations without checking them, rely on AI summaries instead of reading the relevant sources, or allow AI to replace your own research and analysis.
 >
-> - Using AI to draft, edit, or review any written assignments or papers;
-> - Employing AI-generated content as part of any submitted work; and,
-> - Collaborating with or seeking input from AI platforms to solve or address any course-related questions or problems.
+> For each major paper milestone, I may ask you to submit process materials such as a topic memo, preliminary source list, thesis paragraph, outline, partial draft, research trail, or revision memo. These materials help show how your project developed and give us better material for conferences and feedback.
 >
-> It is the responsibility of each student to be aware of this policy and to seek clarification if they are uncertain about what constitutes a violation. If you are unsure about the permissibility of a particular tool or method, you are strongly encouraged to consult with me prior to its use.
+> If you use AI in connection with any submitted work, including a topic memo, presentation, outline, draft, or final paper, include an AI-use statement with the submission. The statement should identify the tool, the stage of work, the purpose, whether any AI-generated language appears in the submission, and how you checked sources, quotations, factual claims, and legal authorities.
+
+Optional research-but-not-writing rule:
+
+> You may use AI to generate research leads, identify possible counterarguments, and ask background questions. You may not use AI to draft, rewrite, or polish the submitted paper. Any source, case, article, quotation, statistic, or factual claim surfaced by AI must be independently located, read, and verified before you rely on it.
+
+Optional process-checkpoint language:
+
+> For the paper, you will submit [topic memo / source list / thesis paragraph / outline / partial draft / conference memo / final paper]. At each stage, identify any AI assistance you used. I may ask you to discuss your process in conference. The goal is not to punish responsible AI use; the goal is to make your research and writing choices visible.
+
+Professor Cathie Struve's attribution-and-disclosure model is a strong version of this approach. The Project's [AI Use Policy Templates]({{< relref "policy-templates" >}}) reproduce her syllabus block and provide sample AI-use statements.
+
+<a id="writing-skills"></a>
+
+### 3. Research, writing, or skills assignments
+
+For writing and skills courses, the AI rule should track the learning goal. If the assignment assesses first-pass legal analysis, restrict drafting. If the assignment assesses revision, client communication, negotiation strategy, or professional judgment, AI can be part of the exercise.
+
+#### If the goal is independent first-pass analysis
+
+> **Artificial Intelligence Policy for This Assignment.** This assignment assesses your own legal analysis and writing. You may use ordinary spelling, grammar, and citation-formatting tools, but you may not use generative AI to draft, revise, organize, polish, translate, or rewrite the submitted work. You may use AI only for general background questions that do not involve the facts, law, or substance of this assignment.
+>
+> If you are unsure whether a tool or use is covered by this rule, ask before using it. Do not assume that a tool is permitted because it is built into a word processor, research platform, or search engine.
+
+#### If the goal is revision or professional judgment
+
+> **Artificial Intelligence Policy for This Assignment.** You must prepare your own first draft before using AI. After you have a complete draft, you may use AI to critique clarity, organization, tone, concision, counterarguments, or audience fit. You may not ask AI to write the assignment for you, and you may not paste AI-generated language into your submission without revising, checking, and disclosing it.
+>
+> With your final submission, include a short reflection explaining what AI feedback you requested, which suggestions you accepted, which suggestions you rejected, and why. Your grade will turn on your judgment, revision choices, and final work product.
+
+#### If AI is part of the exercise
+
+> **Artificial Intelligence Policy for This Assignment.** AI use is part of this assignment. You will generate, receive, or evaluate AI output and then assess it using the legal authorities, facts, client goals, and professional standards relevant to the problem. Your grade will depend on your critique, corrections, verification, and explanation, not on whether the AI output sounds polished.
+>
+> You must identify any hallucinated citations, unsupported factual claims, missing authorities, weak reasoning, confidentiality concerns, or professional-responsibility issues. You are responsible for the final analysis.
+
+Example integrated assignments:
+
+- Give students an AI-generated answer and ask them to grade it against a rubric.
+- Ask students to identify hallucinated cases or unsupported factual claims.
+- Have students compare their own first draft with AI feedback and explain what they changed.
+- Ask students to prompt an AI tool for a client letter, then revise it for accuracy, tone, and professional judgment.
+- Have students build a research trail showing which AI-generated leads were useful, which were false, and which required human source checking.
+
+<a id="mixed-assessments"></a>
+<a id="2-course-with-written-assignments--limited-ai-use"></a>
+
+### 4. Courses with multiple assessment types
+
+Many courses need layered rules. A professor might prohibit AI on quizzes, permit AI study aids between classes, require disclosure on practice problems, and integrate AI into one class session on legal research or drafting.
+
+> **Course AI Policy.** Different assignments in this course have different AI rules. The default rule is that you may use AI for studying, brainstorming, and practice, but you may not use AI to draft submitted work unless the assignment instructions expressly permit it. When an assignment has a different rule, the assignment instructions control.
+>
+> You are responsible for reading the AI rule attached to each assignment. If the rule is unclear, ask before using AI.
+
+<a id="permitted-uses-table"></a>
+
+You can make the layered rule easier to read with a permitted-uses table:
+
+| Course activity | AI rule | Notes |
+| --- | --- | --- |
+| Class preparation | Permitted | Use AI to quiz yourself, generate practice questions, or clarify concepts after completing the reading. |
+| In-class quizzes | Prohibited | No AI tools unless I expressly authorize them. |
+| Practice problems | Permitted with disclosure if submitted | Try the problem yourself first; disclose any AI feedback you used. |
+| Research paper | Assignment-specific | Follow the paper instructions and submit an AI-use statement if required. |
+| Presentation | Permitted with disclosure | AI may help with slide design, counterarguments, and audience questions; verify all substance. |
+| Final exam | Prohibited unless exam instructions permit | The exam instructions control. |
+
+Davis's menu approach works especially well here. The point is not to anticipate every tool. The point is to name the recurring activities students actually ask about.
+
+<a id="disclosure-language"></a>
+
+## General disclosure language
+
+When disclosure is required, use a simple form students can complete without guessing what counts. Disclosure is not the same as citation. Disclosure tells the professor how AI affected the student's process. Citation tells the reader where an idea, quotation, source, or authority comes from.
+
+> **AI-use statement.** I used [tool name and version, if known] on [date] for [purpose] at [stage of work]. Specifically, I used it to [brainstorm topics / generate practice questions / critique my outline / review a draft / identify possible counterarguments / check clarity / other]. [No AI-generated language appears in this submission / AI-generated language appears only where quoted or cited / I revised all AI-assisted wording before submission]. I checked all legal authorities, quotations, factual claims, and citations. I take responsibility for the final submission.
+
+For longer projects, ask students to answer five questions:
+
+1. What tool did you use?
+2. What did you ask it to do?
+3. What output affected the submitted work?
+4. How did you verify authorities, quotations, factual claims, and citations?
+5. What responsibility do you take for the final work?
+
+Optional certification language:
+
+> I certify that this submission complies with the AI policy for this course and assignment. Any AI assistance I used is disclosed above. I understand that fabricated citations, unverified authorities, undisclosed AI-generated text, or use of AI contrary to the assignment instructions may raise academic-integrity concerns.
+
+## Privacy and course materials
+
+AI policy is also data policy. Students should not upload material to AI systems unless the course permits it and the tool is appropriate for that material.
+
+Recommended syllabus language:
+
+> Do not upload nonpublic course materials, class recordings, transcripts, slides, exams, model answers, grading materials, student work, client information, confidential facts, or personal information about another person to an AI tool unless I expressly authorize that use. If an assignment requires AI use, I will specify what material may be uploaded and which tool or tool category is appropriate.
+
+For public cases, statutes, regulations, articles, and other generally available legal materials, the privacy concern is usually lower. Accuracy still matters. Students must verify any AI-generated account of those materials against the actual source.
+
+<a id="design-options"></a>
+
+## Design options that make the policy work
+
+A syllabus policy works best when the assignment design supports it.
+
+**Use process evidence.** Ask for an outline, revision history, research trail, source list, reflection memo, or short oral explanation. Process evidence makes learning visible and gives you a better basis for feedback.
+
+**Make AI an object of critique.** Ask students to evaluate an AI answer, identify hallucinated authorities, improve a weak prompt, compare AI output to a model answer, or explain why an AI-generated analysis is persuasive but wrong.
+
+**Use local or course-specific facts.** Assignments that require class discussion, assigned materials, specific hypotheticals, or current course themes are harder to outsource and easier to assess.
+
+**Require source verification.** If AI supplies a case, quotation, statistic, factual claim, or scholarly argument, students should trace it to a real source before using it. AI output is a lead, not authority.
+
+**Use oral or conference components.** A short conversation about the student's thesis, research path, or revision choices can reveal learning better than a detector score.
+
+**Use low-stakes practice.** Let students use AI for practice questions, self-quizzing, critique, or revision exercises before a high-stakes assessment. This teaches supervision rather than avoidance.
+
+## Complete prohibition option
+
+Some faculty will choose a restrictive rule for a course or assignment. If so, define the scope carefully. A broad prohibition can be hard to administer because AI features appear inside ordinary research, writing, and productivity tools.
+
+> **Artificial Intelligence Policy.** Students may not use generative AI tools, chatbots, AI-assisted drafting tools, or similar systems to prepare, draft, revise, edit, translate, or complete any assignment, paper, project, quiz, or examination submitted for this course, unless I expressly authorize that use in writing.
+>
+> This prohibition includes using AI to generate ideas, outline an answer, draft text, revise text, summarize sources for use in submitted work, create citations, or solve course problems. Ordinary spelling and grammar checking is permitted unless an assignment says otherwise. AI-assisted legal research tools are [prohibited / permitted only for source identification / permitted subject to disclosure].
+>
+> If you are unsure whether a tool or use is permitted, ask before using it.
+
+Structural supports for a restrictive rule:
+
+- Use in-class writing, oral explanation, or timed components where appropriate.
+- Require staged drafts or process evidence for longer work.
+- Avoid assignments that can be completed by a generic prompt with little connection to class materials.
+- Tell students whether embedded tools in Word, Google Docs, Westlaw, Lexis, Grammarly, or similar platforms are covered.
+
+## Enforcement: conversation before accusation
+
+If work appears inconsistent with the policy, start with a conversation. Ask the student to explain their process, sources, revisions, and use of any tools. Where appropriate, ask for revision history, research notes, prompts, outputs, or a short oral explanation.
+
+Escalation may be appropriate for deception, refusal to explain, fabricated sources, undisclosed AI-generated text where disclosure was required, or conduct that clearly defeats the assignment's learning goal. A detector score alone should not be the basis for an accusation.
+
+Possible syllabus language:
+
+> If I have questions about whether submitted work complied with the AI policy, I may ask you to meet with me, explain your process, provide process materials, or complete a short follow-up conversation about your work. This is not an accusation. It is a way to understand authorship, learning, and compliance with the assignment rules.
+
+## Faculty checklist
+
+Before the semester starts:
+
+- Add a course-level AI policy to the syllabus.
+- Decide whether the exam rule is settled now or will be supplied with the exam instructions.
+- Identify assignments that need their own AI instructions.
+- Decide whether students may upload course materials to AI tools.
+- Choose a disclosure format if AI use is permitted.
+- Decide what process evidence, if any, you will collect.
+- Tell students what to do when they are unsure.
+
+Before each major assignment:
+
+- Restate the AI rule in the assignment instructions.
+- Say whether AI may be used before the student's own first draft.
+- Say whether AI may be used for revision, editing, source identification, or citation checking.
+- Say whether prompts, outputs, chat logs, or an AI-use statement are required.
+- Explain how AI-related work will affect grading.
+
+## Sources and related Project materials
+
+This guide aligns with the Fall 2026 teaching guidance on the Penn Carey Law Faculty Pedagogy Resources portal. It draws especially on:
+
+- Kirsten K. Davis, *Guide to Syllabus and Assignment Generative AI Policies and Advice*.
+- Korin Munsterman, *GenAI in Legal Education: A Practical Guide for Professors and Students* (CALI eLangdell Press, 2026).
+- Professor Cathie Struve's attribution-and-disclosure model for writing-intensive seminars.
+
+Related Project materials:
+
+- [AI Use Policy Templates]({{< relref "policy-templates" >}}) — Professor Struve's attribution and disclosure model, with sample AI-use statements.
+- [Best Practices for AI in Legal Education]({{< relref "best-practices" >}}) — broader teaching design and student-use guidance.
+- [Prompt Guide & Scenarios]({{< relref "prompt-guide" >}}) — prompting patterns for law school tasks.
 
 ## Contact
 

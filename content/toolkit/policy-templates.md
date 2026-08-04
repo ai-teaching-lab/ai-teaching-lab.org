@@ -23,6 +23,8 @@ Three ideas drive the policy:
 - **Disclosure is broader than attribution.** Even when no AI-generated language ends up in the submitted work, if AI shaped the assignment (selected readings, surfaced counterarguments, suggested topics), the student includes an AI-use statement explaining how and why.
 - **Verification stays with the student.** AI output is treated as a lead, not a citation. Students confirm sources, check facts, and remain responsible for accuracy.
 
+<a id="drop-in-syllabus-block"></a>
+
 ## Sample syllabus language
 
 ### Attribution and AI use (drop-in syllabus block)
@@ -36,6 +38,8 @@ Three ideas drive the policy:
 [^2]: The Policy is available at <https://www.law.upenn.edu/students/policies/conduct-and-responsibility.php>.
 
 [^3]: Sample AI use statements are posted separately on the Canvas page.
+
+<a id="disclosure-examples"></a>
 
 ## Sample AI-use disclosures
 
