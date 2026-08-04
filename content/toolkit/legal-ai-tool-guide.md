@@ -11,105 +11,131 @@ availability: "public"
 version: "July 2025; revised August 2026"
 ---
 
-This guide explains the main categories of legal AI tools. It is not an access guide, product catalog, or endorsement list. For current Penn Carey Law access, account setup, and product-specific guidance, use the [AI Resources Portal](https://resources.pennai.law/).
+This guide helps faculty and students evaluate legal AI by task, evidence base, and verification obligation. It is not an access guide, product catalogue, or endorsement list. For current Penn Carey Law access, account setup, and product-specific guidance, use the [AI Resources Portal](https://resources.pennai.law/).
 
-The useful question for faculty and students is usually not "which product is best?" It is: what kind of task is this, what corpus does the tool draw from, what can the output be used for, and what must I verify before relying on it?
+The useful question is not "which product is best?" It is: what task is this tool performing, what material can it draw on, what can go wrong, and what must a lawyer verify before relying on the output?
 
-## Two layers: general-purpose and legal-specific
+## Start with the task
 
-Legal work now uses two broad layers of AI tools.
+Legal AI is most useful when the task is clear. Match the tool and the level of supervision to the work, rather than treating every AI system as a substitute for legal research or legal judgment.
 
-**General-purpose AI assistants** are useful for brainstorming, outlining, drafting, editing, summarizing, and practicing explanations. They are flexible, but they are not legal databases. Without supplied sources or retrieval, they can invent legal authorities and misstate doctrine.
+### Legal research and authority analysis
 
-**Legal-specific AI tools** are built around legal workflows: research, document review, contract drafting, litigation analytics, due diligence, and compliance. Many use retrieval from legal or business databases. Retrieval improves grounding, but it does not remove the need to check the work.
+**Use it for:** finding leads, comparing authorities, organizing a research trail, and testing possible lines of analysis.
 
-Most legal professionals will use both layers. The hard part is matching the tool to the task.
+**Watch for:** invented or incomplete authority, a citation that does not support the proposition offered, overlooked jurisdictional limits, outdated law, and missing contrary authority.
 
-## Core categories of legal AI tools
+**Minimum check:** confirm the authority, proposition, context, jurisdiction, currency, and contrary authority. Read the source; do not rely on a model's description of it.
 
-### 1. Legal research and document production
+### Analysis of supplied documents and document sets
 
-These tools search legal databases, summarize authorities, generate research trails, draft memos, and help with litigation or transactional documents. They are closest to the traditional Westlaw, Lexis, Bloomberg, and legal-research workflow.
+**Use it for:** summarizing, comparing, clustering, surfacing questions, and preparing a first-pass issue list from documents you have supplied.
 
-Use them for: early research, source gathering, memo scaffolding, authority comparison, and drafting support.
+**Watch for:** missing documents, quotations that omit context, unsupported factual inferences, and material that should be handled under separate confidentiality or privilege rules.
 
-Verify: whether cited authority exists, whether the cited proposition is accurate, whether contrary authority is missing, and whether the output overstates certainty.
+**Minimum check:** confirm document coverage, quoted language, missing context, and the factual basis for every consequential inference.
 
-### 2. Contract drafting and review
+### Drafting, revision, and adversarial testing
 
-These tools help with clause comparison, redlining, playbook compliance, issue spotting, and contract-lifecycle workflows.
+**Use it for:** creating a first draft, improving organization, proposing alternatives, identifying ambiguities, and stress-testing an argument.
 
-Use them for: first-pass review, consistency checks, clause alternatives, and summarizing negotiation positions.
+**Watch for:** unsupported legal or factual assertions, generic language that does not fit the matter, and a polished answer that conceals weak analysis.
 
-Verify: client preferences, deal context, governing law, defined terms, business consequences, and whether the tool imported language that does not fit the transaction.
+**Minimum check:** identify every proposition that needs support, check the underlying sources, and retain your own legal judgment about the argument and its consequences.
 
-### 3. E-discovery and document review
+### Workflow, triage, and recurring operational work
 
-E-discovery tools have used machine learning for years. Newer generative systems summarize document sets, suggest issue coding, flag privilege concerns, and draft work product from review results.
+**Use it for:** sorting, routing, labeling, and surfacing patterns in recurring work.
 
-Use them for: triage, clustering, summarization, and review-management support.
+**Watch for:** a workflow that misses relevant material, treats an uncertain pattern as a decision, or obscures a choice with legal consequences.
 
-Verify: privilege calls, responsiveness decisions, sampling methods, production obligations, and any claims made from document patterns.
+**Minimum check:** test what the workflow leaves out, review decisions with legal consequences, and make sure the human reviewer can see the material and reasoning behind a result.
 
-### 4. Practice management and operations
+## Ask what the tool knows
 
-Practice-management systems add AI to billing, timekeeping, client intake, matter summaries, task routing, and internal knowledge management.
+Before evaluating an answer, ask what material the system can actually draw on.
 
-Use them for: administrative reduction and matter organization.
+- **Model knowledge** is an answer generated from learned patterns, without the source set being visible to the user.
+- **Retrieved sources** are materials selected from a defined collection to help generate an answer.
+- **Supplied sources** are documents the user provides to the system for a particular task.
+- **Workflow or organizational data** is matter, firm, or other operational information that informs an answer or action.
 
-Verify: client confidentiality, billing accuracy, firm policies, and whether administrative summaries omit material context.
+Source availability and source reliability are different questions. A linked citation, retrieved document, or confident answer supplies evidence to inspect; it does not prove that the conclusion is correct.
 
-### 5. Domain-specific platforms
+Retrieval can improve grounding by bringing relevant material into the task. It does not eliminate errors in retrieval, interpretation, or synthesis. The same is true when a tool works from a document set: the answer may be useful, but the reader must still determine whether the material is complete, relevant, and accurately understood.
 
-Some products focus on a practice area: patents, trademarks, immigration, tax, M&A diligence, employment, personal injury, or regulatory work.
+## Verify the output as a lawyer would
 
-Use them for: workflows with repeatable forms, specialized checklists, or domain-specific source sets.
+Use this workflow before relying on AI-generated legal work:
 
-Verify: local rules, updated law, factual assumptions, and whether the tool's templates fit the actual matter.
+1. Identify the legal propositions that matter.
+2. Open and read the cited or supplied source.
+3. Check authority, proposition, context, jurisdiction, and currency.
+4. Look for missing facts, contrary authority, and unsupported inferences.
+5. Make and own the professional judgment.
 
-### 6. Public-facing legal help and lawyer matching
+This approach reflects the professional responsibilities that surround AI use, including competence, confidentiality, supervision, communication, and fees. It is educational guidance, not jurisdiction-specific ethics advice. A useful output can save time, but it does not transfer responsibility from the lawyer or student using it.
 
-Consumer-facing tools may answer routine questions, route users to lawyers, or help generate simple documents. This category raises significant unauthorized-practice, quality-control, and consumer-protection issues.
+## Teaching activities
 
-Use them as an object of study, not as a substitute for legal advice.
+Faculty can teach legal-AI literacy without running a product demonstration or requiring students to use AI. These activities make verification and professional judgment visible.
 
-Verify: whether the tool is giving legal information or legal advice, whether a human lawyer is involved, and what jurisdiction's rules apply.
+### Compare answers in a doctrinal course
 
-### 7. Compliance and regulatory monitoring
+**Course setting:** a doctrinal course introducing a rule or line of cases.
 
-These tools track regulatory developments, map obligations, summarize agency materials, and support compliance programs across jurisdictions.
+**Learning objective:** distinguish a fluent answer from a source-supported legal analysis.
 
-Use them for: monitoring, triage, and obligation mapping.
+**Student task:** compare a general answer and a source-grounded answer to the same question. Identify each unsupported proposition and explain whether either response supports its conclusion.
 
-Verify: effective dates, jurisdictional coverage, agency source materials, and whether the output reflects current law.
+**Debrief:** ask what changed when the students could inspect sources, and what they would need to verify before relying on either answer.
 
-## How to evaluate a legal AI output
+### Build a verified research trail in legal research or writing
 
-For any legal AI tool, ask five questions before relying on the answer:
+**Course setting:** legal research, legal writing, or an assignment requiring authority research.
 
-1. What sources did the tool use?
-2. Can I inspect those sources directly?
-3. Does the answer distinguish law, facts, assumptions, and inference?
-4. What contrary authority or counterargument might be missing?
-5. What professional obligation would be breached if this output is wrong?
+**Learning objective:** turn an AI answer into a research process rather than treating it as research results.
 
-A good output can save time. It does not transfer responsibility.
+**Student task:** begin with an AI answer, locate every cited source, state the proposition each source actually supports, identify what is missing, and produce a corrected research plan.
 
-## Teaching uses
+**Debrief:** ask which errors were visible only after opening the authority and which research steps the original answer skipped.
 
-Faculty can use this category map to help students understand legal AI without turning class into a product demo. Useful exercises include:
+### Audit a method in a seminar
 
-- Compare a general-purpose answer with a legal-specific answer on the same research question.
-- Ask students to identify which category of tool fits a given legal task.
-- Give students an AI-generated memo and require source verification.
-- Have students map hallucination risks by task type.
-- Ask students to explain what a supervising lawyer would need to check before using the output.
+**Course setting:** an upper-level seminar with a research memo or paper.
+
+**Learning objective:** evaluate the method and evidence behind a conclusion, not just the conclusion itself.
+
+**Student task:** assess an AI-generated research memo by separating its research question, source base, legal propositions, assumptions, counterarguments, and conclusions.
+
+**Debrief:** ask which parts of the memo are supported, which parts are inference, and how the student would revise the research method before using the memo in a paper.
+
+### Supervise a first-pass issue list in a transactional or clinic course
+
+**Course setting:** a transactional, drafting, or clinic course using a supplied document set.
+
+**Learning objective:** practice supervising a first-pass work product.
+
+**Student task:** use a supplied document set to generate an issue list, identify the additional facts and governing law needed, and state what a supervising lawyer would verify before advising a client.
+
+**Debrief:** ask which issues were useful leads, which required more factual development, and what should never be inferred from silence in the documents.
+
+For prompting and iteration techniques, see the [Prompt Guide & Scenarios]({{< relref "prompt-guide" >}}). For choices about course and assignment rules, see the [AI Syllabus Guide]({{< relref "syllabus-guide" >}}).
 
 ## Related resources
 
-- [Prompt Guide & Scenarios]({{< relref "prompt-guide" >}}) — prompting and iteration patterns.
-- [Best Practices for AI in Legal Education]({{< relref "best-practices" >}}) — teaching principles and academic standards.
+- [Prompt Guide & Scenarios]({{< relref "prompt-guide" >}}) — prompting, iteration, and verification habits.
+- [AI Syllabus Guide]({{< relref "syllabus-guide" >}}) — course and assignment AI rules.
+- [AI Use Policy Templates]({{< relref "policy-templates" >}}) — attribution and disclosure models for writing-intensive work.
+- [Best Practices for AI in Legal Education]({{< relref "best-practices" >}}) — course-design principles.
 - [AI Resources Portal](https://resources.pennai.law/) — current Penn Carey Law access, setup, and product-specific guidance.
+
+## Further reading
+
+- [ABA Formal Opinion 512: Generative Artificial Intelligence Tools](https://www.americanbar.org/content/dam/aba/administrative/professional_responsibility/ethics-opinions/aba-formal-opinion-512.pdf)
+- [Hallucination-Free? Assessing the Reliability of Leading AI Legal Research Tools](https://law.stanford.edu/wp-content/uploads/2024/05/Legal_RAG_Hallucinations.pdf)
+- [AI-Powered Lawyering: AI Reasoning Models, Retrieval Augmented Generation, and the Future of Legal Practice](https://papers.ssrn.com/abstract=5162111)
+- [GenAI in Legal Education: A Practical Guide for Professors and Students](https://www.cali.org/sites/default/files/GenAIinLegalEducationMunsterman-May2026.pdf)
 
 ## Acknowledgment
 
