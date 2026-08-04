@@ -13,7 +13,7 @@ version: "August 2025; revised August 2026"
 
 Drop-in syllabus and assignment language for faculty teaching in an age of AI. This guide is organized around the decisions faculty actually have to make: what kind of course you are teaching, what work you are assessing, what AI uses you want to permit or prohibit, and what students must disclose.
 
-The guide draws especially on Kirsten K. Davis's *Guide to Syllabus and Assignment Generative AI Policies and Advice*, Korin Munsterman's *GenAI in Legal Education: A Practical Guide for Professors and Students*, and Professor Cathie Struve's attribution-and-disclosure model for writing-intensive seminars.
+The guide draws especially on Kirsten K. Davis's *Guide to Syllabus and Assignment Generative AI Policies and Advice*, Korin Munsterman's *GenAI in Legal Education: A Practical Guide for Professors and Students*, and teaching materials shared by Professor Cathie Struve on attribution and disclosure in writing-intensive seminars. The Davis and Struve materials are cited here as source materials for this guide, not as Penn Carey Law policy.
 
 This document is not official Law School policy. Each faculty member sets the AI policy for their own course, subject to ordinary academic-integrity rules and any exam procedures administered by the Registrar.
 
@@ -152,7 +152,7 @@ Optional process-checkpoint language:
 
 > For the paper, you will submit [topic memo / source list / thesis paragraph / outline / partial draft / conference memo / final paper]. At each stage, identify any AI assistance you used. I may ask you to discuss your process in conference. The goal is not to punish responsible AI use; the goal is to make your research and writing choices visible.
 
-Professor Cathie Struve's attribution-and-disclosure model is a strong version of this approach. The Project's [AI Use Policy Templates]({{< relref "policy-templates" >}}) reproduce her syllabus block and provide sample AI-use statements.
+The attribution-and-disclosure model shared by Professor Cathie Struve is a strong version of this approach. The Project's [AI Use Policy Templates]({{< relref "policy-templates" >}}) reproduce her syllabus block and provide sample AI-use statements.
 
 <a id="writing-skills"></a>
 
@@ -311,9 +311,9 @@ Before each major assignment:
 
 This guide aligns with the Fall 2026 teaching guidance on the Penn Carey Law Faculty Pedagogy Resources portal. It draws especially on:
 
-- Kirsten K. Davis, *Guide to Syllabus and Assignment Generative AI Policies and Advice*.
+- Kirsten K. Davis, *Guide to Syllabus and Assignment Generative AI Policies and Advice* (source publication; verify the current edition and citation before adding it to a syllabus or bibliography).
 - Korin Munsterman, *GenAI in Legal Education: A Practical Guide for Professors and Students* (CALI eLangdell Press, 2026).
-- Professor Cathie Struve's attribution-and-disclosure model for writing-intensive seminars.
+- Teaching materials shared by Professor Cathie Struve on attribution and disclosure for writing-intensive seminars.
 
 Related Project materials:
 

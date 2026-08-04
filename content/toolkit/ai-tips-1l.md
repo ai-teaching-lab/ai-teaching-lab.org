@@ -11,7 +11,7 @@ availability: "public"
 version: "August 2025; revised August 2026"
 ---
 
-Talking points for orientation sessions and 1L AI-introduction events. Designed as a presenter's guide for in-person delivery rather than independent reading. Pairs with the longer [1L Guidance on Claude Use](../guidance-1l/).
+Talking points for orientation sessions and 1L AI-introduction events. Designed as a presenter's guide for in-person delivery rather than independent reading. Pairs with the longer [1L Guidance on AI Use](../guidance-1l/).
 
 ## The headline caveat
 
@@ -79,4 +79,4 @@ If a long chat starts ignoring instructions, drifting from the course materials,
 
 ## Status
 
-Maintained for the Penn Carey Law community. Pairs with the longer [1L Guidance on Claude Use](../guidance-1l/).
+Maintained for the Penn Carey Law community. Pairs with the longer [1L Guidance on AI Use](../guidance-1l/).

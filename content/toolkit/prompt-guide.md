@@ -27,33 +27,33 @@ Good prompts do five things:
 
 For legal work, add a sixth habit: require verification. Ask the model to distinguish source-supported claims from assumptions, and check anything you plan to rely on.
 
-## The CRAFTED Framework
+## A prompting checklist
 
-### C — Choose the right tool
+### Choose the right tool
 
 Use a tool that fits the task. General-purpose assistants are useful for brainstorming, drafting, explanation, and revision. Legal-specific tools are better when the task depends on legal databases or source-grounded research. For current Penn Carey Law access and setup, use the [AI Resources Portal](https://resources.pennai.law/).
 
-### R — Relevance through context
+### Add relevant context
 
 Give the model the facts, course, jurisdiction, assignment goal, audience, and constraints. A prompt without context produces generic output.
 
-### A — "Act as" prompting
+### Assign a useful role when needed
 
 Assign a role when it helps: professor, skeptical reader, senior associate, student study partner, or judge. The role should match the task and audience.
 
-### F — Fine-tune for specifics
+### Specify the output
 
 Ask for the exact format you need: table, checklist, outline, questions, memo structure, or critique. Include length, tone, and exclusions.
 
-### T — Thoughtful interaction
+### Iterate and question the result
 
 Treat the first answer as a draft. Ask follow-up questions, request alternatives, and press for uncertainty. Iteration usually matters more than a perfect first prompt.
 
-### E — Examples for clarity
+### Give examples when format matters
 
 Show the model what good output looks like when format or tone matters. Examples often work better than abstract instructions.
 
-### D — Development through refinement
+### Refine your own work
 
 Use the model to refine your own work, not to replace your judgment. For student work, check whether the course permits the use and whether disclosure is required.
 

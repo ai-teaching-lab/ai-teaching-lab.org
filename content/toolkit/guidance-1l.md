@@ -1,5 +1,5 @@
 ---
-title: "1L Guidance on Claude Use"
+title: "1L Guidance on AI Use"
 description: "Written for incoming 1Ls. How LLMs work, their strengths and weaknesses, the human-AI-human workflow, course rules, confidentiality, and prompting tips."
 date: 2025-09-01
 lastmod: 2026-08-04
@@ -11,7 +11,7 @@ availability: "public"
 version: "September 2025; revised August 2026"
 ---
 
-Written for incoming 1Ls. This guide explains how to use Claude and similar AI tools as study support without substituting them for legal reasoning.
+Written for incoming 1Ls. This guide explains how to use AI tools as study support without substituting them for legal reasoning.
 
 **First and most important:** course-specific rules control. General Project guidance does not override a syllabus, assignment instruction, exam rule, clinic rule, journal rule, or supervisor instruction. When in doubt, ask the professor before using AI.
 

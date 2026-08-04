@@ -3,7 +3,7 @@ title: "AI Resources Portal"
 description: "The Penn Carey Law hub for AI tool access, setup, data policy, and product-specific guidance."
 toolkit_category: "audience"
 toolkit_group: "start"
-audience: ["faculty", "staff"]
+audience: ["faculty", "staff", "student"]
 availability: "public"
 version: "August 2026"
 weight: 20

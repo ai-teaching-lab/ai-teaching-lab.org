@@ -1,6 +1,6 @@
 ---
 title: "Toolkit"
-description: "Fall 2026 guides for AI use in law teaching, student work, legal research, and Penn Carey Law tool access."
+description: "Fall 2026 guides for AI use in law teaching, student work, legal research, and responsible law-school workflows."
 lastmod: 2026-08-04
 ---
 

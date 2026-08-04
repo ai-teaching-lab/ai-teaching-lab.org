@@ -15,7 +15,7 @@ Professor Struve's attribution-and-disclosure model for generative AI in a writi
 
 **Scope.** These templates reflect individual-faculty syllabus language drafted by Professor Struve and reproduced here as a reference. They are *not* Penn Carey Law's institutional AI policy and have not been adopted by the Office of Academic Affairs, the Curriculum Committee, or the Office of Student Conduct. Each faculty member is responsible for the AI policy in their own course; students should rely on the syllabus they receive, not on this page.
 
-The syllabus language is reproduced from Professor Struve's draft seminar syllabus. The sample AI-use disclosures were originally generated in a dialogue with ChatGPT and have been edited for accuracy and pedagogical clarity. Faculty using these templates should copy the blocks where the wording is doing work, then adapt citations, Canvas references, and use cases to their own courses. **Note on illustrative citations:** the sample disclosures below contain bracketed placeholders for case names, articles, and authors (e.g., `[Author, Title, Vol. Journal Page (Year)]`). Replace each placeholder with a real source you have read and verified before submitting work.
+The syllabus language is reproduced from Professor Struve's draft seminar syllabus. The sample AI-use disclosures were originally generated in a dialogue about that seminar and have been edited for accuracy and pedagogical clarity. Faculty using these templates should copy the blocks where the wording is doing work, then adapt citations, course-platform references, and use cases to their own courses. The examples below are illustrative. Replace every bracketed field with the student's actual information, and replace any example source with a real source the student has read and verified before submitting work.
 
 For broader course-policy choices, start with the [AI Syllabus Guide]({{< relref "syllabus-guide" >}}). This page is best for writing-intensive courses that permit AI use with attribution, disclosure, and process transparency.
 
@@ -41,7 +41,7 @@ Three ideas drive the policy:
 
 [^2]: The Policy is available at <https://www.law.upenn.edu/students/policies/conduct-and-responsibility.php>.
 
-[^3]: Sample AI use statements are posted separately on the Canvas page.
+[^3]: In the original course context, sample AI-use statements were posted on the course Canvas page. Replace this note with the location used in your own course, or remove it.
 
 <a id="disclosure-examples"></a>
 
@@ -49,7 +49,7 @@ Three ideas drive the policy:
 
 The five disclosures below cover common student use cases — triaging optional readings, checking the clarity of a draft, reviewing slide design, brainstorming a paper topic, and stress-testing an outline. Each is preceded by a short rationale explaining why the use case is acceptable and what guardrails apply.
 
-These were originally generated through a dialogue with ChatGPT (model o3) about specific stages of a writing seminar. Professor Struve includes both the disclosures and the underlying dialogue so students can see the considerations behind each policy. Students should adapt the date, model, and specifics to their own work.
+These were originally generated through a dialogue about specific stages of a writing seminar. Professor Struve includes both the disclosures and the underlying dialogue so students can see the considerations behind each policy. Students should adapt the tool, model or version, date, and specifics to their own work. Product names and model versions are intentionally omitted below because they change.
 
 ### 1. Screening optional readings
 
@@ -59,12 +59,12 @@ These were originally generated through a dialogue with ChatGPT (model o3) about
 
 **Sample disclosure.**
 
-> **AI use statement for [date] presentation on Smith (1998) and related readings**
+> **AI use statement for [date] presentation on [assigned source] and related readings**
 >
-> - **Tool & access date:** OpenAI ChatGPT (model o3), accessed 11 July 2025 via chat.openai.com.
+> - **Tool & access date:** [Tool name] ([model or version, if known]), accessed [date] via [platform or service].
 > - **Purpose:** To screen five optional articles listed for Week 4 and decide which to emphasize in my two-page paper and class presentation.
-> - **Prompts provided (representative):** "Please give me a concise 200-word summary of 'Jones, *Law and Markets* (Harvard L. Rev. 2001).' Highlight its thesis, methods, and main findings."
-> - **Outputs used:** I read the resulting summaries, verified key points by skimming each article's introduction and conclusion, and then selected Jones (2001) and Lee (2015) as the optional works I would integrate.
+> - **Prompts provided (representative):** "Please give me a concise 200-word summary of '[author, title, and complete citation for assigned optional source].' Highlight its thesis, methods, and main findings."
+> - **Outputs used:** I read the resulting summaries, verified key points against the original sources, and then selected [sources] as the optional works I would integrate.
 > - **Extent of incorporation:** No AI-generated language appears verbatim or in paraphrase in my submitted paper or slides; the summaries served only to guide my selection of optional readings.
 > - **Verification steps:** Checked page numbers, quotations, and statistics directly against the original PDFs before final submission.
 > - **Responsibility:** I remain responsible for the accuracy of all information presented.
@@ -79,7 +79,7 @@ These were originally generated through a dialogue with ChatGPT (model o3) about
 
 > **AI use statement for two-page paper submitted 14 Oct 2025**
 >
-> - **Tool & date:** Anthropic Claude 3.5 Sonnet (web interface), 10 Oct 2025.
+> - **Tool & date:** [Tool name] ([model or version, if known]), [date].
 > - **Purpose:** To test whether the draft paper's main arguments were clearly expressed.
 > - **Prompt (abridged):** "Here is my complete draft (≈650 words). Please list the key points you think the author is making in no more than six bullet points."
 > - **How I used the output:**
@@ -119,10 +119,10 @@ These were originally generated through a dialogue with ChatGPT (model o3) about
 
 > **AI use statement for final paper topic selection (submitted 18 Sept 2025)**
 >
-> - **Tool & date used:** OpenAI ChatGPT (model o3), 16 Sept 2025.
+> - **Tool & date used:** [Tool name] ([model or version, if known]), [date].
 > - **Purpose:** To brainstorm doctrinally focused, 25-page-scale topics within multidistrict litigation (MDL).
 > - **Representative prompt:** "I want to write about multidistrict litigation but need a legal-doctrinal topic suitable for ~25 pages. My strengths: case law analysis and statutory interpretation. I lack experience in empirical methods. Generate 8–10 potential topics that (a) matter to current MDL practice, (b) turn on legal doctrine, and (c) can be handled without empirical or interview work."
-> - **Output received:** A list of nine topic ideas with 2–3-sentence descriptions (e.g., "The constitutionality of 'rocket-docket' scheduling orders in MDLs"; "Revisiting the *Lexecon* waiver doctrine post-*Bristol-Myers*").
+> - **Output received:** A list of topic ideas with short descriptions. I treated the ideas as leads, not as verified statements about the law or literature.
 > - **How I used the output:**
 >   - Screened each idea for novelty and source availability.
 >   - Selected "*Lexecon* waivers after *Bristol-Myers*" as my preliminary topic.
@@ -142,7 +142,7 @@ The permitted patterns are review patterns: stress-testing logic, gap-spotting, 
 
 > **AI use statement for outline submitted 21 Oct 2025**
 >
-> - **Tool & date used:** Anthropic Claude Sonnet 4 (web interface), 18 Oct 2025.
+> - **Tool & date used:** [Tool name] ([model or version, if known]), [date].
 > - **Purpose:** To audit my self-written outline for logical gaps and redundant sections.
 > - **Prompt (abridged):** "Below is my 1,100-word outline for a 25-page paper on *Lexecon* waivers post-*Bristol-Myers*. Please do not rewrite any part of it. Instead, point out (1) arguments that lack supporting authority, (2) potential counterarguments not yet addressed, and (3) sections whose order might impede reader flow."
 > - **Output received:** A numbered critique highlighting three undeveloped counterarguments and noting that Sections III.A and III.B overlapped.
@@ -155,7 +155,7 @@ The permitted patterns are review patterns: stress-testing logic, gap-spotting, 
 
 ## Source-tracing for AI-generated ideas
 
-When AI produces a substantive idea — a new argument, a doctrinal counterpoint, a quotation, a historical claim — the student's obligation goes beyond AI-use disclosure. They also owe attribution to the human author whose work the AI's output may reflect. Disclosure documents process; citation documents provenance. Both are required.
+For courses that adopt this source-tracing model, when AI produces a substantive idea — a new argument, a doctrinal counterpoint, a quotation, or a historical claim — the student's obligation goes beyond AI-use disclosure. The student should make a good-faith effort to identify and cite a verifiable human source when one exists. Disclosure documents process; citation documents provenance. The course syllabus or assignment should state whether and how this model applies.
 
 The following addition to the syllabus operationalizes that obligation.
 
@@ -165,9 +165,9 @@ The following addition to the syllabus operationalizes that obligation.
 >
 > 1. **Treat the AI output as a lead, not a citation.** Prompt the model for clues: "Where in the academic or judicial literature has this argument appeared? Please list specific cases, articles, or books."
 > 2. **Independently confirm any sources named.** Look up the case, article, or book yourself. Read enough of the source to be sure it actually contains the idea.
-> 3. **Cite the human source in the ordinary way.** Example: *See* [Author], *[Article Title]*, [Vol.] [Journal] [Page] ([Year]).
+> 3. **If you find a human source, cite it in the ordinary way.** Example: *See* [Author], *[Article Title]*, [Vol.] [Journal] [Page] ([Year]).
 > 4. **If, after reasonable search, no prior human source emerges,** state in your AI use statement: "The model surfaced this argument during my brainstorming. I searched the legal literature (databases A, B; search terms: ...) and did not locate a prior published articulation. I have refined the argument and developed the supporting analysis independently."
-> 5. **Never cite the AI model itself as the intellectual originator of a legal or scholarly claim.** Models provide computations over text; citation credit belongs to the human author(s) on whose text the model drew — or to you if no prior source exists.
+> 5. **Do not treat the AI model as authority for a legal or scholarly claim.** Cite a verified underlying source when one exists, and disclose the AI's role under the course rule.
 
 ### Rationale to share with students
 
@@ -189,7 +189,7 @@ When the student successfully traces an AI-suggested idea to a human author, the
 
 > **AI use statement for final research paper (submitted 15 Dec 2025)**
 >
-> - **Tool & date:** OpenAI ChatGPT (model o3), accessed 8 Dec 2025.
+> - **Tool & date:** [Tool name] ([model or version, if known]), accessed [date].
 > - **Purpose:** To stress-test Section III of my draft, which argues that post-*Bristol-Myers* personal-jurisdiction limits should not constrain transferee courts from approving *Lexecon* waivers.
 > - **Prompts (abridged):**
 >   1. "Here is Section III of my draft (≈1,400 words). List any plausible doctrinal counter-arguments a court might raise."
@@ -218,10 +218,10 @@ The disclosure separates the AI's role (idea lead) from the human author's role 
 
 A few notes for faculty importing this language into their own syllabi:
 
-- The Penn Carey Law citations in footnotes 1 and 2 link to PCL-specific policies. Adjust if you teach elsewhere.
+- The Penn Carey Law references in footnotes 1 and 2 point to PCL-specific policies. Verify the current policy text and links before publishing this block in a syllabus, and adjust if you teach elsewhere.
 - The Wisconsin Writing Center handout is a useful neutral reference for what counts as paraphrase versus quotation. Substitute your own preferred reference if you have one.
 - The sample disclosures are written for a writing-intensive seminar with intermediate deliverables (two-page paper, class presentation, outline, final paper). For a different course structure — exam-only, problem sets, simulations — keep the framework and adapt the use cases.
-- AI tools and model names move fast. The pattern in each disclosure (tool, date, purpose, prompt, output, verification, responsibility) holds even as students substitute whatever model they actually use.
+- AI tools and model names move fast. The pattern in each disclosure (tool, date, purpose, prompt, output, verification, responsibility) holds even as students substitute the system they actually use.
 
 ## Acknowledgment
 
