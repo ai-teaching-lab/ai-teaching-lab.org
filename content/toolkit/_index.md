@@ -1,8 +1,9 @@
 ---
 title: "Toolkit"
-description: "Practical resources from the Project on using AI well in legal education and practice — for faculty, students, and chambers."
+description: "Fall 2026 guides for AI use in law teaching, student work, legal research, and Penn Carey Law tool access."
+lastmod: 2026-08-04
 ---
 
-The Toolkit collects the Project's audience-specific reference documents — the kinds of practical materials a faculty member, 1L, or staff member can pick up and use the same day.
+Start here if you are updating a syllabus, planning an assignment, advising students, or choosing how AI belongs in a law-school workflow.
 
-The current generation was developed for the Penn Carey Law community and is now openly available here. The Project revises these documents continuously — subscribe to the Project newsletter to be notified as items update.
+The Toolkit is organized by task. Durable teaching, learning, prompting, and legal-method guidance lives here. Penn-specific tool access, account setup, data policy, and product details live in the AI Resources portal, where they can be updated as platforms and approvals change.

@@ -1,97 +1,123 @@
 ---
 title: "Legal AI Tool Guide"
-description: "Categorized overview of seven legal AI tool families plus the major general-purpose tools — built for faculty trying to make sense of the field."
+description: "A category-based guide to legal AI tools, focused on what different tool families do and how to evaluate outputs."
 date: 2025-07-01
-lastmod: 2026-05-09
-weight: 30
+lastmod: 2026-08-04
+weight: 220
 toolkit_category: "core"
-audience: ["faculty"]
+toolkit_group: "methods"
+audience: ["faculty", "student"]
 availability: "public"
-version: "July 2025; revised May 2026"
+version: "July 2025; revised August 2026"
 ---
 
-A categorized overview of the legal AI landscape — seven domain-specific tool families plus the major general-purpose models (ChatGPT, Claude, Gemini). Built for faculty who want to understand what's out there without having to track every product launch.
+This guide explains the main categories of legal AI tools. It is not an access guide, product catalog, or endorsement list. For current Penn Carey Law access, account setup, and product-specific guidance, use the [AI Resources Portal](https://resources.pennai.law/).
 
-The goal is orientation, not endorsement. We name representative tools in each category to make the categories concrete; we don't recommend specific products, and we don't try to be exhaustive. The legal AI market is moving fast — vendors get acquired, products get rebranded (Casetext was acquired by Thomson Reuters in 2023 and CoCounsel is now a Thomson Reuters product; LexisNexis replaced Lexis+ AI with Lexis+ with Protégé in 2026), and new entrants appear every few months. Treat any specific tool name here as illustrative.
+The useful question for faculty and students is usually not "which product is best?" It is: what kind of task is this, what corpus does the tool draw from, what can the output be used for, and what must I verify before relying on it?
 
 ## Two layers: general-purpose and legal-specific
 
-Generative AI tools used in legal work fall into two broad layers:
+Legal work now uses two broad layers of AI tools.
 
-- **General-purpose models** — ChatGPT (OpenAI), Claude (Anthropic), Gemini (Google). These are the foundation models. They're strong at reasoning, drafting, brainstorming, and code, but they're not designed around legal corpora and they generate plausible-sounding citations that don't exist.
-- **Legal-specific tools** — products built on top of general-purpose models, often with managed legal databases, retrieval pipelines that surface real authority, and workflow features tailored to lawyers. CoCounsel, Lexis+ with Protégé, Harvey, Spellbook, Relativity, and others fall here.
+**General-purpose AI assistants** are useful for brainstorming, outlining, drafting, editing, summarizing, and practicing explanations. They are flexible, but they are not legal databases. Without supplied sources or retrieval, they can invent legal authorities and misstate doctrine.
 
-A typical lawyer or law student today uses both. General-purpose tools are better for thinking out loud and drafting; legal-specific tools are better when citation accuracy matters.
+**Legal-specific AI tools** are built around legal workflows: research, document review, contract drafting, litigation analytics, due diligence, and compliance. Many use retrieval from legal or business databases. Retrieval improves grounding, but it does not remove the need to check the work.
 
-## Seven categories of legal-specific AI
+Most legal professionals will use both layers. The hard part is matching the tool to the task.
 
-Apart from the general-purpose models, the legal AI market sorts roughly into seven categories.
+## Core categories of legal AI tools
 
 ### 1. Legal research and document production
 
-AI-powered platforms that search legal databases, produce research memos, summarize cases, and draft documents. These are the tools competing most directly with traditional Westlaw and Lexis workflows — and in fact the major incumbents have built their own AI products into those platforms.
+These tools search legal databases, summarize authorities, generate research trails, draft memos, and help with litigation or transactional documents. They are closest to the traditional Westlaw, Lexis, Bloomberg, and legal-research workflow.
 
-### 2. Contract management
+Use them for: early research, source gathering, memo scaffolding, authority comparison, and drafting support.
 
-Tools for contract drafting, review, redlining, clause libraries, and lifecycle management. Used heavily in transactional practice; many integrate directly with Word.
+Verify: whether cited authority exists, whether the cited proposition is accurate, whether contrary authority is missing, and whether the output overstates certainty.
 
-### 3. Electronic discovery
+### 2. Contract drafting and review
 
-E-discovery has used machine learning for more than a decade. The current generation of tools applies generative AI to document summarization, issue coding, privilege review, and drafting work product from review sets.
+These tools help with clause comparison, redlining, playbook compliance, issue spotting, and contract-lifecycle workflows.
 
-### 4. Practice management
+Use them for: first-pass review, consistency checks, clause alternatives, and summarizing negotiation positions.
 
-Time tracking, billing, client intake, matter management. AI features here mostly automate administrative overhead so lawyers can spend more time on substantive work.
+Verify: client preferences, deal context, governing law, defined terms, business consequences, and whether the tool imported language that does not fit the transaction.
+
+### 3. E-discovery and document review
+
+E-discovery tools have used machine learning for years. Newer generative systems summarize document sets, suggest issue coding, flag privilege concerns, and draft work product from review results.
+
+Use them for: triage, clustering, summarization, and review-management support.
+
+Verify: privilege calls, responsiveness decisions, sampling methods, production obligations, and any claims made from document patterns.
+
+### 4. Practice management and operations
+
+Practice-management systems add AI to billing, timekeeping, client intake, matter summaries, task routing, and internal knowledge management.
+
+Use them for: administrative reduction and matter organization.
+
+Verify: client confidentiality, billing accuracy, firm policies, and whether administrative summaries omit material context.
 
 ### 5. Domain-specific platforms
 
-Tools built for a particular practice area — patents, trademarks, immigration, personal injury, M&A diligence. These trade breadth for depth, often with templates, checklists, and outputs tailored to the conventions of one field.
+Some products focus on a practice area: patents, trademarks, immigration, tax, M&A diligence, employment, personal injury, or regulatory work.
 
-### 6. Lawyer search and access
+Use them for: workflows with repeatable forms, specialized checklists, or domain-specific source sets.
 
-Consumer-facing platforms that match clients with lawyers, route routine legal questions, or attempt to provide direct legal services. A more experimental category, with regulatory uncertainty around the unauthorized-practice-of-law line.
+Verify: local rules, updated law, factual assumptions, and whether the tool's templates fit the actual matter.
 
-### 7. Regulatory compliance
+### 6. Public-facing legal help and lawyer matching
 
-Tools that monitor regulatory changes, map obligations across jurisdictions, and help in-house teams keep compliance programs current.
+Consumer-facing tools may answer routine questions, route users to lawyers, or help generate simple documents. This category raises significant unauthorized-practice, quality-control, and consumer-protection issues.
 
-## Representative tools in each category
+Use them as an object of study, not as a substitute for legal advice.
 
-The table below names a few representative tools per category. Inclusion is illustrative — these are tools we have seen mentioned often enough to be worth knowing about, not endorsements.
+Verify: whether the tool is giving legal information or legal advice, whether a human lawyer is involved, and what jurisdiction's rules apply.
 
-| Category | Representative tools |
-|---|---|
-| Legal research and document production | **CoCounsel** (Thomson Reuters; originally a Casetext product, acquired 2023) and **Lexis+ with Protégé** (LexisNexis) — major legal-AI products from the two incumbents. Both handle research memos, document review, deposition prep, and contract analysis. On Westlaw, the platform now ships as **Westlaw Advantage** (which folds in CoCounsel); on Lexis, "Lexis+ AI" was replaced by **Lexis+ with Protégé** in 2026. **Harvey** — a copilot for lawyers across drafting, research, and analysis tasks, with publicized adoption at several AmLaw firms. |
-| Contract management | **Ironclad** — contract lifecycle management used by in-house teams. **Spellbook** — contract review and clause suggestions inside Microsoft Word. |
-| Electronic discovery | **Relativity** — established e-discovery platform; AI features build on capabilities from its 2021 Text IQ acquisition for sensitive-data detection. **Everlaw AI Assistant** — generative AI for document summarization, issue coding, sentiment analysis, and draft argument generation in discovery review. |
-| Practice management | **Clio Duo** — AI-assisted billing, time tracking, and matter summaries inside the Clio practice-management platform. **MyCase IQ** — comparable AI features for solo and small-firm practice management. |
-| Domain-specific | **PatentPal** — generates patent diagrams and specification text from claim sets, aimed at patent attorneys and agents. **Lex Machina** — litigation analytics built on PACER and state-court records, used heavily in IP and complex-commercial practice. |
-| Lawyer search and access | **DoNotPay** — consumer service marketed as a "robot lawyer" for routine matters such as contesting tickets. The FTC filed a complaint against DoNotPay in September 2024 over its "AI lawyer" marketing claims, and finalized a consent order in February 2025 imposing $193,000 in monetary relief and barring the company from advertising AI legal services as a substitute for a human lawyer without supporting evidence. The category as a whole faces ongoing regulatory questions about unauthorized practice. |
-| Regulatory compliance | **Red Marker** and **Regology** — regulatory-change monitoring and compliance-process management for organizations operating across multiple regimes. |
-| General-purpose AI (separate layer, not one of the seven legal-specific categories) | **ChatGPT** (OpenAI), **Claude** (Anthropic), **Gemini** (Google). All three offer free tiers and paid tiers with stronger models. Penn Carey Law has provided ChatGPT Edu accounts to incoming first-year students, 1L teaching assistants, and Littleton/legal-writing fellows since Fall 2025. **Always verify factual and citation outputs against authoritative sources** — general-purpose models generate plausible-sounding but incorrect case law. |
+### 7. Compliance and regulatory monitoring
 
-## What faculty should take from this
+These tools track regulatory developments, map obligations, summarize agency materials, and support compliance programs across jurisdictions.
 
-A few points worth keeping in mind as you talk with students or colleagues about legal AI tools:
+Use them for: monitoring, triage, and obligation mapping.
 
-- **The category matters more than the product.** Tools come and go; the categories above describe stable functions that lawyers will keep needing. If a student understands what "legal research AI" or "contract review AI" is for, they can evaluate any new entrant.
-- **General-purpose vs. legal-specific is the most important distinction.** Use general-purpose tools for thinking, drafting, and brainstorming. Use legal-specific tools when grounded citations matter. Confusing the two is the most common source of bad outputs.
-- **Citation hallucination is the central failure mode.** Without retrieval over a real corpus, general-purpose models routinely produce convincing-sounding case citations that don't exist. Legal-specific tools mitigate this with retrieval over real corpora, but they don't eliminate it. Verify before you rely.
-- **The market appears to be consolidating around the incumbents.** Westlaw and Lexis have both shipped major AI products (CoCounsel and Lexis+ with Protégé respectively). Several independent legal-AI startups have been acquired or absorbed. Expect this to continue, though foundation-model providers moving directly into the legal stack may complicate the picture.
+Verify: effective dates, jurisdictional coverage, agency source materials, and whether the output reflects current law.
 
-## Contact
+## How to evaluate a legal AI output
 
-The Legal AI Tool Guide is a Project document maintained by:
+For any legal AI tool, ask five questions before relying on the answer:
 
-- Ambar Larancuent '26
-- Hailey Parikh '27
-- Polk Wagner — `pwagner@law.upenn.edu`
+1. What sources did the tool use?
+2. Can I inspect those sources directly?
+3. Does the answer distinguish law, facts, assumptions, and inference?
+4. What contrary authority or counterargument might be missing?
+5. What professional obligation would be breached if this output is wrong?
 
-*With thanks to AI Law Lab alumni who contributed to the original guide:*
+A good output can save time. It does not transfer responsibility.
+
+## Teaching uses
+
+Faculty can use this category map to help students understand legal AI without turning class into a product demo. Useful exercises include:
+
+- Compare a general-purpose answer with a legal-specific answer on the same research question.
+- Ask students to identify which category of tool fits a given legal task.
+- Give students an AI-generated memo and require source verification.
+- Have students map hallucination risks by task type.
+- Ask students to explain what a supervising lawyer would need to check before using the output.
+
+## Related resources
+
+- [Prompt Guide & Scenarios]({{< relref "prompt-guide" >}}) — prompting and iteration patterns.
+- [Best Practices for AI in Legal Education]({{< relref "best-practices" >}}) — teaching principles and academic standards.
+- [AI Resources Portal](https://resources.pennai.law/) — current Penn Carey Law access, setup, and product-specific guidance.
+
+## Acknowledgment
+
+With thanks to the AI Law Lab alumni who contributed to the original guide:
 
 - Meghana Bhimarao '25 — AI Law Lab & CTIC Fellow
 - Lakshmi Prakash '25 — AI Law Lab & CTIC Fellow
 
 ## Status
 
-Maintained for the Penn Carey Law community. Comments, corrections, and product updates welcome — email Polk Wagner at <pwagner@law.upenn.edu>.
+Maintained for the Penn Carey Law community.

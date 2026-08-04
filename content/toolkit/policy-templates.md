@@ -2,11 +2,13 @@
 title: "AI Use Policy Templates"
 description: "Professor Struve's attribution and disclosure model, with sample AI-use statements faculty can drop into syllabi."
 date: 2024-08-01
-weight: 240
+lastmod: 2026-08-04
+weight: 120
 toolkit_category: "teaching"
+toolkit_group: "teaching"
 audience: ["faculty"]
 availability: "public"
-version: "Fall 2024; revised May 2026"
+version: "Fall 2024; revised August 2026"
 ---
 
 Professor Struve's attribution-and-disclosure model for generative AI in a writing-intensive seminar, with sample AI-use disclosures students can adapt to specific use cases. The framework treats AI as a tool that requires attribution and process transparency.
@@ -14,6 +16,8 @@ Professor Struve's attribution-and-disclosure model for generative AI in a writi
 **Scope.** These templates reflect individual-faculty syllabus language drafted by Professor Struve and reproduced here as a reference. They are *not* Penn Carey Law's institutional AI policy and have not been adopted by the Office of Academic Affairs, the Curriculum Committee, or the Office of Student Conduct. Each faculty member is responsible for the AI policy in their own course; students should rely on the syllabus they receive, not on this page.
 
 The syllabus language is reproduced from Professor Struve's draft seminar syllabus. The sample AI-use disclosures were originally generated in a dialogue with ChatGPT and have been edited for accuracy and pedagogical clarity. Faculty using these templates should copy the blocks where the wording is doing work, then adapt citations, Canvas references, and use cases to their own courses. **Note on illustrative citations:** the sample disclosures below contain bracketed placeholders for case names, articles, and authors (e.g., `[Author, Title, Vol. Journal Page (Year)]`). Replace each placeholder with a real source you have read and verified before submitting work.
+
+For broader course-policy choices, start with the [AI Syllabus Guide]({{< relref "syllabus-guide" >}}). This page is best for writing-intensive courses that permit AI use with attribution, disclosure, and process transparency.
 
 ## The framework
 
@@ -225,4 +229,4 @@ These templates and the underlying framework are reproduced from a draft seminar
 
 ## Status
 
-Maintained for the Penn Carey Law community. Comments and suggestions: <pwagner@law.upenn.edu>.
+Maintained for the Penn Carey Law community.

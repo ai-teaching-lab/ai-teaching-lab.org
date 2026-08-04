@@ -3,8 +3,9 @@ title: "AI Syllabus Guide"
 description: "Fall 2026 syllabus language for teaching in an age of AI, organized by course type, assignment design, disclosure, and assessment choices."
 date: 2025-08-01
 lastmod: 2026-08-04
-weight: 20
+weight: 10
 toolkit_category: "core"
+toolkit_group: "start"
 audience: ["faculty"]
 availability: "public"
 version: "August 2025; revised August 2026"
@@ -320,15 +321,9 @@ Related Project materials:
 - [Best Practices for AI in Legal Education]({{< relref "best-practices" >}}) — broader teaching design and student-use guidance.
 - [Prompt Guide & Scenarios]({{< relref "prompt-guide" >}}) — prompting patterns for law school tasks.
 
-## Contact
+## Acknowledgment
 
-This guide is maintained by:
-
-- Ambar Larancuent '26
-- Hailey Parikh '27
-- Polk Wagner — `pwagner@law.upenn.edu`
-
-*With thanks to AI Law Lab alumni who contributed to the original guide:*
+With thanks to the AI Law Lab alumni who contributed to the original guide:
 
 - Meghana Bhimarao '25 — AI Law Lab & CTIC Fellow
 - Lakshmi Prakash '25 — AI Law Lab & CTIC Fellow

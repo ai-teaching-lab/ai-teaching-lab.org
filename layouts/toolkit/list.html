@@ -8,13 +8,18 @@
   </header>
 
   {{ $n := 0 }}
-  {{ $core := where .Pages "Params.toolkit_category" "core" }}
-  {{ $rest := where .Pages "Params.toolkit_category" "ne" "core" }}
-  {{ range $group := slice (dict "name" "Core publications" "items" $core.ByWeight) (dict "name" "Guides and references" "items" $rest.ByWeight) }}
-    {{ if $group.items }}
+  {{ $groups := slice
+    (dict "name" "Start here for Fall 2026" "key" "start")
+    (dict "name" "Teaching and course design" "key" "teaching")
+    (dict "name" "Student guidance" "key" "student")
+    (dict "name" "Methods and practice" "key" "methods")
+  }}
+  {{ range $group := $groups }}
+    {{ $items := where $.Pages "Params.toolkit_group" $group.key }}
+    {{ if $items }}
     <section class="cluster">
-      <div class="cluster-h"><h2>{{ $group.name }}</h2><span>{{ printf "%02d" (len $group.items) }}</span></div>
-      {{ range $group.items }}
+      <div class="cluster-h"><h2>{{ $group.name }}</h2><span>{{ printf "%02d" (len $items) }}</span></div>
+      {{ range $items.ByWeight }}
         {{ $n = add $n 1 }}
         {{ $url := .Params.external_url | default .RelPermalink }}
         <div class="row">

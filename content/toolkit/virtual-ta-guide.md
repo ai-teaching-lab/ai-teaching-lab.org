@@ -1,94 +1,176 @@
 ---
 title: "Building a Virtual TA for Your Course"
-description: "Four ways to give your course a virtual teaching assistant — Claude Projects, PennChat Agents, the Project's Heron Slackbot, or an externally-hosted tool — with access, cost, setup, and data tradeoffs for each."
+description: "Heron plus the design choices behind course-bounded virtual teaching assistants: corpus, citations, refusals, student expectations, privacy, maintenance, and assessment fit."
 date: 2024-09-01
-lastmod: 2026-07-13
-weight: 230
+lastmod: 2026-08-04
+weight: 140
 toolkit_category: "teaching"
+toolkit_group: "teaching"
 audience: ["faculty"]
 availability: "public"
-version: "2024; revised July 2026"
+version: "2024; revised August 2026"
 ---
 
-A virtual TA is a course-specific AI assistant, grounded in your syllabus, readings, and framing, that students can ask questions of directly. As of mid-2026 there are four real ways to build one at Penn Carey Law, and they differ enough in access, cost, and setup that the right choice depends heavily on your course. This guide walks through all four.
+The Project's model for a virtual TA is [Heron]({{< relref "/projects/heron" >}}): a course-bounded assistant that answers students in Slack from one course's materials, cites the source it used, and says plainly when the materials do not answer the question.
 
-This replaces the older version of this guide, which walked through building a ChatGPT Custom GPT. That path is no longer workable for reaching students: ChatGPT EDU remains available at Penn Carey Law, but only for faculty and staff — students are moving to Claude for 2026–27, so a Custom GPT has no student audience to reach on the institutional side. The four paths below are the current landscape.
+This guide is Heron plus the additional design thoughts faculty need before adapting the pattern. For current Penn-specific options for deploying a course assistant, use the [AI Resources Portal](https://resources.pennai.law/). Platform access, account eligibility, data approvals, and setup steps change too quickly to duplicate here.
 
-## The four paths, at a glance
+## The basic idea
 
-| Path | Who can reach it | Cost | Setup effort | Where materials go | Best for |
-|---|---|---|---|---|---|
-| **1. Claude.ai / Claude Projects** | Faculty (research account); 1Ls (2026–27 curriculum); other students only if they have their own Claude account | Free tier is limited; full Project functionality needs a paid plan (Pro/Max/Team/Enterprise) | Low — build a Project, write instructions, upload files. No code. | Anthropic's servers, under your (or each student's) individual account | A 1L course, or any course where you can assume students already have Claude |
-| **2. PennChat Agents** | Everyone — faculty, staff, all student levels (pilot now, full launch expected after mid-August 2026) | Free during the pilot; credit-based system at full launch (pricing TBD) | Low-to-medium — rebuild your instructions/knowledge/tools as a PennChat Agent; no import from a Custom GPT | Penn's secure hosted environment (LibreChat), approved for most data up to High Risk | Broad reach across a whole class regardless of year, especially with sensitive course material |
-| **3. Heron (Slack)** | Anyone in your course's Slack workspace — no Claude/ChatGPT/PennChat account needed | Real, ongoing: Pinecone, OpenAI embeddings, an LLM provider, and Railway hosting all bill separately; not free | Medium-to-high — fork a repo, configure a YAML file, stand up a Slack app, deploy, sync materials | Third-party infrastructure (Pinecone, OpenAI, your chosen LLM provider, Railway) — not a Penn-reviewed tool | Courses already living in Slack, or where you want page/slide/timestamp-level citations and are comfortable with (or have help for) the technical setup |
-| **4. Externally-hosted** | Whoever you grant access to, on whatever platform you choose | Variable, and entirely on you | High — you're building and running a service | Wherever you host it — outside Penn's reviewed tools entirely | Narrow, low-risk use cases where you need something Penn's tools don't offer, and you have the technical support to run it |
+A virtual TA should not be a general chatbot with a course label on it. It should be bounded by the course.
 
-Read the sections below before picking — the table compresses a lot of nuance, especially on path 1's sharing story and path 3's data posture.
+Heron's design is the reference point:
 
-## Path 1: Claude.ai and Claude Projects
+- The corpus is the course's own materials.
+- The assistant answers only when retrieved course materials support an answer.
+- Answers cite the page, slide, or transcript timestamp students can check.
+- Unsupported questions are refused or labeled as outside the course materials.
+- The assistant follows the professor's framing and course rules.
+- It can be taken offline when the exam period begins.
 
-**Who can access it.** Faculty have Claude access through research accounts today; a University-wide Claude agreement is expected around August 2026. For 2026–27, 1Ls receive Claude.ai (and likely Claude Code) as part of the 1L Legal Practice Skills curriculum. Outside that curriculum, Penn hasn't confirmed institutional Claude access for 2Ls, 3Ls, or LLMs — if you teach one of those courses, this path depends on students bringing their own Claude accounts.
+The point is governance, not magic accuracy. Students already have access to general AI tools. A course-bounded assistant gives them a better path: back to the course, back to the source, and back to the professor's expectations.
 
-**What it costs.** Claude's free tier is limited; full Project functionality requires a paid plan (Pro, Max, Team, or Enterprise). Whether the 1L curriculum's Claude access includes a paid tier for students, or what the university-wide agreement will look like, isn't confirmed in Penn's current tool documentation — **check with me before telling students what tier they'll have.**
+## What Heron showed
 
-**What setup involves.** Build a Claude Project: give it custom instructions (the same kind of briefing you'd write for a Custom GPT — audience, purpose, voice, scope, boundaries) and upload knowledge files (syllabus, readings, your own hypotheticals). No code, no hosting.
+Heron ran in a Spring 2026 Intellectual Property course. The write-up is linked from the [Heron project page]({{< relref "/projects/heron" >}}).
 
-**The sharing story — read this before you promise anything.** Claude Projects live on an individual account. There is no button that publishes a Project to "everyone in my course" the way a GPT Store listing works. What's confirmed: a Project's files, instructions, and chat history follow your account across devices once you're logged in, and full functionality needs a paid plan; if your account is managed by an organization, that org's settings can affect access independently of Claude itself. What's *not* confirmed is whether Penn's forthcoming Claude deployment will provision projects as a shared, multi-user workspace — that would likely require a Team- or Enterprise-style account structure, and nothing in Penn's current tool documentation says whether that's how the rollout will work. **Treat any claim of a "shared class Project" as unverified until I've confirmed it.**
+The short version:
 
-The workaround that works today regardless of how that resolves: build the Claude Project as your own reference tool, then hand students the underlying pieces — your instructions and your (rights-cleared) materials — as something they paste into a Project on their *own* individual account. It's more setup per student than a single shared link, but it doesn't depend on a capability nobody has confirmed yet. **This is the most genuinely open question in this guide — I don't have a clean answer for class-wide Project sharing, and I'd rather say that plainly than invent a procedure.**
+- Students mostly used it near the exam, not steadily through the semester.
+- The useful design move was not that the bot was always right.
+- The useful design move was that it was constrained: cite, or say it could not answer from the course materials.
+- Students could check the answer against a page, slide, or transcript timestamp.
+- The tool could be turned off for the exam.
 
-**What data can go in.** Follow the same do-not-upload list that applies to any AI knowledge base: no class recordings or transcripts of them (FERPA protects identifiable student speech), no student work or grading materials with names attached, no copyrighted casebook material beyond fair use, nothing under NDA or embargo. Penn's data-risk review anticipates Claude will be approved for Low and Moderate Risk data, but that approval is explicitly "to be confirmed at rollout" — don't put anything you'd classify as High Risk into a Project yet.
+That makes Heron a model for faculty design even when the implementation changes.
 
-**When to pick this path.** Your course is a 1L course (where Claude access is a given via the curriculum), or you're comfortable requiring or assuming students already have paid Claude accounts. It's the lowest-effort path with the best model quality, but the honest access gap for non-1L courses is real — don't build this for a 2L seminar and assume every student can reach it.
+## Start with the teaching purpose
 
-## Path 2: PennChat Agents
+Do not build a virtual TA because the technology is available. Build one only if it solves a course problem.
 
-**What PennChat is.** Penn's AI portal, hosted inside Penn's secure network, fronting both Anthropic's Claude and OpenAI's models in one interface. It runs on **LibreChat**, an open platform, and its **Agents** feature is the direct successor to ChatGPT's Custom GPTs: you give an agent standing instructions, attach knowledge files it searches across, and add tools (web search, a code interpreter, and OpenAPI-based actions — which tools are switched on can vary during the pilot).
+Good uses include:
 
-**Who can access it.** Broader than any other path: faculty, staff, and students at every level, currently in a pilot running through roughly mid-August 2026, then moving to a full enterprise launch. This is the only path that reliably reaches 2Ls, 3Ls, and LLMs alongside 1Ls without depending on personal accounts.
+- answering recurring course-logistics questions from the syllabus;
+- pointing students to the right reading, slide, class note, or transcript segment;
+- generating practice questions from assigned materials;
+- asking follow-up questions instead of giving final answers;
+- helping students review doctrine after they have done the reading;
+- giving students a low-stakes place to test explanations before office hours.
 
-**What it costs.** Free during the pilot. At full launch, PennChat moves to a credit-based usage system — the specific pricing isn't set yet, so don't commit to numbers with students until that's published.
+Poor uses include:
 
-**One access catch:** PennChat requires a connection to PennNet, AirPennNet, or the GlobalProtect VPN. A student working from off-campus without the VPN can't reach it — worth flagging if your course has remote components.
+- writing answers to graded work;
+- substituting for assigned reading;
+- giving legal advice;
+- answering beyond the materials provided;
+- handling confidential, FERPA-protected, client, clinic, or exam material without approval.
 
-**What setup involves.** There's no one-click import from a ChatGPT Custom GPT — a Custom GPT is rebuilt, not migrated. Paste your instructions into a new PennChat agent, re-upload your knowledge files, and recreate any actions as PennChat tools. Every Custom GPT capability has a direct equivalent; it's manual, not automatic. Start from the Agent Builder in PennChat's side panel. (LibreChat's own agent documentation covers the mechanics in more depth than Penn-specific guidance does.)
+## Define the corpus
 
-**What data can go in.** This is PennChat's strongest point: it's approved for Low, Moderate, and most High Risk data (excluding SSNs and credit-card numbers, and avoiding identifiable PHI) — the broadest data approval of any general-purpose AI tool reviewed at Penn Carey Law, alongside Microsoft Copilot Chat. If your course materials include anything sensitive, this is the safest of the four paths.
+The first design choice is what the assistant is allowed to know.
 
-**When to pick this path.** You want to reach your whole class regardless of year, your course touches data more sensitive than "public syllabus and readings," or you'd rather wait a few weeks for the full launch than build something today on infrastructure Penn hasn't reviewed. The tradeoff is the VPN requirement and a pilot timeline that isn't finished yet — this is a path for the fall semester, not necessarily for something you need live this month.
+Good source sets include:
 
-## Path 3: Heron (Slack)
+- the syllabus and assignment schedule;
+- professor-created slides and handouts;
+- public cases, statutes, and regulations;
+- professor-written hypotheticals and practice problems;
+- course FAQs;
+- transcripts or notes only if they are approved for the tool and appropriate for student use;
+- model instructions for how the assistant should answer student questions.
 
-**What it is.** Heron is our own open-source project: a RAG-powered Slack bot that answers student questions using your course materials. Students `@mention` the bot inside a Slack channel; it retrieves relevant passages from your materials (stored in a Pinecone vector database), and generates an answer with page citations via an LLM, called through LiteLLM so it can run on Anthropic, OpenAI, or Google models. It supports PDF, Word, Markdown, CSV, Google Docs, and Google Sheets, syncing automatically from a Google Drive folder. Markdown transcripts with `[HH:MM:SS]` timestamps get citations like "Class 5 Transcript, around the 7:00 mark" instead of page numbers, and slide decks cite by slide number.
+Be cautious with:
 
-The code is course-agnostic — one repository, and everything course-specific (bot name and personality, system prompts, topic categories) lives in a single `course_config.yaml` file you edit or generate with an interactive setup wizard.
+- copyrighted casebook material;
+- class recordings or transcripts that include identifiable student participation;
+- student work;
+- grading rubrics, model answers, or exam questions;
+- client, clinic, personnel, or committee materials.
 
-**Who can access it.** Anyone who's a member of the Slack workspace and channel the bot is installed in — no Claude, ChatGPT, or PennChat account required at all. This is the lowest access barrier of the four paths if your course (or your students generally) already lives in Slack. DMs to the bot are admin-only; students interact by mentioning it in an allowed channel.
+If the source material is sensitive, the platform decision matters. Use the [AI Resources Portal](https://resources.pennai.law/) for current data-policy and platform guidance.
 
-**What it costs — and this is the one path with real ongoing dollar cost.** Unlike the other three, Heron isn't a flat-rate or free institutional tool. You (or whoever administers it) need, and pay for, separately: a Pinecone account (vector database), an OpenAI API key (used for embeddings regardless of which model answers questions), an API key for at least one LLM provider (Anthropic, OpenAI, or Google), and hosting — the reference deployment runs on Railway. None of these costs are fixed numbers in the codebase; they scale with usage and current vendor pricing. **Get current quotes before committing to this path for a course of any size.**
+## Use cite-or-refuse as the default
 
-**What setup involves.** Fork the repository, run the setup wizard (`python scripts/setup.py`) to generate your course config, create a Slack app with the required OAuth scopes and Socket Mode enabled, set the environment variables (Slack tokens, Pinecone key, OpenAI key, your chosen LLM provider key, a Google service-account credential for Drive sync), and deploy — the reference setup targets Railway. Then point it at a Google Drive folder of course materials and sync. Admin control happens through Slack slash commands (`status`, `health`, `sync`, `resync`, `model`, `export`, and more) restricted to a configured list of admin Slack user IDs; which channels the bot will respond in is also configured explicitly. This is a real technical setup — plan on doing it yourself if you're comfortable with Python and API credentials, or getting help from an RA or from us.
+The safest course-assistant pattern is cite-or-refuse.
 
-**What data can go in — and this needs a clear-eyed answer.** Whatever you put in the synced Google Drive folder gets sent to OpenAI (for embeddings) and stored in Pinecone (a third-party vector database), plus whichever LLM provider answers questions. This is **not** one of the tools Penn Law ITS or Penn ISC has reviewed and approved for a specific data-risk tier — it doesn't appear on Penn's list of endorsed AI tools at all. That means there's no institutional data classification covering it; you're relying on Pinecone's, OpenAI's, and your LLM provider's own commercial data-handling terms, which you should read before uploading anything. Treat this the same as any personal-account AI tool: fine for ordinary public course materials (syllabus, published readings, your own slides), and a bad fit for anything FERPA-protected, confidential, or above Low/Moderate risk. One more thing worth knowing: the bot logs student queries — a rolling window of the last 1,000 in an active file, with everything older archived indefinitely (deletable only via an explicit admin command) — so there's a standing record of which students asked what, unless you actively purge it.
+Useful instruction:
 
-**When to pick this path.** Your course already runs on Slack, you want citation precision (specific pages, slide numbers, or transcript timestamps) that a general chat tool won't give you out of the box, and you're willing to either do the setup yourself or line up help — and to budget for the ongoing API and hosting costs. It's the most capable and most customizable of the four, and also the most work.
+> Answer from the course materials provided. When you answer, identify the specific reading, page, slide, class session, or transcript timestamp that supports the answer. If the course materials do not support an answer, say that plainly. Do not invent citations, readings, slide numbers, transcript timestamps, or class discussions.
 
-## Path 4: Externally-hosted
+This does not make the answer perfect. It does make the answer inspectable. That is the main pedagogical advantage over a general chatbot.
 
-**What this means practically.** Anything you build or run outside Penn's institutional systems and Penn-reviewed tool list — that includes a self-hosted Heron instance sitting on infrastructure Penn hasn't reviewed (see Path 3), but also covers other options: a custom web app calling an LLM API directly, a third-party AI-chatbot-builder SaaS product, or any other outside service you point students to.
+## Write the assistant's boundaries
 
-**The tradeoff, honestly.** You get control and flexibility Penn's reviewed tools don't offer — pick any model or provider, customize without waiting on a pilot to finish, reach people without Penn credentials if that matters for your use case. You give up institutional review and support in exchange: nobody at Penn Law ITS has vetted the vendor's data-handling terms, there's no help desk if it breaks during the semester, and you (or whoever built it) are the ongoing maintainer for as long as it's live. A bot that goes dark mid-exam-prep because nobody was watching it is worse than no bot.
+A good course assistant instruction should state:
 
-**When it's appropriate.** Low-risk, non-sensitive material, where you specifically need a capability none of the first three paths offer, and you or a collaborator can actually maintain a running service through the semester. Check the material you're putting in against Penn's data risk classification framework before you start — the same three tiers (Low, Moderate, High Risk) that govern every other tool on this page apply here too, except there's no vendor review to lean on. You're doing that assessment yourself.
+1. the course and audience;
+2. the materials the assistant may rely on;
+3. the kinds of questions it may answer;
+4. the kinds of questions it must refuse;
+5. how it should cite or point back to materials;
+6. what it should say when it does not know;
+7. whether it should give direct answers, hints, or Socratic questions;
+8. whether and when it should go offline.
 
-**When it isn't.** Any FERPA-protected material, anything above Low/Moderate risk, or any course where you can't guarantee someone is maintaining the service for the term. If you're not sure which bucket you're in, that's the sign to use one of the first three paths instead.
+Starter language:
 
-## Which path should you pick?
+> You are a course assistant for [course name]. Use only the syllabus, assigned readings, slides, handouts, transcripts, and other course materials I provide. Help students understand the course materials by asking clarifying questions, pointing them to relevant sources, and explaining concepts at the level appropriate for this course. Do not write answers to graded assignments, do not predict grades, do not provide legal advice, and do not answer questions that require information outside the course materials unless you clearly label the answer as general background.
 
-Start with who needs to reach it. If it's just your own 1L section, Claude Projects is the least work and the best model quality — but confirm with me what tier of Claude access students actually have before you build around an assumption. If you need to reach 2Ls, 3Ls, or LLMs, or your materials are more sensitive than an ordinary reading list, wait for PennChat's full launch or use it now during the pilot. If you want Slack-native delivery and citation precision and are willing to pay for and maintain the infrastructure, Heron is the Project's own answer to that. Reach for an externally-hosted option only when the first three genuinely don't cover what you need, and only for material that doesn't carry real data risk.
+## Tell students what the assistant is for
 
-None of these are mutually exclusive with good pedagogy design — the [AI Syllabus Guide]({{< ref "/toolkit/syllabus-guide" >}}) covers setting expectations around a virtual TA the same way it covers AI use generally, and the do-not-upload guidance in this doc applies no matter which path you pick.
+Students should know that the assistant supports learning but does not replace the professor, assigned materials, class discussion, office hours, or course rules.
+
+Sample student-facing language:
+
+> This course includes an AI course assistant. The assistant is a study tool grounded in course materials. It can help you locate readings, generate practice questions, and think through concepts after you have completed the reading. It may be wrong, incomplete, or too general. You remain responsible for the assigned materials, class discussion, and all submitted work. Do not use the assistant to write answers to graded assignments unless an assignment expressly permits that use.
+
+If students may use the assistant for submitted work, say exactly how and when disclosure is required. The [AI Syllabus Guide]({{< relref "syllabus-guide" >}}) has copyable language.
+
+## Plan the exam cutoff
+
+Heron's exam cutoff is a design choice worth preserving. If the assistant helps students study before an exam but should not be available during the exam, build that into the course plan.
+
+Say:
+
+- when the assistant will go offline;
+- whether old conversations remain available;
+- whether the cutoff applies to the professor and teaching team too;
+- how the exam instructions describe AI use;
+- what students should do if the assistant gives conflicting information before the cutoff.
+
+The exam rule should still be stated separately in the exam instructions.
+
+## Decide who maintains it
+
+A virtual TA is not finished when it launches. Someone needs to maintain it during the semester.
+
+Maintenance work includes:
+
+- updating materials when the syllabus changes;
+- removing old drafts or superseded readings;
+- checking whether common answers are accurate;
+- reviewing failed or confusing interactions if logs are available and appropriate;
+- telling students when the assistant's boundaries change;
+- shutting it down or archiving it after the course ends.
+
+If no one can maintain it, keep the assistant narrow or do not deploy it.
+
+## Match the assistant to assessment design
+
+| Course design | Good fit | Caution |
+| --- | --- | --- |
+| Traditional lecture course | Practice questions, doctrine review, syllabus logistics, exam study support before the cutoff | Keep exam rules separate and explicit. |
+| Seminar | Research-process questions, source-trail support, topic brainstorming | Do not let the assistant become an undisclosed writing partner. |
+| Writing or skills course | Revision prompts, client-communication critique, simulation practice | Preserve first-pass student analysis when that is the learning goal. |
+| Clinic | Internal training on public or approved materials | Do not include client or confidential facts unless approved. |
+
+## Related resources
+
+- [Heron project page]({{< relref "/projects/heron" >}}) — implementation, paper, and case-study results.
+- [AI Syllabus Guide]({{< relref "syllabus-guide" >}}) — course-policy language.
+- [Teaching Examples and AI Demos]({{< relref "teaching-demos" >}}) — starter course-assistant prompt.
+- [AI Resources Portal](https://resources.pennai.law/) — current platform, access, setup, and data-policy guidance.
 
 ## Status
 
-Maintained for the Penn Carey Law community. Vendor UI flows, pilot timelines, and data-approval terms change — verify against current Penn Law ITS and Penn ISC guidance before relying on the specifics here. Comments and corrections: <pwagner@law.upenn.edu>.
+Maintained for Penn Carey Law faculty.

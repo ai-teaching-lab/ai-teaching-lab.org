@@ -1,87 +1,105 @@
 ---
 title: "1L Guidance on Claude Use"
-description: "Written for incoming 1Ls. How LLMs work, their strengths and weaknesses, the human-AI-human sandwich workflow, and prompting tips."
+description: "Written for incoming 1Ls. How LLMs work, their strengths and weaknesses, the human-AI-human workflow, course rules, confidentiality, and prompting tips."
 date: 2025-09-01
-lastmod: 2026-07-13
-weight: 110
+lastmod: 2026-08-04
+weight: 10
 toolkit_category: "audience"
+toolkit_group: "student"
 audience: ["student"]
 availability: "public"
-version: "September 2025; revised July 2026"
+version: "September 2025; revised August 2026"
 ---
 
-Written for incoming 1Ls. Covers how LLMs work, what they do well, what they fail at, the "human-AI-human sandwich" workflow that keeps the student in the loop, and concrete prompting tips.
+Written for incoming 1Ls. This guide explains how to use Claude and similar AI tools as study support without substituting them for legal reasoning.
 
-**First and most important:** every course has its own rules about AI. Always check your syllabus and follow your professor's guidance — that governs. This document is general orientation for cases not covered by a specific course rule.
+**First and most important:** course-specific rules control. General Project guidance does not override a syllabus, assignment instruction, exam rule, clinic rule, journal rule, or supervisor instruction. When in doubt, ask the professor before using AI.
 
-Starting with the 2026–27 academic year, 1Ls receive institutional access to **Claude.ai**, integrated into the 1L Legal Practice Skills curriculum. That's the tool this document assumes. ChatGPT EDU remains available at Penn Carey Law for faculty and staff, but it's no longer the student-facing tool — the guidance below is written for Claude.
+For current Penn Carey Law tool access and setup, use the [AI Resources Portal](https://resources.pennai.law/).
 
 ## The frame
 
-Your main task as a 1L is to develop legal reasoning. Generative AI can support that learning, but it cannot replace the work of thinking, analyzing, and writing as a lawyer. Approach AI with attention and skepticism. Use it thoughtfully, not as a shortcut.
+Your main task as a 1L is to develop legal reasoning. AI can support that learning, but it cannot replace the work of reading, analyzing, writing, revising, and explaining legal arguments yourself.
+
+Use AI as a study partner after you have done the first pass. Do not use it as a shortcut around the work that builds judgment.
 
 ## How generative AI works
 
-Claude, ChatGPT, and other Large Language Models are predictive tools. They generate likely next text based on patterns in their training data and the prompts you provide — a process that often produces fluent, useful output but is fundamentally different from how a lawyer reasons through a problem. They can produce confident mistakes, called "hallucinations," because nothing in the underlying mechanism checks output against truth.
+Claude, ChatGPT, Gemini, and similar systems are large language models. They generate likely text based on patterns in their training data and the prompts you provide. That can produce fluent and useful output, but it is not the same as legal reasoning, source retrieval, or truth checking.
 
-## Where AI excels
+The practical consequence: the answer may sound right even when it is wrong.
 
-AI is most useful as a study assistant. It can:
+## Where AI helps
 
-- Generate text in different styles, summarize material, and rephrase passages for clarity.
-- Help organize your notes and outlines.
-- Turn your materials into flashcards, practice questions, and self-quizzes.
-- Brainstorm ideas, suggest alternative framings, and refine your writing for grammar and tone.
+AI is most useful for low-stakes study support:
+
+- turning your notes into practice questions;
+- asking you follow-up questions after you explain a rule;
+- helping organize your own outline;
+- generating hypotheticals after you have studied the doctrine;
+- suggesting alternative ways to explain an idea;
+- proofreading for grammar or clarity when permitted.
 
 ## Where AI falls short
 
-AI should not be trusted for precise fact retrieval — case names, holdings, statutory language. It is unreliable for citation accuracy and Bluebook formatting. Most importantly, it cannot provide genuine legal reasoning or analysis. Those are the core skills you are here to master.
+AI is weak where legal education most needs precision and judgment. It may invent cases, misstate holdings, flatten ambiguity, omit counterarguments, or give a confident answer where the right answer depends on context.
 
-If responses start drifting or losing track of earlier instructions, start a fresh session — it's cheap and often fixes the problem.
+Do not rely on AI for case names, quotations, citations, holdings, procedural posture, statutory language, or professor-specific course takeaways unless you verify against the assigned materials or another authoritative source.
 
 ## Critical risks
 
-- **Hallucination.** AI may invent authority or distort holdings. The output sounds confident either way.
-- **Overreliance.** Relying on AI before you've done your own reasoning short-circuits the practice you came to law school to get. The skills you're building — issue-spotting, analogical reasoning, working through ambiguity — develop through struggle, not through reading a polished answer.
-- **Bias.** AI reflects biases in its training data, including stereotyped framings on race, gender, immigration status, and class. That matters when you're working in doctrinal areas where bias affects outcomes (criminal procedure, employment, family law, immigration). Check outputs for stereotyped framings before relying on them.
-- **Integrity.** Misrepresenting AI output as your own work violates academic integrity rules. Failing to verify AI output is your own quality problem — and depending on the assignment, it can become an integrity issue if the work is presented as your independent analysis.
-- **Confidentiality.** Don't paste another person's work, anything from a confidential source, or anything you wouldn't want on a public web page. The Claude access provided through the 1L curriculum is expected to carry institutional data protections, but Penn's data-approval terms for it are still being finalized as the university-wide agreement rolls out — check current guidance before assuming coverage. Personal or consumer AI accounts don't have this protection. If you're not sure where a tool stores or trains on your inputs, assume it does.
+- **Hallucination.** AI may invent authority or distort real authority.
+- **Overreliance.** If you use AI before you have done your own reasoning, you lose the practice law school is designed to give you.
+- **Bias.** AI can reproduce biased assumptions from its training data. Check outputs carefully, especially in areas where race, gender, immigration status, disability, class, or policing affect legal outcomes.
+- **Integrity.** Misrepresenting AI output as your own work can violate academic-integrity rules. Undisclosed AI use may also violate a course or assignment policy.
+- **Confidentiality.** Do not paste another person's work, confidential facts, client or clinic information, class recordings, exam materials, or anything you would not want treated as uploaded data unless your professor has expressly authorized that use and the tool is approved for that material.
 
-## Best practices: the human-AI-human sandwich
+## The human-AI-human workflow
 
-Use AI within clear limits. Follow a "human–AI–human" process:
+Use AI in three steps:
 
-1. Begin with your own reasoning.
-2. Use AI to refine, extend, or test it.
-3. Critically review the output before relying on any of it.
+1. **Human first.** Read, brief, outline, or draft before asking AI for help.
+2. **AI second.** Ask for questions, critique, alternatives, or organization.
+3. **Human last.** Verify, revise, and decide what to use.
 
-Only use AI for tasks where you have an idea of what a correct answer should look like. Always brief cases yourself before consulting AI. If answers drift, start a fresh session.
+Only use AI for tasks where you have enough knowledge to evaluate the output. If you cannot tell whether the answer is good, the tool is not helping you yet.
 
 ## Suggested uses
 
-- Summarize your notes into outlines.
-- Convert handwritten or audio notes into structured study materials.
-- Create quizzes and flashcards from your own outlines.
-- Brainstorm writing strategies and arguments.
-- Polish prose for clarity, grammar, and tone.
+Good study uses include:
 
-In all cases: verify accuracy, and check that the meaning of your work hasn't shifted in the process.
+- "Ask me five questions about this case based on my notes."
+- "Give me a hypo that tests this rule, but do not answer it until I try."
+- "Compare these two doctrines in a table using only the notes I provide."
+- "Identify what is unclear in my explanation of this concept."
+- "Generate flashcards from my outline."
+
+Riskier uses include:
+
+- "Brief this case for me" before you have read it.
+- "Write my assignment" or "draft my answer."
+- "Find cases that support my argument" without checking the sources.
+- "Tell me what my professor wants" when you have not supplied course materials.
 
 ## Prompting as a skill
 
-Good results depend on how you ask:
+Good prompts give context and limits:
 
-- **Be specific and detailed.** Vague prompts yield vague answers.
-- **Provide context and goals.** Tell the model what you're trying to accomplish.
-- **Use examples.** Showing the model what good output looks like beats describing it.
-- **Break complex requests into steps.** Tackle one thing at a time.
-- **Assign a role.** "Acting as a senior associate…" or "Acting as my contracts professor…" tightens the output.
-- **Specify a format.** Outline, table, bullet list, memo — say which.
+- Say the course and topic.
+- Say what materials the tool may use.
+- Say what you have already done.
+- Ask for questions or critique before answers.
+- Ask the model to identify uncertainty.
+- Specify the format you want.
+
+Example:
+
+> I am a 1L studying Contracts. I have already read the assigned case and written the rule in my own words. Ask me three questions that test whether I understand expectation damages. After each answer, tell me what I missed and what part of my notes I should review. Do not give me a full model answer unless I ask.
 
 ## The big takeaway
 
-Generative AI can be a valuable tool, but it is not a substitute for legal reasoning. Its value depends on your ability to supervise it critically. Use it to enhance, not avoid, your own work — and remember that course-specific syllabus rules govern.
+AI can help you practice, organize, and test your understanding. It cannot replace the work of building legal judgment. Use it to enhance your learning, not to avoid the hard parts.
 
 ## Status
 
-Maintained for the Penn Carey Law community.
+Maintained for the Penn Carey Law community. Current tool-access details are in the [AI Resources Portal](https://resources.pennai.law/).

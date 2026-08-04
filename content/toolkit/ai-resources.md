@@ -1,11 +1,12 @@
 ---
-title: "Faculty AI Resources"
-description: "The faculty hub for AI at Penn Carey Law — tools, use cases, agentic-AI guidance, policies, and the wider Penn AI ecosystem."
+title: "AI Resources Portal"
+description: "The Penn Carey Law hub for AI tool access, setup, data policy, and product-specific guidance."
 toolkit_category: "audience"
-audience: ["faculty"]
+toolkit_group: "start"
+audience: ["faculty", "staff"]
 availability: "public"
-version: "May 2026"
-weight: 100
+version: "August 2026"
+weight: 20
 external_url: "https://resources.pennai.law/"
 build:
   render: never
