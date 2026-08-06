@@ -15,7 +15,7 @@ Drop-in syllabus and assignment language for faculty teaching in an age of AI. T
 
 The guide draws especially on Kirsten K. Davis's *Guide to Syllabus and Assignment Generative AI Policies and Advice*, Korin Munsterman's *GenAI in Legal Education: A Practical Guide for Professors and Students*, and teaching materials shared by Professor Cathie Struve on attribution and disclosure in writing-intensive seminars. The Davis and Struve materials are cited here as source materials for this guide, not as Penn Carey Law policy.
 
-This document is not official Law School policy. Each faculty member sets the AI policy for their own course, subject to ordinary academic-integrity rules and any exam procedures administered by the Registrar.
+This document is not official Law School policy and does not authorize AI use. Faculty should state course and assessment rules clearly, consistent with current Registrar and University guidance and any applicable clinic, placement, client, supervisory, or professional requirements.
 
 ## Jump to sample language
 
@@ -41,7 +41,7 @@ A good course AI policy does four things:
 3. Makes students responsible for accuracy, sources, confidentiality, and judgment.
 4. Gives a concrete disclosure form when disclosure is required.
 
-Do not build the policy around AI detection. Detection is unreliable, and it does not teach students how to use AI responsibly. Better design choices include process artifacts, revision history, oral explanation, source checks, critique of AI output, and assignment-specific disclosure.
+Do not build the policy around AI detection. Detector performance varies by tool, model, genre, language, threshold, and mixed authorship; do not treat a score as standalone proof of misconduct. Better design choices include aligned process evidence, source checks, critique of AI output, and assignment-specific disclosure.
 
 ## Start with the learning goal
 
@@ -196,7 +196,7 @@ The short examples above establish policy direction. For a ready-to-adapt sequen
 - [Independent First Pass + AI-Supported Revision]({{< relref "assignment-first-pass-revision" >}}) — preserve evidence of independent analysis, then assess selective revision judgment.
 - [Audit and Correct AI Legal Work]({{< relref "assignment-ai-critique" >}}) — assess verification, diagnosis, correction, and professional judgment.
 - [Staged Research or Writing Project]({{< relref "assignment-staged-project" >}}) — use meaningful checkpoints and stage-specific AI rules for substantial work.
-- [Open-AI Work + Complementary Explanation]({{< relref "assignment-open-ai-explanation" >}}) — assess assisted performance and, only when necessary, personal explanation or application through different evidence.
+- [AI-Permitted Work + Complementary Evidence]({{< relref "assignment-open-ai-explanation" >}}) — assess assisted performance and, only when necessary, personal explanation or application through different evidence.
 
 These are design patterns, not mandatory policies. Select the least burdensome structure that supports the inference you need to make about learning.
 
@@ -266,11 +266,11 @@ A syllabus policy works best when the assignment design supports it.
 
 **Make AI an object of critique.** Ask students to evaluate an AI answer, identify hallucinated authorities, improve a weak prompt, compare AI output to a model answer, or explain why an AI-generated analysis is persuasive but wrong.
 
-**Use local or course-specific facts.** Assignments that require class discussion, assigned materials, specific hypotheticals, or current course themes are harder to outsource and easier to assess.
+**Use local or course-specific facts for relevance.** Assignments tied to class discussion, assigned materials, specific hypotheticals, or current course themes can improve alignment. Do not assume specificity prevents outsourcing or establishes authorship.
 
 **Require source verification.** If AI supplies a case, quotation, statistic, factual claim, or scholarly argument, students should trace it to a real source before using it. AI output is a lead, not authority.
 
-**Use oral or conference components.** A short conversation about the student's thesis, research path, or revision choices can reveal learning better than a detector score.
+**Use a structured complement when needed.** A conversation, written explanation, or new application may provide complementary evidence of the student's reasoning. It is not authorship proof. Oral components require transparent criteria, practice where appropriate, accommodations, and equitable alternatives.
 
 **Use low-stakes practice.** Let students use AI for practice questions, self-quizzing, critique, or revision exercises before a high-stakes assessment. This teaches supervision rather than avoidance.
 
@@ -295,7 +295,7 @@ Structural supports for a restrictive rule:
 
 If work appears inconsistent with the policy, start with a conversation. Ask the student to explain their process, sources, revisions, and use of any tools. Where appropriate, ask for revision history, research notes, prompts, outputs, or a short oral explanation.
 
-Escalation may be appropriate for deception, refusal to explain, fabricated sources, undisclosed AI-generated text where disclosure was required, or conduct that clearly defeats the assignment's learning goal. A detector score alone should not be the basis for an accusation.
+If concerns remain after an ordinary inquiry, follow the current academic-integrity process and consult the appropriate Law School office. This guide does not define grounds or procedures for escalation. A detector score alone should not be the basis for an accusation.
 
 Possible syllabus language:
 

@@ -62,7 +62,7 @@ Good assignment design does more than announce a rule.
 - **Require source verification.** AI output is a lead, not authority.
 - **Use low-stakes practice.** Let students practice supervising AI before a high-stakes assessment.
 
-Do not build academic-integrity work around AI detection. Detection is unreliable and does not teach students how to use AI responsibly.
+Do not build academic-integrity work around AI detection. Performance varies by system and context, and a detector score is not standalone proof of misconduct. Detection also does not teach students how to supervise AI responsibly.
 
 ## Accuracy, attribution, and source checking
 

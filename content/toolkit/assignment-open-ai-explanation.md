@@ -1,5 +1,5 @@
 ---
-title: "Assignment Package: Open-AI Work + Complementary Explanation"
+title: "Assignment Package: AI-Permitted Work + Complementary Evidence"
 description: "A proportionate assessment-twins pattern combining disclosed AI-assisted work with a short, independently completed application or explanation."
 date: 2026-08-06
 lastmod: 2026-08-06
@@ -45,7 +45,7 @@ Students should be able to:
 ## Assignment sequence
 
 1. **Announce both components:** publish the work-product and complementary-task criteria together.
-2. **Complete open-AI work:** students may use approved AI assistance within stated data and disclosure limits.
+2. **Complete AI-permitted work:** students may use approved AI assistance within stated data and disclosure limits.
 3. **Submit:** collect the product and concise use statement.
 4. **Complete the complement:** use a short no-AI explanation or application under equivalent conditions.
 5. **Evaluate jointly:** interpret each component for the outcome it actually measures; define in advance how inconsistent evidence will be handled.
@@ -60,7 +60,7 @@ Students should be able to:
 | Source defense | Research judgment and authority use | Do not reward database access or memorized citation detail |
 | Five-minute conference | Reasoning, audience, professional judgment | Requires calibration, scheduling, practice, and alternatives |
 | In-class application | Scalable individual evidence | Ensure accommodations and avoid turning it into an unrelated speed test |
-| Sampled follow-up | Large classes; deterrence and validation | Publish a fair selection method and do not overgeneralize from a tiny sample |
+| Implementation sample | Review workload, scoring, and question quality | Not evidence of unsampled students' competence and not a substitute for an individually graded complement |
 
 ## Student-facing instructions
 
@@ -107,7 +107,7 @@ Set a transparent consequence for weak or inconsistent evidence. Options include
 
 **Medium class:** written explanation plus a fact variation completed in class; conferences only where evidence is ambiguous.
 
-**Large class:** short common application, randomly selected announced oral sampling, or teaching-assistant conferences with scripts, calibration examples, and faculty review. Sampling can validate a design but cannot establish every student's competence unless the selection and scoring support that inference.
+**Large class:** give every student a short common written application when individual competence is graded. Use teaching-assistant scoring only with scripts, calibration examples, and faculty review. A sample of oral follow-ups may inform implementation review or evaluator calibration, but it is not evidence of unsampled students' competence.
 
 ## Accessibility and equity
 
