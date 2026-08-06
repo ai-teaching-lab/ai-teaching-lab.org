@@ -2,7 +2,7 @@
 title: "AI Syllabus Guide"
 description: "Fall 2026 syllabus language for teaching in an age of AI, organized by course type, assignment design, disclosure, and assessment choices."
 date: 2025-08-01
-lastmod: 2026-08-04
+lastmod: 2026-08-06
 weight: 10
 toolkit_category: "core"
 toolkit_group: "start"
@@ -26,6 +26,7 @@ This document is not official Law School policy. Each faculty member sets the AI
 - [Permitted-uses table](#permitted-uses-table)
 - [Disclosure language](#disclosure-language)
 - [Design options](#design-options)
+- [Complete assignment packages](#complete-assignment-packages)
 
 ## The short version
 
@@ -185,6 +186,19 @@ Example integrated assignments:
 - Have students compare their own first draft with AI feedback and explain what they changed.
 - Ask students to prompt an AI tool for a client letter, then revise it for accuracy, tone, and professional judgment.
 - Have students build a research trail showing which AI-generated leads were useful, which were false, and which required human source checking.
+
+<a id="complete-assignment-packages"></a>
+
+## Complete assignment packages
+
+The short examples above establish policy direction. For a ready-to-adapt sequence, student instructions, disclosure, deliverables, rubric, class-size variants, accessibility guidance, and evidence limitations, use the package that matches the capability you want to observe:
+
+- [Independent First Pass + AI-Supported Revision]({{< relref "assignment-first-pass-revision" >}}) — preserve evidence of independent analysis, then assess selective revision judgment.
+- [Audit and Correct AI Legal Work]({{< relref "assignment-ai-critique" >}}) — assess verification, diagnosis, correction, and professional judgment.
+- [Staged Research or Writing Project]({{< relref "assignment-staged-project" >}}) — use meaningful checkpoints and stage-specific AI rules for substantial work.
+- [Open-AI Work + Complementary Explanation]({{< relref "assignment-open-ai-explanation" >}}) — assess assisted performance and, only when necessary, personal explanation or application through different evidence.
+
+These are design patterns, not mandatory policies. Select the least burdensome structure that supports the inference you need to make about learning.
 
 <a id="mixed-assessments"></a>
 <a id="2-course-with-written-assignments--limited-ai-use"></a>
