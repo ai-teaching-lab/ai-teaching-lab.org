@@ -135,4 +135,3 @@ See Dawson et al., [“Validity Matters More Than Cheating”](https://doi.org/1
 - [AI Use Policy Templates]({{< relref "policy-templates" >}})
 - [Assignment Package: Independent First Pass + AI-Supported Revision]({{< relref "assignment-first-pass-revision" >}})
 - [Current Penn AI access and data guidance](https://resources.pennai.law/)
-

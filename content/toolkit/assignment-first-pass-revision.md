@@ -123,4 +123,3 @@ Use the pattern to make the two performances observable, not to claim that revis
 - [AI Use Policy Templates]({{< relref "policy-templates" >}})
 - [Assignment Package: Staged Project]({{< relref "assignment-staged-project" >}})
 - [Current Penn AI access and data guidance](https://resources.pennai.law/)
-
