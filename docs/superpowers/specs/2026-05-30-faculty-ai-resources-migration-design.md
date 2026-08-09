@@ -3,7 +3,7 @@
 **Date:** 2026-05-30
 **Status:** Approved design (subdomain architecture), pre-implementation
 **Portal repo:** `polkwagner/penn-law-ai-resources` → transfers to `ai-teaching-lab/penn-law-ai-resources`. Working copies at `~/code/penn-law-ai-resources` and `~/Penn Law Dropbox/Polk Wagner/code/penn-law-ai-resources`.
-**Lab site:** `~/code/ai-teaching-lab/ai-teaching-lab.org` (repo `ai-teaching-lab/ai-teaching-lab.org`, served at `ai-teaching-lab.org`)
+**Lab site:** `~/code/pcl-ai-project/ai-teaching-lab.org` (repo `ai-teaching-lab/ai-teaching-lab.org`, served at `ai-teaching-lab.org`)
 
 ## Goal
 

@@ -20,7 +20,7 @@
 **Spec:** `docs/superpowers/specs/2026-05-30-faculty-ai-resources-migration-design.md`
 
 **Repos & working copies:**
-- Lab site: `~/code/ai-teaching-lab/ai-teaching-lab.org` (branch `migrate-faculty-ai-resources`, already created)
+- Lab site: `~/code/pcl-ai-project/ai-teaching-lab.org` (branch `migrate-faculty-ai-resources`, already created)
 - Portal: `~/Penn Law Dropbox/Polk Wagner/code/penn-law-ai-resources` (branch `main`, clean; remote `polkwagner/penn-law-ai-resources`)
 
 **Legend:** 🟢 = Claude executes locally · 🟠 = manual step Polk performs (GitHub/DNS/shortlink). Tasks are ordered to match the spec's **Cutover sequence** — local edits first (reversible), the irreversible/ops steps later, the shortlink last.
@@ -77,7 +77,7 @@ with:
     <h3>{{ .Title }}{{ if .Params.external_url }} <span class="toolkit-card-ext" aria-hidden="true">↗</span>{{ end }}</h3>
 ```
 
-- [ ] **Step 4: Build and confirm existing cards are unchanged.** From `~/code/ai-teaching-lab/ai-teaching-lab.org`:
+- [ ] **Step 4: Build and confirm existing cards are unchanged.** From `~/code/pcl-ai-project/ai-teaching-lab.org`:
 
 ```bash
 hugo --gc --minify --quiet && grep -c '<li class="toolkit-card' public/toolkit/index.html
@@ -358,7 +358,7 @@ Now that the subdomain is live, publish the Toolkit card so it links to a workin
 - [ ] **Step 1: (Optional CI sanity) push the feature branch to `dev`** to get a no-deploy CI build, if desired:
 
 ```bash
-cd ~/code/ai-teaching-lab/ai-teaching-lab.org
+cd ~/code/pcl-ai-project/ai-teaching-lab.org
 git push origin migrate-faculty-ai-resources:dev
 ```
 

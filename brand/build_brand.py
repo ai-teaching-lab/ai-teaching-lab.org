@@ -16,7 +16,7 @@ from fontTools.pens.transformPen import TransformPen
 from fontTools.ttLib import TTFont
 
 FONT = str(Path.home() / "Library/Fonts/Rajdhani-Bold.ttf")
-STATIC = Path.home() / "code/ai-teaching-lab/ai-teaching-lab.org/static"
+STATIC = Path.home() / "code/pcl-ai-project/ai-teaching-lab.org/static"
 OUT = Path.home() / "Downloads" / "PennCareyLawAIProject-brand-2026-07"
 OUT.mkdir(parents=True, exist_ok=True)
 
