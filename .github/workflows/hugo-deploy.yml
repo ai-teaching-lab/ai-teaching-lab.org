@@ -52,7 +52,7 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url || 'https://ai-teaching-lab.org/' }}/"
+            --baseURL "${{ steps.pages.outputs.base_url || 'https://pennai.law' }}/"
 
       - name: Run Pagefind
         run: npx -y pagefind --site public
