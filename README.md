@@ -1,4 +1,4 @@
-# ai-teaching-lab.org
+# pennai.law
 
 Hugo source for the Penn Carey Law AI Project website, live at https://pennai.law.
 The custom domain comes from `static/CNAME`; don't delete it.
