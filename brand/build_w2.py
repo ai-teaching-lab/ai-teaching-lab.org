@@ -27,7 +27,7 @@ U_WM, U_EB, U_GAP, U_RULE_OFF, U_RULE_W = 145.0, 35.0, 144.0, 22.0, 8.0
 # W2 parameters, approved 2026-07-29.
 URL_SCALE, URL_TRACK_EM, GAP_EM, DOT_EM = 0.85, 0.12, 0.50, 0.15
 
-STATIC = Path.home() / "code/pcl-ai-project/ai-teaching-lab.org/static"
+STATIC = Path.home() / "code/pcl-ai-project/pennai.law/static"
 
 
 def shield_of(fname):

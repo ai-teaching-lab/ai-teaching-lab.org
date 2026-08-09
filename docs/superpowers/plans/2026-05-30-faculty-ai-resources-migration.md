@@ -11,7 +11,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Make the Penn Carey Law AI Resources portal a Lab project — owned by the `ai-teaching-lab` GitHub org, served at `https://ai-resources.ai-teaching-lab.org/` on its own GitHub Pages, and featured as a card in the Lab site's Toolkit — with no build coupling between the two sites.
+**Goal:** Make the Penn Carey Law AI Resources portal a Lab project — owned by the `ai-teaching-lab` GitHub org, served at `https://ai-resources.pennai.law/` on its own GitHub Pages, and featured as a card in the Lab site's Toolkit — with no build coupling between the two sites.
 
 **Architecture:** The portal stays its own repo (transferred to the org) and keeps deploying itself via GitHub Pages from `main`, root `/` (legacy "deploy from a branch" — confirmed: no Actions workflow, no CNAME file present). It serves on a Lab subdomain via a root `CNAME` file + a DNS record. The Lab site is untouched except for one new Toolkit card (a `render: never` content stub that links out via a new `external_url` front-matter field) and a one-line edit to the card partial.
 
@@ -20,7 +20,7 @@
 **Spec:** `docs/superpowers/specs/2026-05-30-faculty-ai-resources-migration-design.md`
 
 **Repos & working copies:**
-- Lab site: `~/code/pcl-ai-project/ai-teaching-lab.org` (branch `migrate-faculty-ai-resources`, already created)
+- Lab site: `~/code/pcl-ai-project/pennai.law` (branch `migrate-faculty-ai-resources`, already created)
 - Portal: `~/Penn Law Dropbox/Polk Wagner/code/penn-law-ai-resources` (branch `main`, clean; remote `polkwagner/penn-law-ai-resources`)
 
 **Legend:** 🟢 = Claude executes locally · 🟠 = manual step Polk performs (GitHub/DNS/shortlink). Tasks are ordered to match the spec's **Cutover sequence** — local edits first (reversible), the irreversible/ops steps later, the shortlink last.
@@ -77,7 +77,7 @@ with:
     <h3>{{ .Title }}{{ if .Params.external_url }} <span class="toolkit-card-ext" aria-hidden="true">↗</span>{{ end }}</h3>
 ```
 
-- [ ] **Step 4: Build and confirm existing cards are unchanged.** From `~/code/pcl-ai-project/ai-teaching-lab.org`:
+- [ ] **Step 4: Build and confirm existing cards are unchanged.** From `~/code/pcl-ai-project/pennai.law`:
 
 ```bash
 hugo --gc --minify --quiet && grep -c '<li class="toolkit-card' public/toolkit/index.html
@@ -135,7 +135,7 @@ Expected: succeeds, no errors, no duplicate-target warnings.
 grep -o 'href=[^ "]*ai-resources.ai-teaching-lab.org/' public/toolkit/index.html
 ```
 
-Expected: prints `href=https://ai-resources.ai-teaching-lab.org/` (the card exists and links out). Note: don't use `grep -A4` here — `--minify` collapses the page to one line, so line-context flags return nothing.
+Expected: prints `href=https://ai-resources.pennai.law/` (the card exists and links out). Note: don't use `grep -A4` here — `--minify` collapses the page to one line, so line-context flags return nothing.
 
 - [ ] **Step 4: Confirm NO orphan page was emitted at the portal's future path.**
 
@@ -343,11 +343,11 @@ TTL:   default
 - [ ] **Step 5: Verify the subdomain serves over HTTPS and the old path redirects.**
 
 ```bash
-curl -sI https://ai-resources.ai-teaching-lab.org/ | head -1
+curl -sI https://ai-resources.pennai.law/ | head -1
 curl -sI https://ai-teaching-lab.github.io/penn-law-ai-resources/ | grep -i location
 ```
 
-Expected: first prints `HTTP/2 200`; second shows a `location:` header pointing at `https://ai-resources.ai-teaching-lab.org/`.
+Expected: first prints `HTTP/2 200`; second shows a `location:` header pointing at `https://ai-resources.pennai.law/`.
 
 ---
 
@@ -358,7 +358,7 @@ Now that the subdomain is live, publish the Toolkit card so it links to a workin
 - [ ] **Step 1: (Optional CI sanity) push the feature branch to `dev`** to get a no-deploy CI build, if desired:
 
 ```bash
-cd ~/code/pcl-ai-project/ai-teaching-lab.org
+cd ~/code/pcl-ai-project/pennai.law
 git push origin migrate-faculty-ai-resources:dev
 ```
 
@@ -385,7 +385,7 @@ Expected: prints the subdomain URL (the card is live in the Toolkit).
 
 Done last, so the advertised entry point only ever points at a fully-live HTTPS URL.
 
-- [ ] **Step 1:** In whatever runs `pennlaw.link`, repoint `pennlaw.link/ai-resources` → `https://ai-resources.ai-teaching-lab.org/`.
+- [ ] **Step 1:** In whatever runs `pennlaw.link`, repoint `pennlaw.link/ai-resources` → `https://ai-resources.pennai.law/`.
 
 - [ ] **Step 2: Verify.**
 
@@ -393,13 +393,13 @@ Done last, so the advertised entry point only ever points at a fully-live HTTPS 
 curl -sI https://pennlaw.link/ai-resources | grep -i location
 ```
 
-Expected: `location:` resolves (possibly via one hop) to `https://ai-resources.ai-teaching-lab.org/`.
+Expected: `location:` resolves (possibly via one hop) to `https://ai-resources.pennai.law/`.
 
 ---
 
 ## Final verification checklist (maps to spec §Verification)
 
-- [ ] `https://ai-resources.ai-teaching-lab.org/` serves the portal over HTTPS, valid cert, Enforce HTTPS on. *(Task 7.5)*
+- [ ] `https://ai-resources.pennai.law/` serves the portal over HTTPS, valid cert, Enforce HTTPS on. *(Task 7.5)*
 - [ ] `https://ai-teaching-lab.github.io/penn-law-ai-resources/` redirects to the subdomain. *(Task 7.5)*
 - [ ] Portal internal nav, Cmd+K search, reading pages, and `assets/` all resolve on the subdomain. *(spot-check in browser)*
 - [ ] A non-Polk org team member can push to the portal repo (team Write confirmed). *(Task 5.3)*

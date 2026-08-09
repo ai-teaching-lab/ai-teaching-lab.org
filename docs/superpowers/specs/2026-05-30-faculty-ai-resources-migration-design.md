@@ -3,7 +3,7 @@
 **Date:** 2026-05-30
 **Status:** Approved design (subdomain architecture), pre-implementation
 **Portal repo:** `polkwagner/penn-law-ai-resources` → transfers to `ai-teaching-lab/penn-law-ai-resources`. Working copies at `~/code/penn-law-ai-resources` and `~/Penn Law Dropbox/Polk Wagner/code/penn-law-ai-resources`.
-**Lab site:** `~/code/pcl-ai-project/ai-teaching-lab.org` (repo `ai-teaching-lab/ai-teaching-lab.org`, served at `ai-teaching-lab.org`)
+**Lab site:** `~/code/pcl-ai-project/pennai.law` (repo `ai-teaching-lab/ai-teaching-lab.org`, served at `ai-teaching-lab.org`)
 
 ## Goal
 
@@ -48,7 +48,7 @@ The portal already deploys via GitHub Pages from `main`, root `/`. Point that Pa
 - **DNS:** add a CNAME record `ai-resources.ai-teaching-lab.org` → `ai-teaching-lab.github.io`. (Independent of the apex `ai-teaching-lab.org`, which already points at GitHub Pages for the Lab site. Two repos, two custom domains, same org — fully supported.) **Manual DNS step.**
 - Wait for GitHub to provision the TLS cert (can take minutes to ~24h; **"Enforce HTTPS" stays greyed out until it issues**), then enable **Enforce HTTPS**.
 
-Result: the portal serves at `https://ai-resources.ai-teaching-lab.org/`, deploying on every push to the portal repo — no dependency on the Lab site.
+Result: the portal serves at `https://ai-resources.pennai.law/`, deploying on every push to the portal repo — no dependency on the Lab site.
 
 > Pre-existing note (not introduced here): the portal's Pages serves its repo root, so dev files (`CLAUDE.md`, `docs/`) are already web-reachable as they are today. Optional hardening: add a Jekyll `_config.yml` with an `exclude:` list, or a `.gitignore`-style Pages exclusion, so only published files serve. Minor; out of the critical path.
 
@@ -88,14 +88,14 @@ build:                 # NOTE: key is `build`, not `_build` (renamed in Hugo 0.1
 
 Committed in the portal repo (the source of truth). Not cosmetic — canonical tags control duplicate-content/SEO between the old `github.io` copy and the subdomain.
 
-- `index.html` — set `<link rel="canonical">` and `og:url` to `https://ai-resources.ai-teaching-lab.org/`. **Add them if absent** (don't skip when missing).
+- `index.html` — set `<link rel="canonical">` and `og:url` to `https://ai-resources.pennai.law/`. **Add them if absent** (don't skip when missing).
 - `agentic-ai-overview.html` — update its canonical (currently `…penn-law-ai-resources/#agentic-ai`) to the subdomain.
 - `license.html` — update the attribution blockquote `Source: … polkwagner.github.io/penn-law-ai-resources` to the subdomain.
 - Any other page-level canonical/`og:url` tags → subdomain.
 
 ### Component 5 — Old-URL preservation
 
-- **Shortlink (primary):** repoint `pennlaw.link/ai-resources` → `https://ai-resources.ai-teaching-lab.org/`. **Manual.**
+- **Shortlink (primary):** repoint `pennlaw.link/ai-resources` → `https://ai-resources.pennai.law/`. **Manual.**
 - **`ai-teaching-lab.github.io/penn-law-ai-resources/*`:** GitHub Pages auto-redirects the `github.io` path to the repo's custom domain once the `CNAME` is set — so deep links land on the subdomain. Real, not best-effort.
 - **`polkwagner.github.io/penn-law-ai-resources/*`:** GitHub's post-transfer redirect forwards to the new owner's `github.io` path, which then redirects to the subdomain (best-effort for the transfer hop, reliable for the custom-domain hop).
 
@@ -110,7 +110,7 @@ The portal is a separate site, so the Lab's Pagefind does **not** index it (the 
 ## Verification
 
 **Portal / subdomain**
-1. `https://ai-resources.ai-teaching-lab.org/` resolves and serves the portal over HTTPS (valid cert, Enforce HTTPS on).
+1. `https://ai-resources.pennai.law/` resolves and serves the portal over HTTPS (valid cert, Enforce HTTPS on).
 2. `https://ai-teaching-lab.github.io/penn-law-ai-resources/` redirects to the subdomain.
 3. Portal internal nav, Cmd+K search, reading pages, and assets all resolve under the subdomain.
 4. Org members (not just Polk) can push to the portal repo — confirm a test member or the team permission setting.
@@ -129,10 +129,10 @@ Order matters: the repo transfer briefly takes the old `github.io` URL offline, 
 2. **[manual] Transfer** `penn-law-ai-resources` to the `ai-teaching-lab` org; confirm **public**; grant the **team** write access (Component 1). *Expect the old `polkwagner.github.io/penn-law-ai-resources/` URL to 404 or redirect during propagation — this is the brief downtime window.*
 3. **Confirm the org Pages site rebuilt:** `https://ai-teaching-lab.github.io/penn-law-ai-resources/` serves the portal. Do **not** proceed to DNS until this is green.
 4. **[manual] Custom domain + DNS:** set the portal Pages custom domain to `ai-resources.ai-teaching-lab.org` (per the verified deploy mechanism), commit the `CNAME` file, add the DNS CNAME record → `ai-teaching-lab.github.io` (Component 2).
-5. **[manual] Wait for the TLS cert**, then enable **Enforce HTTPS**. Verify `https://ai-resources.ai-teaching-lab.org/` serves with a valid cert, and that `…github.io/penn-law-ai-resources/` now redirects to it.
+5. **[manual] Wait for the TLS cert**, then enable **Enforce HTTPS**. Verify `https://ai-resources.pennai.law/` serves with a valid cert, and that `…github.io/penn-law-ai-resources/` now redirects to it.
 6. **Ship the canonical edits** in the portal repo (Component 4) so the live site advertises the new URL.
 7. **Merge the Lab-site bridge card** `dev` → `main` after the `dev` build checks out (Component 3 / Verification step 5).
-8. **[manual] Repoint the shortlink** `pennlaw.link/ai-resources` → `https://ai-resources.ai-teaching-lab.org/`. **Last**, so it only ever points at a fully-live HTTPS URL.
+8. **[manual] Repoint the shortlink** `pennlaw.link/ai-resources` → `https://ai-resources.pennai.law/`. **Last**, so it only ever points at a fully-live HTTPS URL.
 
 ## Out of scope
 
